@@ -1004,7 +1004,7 @@ a {
 .article-entry em {
   font-style: italic;
 }
-.article-entry ul li:before {
+.article-entry ul>li:before {
   content: "";
   width: 6px;
   height: 6px;
