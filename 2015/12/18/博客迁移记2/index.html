@@ -12,8 +12,8 @@
 <meta property="og:url" content="http://stdioa.github.io/2015/12/18/博客迁移记2/index.html">
 <meta property="og:site_name" content="Stdio's Blog">
 <meta property="og:description" content="域名依然在备案中，依然想将博客部署到新买的VPS的我和腾讯斗智斗勇（雾），为博客添加了HTTPS&amp;gt;_&amp;lt;同时，把自己的密码学课设也转移到VPS上来了。">
-<meta property="og:image" content="http://7xk9uk.com1.z0.glb.clouddn.com/hhh_HTTPS.jpg">
-<meta property="og:updated_time" content="2015-12-18T11:37:16.648Z">
+<meta property="og:image" content="http://stdioa.github.io/pics/hhh_HTTPS.jpg">
+<meta property="og:updated_time" content="2015-12-18T11:41:03.947Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客迁移记（二）">
 <meta name="twitter:description" content="域名依然在备案中，依然想将博客部署到新买的VPS的我和腾讯斗智斗勇（雾），为博客添加了HTTPS&amp;gt;_&amp;lt;同时，把自己的密码学课设也转移到VPS上来了。">
@@ -259,7 +259,7 @@
 <p>重新加载配置，访问<a href="https://blog.stdioa.com" target="_blank" rel="external">https://blog.stdioa.com</a> , 成功~</p>
 <p>小插曲：<br>昨天晚上熄灯之前发现Ubuntu上使用<code>apt-get</code>安装的Nginx版本太老了，于是在VPS上重新编译升级了Nginx，结果配置好HTTPS以后重启Nginx时发现启动失败，原因为缺少<code>ngx</code>组件。经Google后发现没有编译该组件，所以重新编译安装Nginx, 在配置时加入<code>--with-http_ssl_module</code>选项。</p>
 <p>小插曲2：<br>HTTPS配置好后访问博客，Chrome提示“存在不安全的内容”，选择加载后，地址栏左边的HTTPS会变成红色，极其不好看（雾），于是看了博客的模板，发现有两个js在加载时选择使用HTTP方式加载，于是将<code>http://.../*.js</code>改为<code>//.../*.js</code>, 使浏览器可以根据当前协议自动选择JS文件的加载协议。更新博客模板，重新访问，所有js均使用HTTPS方式加载，问题解决。附图:</p>
-<center><img src="http://7xk9uk.com1.z0.glb.clouddn.com/hhh_HTTPS.jpg" alt="哈哈哈HTTPS"></center>
+<center><img src="/pics/hhh_HTTPS.jpg" alt="哈哈哈HTTPS"></center>
 
 <p>小插曲3：<br>上面那张图片的链接之前来自七牛，采用HTTP协议而不是HTTPS加载。发布这篇博文后，我发现该文章页面中地址栏左侧的HTTPS标志变为了白色…还是不好看！打开Chrome的控制台，在控制台中看到，如果图片链接协议为HTTPS，则Chrome依然会提示“不安全”，但是个人感觉这只是一张图片而已啊，又不是JS_(:зゝ∠)_<br>解决方案：将图片链接改回本地，待域名备案后再想办法在七牛那边解决域名绑定及HTTPS的问题。</p>
 <h1 id="4-_参考资料">4. 参考资料</h1><p><a href="http://www.vpser.net/build/letsencrypt-free-ssl.html" target="_blank" rel="external">免费SSL安全证书Let’s Encrypt安装使用教程(附Nginx/Apache配置)</a><br><a href="http://blog.csdn.net/donghustone/article/details/25797727" target="_blank" rel="external">http://blog.csdn.net/donghustone/article/details/25797727</a><br><a href="http://serverfault.com/questions/438889/nginx-ssl-error" target="_blank" rel="external">nginx SSL error - Server Fault</a><br><a href="http://www.zzidc.com/main/help/showHelpContent/id_473.html" target="_blank" rel="external">网站存在不安全因素的解决办法</a></p>
