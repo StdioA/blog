@@ -12,7 +12,7 @@
 <meta property="og:url" content="//blog.stdioa.com/2015/09/02/搭建私有KMS服务器/index.html">
 <meta property="og:site_name" content="Stdio's Blog">
 <meta property="og:description" content="最近win10又频繁提示“许可即将过期”，之前找到的kms服务器又挂掉了，于是就决定自己搭一个自己用。">
-<meta property="og:updated_time" content="2015-10-21T12:22:56.763Z">
+<meta property="og:updated_time" content="2015-12-20T02:21:36.423Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建私有KMS服务器">
 <meta name="twitter:description" content="最近win10又频繁提示“许可即将过期”，之前找到的kms服务器又挂掉了，于是就决定自己搭一个自己用。">
@@ -239,8 +239,7 @@
         
           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-_引子"><span class="toc-text">1. 引子</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-_科普"><span class="toc-text">2. 科普</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-_搭(luan)建(gao)过程"><span class="toc-text">3. 搭(luan)建(gao)过程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-_总结"><span class="toc-text">4. 总结</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-_各种Key"><span class="toc-text">5. 各种Key</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-_参考文档"><span class="toc-text">6. 参考文档</span></a></li></ol>
         
-        <hr>
-<p>最近win10又频繁提示“许可即将过期”，之前找到的kms服务器又挂掉了，于是就决定自己搭一个自己用。</p>
+        <p>最近win10又频繁提示“许可即将过期”，之前找到的kms服务器又挂掉了，于是就决定自己搭一个自己用。</p>
 <a id="more"></a>
 <h1 id="1-_引子">1. 引子</h1><p>好久没更新日志了，暑假在家每天过的乱七八糟，就没怎么研究技术，于是博客也没怎么更新…今天随便写点什么凑个数_(:зゝ∠)_</p>
 <h1 id="2-_科普">2. 科普</h1><p>KMS (Key Management Service), 密钥管理服务，是一种对Windows及Office产品进行批量授权的服务，通常被部署在大型企业局域网中，用于对批量授权版（即VOL版）Windows系统进行大批量的激活。KMS服务器的作用是给局域网中的所有计算机的操作系统提供一个有效的产品序列号，然后计算机里面的KMS服务就会自动将系统激活。每一个由KMS Server提供的序列号的有效期只有180天，而不是其他版本的永久使用一个序列号。所以操作者必须在快到期的时候在此手动连接KMS服务器让它提供一个新的序列号，否则180天以后就会回到试用版本状态。由于KMS系统部署较为容易，所以在国内很多人通过MSDN等渠道下载VOL版本的软件，然后通过KMS服务进行激活，已达到盗版的目的。</p>

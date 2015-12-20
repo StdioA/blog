@@ -12,7 +12,7 @@
 <meta property="og:url" content="//blog.stdioa.com/2015/10/22/Python学习之上下文管理/index.html">
 <meta property="og:site_name" content="Stdio's Blog">
 <meta property="og:description" content="最近突发奇想，想写一个能改变当前输出环境，输出彩色文字的上下文管理器，于是学习了一下上下文管理。">
-<meta property="og:updated_time" content="2015-10-29T03:32:55.036Z">
+<meta property="og:updated_time" content="2015-12-20T02:22:08.283Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python学习之上下文管理">
 <meta name="twitter:description" content="最近突发奇想，想写一个能改变当前输出环境，输出彩色文字的上下文管理器，于是学习了一下上下文管理。">
@@ -239,8 +239,7 @@
         
           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-_简介"><span class="toc-text">1. 简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-_编写上下文管理器"><span class="toc-text">2. 编写上下文管理器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1___enter__函数"><span class="toc-text">2.1 __enter__函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2___exit__函数"><span class="toc-text">2.2 __exit__函数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-_综合示例"><span class="toc-text">3. 综合示例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-_参考文档"><span class="toc-text">4. 参考文档</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-_后记"><span class="toc-text">5. 后记</span></a></li></ol>
         
-        <hr>
-<p>最近突发奇想，想写一个能改变当前输出环境，输出彩色文字的上下文管理器，于是学习了一下上下文管理。</p>
+        <p>最近突发奇想，想写一个能改变当前输出环境，输出彩色文字的上下文管理器，于是学习了一下上下文管理。</p>
 <a id="more"></a>
 <h1 id="1-_简介">1. 简介</h1><p>上下文管理器(context manager)是Python2.5开始支持的一种语法，用于规定某个对象的使用范围。一旦进入或者离开该使用范围，会有特殊操作被调用 (比如为对象分配或者释放内存)。一个最简单的例子:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> file(<span class="string">"a.txt"</span>, <span class="string">"r"</span>) <span class="keyword">as</span> f:</span><br><span class="line">    s = f.read()</span><br><span class="line">    <span class="keyword">print</span> f.closed                  <span class="comment"># 此时文件是打开的</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> f.closed                      <span class="comment"># 变量s和f依然存在，但此时f已关闭</span></span><br></pre></td></tr></table></figure></p>
 <h1 id="2-_编写上下文管理器">2. 编写上下文管理器</h1><p>为一个类编写上下文管理器时，需要定义类的<code>__enter__</code>和<code>__exit__</code>函数。</p>

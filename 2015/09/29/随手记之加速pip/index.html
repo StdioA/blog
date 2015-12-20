@@ -12,7 +12,7 @@
 <meta property="og:url" content="//blog.stdioa.com/2015/09/29/随手记之加速pip/index.html">
 <meta property="og:site_name" content="Stdio's Blog">
 <meta property="og:description" content="原来Windows和Linux更改镜像源的方式是不一样的啊。">
-<meta property="og:updated_time" content="2015-09-29T15:06:30.762Z">
+<meta property="og:updated_time" content="2015-12-20T02:21:47.485Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="随手记 - 用国内镜像加速pip">
 <meta name="twitter:description" content="原来Windows和Linux更改镜像源的方式是不一样的啊。">
@@ -239,8 +239,7 @@
         
           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-_引子"><span class="toc-text">1. 引子</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-_过程"><span class="toc-text">2. 过程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-_瞎写"><span class="toc-text">3. 瞎写</span></a></li></ol>
         
-        <hr>
-<p>原来Windows和Linux更改镜像源的方式是不一样的啊。</p>
+        <p>原来Windows和Linux更改镜像源的方式是不一样的啊。</p>
 <a id="more"></a>
 <h1 id="1-_引子">1. 引子</h1><p>偶然发现USTC有一个pypi的源(<a href="http://mirrors.ustc.edu.cn/pypi/" target="_blank" rel="external">在这里</a>)，照着USTC给的<a href="https://lug.ustc.edu.cn/wiki/mirrors/help/pypi" target="_blank" rel="external">镜像使用帮助</a>更改镜像源无果。今天闲来无事就多搜了一下。</p>
 <h1 id="2-_过程">2. 过程</h1><p>USTC的镜像使用帮助里说，将<code>index-url = https://pypi.mirrors.ustc.edu.cn/simple</code>添加到<code>~/.pip/pip.conf</code>文件中，按照此思路看，如果我在Windows下使用的话，应该将配置信息添加到<code>C:\Users\Stdio\.pip\pip.conf</code>文件中。然而添加后并没有什么卵用。今天看见一个<a href="http://blog.csdn.net/sasoritattoo/article/details/10020547" target="_blank" rel="external">博文</a>说文件设置路径应为<code>%HOME%\pip\pip.ini</code>，于是试了一下（绝对路径为<code>C:\Users\Stdio\pip\pip.ini</code>），成功。用了USTC的源，装个软件速度简直飞起︿(￣︶￣)︿<br>弄好以后多了个心眼，去看看官方怎么说，于是找到了pip的Documentation（<a href="https://pip.pypa.io/en/stable/user_guide/#configuration" target="_blank" rel="external">在这里</a>）里面讲述了配置文件所在位置。</p>

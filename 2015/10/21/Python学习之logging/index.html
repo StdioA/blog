@@ -12,7 +12,7 @@
 <meta property="og:url" content="//blog.stdioa.com/2015/10/21/Python学习之logging/index.html">
 <meta property="og:site_name" content="Stdio's Blog">
 <meta property="og:description" content="以前写代码的时候，所有信息包括调试信息全部输出在屏幕上，有的时候会看起来乱糟糟的，这时就需要logging模块来记录信息或生成日志文件。">
-<meta property="og:updated_time" content="2015-10-26T01:48:59.593Z">
+<meta property="og:updated_time" content="2015-12-20T02:22:22.025Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python学习之logging">
 <meta name="twitter:description" content="以前写代码的时候，所有信息包括调试信息全部输出在屏幕上，有的时候会看起来乱糟糟的，这时就需要logging模块来记录信息或生成日志文件。">
@@ -239,8 +239,7 @@
         
           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-_简介"><span class="toc-text">1. 简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-_基本"><span class="toc-text">2. 基本</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-_日志格式设置及日志文件操作"><span class="toc-text">3. 日志格式设置及日志文件操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-_将日志输出到多个流中"><span class="toc-text">4. 将日志输出到多个流中</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-_设置多个logger以记录不同信息"><span class="toc-text">5. 设置多个logger以记录不同信息</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-_参考文档"><span class="toc-text">5. 参考文档</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-_后记"><span class="toc-text">6. 后记</span></a></li></ol>
         
-        <hr>
-<p>以前写代码的时候，所有信息包括调试信息全部输出在屏幕上，有的时候会看起来乱糟糟的，这时就需要logging模块来记录信息或生成日志文件。</p>
+        <p>以前写代码的时候，所有信息包括调试信息全部输出在屏幕上，有的时候会看起来乱糟糟的，这时就需要logging模块来记录信息或生成日志文件。</p>
 <a id="more"></a>
 <h1 id="1-_简介">1. 简介</h1><p>logging是一个用来记录日志信息的模块，它可以输出信息到stdout或者自定的日志文件中。</p>
 <h1 id="2-_基本">2. 基本</h1><p>输出信息：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">logging.debug(<span class="string">"A debug message"</span>)</span><br><span class="line">logging.info(<span class="string">"A info message"</span>)</span><br><span class="line">logging.warn(<span class="string">"A warning message"</span>)</span><br><span class="line">logging.error(<span class="string">"A error message"</span>)</span><br><span class="line">logging.critical(<span class="string">"A critical message"</span>)</span><br></pre></td></tr></table></figure></p>
