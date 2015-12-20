@@ -223,6 +223,7 @@ a {
 #container #mobile-nav #header .header-menu {
   height: auto;
   margin: 10px;
+  margin-top: 5px;
 }
 #container #mobile-nav #header .header-menu ul {
   text-align: center;
@@ -273,6 +274,9 @@ a {
   }
   #container #header .header-nav {
     position: relative;
+  }
+  #container #header .header-menu {
+    min-height: 1em;
   }
   #container .header-author.fixed {
     position: fixed;
@@ -467,6 +471,11 @@ a {
   }
   #container #footer .footer-right {
     float: initial;
+  }
+  #container ol.toc {
+    min-width: 0;
+    max-width: 320px;
+    width: 100%;
   }
 }
 .header-author {
@@ -1210,11 +1219,12 @@ a {
   padding-left: 0.5em;
 }
 ol.toc {
-  font-size: 17px;
+/*font-size: 17px;*/
   background: #eee;
   border: 1px solid #ccc;
   width: 30%;
-  max-width: 400px;
+  max-width: 600px;
+  min-width: 320px;
   padding-top: 0.3em;
   padding-bottom: 0.3em;
   margin-left: 0;
