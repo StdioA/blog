@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>//blog.stdioa.com/2015/10/22/Python%E5%AD%A6%E4%B9%A0%E4%B9%8Bvirtualenv/</loc>
+    <lastmod>2015-12-20T02:22:28.361Z</lastmod>
+    <data>
+        <display>
+        <title>Python学习之virtualenv</title>
+        <pubTime>2015-10-22T02:15:00.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>virtualenv</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="//blog.stdioa.com/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.stdioa.com/2015/11/12/Python%E5%AD%A6%E4%B9%A0%E4%B9%8Bunittest/</loc>
+    <lastmod>2015-12-20T02:22:25.400Z</lastmod>
+    <data>
+        <display>
+        <title>Python学习之unittest</title>
+        <pubTime>2015-11-12T10:53:02.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>unittest</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="//blog.stdioa.com/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.stdioa.com/2015/10/21/Python%E5%AD%A6%E4%B9%A0%E4%B9%8Blogging/</loc>
+    <lastmod>2015-12-20T02:22:22.025Z</lastmod>
+    <data>
+        <display>
+        <title>Python学习之logging</title>
+        <pubTime>2015-10-21T08:00:00.000Z</pubTime>
+        
+        <tag>logging</tag>
+         
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="//blog.stdioa.com/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.stdioa.com/2015/10/29/Python%E5%AD%A6%E4%B9%A0%E4%B9%8Bcollections/</loc>
+    <lastmod>2015-12-20T02:22:17.054Z</lastmod>
+    <data>
+        <display>
+        <title>Python学习之collections</title>
+        <pubTime>2015-10-29T12:55:00.000Z</pubTime>
+        
+        <tag>collections</tag>
+         
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="//blog.stdioa.com/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.stdioa.com/2015/10/26/Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8/</loc>
+    <lastmod>2015-12-20T02:22:13.570Z</lastmod>
+    <data>
+        <display>
+        <title>Python学习之迭代器</title>
+        <pubTime>2015-10-26T07:43:00.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>迭代器</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="//blog.stdioa.com/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.stdioa.com/2015/10/22/Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86/</loc>
+    <lastmod>2015-12-20T02:22:08.283Z</lastmod>
+    <data>
+        <display>
+        <title>Python学习之上下文管理</title>
+        <pubTime>2015-10-22T12:00:00.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>上下文管理</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="//blog.stdioa.com/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.stdioa.com/2015/07/09/LAMP%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%BF%83%E5%BE%97/</loc>
+    <lastmod>2015-12-20T02:22:04.402Z</lastmod>
+    <data>
+        <display>
+        <title>LAMP环境搭建心得</title>
+        <pubTime>2015-07-09T12:05:00.000Z</pubTime>
+        
+        <tag>Apache</tag>
+         
+        <tag>Linux</tag>
+         
+        <tag>MySQL</tag>
+         
+        <tag>PHP</tag>
+         
+         
+           
+             
+              <breadCrumb title="网络" url="//blog.stdioa.com/categories/%E7%BD%91%E7%BB%9C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.stdioa.com/2015/10/14/%E9%9A%8F%E6%89%8B%E8%AE%B0%E4%B9%8BGit/</loc>
+    <lastmod>2015-12-20T02:22:00.577Z</lastmod>
+    <data>
+        <display>
+        <title>随手记之Git</title>
+        <pubTime>2015-10-14T10:28:00.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+        <tag>编程工具</tag>
+         
+         
+           
+             
+              <breadCrumb title="随手记" url="//blog.stdioa.com/categories/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.stdioa.com/2015/12/07/%E9%9A%8F%E6%89%8B%E8%AE%B0%E4%B9%8B%E8%A7%A3%E5%86%B3InsecurePlatformWarning/</loc>
+    <lastmod>2015-12-20T02:21:53.885Z</lastmod>
+    <data>
+        <display>
+        <title>随手记 - 解决InsecurePlatformWarning</title>
+        <pubTime>2015-12-07T15:01:00.000Z</pubTime>
+        
+        <tag>openssl</tag>
+         
+        <tag>python</tag>
+         
+        <tag>requests</tag>
+         
+         
+           
+             
+              <breadCrumb title="随手记" url="//blog.stdioa.com/categories/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.stdioa.com/2015/09/29/%E9%9A%8F%E6%89%8B%E8%AE%B0%E4%B9%8B%E5%8A%A0%E9%80%9Fpip/</loc>
+    <lastmod>2015-12-20T02:21:47.485Z</lastmod>
+    <data>
+        <display>
+        <title>随手记 - 用国内镜像加速pip</title>
+        <pubTime>2015-09-29T15:01:00.000Z</pubTime>
+        
+        <tag>pip</tag>
+         
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="随手记" url="//blog.stdioa.com/categories/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.stdioa.com/2015/09/22/%E7%82%B9%E7%82%B9%E6%8A%80%E8%83%BD%E7%82%B9%E4%B9%8BAjax/</loc>
+    <lastmod>2015-12-20T02:21:41.907Z</lastmod>
+    <data>
+        <display>
+        <title>点点技能点之Ajax</title>
+        <pubTime>2015-09-22T13:07:00.000Z</pubTime>
+        
+        <tag>Ajax</tag>
+         
+        <tag>前端开发</tag>
+         
+         
+           
+             
+              <breadCrumb title="网络" url="//blog.stdioa.com/categories/%E7%BD%91%E7%BB%9C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.stdioa.com/2015/09/02/%E6%90%AD%E5%BB%BA%E7%A7%81%E6%9C%89KMS%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <lastmod>2015-12-20T02:21:36.423Z</lastmod>
+    <data>
+        <display>
+        <title>搭建私有KMS服务器</title>
+        <pubTime>2015-09-02T14:26:00.000Z</pubTime>
+        
+        <tag>KMS</tag>
+         
+         
+           
+             
+              <breadCrumb title="乱七八糟" url="//blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.stdioa.com/2015/09/18/%E5%9C%A8Windows%E4%B8%AD%E4%BD%BF%E7%94%A8wget/</loc>
+    <lastmod>2015-12-20T02:21:22.500Z</lastmod>
+    <data>
+        <display>
+        <title>在Windows中使用Wget</title>
+        <pubTime>2015-09-18T12:07:00.000Z</pubTime>
+        
+        <tag>Windows</tag>
+         
+        <tag>wget</tag>
+         
+         
+           
+             
+              <breadCrumb title="乱七八糟" url="//blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.stdioa.com/2015/12/18/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E8%AE%B02/</loc>
+    <lastmod>2015-12-18T11:41:03.947Z</lastmod>
+    <data>
+        <display>
+        <title>博客迁移记（二）</title>
+        <pubTime>2015-12-18T07:55:37.000Z</pubTime>
+        
+        <tag>Github</tag>
+         
+        <tag>Let&#39;s Encrypt</tag>
+         
+        <tag>nginx</tag>
+         
+         
+           
+             
+              <breadCrumb title="乱七八糟" url="//blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>//blog.stdioa.com/2015/12/17/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E8%AE%B0/</loc>
+    <lastmod>2015-12-18T05:53:29.525Z</lastmod>
+    <data>
+        <display>
+        <title>博客迁移记（一）</title>
+        <pubTime>2015-12-17T11:55:37.000Z</pubTime>
+        
+        <tag>Github</tag>
+         
+        <tag>nginx</tag>
+         
+        <tag>python</tag>
+         
+         
+           
+             
+              <breadCrumb title="乱七八糟" url="//blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+</urlset>
