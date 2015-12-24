@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[博客迁移记（二）]]></title>
-    <link href="//blog.stdioa.com/2015/12/18/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E8%AE%B02/"/>
-    <id>//blog.stdioa.com/2015/12/18/博客迁移记2/</id>
+    <link href="//blog.stdioa.com/2015/12/blog-migration-ii/"/>
+    <id>//blog.stdioa.com/2015/12/blog-migration-ii/</id>
     <published>2015-12-18T07:55:37.000Z</published>
     <updated>2015-12-18T11:41:03.947Z</updated>
     <content type="html"><![CDATA[<p>域名依然在备案中，依然想将博客部署到新买的VPS的我和腾讯斗智斗勇（雾），为博客添加了HTTPS&gt;_&lt;<br>同时，把自己的密码学课设也转移到VPS上来了。</p>
@@ -63,8 +63,8 @@
   
   <entry>
     <title><![CDATA[博客迁移记（一）]]></title>
-    <link href="//blog.stdioa.com/2015/12/17/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E8%AE%B0/"/>
-    <id>//blog.stdioa.com/2015/12/17/博客迁移记/</id>
+    <link href="//blog.stdioa.com/2015/12/blog-migration/"/>
+    <id>//blog.stdioa.com/2015/12/blog-migration/</id>
     <published>2015-12-17T11:55:37.000Z</published>
     <updated>2015-12-18T05:53:29.525Z</updated>
     <content type="html"><![CDATA[<p>昨天买了一个VPS、一个域名，决定把博客迁移到VPS上。</p>
@@ -107,8 +107,8 @@
   
   <entry>
     <title><![CDATA[随手记 - 解决InsecurePlatformWarning]]></title>
-    <link href="//blog.stdioa.com/2015/12/07/%E9%9A%8F%E6%89%8B%E8%AE%B0%E4%B9%8B%E8%A7%A3%E5%86%B3InsecurePlatformWarning/"/>
-    <id>//blog.stdioa.com/2015/12/07/随手记之解决InsecurePlatformWarning/</id>
+    <link href="//blog.stdioa.com/2015/12/essay-solve-InsecurePlatformWarning/"/>
+    <id>//blog.stdioa.com/2015/12/essay-solve-InsecurePlatformWarning/</id>
     <published>2015-12-07T15:01:00.000Z</published>
     <updated>2015-12-20T02:21:53.885Z</updated>
     <content type="html"><![CDATA[<p>第三次在VPS上面解决使用requests报InsecurePlatformWarning警告的问题。之前每次都要查资料折腾好久，这次决定把它记下来。</p>
@@ -151,8 +151,8 @@
   
   <entry>
     <title><![CDATA[Python学习之unittest]]></title>
-    <link href="//blog.stdioa.com/2015/11/12/Python%E5%AD%A6%E4%B9%A0%E4%B9%8Bunittest/"/>
-    <id>//blog.stdioa.com/2015/11/12/Python学习之unittest/</id>
+    <link href="//blog.stdioa.com/2015/11/learning-python-unittest/"/>
+    <id>//blog.stdioa.com/2015/11/learning-python-unittest/</id>
     <published>2015-11-12T10:53:02.000Z</published>
     <updated>2015-12-20T02:22:25.400Z</updated>
     <content type="html"><![CDATA[<p>单元测试，工程开发中重要的一环。</p>
@@ -196,8 +196,8 @@
   
   <entry>
     <title><![CDATA[Python学习之collections]]></title>
-    <link href="//blog.stdioa.com/2015/10/29/Python%E5%AD%A6%E4%B9%A0%E4%B9%8Bcollections/"/>
-    <id>//blog.stdioa.com/2015/10/29/Python学习之collections/</id>
+    <link href="//blog.stdioa.com/2015/10/learning-python-collections/"/>
+    <id>//blog.stdioa.com/2015/10/learning-python-collections/</id>
     <published>2015-10-29T12:55:00.000Z</published>
     <updated>2015-12-20T02:22:17.054Z</updated>
     <content type="html"><![CDATA[<p>collection是Python内建的一个实用工具包，提供一些使用的容器，用于对传统容器类型进行功能提升。</p>
@@ -282,8 +282,8 @@
   
   <entry>
     <title><![CDATA[Python学习之迭代器]]></title>
-    <link href="//blog.stdioa.com/2015/10/26/Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%BF%AD%E4%BB%A3%E5%99%A8/"/>
-    <id>//blog.stdioa.com/2015/10/26/Python学习之迭代器/</id>
+    <link href="//blog.stdioa.com/2015/10/learning-python-iterator/"/>
+    <id>//blog.stdioa.com/2015/10/learning-python-iterator/</id>
     <published>2015-10-26T07:43:00.000Z</published>
     <updated>2015-12-20T02:22:13.570Z</updated>
     <content type="html"><![CDATA[<p>昨晚用python写了个简单的链表，突然想起了迭代器，就随手整理一下，顺便过一下itertools模块。</p>
@@ -353,8 +353,8 @@
   
   <entry>
     <title><![CDATA[Python学习之上下文管理]]></title>
-    <link href="//blog.stdioa.com/2015/10/22/Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86/"/>
-    <id>//blog.stdioa.com/2015/10/22/Python学习之上下文管理/</id>
+    <link href="//blog.stdioa.com/2015/10/learning-python-context-management/"/>
+    <id>//blog.stdioa.com/2015/10/learning-python-context-management/</id>
     <published>2015-10-22T12:00:00.000Z</published>
     <updated>2015-12-20T02:22:08.283Z</updated>
     <content type="html"><![CDATA[<p>最近突发奇想，想写一个能改变当前输出环境，输出彩色文字的上下文管理器，于是学习了一下上下文管理。</p>
@@ -396,8 +396,8 @@
   
   <entry>
     <title><![CDATA[Python学习之virtualenv]]></title>
-    <link href="//blog.stdioa.com/2015/10/22/Python%E5%AD%A6%E4%B9%A0%E4%B9%8Bvirtualenv/"/>
-    <id>//blog.stdioa.com/2015/10/22/Python学习之virtualenv/</id>
+    <link href="//blog.stdioa.com/2015/10/learning-python-virtualenv/"/>
+    <id>//blog.stdioa.com/2015/10/learning-python-virtualenv/</id>
     <published>2015-10-22T02:15:00.000Z</published>
     <updated>2015-12-20T02:22:28.361Z</updated>
     <content type="html"><![CDATA[<p>用过virtualenv的人都说好，可是我没有具体使用过，所以尝试了一下，用完我也说好~233333</p>
@@ -438,8 +438,8 @@
   
   <entry>
     <title><![CDATA[Python学习之logging]]></title>
-    <link href="//blog.stdioa.com/2015/10/21/Python%E5%AD%A6%E4%B9%A0%E4%B9%8Blogging/"/>
-    <id>//blog.stdioa.com/2015/10/21/Python学习之logging/</id>
+    <link href="//blog.stdioa.com/2015/10/learning-python-logging/"/>
+    <id>//blog.stdioa.com/2015/10/learning-python-logging/</id>
     <published>2015-10-21T08:00:00.000Z</published>
     <updated>2015-12-20T02:22:22.025Z</updated>
     <content type="html"><![CDATA[<p>以前写代码的时候，所有信息包括调试信息全部输出在屏幕上，有的时候会看起来乱糟糟的，这时就需要logging模块来记录信息或生成日志文件。</p>
@@ -472,8 +472,8 @@
   
   <entry>
     <title><![CDATA[随手记之Git]]></title>
-    <link href="//blog.stdioa.com/2015/10/14/%E9%9A%8F%E6%89%8B%E8%AE%B0%E4%B9%8BGit/"/>
-    <id>//blog.stdioa.com/2015/10/14/随手记之Git/</id>
+    <link href="//blog.stdioa.com/2015/10/essay-git/"/>
+    <id>//blog.stdioa.com/2015/10/essay-git/</id>
     <published>2015-10-14T10:28:00.000Z</published>
     <updated>2015-12-20T02:22:00.577Z</updated>
     <content type="html"><![CDATA[<p>从一年前开始使用Git, 一直没系统整理过Git的命令，前几天在部署代码的时候出了问题不知道该如何解决，于是决定整理一份Git的使用方法。本博文会持续更新。</p>
@@ -567,8 +567,8 @@
   
   <entry>
     <title><![CDATA[随手记 - 用国内镜像加速pip]]></title>
-    <link href="//blog.stdioa.com/2015/09/29/%E9%9A%8F%E6%89%8B%E8%AE%B0%E4%B9%8B%E5%8A%A0%E9%80%9Fpip/"/>
-    <id>//blog.stdioa.com/2015/09/29/随手记之加速pip/</id>
+    <link href="//blog.stdioa.com/2015/09/essay-pip-acceleration/"/>
+    <id>//blog.stdioa.com/2015/09/essay-pip-acceleration/</id>
     <published>2015-09-29T15:01:00.000Z</published>
     <updated>2015-12-20T02:21:47.485Z</updated>
     <content type="html"><![CDATA[<p>原来Windows和Linux更改镜像源的方式是不一样的啊。</p>
@@ -594,8 +594,8 @@
   
   <entry>
     <title><![CDATA[点点技能点之Ajax]]></title>
-    <link href="//blog.stdioa.com/2015/09/22/%E7%82%B9%E7%82%B9%E6%8A%80%E8%83%BD%E7%82%B9%E4%B9%8BAjax/"/>
-    <id>//blog.stdioa.com/2015/09/22/点点技能点之Ajax/</id>
+    <link href="//blog.stdioa.com/2015/09/essay-ajax/"/>
+    <id>//blog.stdioa.com/2015/09/essay-ajax/</id>
     <published>2015-09-22T13:07:00.000Z</published>
     <updated>2015-12-20T02:21:41.907Z</updated>
     <content type="html"><![CDATA[<p>之前自己没怎么写过前端，一直以为Ajax写起来很麻烦，也没怎么接触Ajax，今天写了个小网页用到了Ajax，感觉它并不是想象的那么复杂，写完网页随手总结一下。（喂我这个技能点是不是点的太晚了啊！）</p>
@@ -624,8 +624,8 @@
   
   <entry>
     <title><![CDATA[在Windows中使用Wget]]></title>
-    <link href="//blog.stdioa.com/2015/09/18/%E5%9C%A8Windows%E4%B8%AD%E4%BD%BF%E7%94%A8wget/"/>
-    <id>//blog.stdioa.com/2015/09/18/在Windows中使用wget/</id>
+    <link href="//blog.stdioa.com/2015/09/using-wget-in-Windows/"/>
+    <id>//blog.stdioa.com/2015/09/using-wget-in-Windows/</id>
     <published>2015-09-18T12:07:00.000Z</published>
     <updated>2015-12-20T02:21:22.500Z</updated>
     <content type="html"><![CDATA[<p>一直心心念念想在Windows里用wget，今天随便搞了搞，在Windows里面用上了wget，终于可以下载一些乱七八糟的小文件辣。</p>
@@ -651,8 +651,8 @@
   
   <entry>
     <title><![CDATA[搭建私有KMS服务器]]></title>
-    <link href="//blog.stdioa.com/2015/09/02/%E6%90%AD%E5%BB%BA%E7%A7%81%E6%9C%89KMS%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    <id>//blog.stdioa.com/2015/09/02/搭建私有KMS服务器/</id>
+    <link href="//blog.stdioa.com/2015/09/building-a-private-kms-server/"/>
+    <id>//blog.stdioa.com/2015/09/building-a-private-kms-server/</id>
     <published>2015-09-02T14:26:00.000Z</published>
     <updated>2015-12-20T02:21:36.423Z</updated>
     <content type="html"><![CDATA[<p>最近win10又频繁提示“许可即将过期”，之前找到的kms服务器又挂掉了，于是就决定自己搭一个自己用。</p>
@@ -694,8 +694,8 @@ Connection closed: <span class="number">192.168</span><span class="number">.56</
   
   <entry>
     <title><![CDATA[LAMP环境搭建心得]]></title>
-    <link href="//blog.stdioa.com/2015/07/09/LAMP%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%BF%83%E5%BE%97/"/>
-    <id>//blog.stdioa.com/2015/07/09/LAMP环境搭建心得/</id>
+    <link href="//blog.stdioa.com/2015/07/deploy-a-LAMP-environment/"/>
+    <id>//blog.stdioa.com/2015/07/deploy-a-LAMP-environment/</id>
     <published>2015-07-09T12:05:00.000Z</published>
     <updated>2015-12-20T02:22:04.402Z</updated>
     <content type="html"><![CDATA[<p>闲来无事，在虚拟机上搭了一个LAMP服务器环境，把安装及配置过程记了下来。</p>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>Python学习之unittest | Stdio&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="单元测试，工程开发中重要的一环。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python学习之unittest">
+<meta property="og:url" content="//blog.stdioa.com/2015/11/learning-python-unittest/index.html">
+<meta property="og:site_name" content="Stdio's Blog">
+<meta property="og:description" content="单元测试，工程开发中重要的一环。">
+<meta property="og:updated_time" content="2015-12-20T02:22:25.400Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python学习之unittest">
+<meta name="twitter:description" content="单元测试，工程开发中重要的一环。">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/avatar.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">David Dai</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">随便写写</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/about">关于我</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/StdioA" title="github">github</a>
+					        
+								<a class="telegram" target="_blank" href="https://telegram.me/StdioA" title="telegram">telegram</a>
+					        
+								<a class="mail" target="_blank" href="mailto:stdio_dai@nuaa.edu.cn" title="mail">mail</a>
+					        
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/Apache/" style="font-size: 10px;">Apache</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Github/" style="font-size: 15px;">Github</a> <a href="/tags/KMS/" style="font-size: 10px;">KMS</a> <a href="/tags/Let-s-Encrypt/" style="font-size: 10px;">Let's Encrypt</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/collections/" style="font-size: 10px;">collections</a> <a href="/tags/logging/" style="font-size: 10px;">logging</a> <a href="/tags/nginx/" style="font-size: 15px;">nginx</a> <a href="/tags/openssl/" style="font-size: 10px;">openssl</a> <a href="/tags/pip/" style="font-size: 10px;">pip</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/requests/" style="font-size: 10px;">requests</a> <a href="/tags/unittest/" style="font-size: 10px;">unittest</a> <a href="/tags/virtualenv/" style="font-size: 10px;">virtualenv</a> <a href="/tags/wget/" style="font-size: 10px;">wget</a> <a href="/tags/上下文管理/" style="font-size: 10px;">上下文管理</a> <a href="/tags/前端开发/" style="font-size: 10px;">前端开发</a> <a href="/tags/编程工具/" style="font-size: 10px;">编程工具</a> <a href="/tags/迭代器/" style="font-size: 10px;">迭代器</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://7tsyw3.com1.z0.glb.clouddn.com/index.html">我的乐谱分享站</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://rexskz.info/">Rexskz</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">集死宅和现充于一身的小孩子。</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">David Dai</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/avatar.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">David Dai</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">随便写写</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/about">关于我</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/StdioA" title="github">github</a>
+			        
+						<a class="telegram" target="_blank" href="https://telegram.me/StdioA" title="telegram">telegram</a>
+			        
+						<a class="mail" target="_blank" href="mailto:stdio_dai@nuaa.edu.cn" title="mail">mail</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-learning-python-unittest" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/learning-python-unittest/" class="article-date">
+  	<time datetime="2015-11-12T10:53:02.000Z" itemprop="datePublished">2015-11-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python学习之unittest
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/unittest/">unittest</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Python/">Python</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-_简介"><span class="toc-text">1. 简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-_使用unittest进行测试"><span class="toc-text">2. 使用unittest进行测试</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1_编写测试文件"><span class="toc-text">2.1 编写测试文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2_运行测试"><span class="toc-text">2.2 运行测试</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-_使用Nose进行单元测试"><span class="toc-text">3. 使用Nose进行单元测试</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1_编写测试文件"><span class="toc-text">3.1 编写测试文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2_运行测试文件"><span class="toc-text">3.2 运行测试文件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-_参考文档"><span class="toc-text">4. 参考文档</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-_后记"><span class="toc-text">5. 后记</span></a></li></ol>
+        
+        <p>单元测试，工程开发中重要的一环。</p>
+<a id="more"></a>
+<h1 id="1-_简介">1. 简介</h1><p>单元测试是用来对一个模块、一个函数或者一个类来进行正确性检验的测试工作。</p>
+<h1 id="2-_使用unittest进行测试">2. 使用unittest进行测试</h1><p>unittest是Python自带的单元测试模块，通过编写测试类，在测试类中编写测试函数的方式进行测试。<br>不知道该测试什么，就对python的list对象测试一下好了。</p>
+<h2 id="2-1_编写测试文件">2.1 编写测试文件</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding: utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> unittest                                 <span class="comment"># 使用unittest模块</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestStringMethods</span><span class="params">(unittest.TestCase)</span>:</span>     <span class="comment"># 测试类需继承自unittest.TestCase</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">setUp</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment"># 在函数里进行测试之前需要进行的一些准备工作，setUp在每次测试之前都会运行一次</span></span><br><span class="line">        self.d = []</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_empty</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""\</span><br><span class="line">        Empty testcase</span><br><span class="line">        """</span></span><br><span class="line">        self.assertEqual([], [])                <span class="comment"># 若a和b相等则通过</span></span><br><span class="line">        self.assertNotEqual([<span class="number">1</span>], [])            <span class="comment"># 若不相等则通过</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_bool</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""\</span><br><span class="line">        Bool transform testcase</span><br><span class="line">        """</span></span><br><span class="line">        self.assertTrue([<span class="number">1</span>])                    <span class="comment"># 若内部的表达式或对象为真则通过</span></span><br><span class="line">        self.assertFalse([])                    <span class="comment"># 为假则通过</span></span><br><span class="line">        self.assertTrue(bool([<span class="number">1</span>]))</span><br><span class="line">        self.assertFalse(bool([]))</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_append</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""\</span><br><span class="line">        Append testcase</span><br><span class="line">        """</span></span><br><span class="line">        list_ = []</span><br><span class="line">        list_.append(<span class="number">1</span>)</span><br><span class="line">        self.assertEqual(list_, [<span class="number">1</span>])</span><br><span class="line">        self.assertNotEqual(list_, [])</span><br><span class="line">        list_.append(<span class="number">2</span>)</span><br><span class="line">        self.assertIn(<span class="number">1</span>, list_)                 <span class="comment"># 若a in b则通过</span></span><br><span class="line">        self.assertNotIn(<span class="number">3</span>, list_)              <span class="comment"># 若a not in b则通过</span></span><br><span class="line">        self.assertTrue(list_[<span class="number">0</span>] == <span class="number">1</span>)</span><br><span class="line">        self.assertEqual(list_[<span class="number">1</span>], <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_instance</span><span class="params">(self)</span>:</span></span><br><span class="line">        list_ = []</span><br><span class="line">        self.assertIsInstance(list_, list)      <span class="comment"># 若isinstance(a, b)为真则通过</span></span><br><span class="line">        self.assertNotIsInstance(list_, str)    <span class="comment"># 若isinstance(a, b)为假则通过</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">test_index</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""\</span><br><span class="line">        Index testcase</span><br><span class="line">        """</span></span><br><span class="line">        list_ = []</span><br><span class="line">        <span class="keyword">with</span> self.assertRaises(IndexError):     <span class="comment"># 检测是否有异常抛出，有指定异常抛出则通过</span></span><br><span class="line">            a = list_[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">        list_ = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">        self.assertEqual(list_[<span class="number">1</span>], <span class="number">2</span>)</span><br><span class="line">        self.assertEqual(list_[-<span class="number">2</span>], <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">with</span> self.assertRaises(IndexError):</span><br><span class="line">            a = list_[<span class="number">4</span>]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">tearDown</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment"># 在测试之后需要进行的一些处理事项，tearDown在每次测试之后都会运行一次</span></span><br><span class="line">        <span class="keyword">del</span> self.d</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    __import__(<span class="string">"sys"</span>).argv.append(<span class="string">"-v"</span>)         <span class="comment"># 采用verbose方式，输出测试信息</span></span><br><span class="line">    unittest.main()</span><br></pre></td></tr></table></figure>
+<h2 id="2-2_运行测试">2.2 运行测试</h2><ul>
+<li><p>直接运行测试程序，输出:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">test</span>_append (__main__.TestStringMethods)</span><br><span class="line">Append testcase ... ok</span><br><span class="line"><span class="built_in">test</span>_bool (__main__.TestStringMethods)</span><br><span class="line">Bool transform testcase ... ok</span><br><span class="line"><span class="built_in">test</span>_empty (__main__.TestStringMethods)</span><br><span class="line">Empty testcase ... ok</span><br><span class="line"><span class="built_in">test</span>_index (__main__.TestStringMethods)</span><br><span class="line">Index testcase ... ok</span><br><span class="line"><span class="built_in">test</span>_instance (__main__.TestStringMethods) ... ok</span><br><span class="line"></span><br><span class="line">----------------------------------------------------------------------</span><br><span class="line">Ran <span class="number">5</span> tests <span class="keyword">in</span> <span class="number">0.001</span>s</span><br><span class="line"></span><br><span class="line">OK</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>运行<code>python -m unittest test.py</code>也可以进行测试；</p>
+</li>
+<li>运行<code>python -m unittest</code>, unittest会在当前文件夹中寻找测试类进行测试（真智能）；</li>
+<li>若有测试未通过，unittest会在测试时报告FAIL, 并在测试结束后将所有未通过测试的项目列出。</li>
+</ul>
+<h1 id="3-_使用Nose进行单元测试">3. 使用Nose进行单元测试</h1><p>Nose是一个对unittest的扩展测试框架，能自动发现并运行测试。使用Nose，可以将单元测试代码的编写变得更简单，不用再构造测试类，只需要在以<code>test</code>开头的文件中建立以<code>test</code>开头的函数即可。</p>
+<h2 id="3-1_编写测试文件">3.1 编写测试文件</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding: utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> nose</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_nose_installed_successfully</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">import</span> nose                         <span class="comment"># 运行测试代码</span></span><br><span class="line">    <span class="keyword">assert</span> <span class="keyword">True</span>                         <span class="comment"># assert True表示测试成功</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_obviously_failed</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">assert</span> <span class="keyword">False</span>                        <span class="comment"># assert False表示测试失败，测试时会报"FAIL"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_returns_an_exception</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">raise</span> ValueError                    <span class="comment"># 若抛出除AssertionError的异常，测试时会报"ERROR"</span></span><br><span class="line"></span><br><span class="line">nose.main()</span><br></pre></td></tr></table></figure>
+<h2 id="3-2_运行测试文件">3.2 运行测试文件</h2><p>nose自带可执行文件，所以只需要输入<code>nosetests [测试文件名]</code>即可，若测试文件名为空，则nosetest会在当前文件夹寻找所有测试。以下命令格式均可接受：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nosetests test.module</span><br><span class="line">nosetests another.test:TestCase.test_method</span><br><span class="line">nosetests a.test:TestCase</span><br><span class="line">nosetests /path/to/<span class="built_in">test</span>/file.py:<span class="built_in">test</span>_<span class="keyword">function</span></span><br></pre></td></tr></table></figure></p>
+<p>运行<code>nosetests test_with_nose -v</code>，输出：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">$ nosetests <span class="built_in">test</span>_with_nose -v</span><br><span class="line"><span class="built_in">test</span>_with_nose.test_nose_installed_successfully ... ok</span><br><span class="line"><span class="built_in">test</span>_with_nose.test_obviously_failed ... FAIL</span><br><span class="line"><span class="built_in">test</span>_with_nose.test_returns_an_exception ... ERROR</span><br><span class="line"></span><br><span class="line">======================================================================</span><br><span class="line">ERROR: <span class="built_in">test</span>_with_nose.test_returns_an_exception</span><br><span class="line">----------------------------------------------------------------------</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"c:\python35\lib\site-packages\nose\case.py"</span>, line <span class="number">198</span>, <span class="keyword">in</span> runTest</span><br><span class="line">    self.test(*self.arg)</span><br><span class="line">  File <span class="string">"C:\Users\Stdio\Desktop\temp\utest\test_with_nose.py"</span>, line <span class="number">13</span>, <span class="keyword">in</span> <span class="built_in">test</span>_returns_an_exception</span><br><span class="line">    raise ValueError</span><br><span class="line">ValueError</span><br><span class="line"></span><br><span class="line">======================================================================</span><br><span class="line">FAIL: <span class="built_in">test</span>_with_nose.test_obviously_failed</span><br><span class="line">----------------------------------------------------------------------</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line"> File <span class="string">"c:\python35\lib\site-packages\nose\case.py"</span>, line <span class="number">198</span>, <span class="keyword">in</span> runTest</span><br><span class="line">   self.test(*self.arg)</span><br><span class="line">  File <span class="string">"C:\Users\Stdio\Desktop\temp\utest\test_with_nose.py"</span>, line <span class="number">10</span>, <span class="keyword">in</span> <span class="built_in">test</span>_obviously_failed</span><br><span class="line">   assert False</span><br><span class="line">AssertionError</span><br><span class="line"></span><br><span class="line">----------------------------------------------------------------------</span><br><span class="line">Ran <span class="number">3</span> tests <span class="keyword">in</span> <span class="number">0.003</span>s</span><br><span class="line"></span><br><span class="line">FAILED (errors=<span class="number">1</span>, failures=<span class="number">1</span>)</span><br></pre></td></tr></table></figure></p>
+<h1 id="4-_参考文档">4. 参考文档</h1><ol>
+<li><a href="https://docs.python.org/3/library/unittest.html" target="_blank" rel="external">unitest - Python Doc</a></li>
+<li><a href="http://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/00143191629979802b566644aa84656b50cd484ec4a7838000" target="_blank" rel="external">单元测试 - 廖雪峰的python教程</a></li>
+<li><a href="https://nose.readthedocs.org/en/latest/" target="_blank" rel="external">Nose documentation</a></li>
+<li><a href="http://blog.csdn.net/linda1000/article/details/8533349" target="_blank" rel="external">Python的学习（十八）—- 单元测试工具nose</a></li>
+</ol>
+<h1 id="5-_后记">5. 后记</h1><p>拖了一个月，这个坑再不填日子没法过了(╯‵□′)╯︵┻━┻<br>到现在没给自己的代码写过测试，也是醉…<br>一直想转Py3一直没转，昨天改了环境变量，强迫自己用一阵子，多去看看Py3的特性，有时间整理一下。<br>Git的坑还没填完不过自己的Pro Git看的差不多了，貌似也满足自己的需求了，准备弃坑。<br>下一篇有可能是SQLAlchemy, MongoDB, Flask…哎，随它去吧。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/12/essay-solve-InsecurePlatformWarning/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          随手记 - 解决InsecurePlatformWarning
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/10/learning-python-collections/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python学习之collections</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'stdioa'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 David Dai
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="//7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-65107715-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+  </div>
+</body>
+</html>
