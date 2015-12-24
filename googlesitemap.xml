@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.stdioa.com/2015/12/blog-migration-ii/</loc>
+    <lastmod>2015-12-24T12:06:06.561Z</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.stdioa.com/2015/10/learning-python-virtualenv/</loc>
     <lastmod>2015-12-20T02:22:28.361Z</lastmod>
   </url>
@@ -64,11 +69,6 @@
   <url>
     <loc>https://blog.stdioa.com/2015/09/using-wget-in-Windows/</loc>
     <lastmod>2015-12-20T02:21:22.500Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2015/12/blog-migration-ii/</loc>
-    <lastmod>2015-12-18T11:41:03.947Z</lastmod>
   </url>
   
   <url>

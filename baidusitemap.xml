@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>https://blog.stdioa.com/2015/12/blog-migration-ii/</loc>
+    <lastmod>2015-12-24T12:06:06.561Z</lastmod>
+    <data>
+        <display>
+        <title>博客迁移记（二）</title>
+        <pubTime>2015-12-18T07:55:37.000Z</pubTime>
+        
+        <tag>Github</tag>
+         
+        <tag>Let&#39;s Encrypt</tag>
+         
+        <tag>nginx</tag>
+         
+         
+           
+             
+              <breadCrumb title="乱七八糟" url="//blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://blog.stdioa.com/2015/10/learning-python-virtualenv/</loc>
     <lastmod>2015-12-20T02:22:28.361Z</lastmod>
     <data>
@@ -282,30 +306,6 @@
         <tag>Windows</tag>
          
         <tag>wget</tag>
-         
-         
-           
-             
-              <breadCrumb title="乱七八糟" url="//blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.stdioa.com/2015/12/blog-migration-ii/</loc>
-    <lastmod>2015-12-18T11:41:03.947Z</lastmod>
-    <data>
-        <display>
-        <title>博客迁移记（二）</title>
-        <pubTime>2015-12-18T07:55:37.000Z</pubTime>
-        
-        <tag>Github</tag>
-         
-        <tag>Let&#39;s Encrypt</tag>
-         
-        <tag>nginx</tag>
          
          
            

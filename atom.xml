@@ -4,7 +4,7 @@
   <subtitle><![CDATA[随便写写]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="//blog.stdioa.com/"/>
-  <updated>2015-12-18T11:41:03.947Z</updated>
+  <updated>2015-12-24T12:06:06.561Z</updated>
   <id>//blog.stdioa.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="//blog.stdioa.com/2015/12/blog-migration-ii/"/>
     <id>//blog.stdioa.com/2015/12/blog-migration-ii/</id>
     <published>2015-12-18T07:55:37.000Z</published>
-    <updated>2015-12-18T11:41:03.947Z</updated>
+    <updated>2015-12-24T12:06:06.561Z</updated>
     <content type="html"><![CDATA[<p>域名依然在备案中，依然想将博客部署到新买的VPS的我和腾讯斗智斗勇（雾），为博客添加了HTTPS&gt;_&lt;<br>同时，把自己的密码学课设也转移到VPS上来了。</p>
 <a id="more"></a>
 <h1 id="1-_使用Nginx针对多个host部署服务器">1. 使用Nginx针对多个host部署服务器</h1><h2 id="1-1_概述">1.1 概述</h2><p>如果一个VPS只能搭一个网站，那未免太浪费了，所以我们可以通过配置Nginx的方式来将针对多个域名的访问请求分开，从而进行不同的处理。例如，我在DNS配置时将<code>blog.stdioa.com</code>与<code>crypt.stdioa.com</code>同时指向到我的腾讯云的IP地址，用户访问这两个域名时，都会向我的VPS发送请求，我要做的是将这两种针对不同域名的访问请求分开。而这两种请求的区别在HTTP请求头的Host字段，所以我只需要针对不同的Host使用不同的处理方式即可。</p>
@@ -44,7 +44,16 @@
 <p>小插曲3：<br>上面那张图片的链接之前来自七牛，采用HTTP协议而不是HTTPS加载。发布这篇博文后，我发现该文章页面中地址栏左侧的HTTPS标志变为了白色…还是不好看！打开Chrome的控制台，在控制台中看到，如果图片链接协议为HTTPS，则Chrome依然会提示“不安全”，但是个人感觉这只是一张图片而已啊，又不是JS_(:зゝ∠)_<br>解决方案：将图片链接改回本地，待域名备案后再想办法在七牛那边解决域名绑定及HTTPS的问题。</p>
 <h1 id="4-_参考资料">4. 参考资料</h1><p><a href="http://www.vpser.net/build/letsencrypt-free-ssl.html" target="_blank" rel="external">免费SSL安全证书Let’s Encrypt安装使用教程(附Nginx/Apache配置)</a><br><a href="http://blog.csdn.net/donghustone/article/details/25797727" target="_blank" rel="external">http://blog.csdn.net/donghustone/article/details/25797727</a><br><a href="http://serverfault.com/questions/438889/nginx-ssl-error" target="_blank" rel="external">nginx SSL error - Server Fault</a><br><a href="http://www.zzidc.com/main/help/showHelpContent/id_473.html" target="_blank" rel="external">网站存在不安全因素的解决办法</a></p>
 <h1 id="5-_后记">5. 后记</h1><p>快递已发出，相片已审核成功，腾讯收到资料之后会尽快报管局审理…希望2016年之前能够备案成功QvQ<br>嗯，Google真好用<br><strong>说好的准备考试呢！</strong></p>
-<p>Update 16:38<br>上午才把资料用快递发走，下午腾讯云就说我的纸质资料已收到…打电话问了一下，客服说腾讯为了加快审核速度，帮我准备了一份材料上交管局，估计他们是用我的扫描件打印了一份交上去了吧，也是不错2333 最后希望通信交通管理局快一点_(:зゝ∠)_</p>
+<hr>
+<p>Update @ 16:38<br>上午才把资料用快递发走，下午腾讯云就说我的纸质资料已收到…打电话问了一下，客服说腾讯为了加快审核速度，帮我准备了一份材料上交管局，估计他们是用我的扫描件打印了一份交上去了吧，也是不错2333 最后希望通信交通管理局快一点_(:зゝ∠)_</p>
+<hr>
+<p>Update @ 19:59, Dec. 24th, 2015<br>腾讯云访问Github的速度太慢了，于是将博客的Repo迁移到了Coding上。</p>
+<ol>
+<li>建立私有项目</li>
+<li>设置部署公钥<br> 因为是私有项目所以无法通过一个<strong>不含用户名密码</strong>的链接访问Repo来进行Pull，所以还是通过SSH访问比较舒服一些。</li>
+<li>改掉VPS上的origin链接，完成</li>
+</ol>
+<p>曾经听到过一种说法：用HTTPS访问Git Repo要比SSH更好，然而一直不知道好在哪…记得用HTTPS访问Repo的时候账户的用户名和密码是要附在链接里面的，感觉好不安全<br>域名备案看来真的要奔着20天的样子去了…</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>域名依然在备案中，依然想将博客部署到新买的VPS的我和腾讯斗智斗勇（雾），为博客添加了HTTPS&gt;_&lt;<br>同时，把自己的密码学课设也转移到VPS上来了。</p>]]>
