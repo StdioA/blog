@@ -4,7 +4,7 @@
   <subtitle><![CDATA[随便写写]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="//blog.stdioa.com/"/>
-  <updated>2015-12-24T12:10:27.343Z</updated>
+  <updated>2016-01-05T03:09:33.443Z</updated>
   <id>//blog.stdioa.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="//blog.stdioa.com/2015/12/blog-migration-ii/"/>
     <id>//blog.stdioa.com/2015/12/blog-migration-ii/</id>
     <published>2015-12-18T07:55:37.000Z</published>
-    <updated>2015-12-24T12:10:27.343Z</updated>
+    <updated>2016-01-05T03:09:33.443Z</updated>
     <content type="html"><![CDATA[<p>域名依然在备案中，依然想将博客部署到新买的VPS的我和腾讯斗智斗勇（雾），为博客添加了HTTPS&gt;_&lt;<br>同时，把自己的密码学课设也转移到VPS上来了。</p>
 <a id="more"></a>
 <h1 id="1-_使用Nginx针对多个host部署服务器">1. 使用Nginx针对多个host部署服务器</h1><h2 id="1-1_概述">1.1 概述</h2><p>如果一个VPS只能搭一个网站，那未免太浪费了，所以我们可以通过配置Nginx的方式来将针对多个域名的访问请求分开，从而进行不同的处理。例如，我在DNS配置时将<code>blog.stdioa.com</code>与<code>crypt.stdioa.com</code>同时指向到我的腾讯云的IP地址，用户访问这两个域名时，都会向我的VPS发送请求，我要做的是将这两种针对不同域名的访问请求分开。而这两种请求的区别在HTTP请求头的Host字段，所以我只需要针对不同的Host使用不同的处理方式即可。</p>
@@ -54,6 +54,7 @@
 <li>改掉VPS上的origin链接，完成</li>
 </ol>
 <p>曾经听到过一种说法：用HTTPS访问Git Repo要比SSH更好，然而一直不知道好在哪…记得用HTTPS访问Repo的时候账户的用户名和密码是要附在链接里面的，感觉好不安全<br>域名备案看来真的要奔着20天的样子去了…</p>
+<p><strong>Update @ 11:07, Jan. 5th, 2015</strong><br>域名备案在2016年的第一个工作日通过啦！庆祝一下，期末之后开始准备制作个人网站~</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>域名依然在备案中，依然想将博客部署到新买的VPS的我和腾讯斗智斗勇（雾），为博客添加了HTTPS&gt;_&lt;<br>同时，把自己的密码学课设也转移到VPS上来了。</p>]]>
