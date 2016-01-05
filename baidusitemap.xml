@@ -3,10 +3,9 @@
 
 
     
-    
   <url>
     <loc>https://blog.stdioa.com/2015/12/blog-migration-ii/</loc>
-    <lastmod>2016-01-05T03:09:33.443Z</lastmod>
+    <lastmod>2016-01-05T09:11:14.099Z</lastmod>
     <data>
         <display>
         <title>博客迁移记（二）</title>
@@ -27,6 +26,77 @@
     </data>
     </url>
 
+    
+  <url>
+    <loc>https://blog.stdioa.com/2015/07/deploy-a-LAMP-environment/</loc>
+    <lastmod>2016-01-05T09:11:06.373Z</lastmod>
+    <data>
+        <display>
+        <title>LAMP环境搭建心得</title>
+        <pubTime>2015-07-09T12:05:00.000Z</pubTime>
+        
+        <tag>Apache</tag>
+         
+        <tag>Linux</tag>
+         
+        <tag>MySQL</tag>
+         
+        <tag>PHP</tag>
+         
+         
+           
+             
+              <breadCrumb title="网络" url="//blog.stdioa.com/categories/%E7%BD%91%E7%BB%9C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.stdioa.com/2015/10/essay-git/</loc>
+    <lastmod>2016-01-05T09:10:53.327Z</lastmod>
+    <data>
+        <display>
+        <title>随手记之Git</title>
+        <pubTime>2015-10-14T10:28:00.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+        <tag>编程工具</tag>
+         
+         
+           
+             
+              <breadCrumb title="随手记" url="//blog.stdioa.com/categories/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.stdioa.com/2015/09/using-wget-in-Windows/</loc>
+    <lastmod>2016-01-05T09:10:36.841Z</lastmod>
+    <data>
+        <display>
+        <title>在Windows中使用Wget</title>
+        <pubTime>2015-09-18T12:07:00.000Z</pubTime>
+        
+        <tag>Windows</tag>
+         
+        <tag>wget</tag>
+         
+         
+           
+             
+              <breadCrumb title="乱七八糟" url="//blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://blog.stdioa.com/2015/10/learning-python-virtualenv/</loc>
@@ -161,54 +231,6 @@
 
     
   <url>
-    <loc>https://blog.stdioa.com/2015/07/deploy-a-LAMP-environment/</loc>
-    <lastmod>2015-12-20T02:22:04.402Z</lastmod>
-    <data>
-        <display>
-        <title>LAMP环境搭建心得</title>
-        <pubTime>2015-07-09T12:05:00.000Z</pubTime>
-        
-        <tag>Apache</tag>
-         
-        <tag>Linux</tag>
-         
-        <tag>MySQL</tag>
-         
-        <tag>PHP</tag>
-         
-         
-           
-             
-              <breadCrumb title="网络" url="//blog.stdioa.com/categories/%E7%BD%91%E7%BB%9C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.stdioa.com/2015/10/essay-git/</loc>
-    <lastmod>2015-12-20T02:22:00.577Z</lastmod>
-    <data>
-        <display>
-        <title>随手记之Git</title>
-        <pubTime>2015-10-14T10:28:00.000Z</pubTime>
-        
-        <tag>Git</tag>
-         
-        <tag>编程工具</tag>
-         
-         
-           
-             
-              <breadCrumb title="随手记" url="//blog.stdioa.com/categories/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://blog.stdioa.com/2015/12/essay-solve-InsecurePlatformWarning/</loc>
     <lastmod>2015-12-20T02:21:53.885Z</lastmod>
     <data>
@@ -285,28 +307,6 @@
         <pubTime>2015-09-02T14:26:00.000Z</pubTime>
         
         <tag>KMS</tag>
-         
-         
-           
-             
-              <breadCrumb title="乱七八糟" url="//blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.stdioa.com/2015/09/using-wget-in-Windows/</loc>
-    <lastmod>2015-12-20T02:21:22.500Z</lastmod>
-    <data>
-        <display>
-        <title>在Windows中使用Wget</title>
-        <pubTime>2015-09-18T12:07:00.000Z</pubTime>
-        
-        <tag>Windows</tag>
-         
-        <tag>wget</tag>
          
          
            

@@ -2,13 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.stdioa.com/about/index.html</loc>
-    <lastmod>2016-01-05T03:13:35.478Z</lastmod>
+    <loc>https://blog.stdioa.com/2015/12/blog-migration-ii/</loc>
+    <lastmod>2016-01-05T09:11:14.099Z</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.stdioa.com/2015/12/blog-migration-ii/</loc>
-    <lastmod>2016-01-05T03:09:33.443Z</lastmod>
+    <loc>https://blog.stdioa.com/2015/07/deploy-a-LAMP-environment/</loc>
+    <lastmod>2016-01-05T09:11:06.373Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2015/10/essay-git/</loc>
+    <lastmod>2016-01-05T09:10:53.327Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2015/09/using-wget-in-Windows/</loc>
+    <lastmod>2016-01-05T09:10:36.841Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/about/index.html</loc>
+    <lastmod>2016-01-05T03:13:35.478Z</lastmod>
   </url>
   
   <url>
@@ -42,16 +57,6 @@
   </url>
   
   <url>
-    <loc>https://blog.stdioa.com/2015/07/deploy-a-LAMP-environment/</loc>
-    <lastmod>2015-12-20T02:22:04.402Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2015/10/essay-git/</loc>
-    <lastmod>2015-12-20T02:22:00.577Z</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.stdioa.com/2015/12/essay-solve-InsecurePlatformWarning/</loc>
     <lastmod>2015-12-20T02:21:53.885Z</lastmod>
   </url>
@@ -69,11 +74,6 @@
   <url>
     <loc>https://blog.stdioa.com/2015/09/building-a-private-kms-server/</loc>
     <lastmod>2015-12-20T02:21:36.423Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2015/09/using-wget-in-Windows/</loc>
-    <lastmod>2015-12-20T02:21:22.500Z</lastmod>
   </url>
   
   <url>
