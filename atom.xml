@@ -4,7 +4,7 @@
   <subtitle><![CDATA[随便写写]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="//blog.stdioa.com/"/>
-  <updated>2016-01-05T09:11:14.099Z</updated>
+  <updated>2016-01-05T09:29:59.102Z</updated>
   <id>//blog.stdioa.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="//blog.stdioa.com/2015/12/blog-migration-ii/"/>
     <id>//blog.stdioa.com/2015/12/blog-migration-ii/</id>
     <published>2015-12-18T07:55:37.000Z</published>
-    <updated>2016-01-05T09:11:14.099Z</updated>
+    <updated>2016-01-05T09:29:59.102Z</updated>
     <content type="html"><![CDATA[<p>域名依然在备案中，依然想将博客部署到新买的VPS的我和腾讯斗智斗勇（雾），为博客添加了HTTPS&gt;_&lt;<br>同时，把自己的密码学课设也转移到VPS上来了。</p>
 <a id="more"></a>
 <h1 id="1-_使用Nginx针对多个host部署服务器">1. 使用Nginx针对多个host部署服务器</h1><h2 id="1-1_概述">1.1 概述</h2><p>如果一个VPS只能搭一个网站，那未免太浪费了，所以我们可以通过配置Nginx的方式来将针对多个域名的访问请求分开，从而进行不同的处理。例如，我在DNS配置时将<code>blog.stdioa.com</code>与<code>crypt.stdioa.com</code>同时指向到我的腾讯云的IP地址，用户访问这两个域名时，都会向我的VPS发送请求，我要做的是将这两种针对不同域名的访问请求分开。而这两种请求的区别在HTTP请求头的Host字段，所以我只需要针对不同的Host使用不同的处理方式即可。</p>
@@ -39,7 +39,7 @@
 <p>重新加载配置，访问<a href="https://blog.stdioa.com" target="_blank" rel="external">https://blog.stdioa.com</a> , 成功~</p>
 <p>小插曲：<br>昨天晚上熄灯之前发现Ubuntu上使用<code>apt-get</code>安装的Nginx版本太老了，于是在VPS上重新编译升级了Nginx，结果配置好HTTPS以后重启Nginx时发现启动失败，原因为缺少<code>ngx</code>组件。经Google后发现没有编译该组件，所以重新编译安装Nginx, 在配置时加入<code>--with-http_ssl_module</code>选项。</p>
 <p>小插曲2：<br>HTTPS配置好后访问博客，Chrome提示“存在不安全的内容”，选择加载后，地址栏左边的HTTPS会变成红色，极其不好看（雾），于是看了博客的模板，发现有两个js在加载时选择使用HTTP方式加载，于是将<code>http://.../*.js</code>改为<code>//.../*.js</code>, 使浏览器可以根据当前协议自动选择JS文件的加载协议。更新博客模板，重新访问，所有js均使用HTTPS方式加载，问题解决。附图:</p>
-<center><img src="https://o0h1xli3b.qnssl.com/pics/hhh_HTTPS.jpg" alt="哈哈哈HTTPS"></center>
+<center><img src="https://o0h1xli3b.qnssl.com/blog/pics/hhh_HTTPS.jpg" alt="哈哈哈HTTPS"></center>
 
 <p>小插曲3：<br>上面那张图片的链接之前来自七牛，采用HTTP协议而不是HTTPS加载。发布这篇博文后，我发现该文章页面中地址栏左侧的HTTPS标志变为了白色…还是不好看！打开Chrome的控制台，在控制台中看到，如果图片链接协议为HTTPS，则Chrome依然会提示“不安全”，但是个人感觉这只是一张图片而已啊，又不是JS_(:зゝ∠)_<br>解决方案：将图片链接改回本地，待域名备案后再想办法在七牛那边解决域名绑定及HTTPS的问题。</p>
 <h1 id="4-_参考资料">4. 参考资料</h1><p><a href="http://www.vpser.net/build/letsencrypt-free-ssl.html" target="_blank" rel="external">免费SSL安全证书Let’s Encrypt安装使用教程(附Nginx/Apache配置)</a><br><a href="http://blog.csdn.net/donghustone/article/details/25797727" target="_blank" rel="external">http://blog.csdn.net/donghustone/article/details/25797727</a><br><a href="http://serverfault.com/questions/438889/nginx-ssl-error" target="_blank" rel="external">nginx SSL error - Server Fault</a><br><a href="http://www.zzidc.com/main/help/showHelpContent/id_473.html" target="_blank" rel="external">网站存在不安全因素的解决办法</a></p>
@@ -485,12 +485,12 @@
     <link href="//blog.stdioa.com/2015/10/essay-git/"/>
     <id>//blog.stdioa.com/2015/10/essay-git/</id>
     <published>2015-10-14T10:28:00.000Z</published>
-    <updated>2016-01-05T09:10:53.327Z</updated>
+    <updated>2016-01-05T09:30:16.793Z</updated>
     <content type="html"><![CDATA[<p>从一年前开始使用Git, 一直没系统整理过Git的命令，前几天在部署代码的时候出了问题不知道该如何解决，于是决定整理一份Git的使用方法。本博文会持续更新。</p>
 <a id="more"></a>
 <h1 id="1-_什么是Git">1. 什么是Git</h1><p>Linus大神写的分布式版本控制工具，具体请访问官网<a href="http://git-scm.com" target="_blank" rel="external">http://git-scm.com</a>.<br>Wikipedia链接: <a href="https://en.wikipedia.org/wiki/Git_(software" target="_blank" rel="external">Git (software)</a>)</p>
 <h1 id="2-_基本操作">2. 基本操作</h1><p>初始化版本仓库: <code>git init</code><br>从远程仓库克隆: <code>git clone [url] [repo_name]</code><br>例: <code>git clone https://github.com/user/repo my_repo</code></p>
-<p><img src="https://o0h1xli3b.qnssl.com/pics/lifecycle.png" alt="life-cycle"></p>
+<p><img src="https://o0h1xli3b.qnssl.com/blog/pics/lifecycle.png" alt="life-cycle"></p>
 <center><small>文件的状态变化周期</small></center>
 
 <p>检查文件状态: <code>git status</code><br>状态简览: <code>git status -s</code><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git status -s&#10; M README&#10;MM Rakefile&#10;A  lib/git.rb&#10;M  lib/simplegit.rb&#10;?? LICENSE.txt</span><br></pre></td></tr></table></figure></p>
@@ -637,13 +637,13 @@
     <link href="//blog.stdioa.com/2015/09/using-wget-in-Windows/"/>
     <id>//blog.stdioa.com/2015/09/using-wget-in-Windows/</id>
     <published>2015-09-18T12:07:00.000Z</published>
-    <updated>2016-01-05T09:10:36.841Z</updated>
+    <updated>2016-01-05T09:30:22.507Z</updated>
     <content type="html"><![CDATA[<p>一直心心念念想在Windows里用wget，今天随便搞了搞，在Windows里面用上了wget，终于可以下载一些乱七八糟的小文件辣。</p>
 <a id="more"></a>
 <h1 id="1-_引子">1. 引子</h1><p>一直觉得Windows里面应该有一个类似wget的工具。今天想从github上下一个文件，结果文件直接以文本方式返回了(响应头的Content-Type为text/plain而不是application神马的)，自己很怨念，觉得要是Windows能像linux一样有个用来wget神马的下载文件的命令就好了…所以自己上网搜了一下，让自己用上了wget.</p>
 <h1 id="2-_乱搞">2. 乱搞</h1><p>随便百度，找到一篇博文，又找到了一个叫做GnuWin(<a href="http://sourceforge.net/projects/gnuwin32/" target="_blank" rel="external">http://sourceforge.net/projects/gnuwin32/</a>)的项目，该项目主要提供Windows下的GNU工具，比如sed, grep, wget等等。于是下载安装，安装程序默认将程序安装在了C:\Program Files (x86)\GnuWin32\bin目录下。然而即使这样，我还是无法直接在命令行里使用。</p>
 <p>Windows中有一个“PATH环境变量”，将某目录（比如C:\Python27）添加进PATH环境变量中，就可以直接在命令行中输入命令打开该目录下的文件。如果想在命令行中使用wget的话，把C:\Program Files (x86)\GnuWin32\bin目录添加进PATH变量中当然可行。但是这样的话，随着工具越来越多，PATH变量里面的路径也就越来越多，维护起来也会更加困难，所以自己使用了一种特殊的方法：在C盘的目录下建了一个Command_line_programs文件夹用来放一些自己常用的命令行工具（比如sqlite），然后将C:\Command_line_programs（以下简称C.L.P.）添加到PATH变量中，这样自己就能使用C.L.P.文件夹中的工具。可是，自己已经将程序安装到Program Files里了，所以需要想个办法在C.L.P.文件中新建一个文件来连接到wget程序。<em>经过尝试，使用快捷方式的方法失败了。</em>所以自己想到了<strong>新建批处理文件</strong>。于是在C.L.P.文件夹中新建wget.bat, 内容为<code>C:\&quot;Program Files (x86)&quot;\GnuWin32\bin\wget.exe %*</code> （<code>%*</code>表示在命令中嵌入程序所有参数，详情请百度或Google Windows批处理编程），保存，在命令行中尝试使用wget，成功。</p>
-<h1 id="3-_然而这并没有什么卵用啊！">3. 然而这并没有什么卵用啊！</h1><p>自己搞完以后，盯着GnuWin这几个字，突然想到了git里面自带了很多GNU工具可以直接使用，于是就去git/bin的目录翻了翻，果然，里面没有wget，然而我看到了curl。然后…就没有然后了。<img src="https://o0h1xli3b.qnssl.com/pics/hands_up_crying.jpg" alt=""></p>
+<h1 id="3-_然而这并没有什么卵用啊！">3. 然而这并没有什么卵用啊！</h1><p>自己搞完以后，盯着GnuWin这几个字，突然想到了git里面自带了很多GNU工具可以直接使用，于是就去git/bin的目录翻了翻，果然，里面没有wget，然而我看到了curl。然后…就没有然后了。<img src="https://o0h1xli3b.qnssl.com/blog/pics/hands_up_crying.jpg" alt=""></p>
 <h1 id="4-_后记">4. 后记</h1><p>这篇文章是胡乱凑数的，最近学习兴趣不高，又有一堆乱七八糟的事情要忙，所以托更了好久T^T<br>好了好了要好好学习，说好了多去体验框架呢QAQ</p>
 ]]></content>
     <summary type="html">
@@ -707,7 +707,7 @@ Connection closed: <span class="number">192.168</span><span class="number">.56</
     <link href="//blog.stdioa.com/2015/07/deploy-a-LAMP-environment/"/>
     <id>//blog.stdioa.com/2015/07/deploy-a-LAMP-environment/</id>
     <published>2015-07-09T12:05:00.000Z</published>
-    <updated>2016-01-05T09:11:06.373Z</updated>
+    <updated>2016-01-05T09:30:11.156Z</updated>
     <content type="html"><![CDATA[<p>闲来无事，在虚拟机上搭了一个LAMP服务器环境，把安装及配置过程记了下来。</p>
 <a id="more"></a>
 <h2 id="1-_引子">1. 引子</h2><h3 id="1-1_环境版本">1.1 环境版本</h3><p>此次搭建的LAMP环境版本：</p>
@@ -724,7 +724,7 @@ Connection closed: <span class="number">192.168</span><span class="number">.56</
 <h2 id="3-_搭建过程">3. 搭建过程</h2><h3 id="3-1_安装">3.1 安装</h3><ol>
 <li><p>Linux<br>我手上现在没实体机了，只有一个树莓派，我也不想每天带着它去上班，何况AMD架构上面软件好像少一点点，更何况树莓派性能挺差的（此处省略一坨借口），所以我只用Virtual Box装了一个虚拟机。<br>说到Linux，选一个用起来比较舒服的的发行版还是挺重要的。Linux发行版众多，一般用Red Hat或者CentOS（RH的社区版）或者Ubuntu Server来做服务器，不过…这学期用Debian系发行版用习惯了，再换到RH系的感觉有点不适应，于是我选择了Ubuntu Server. 当然，如果你想锻炼一下，推荐使用Arch Linux来搭建服务器。<br>下载Linux镜像，搭虚拟机，配置虚拟网络&amp;SSH，更改软件源，更新软件，配置自己需要的vim &amp; tmux &amp; vsftpd，不多说，想详细了解的可以去看某Linux虚拟机安装及配置指南（代号<a href="http://cslab.nju.edu.cn/ics/index.php/Ics:2013/PA0" target="_blank" rel="external">PA0</a>）。上学期装Linux装了绝不下10遍，再说下去自己都要吐了。<br>不过值得一提的是，Ubuntu Server安装程序的用户体验简直棒，安装过程中有一步是设置键盘布局，以前都要自己去一个长长的列表里翻自己的键盘布局（通常是US），而Ubuntu Server提供了一个小脚本来进行自动检测：依照提示敲几个字母/符号，再回答一个问题，安装程序会自动检测出适合你的键盘布局。</p>
 </li>
-<li><p>Apache<br>输入<code>apt-get install apache2</code>命令安装apache.<br>安装过程中apache服务已经启动，如果未启动，则输入<code>service apache2 start</code>启动apache服务。<br>启动后访问服务器ip，会出现apache的测试页面。<br><img src="https://o0h1xli3b.qnssl.com/pics/apache.jpg" alt=""></p>
+<li><p>Apache<br>输入<code>apt-get install apache2</code>命令安装apache.<br>安装过程中apache服务已经启动，如果未启动，则输入<code>service apache2 start</code>启动apache服务。<br>启动后访问服务器ip，会出现apache的测试页面。<br><img src="https://o0h1xli3b.qnssl.com/blog/pics/apache.jpg" alt=""></p>
 </li>
 <li><p>MySQL<br>输入<code>apt-get install mysql-server-5.6 mysql-client-5.6</code>进行安装。<br>安装过程中需要输入MySQL root密码。 </p>
 </li>

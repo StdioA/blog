@@ -4,18 +4,16 @@
 
     
   <url>
-    <loc>https://blog.stdioa.com/2015/12/blog-migration-ii/</loc>
-    <lastmod>2016-01-05T09:11:14.099Z</lastmod>
+    <loc>https://blog.stdioa.com/2015/09/using-wget-in-Windows/</loc>
+    <lastmod>2016-01-05T09:30:22.507Z</lastmod>
     <data>
         <display>
-        <title>博客迁移记（二）</title>
-        <pubTime>2015-12-18T07:55:37.000Z</pubTime>
+        <title>在Windows中使用Wget</title>
+        <pubTime>2015-09-18T12:07:00.000Z</pubTime>
         
-        <tag>Github</tag>
+        <tag>Windows</tag>
          
-        <tag>Let&#39;s Encrypt</tag>
-         
-        <tag>nginx</tag>
+        <tag>wget</tag>
          
          
            
@@ -28,8 +26,30 @@
 
     
   <url>
+    <loc>https://blog.stdioa.com/2015/10/essay-git/</loc>
+    <lastmod>2016-01-05T09:30:16.793Z</lastmod>
+    <data>
+        <display>
+        <title>随手记之Git</title>
+        <pubTime>2015-10-14T10:28:00.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+        <tag>编程工具</tag>
+         
+         
+           
+             
+              <breadCrumb title="随手记" url="//blog.stdioa.com/categories/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://blog.stdioa.com/2015/07/deploy-a-LAMP-environment/</loc>
-    <lastmod>2016-01-05T09:11:06.373Z</lastmod>
+    <lastmod>2016-01-05T09:30:11.156Z</lastmod>
     <data>
         <display>
         <title>LAMP环境搭建心得</title>
@@ -54,38 +74,18 @@
 
     
   <url>
-    <loc>https://blog.stdioa.com/2015/10/essay-git/</loc>
-    <lastmod>2016-01-05T09:10:53.327Z</lastmod>
+    <loc>https://blog.stdioa.com/2015/12/blog-migration-ii/</loc>
+    <lastmod>2016-01-05T09:29:59.102Z</lastmod>
     <data>
         <display>
-        <title>随手记之Git</title>
-        <pubTime>2015-10-14T10:28:00.000Z</pubTime>
+        <title>博客迁移记（二）</title>
+        <pubTime>2015-12-18T07:55:37.000Z</pubTime>
         
-        <tag>Git</tag>
+        <tag>Github</tag>
          
-        <tag>编程工具</tag>
+        <tag>Let&#39;s Encrypt</tag>
          
-         
-           
-             
-              <breadCrumb title="随手记" url="//blog.stdioa.com/categories/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.stdioa.com/2015/09/using-wget-in-Windows/</loc>
-    <lastmod>2016-01-05T09:10:36.841Z</lastmod>
-    <data>
-        <display>
-        <title>在Windows中使用Wget</title>
-        <pubTime>2015-09-18T12:07:00.000Z</pubTime>
-        
-        <tag>Windows</tag>
-         
-        <tag>wget</tag>
+        <tag>nginx</tag>
          
          
            
