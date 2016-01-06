@@ -12,8 +12,8 @@
 <meta property="og:url" content="//blog.stdioa.com/2015/10/essay-git/index.html">
 <meta property="og:site_name" content="Stdio's Blog">
 <meta property="og:description" content="从一年前开始使用Git, 一直没系统整理过Git的命令，前几天在部署代码的时候出了问题不知道该如何解决，于是决定整理一份Git的使用方法。本博文会持续更新。">
-<meta property="og:image" content="https://o0h1xli3b.qnssl.com/blog/pics/lifecycle.png">
-<meta property="og:updated_time" content="2016-01-05T09:30:16.793Z">
+<meta property="og:image" content="//blog.stdioa.com/pics/lifecycle.png">
+<meta property="og:updated_time" content="2016-01-06T07:15:23.755Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="随手记之Git">
 <meta name="twitter:description" content="从一年前开始使用Git, 一直没系统整理过Git的命令，前几天在部署代码的时候出了问题不知道该如何解决，于是决定整理一份Git的使用方法。本博文会持续更新。">
@@ -32,7 +32,7 @@
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			
-			<img lazy-src="/avatar.jpg" class="js-avatar">
+			<img lazy-src="/pics/avatar.jpg" class="js-avatar">
 			
 		</a>
 
@@ -160,7 +160,7 @@
 		<header id="header" class="inner">
 			<div class="profilepic">
 			
-				<img lazy-src="/avatar.jpg" class="js-avatar">
+				<img lazy-src="/pics/avatar.jpg" class="js-avatar">
 			
 			</div>
 			<hgroup>
@@ -248,7 +248,7 @@
 <a id="more"></a>
 <h1 id="1-_什么是Git">1. 什么是Git</h1><p>Linus大神写的分布式版本控制工具，具体请访问官网<a href="http://git-scm.com" target="_blank" rel="external">http://git-scm.com</a>.<br>Wikipedia链接: <a href="https://en.wikipedia.org/wiki/Git_(software" target="_blank" rel="external">Git (software)</a>)</p>
 <h1 id="2-_基本操作">2. 基本操作</h1><p>初始化版本仓库: <code>git init</code><br>从远程仓库克隆: <code>git clone [url] [repo_name]</code><br>例: <code>git clone https://github.com/user/repo my_repo</code></p>
-<p><img src="https://o0h1xli3b.qnssl.com/blog/pics/lifecycle.png" alt="life-cycle"></p>
+<p><img src="/pics/lifecycle.png" alt="life-cycle"></p>
 <center><small>文件的状态变化周期</small></center>
 
 <p>检查文件状态: <code>git status</code><br>状态简览: <code>git status -s</code><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git status -s&#10; M README&#10;MM Rakefile&#10;A  lib/git.rb&#10;M  lib/simplegit.rb&#10;?? LICENSE.txt</span><br></pre></td></tr></table></figure></p>

@@ -12,8 +12,8 @@
 <meta property="og:url" content="//blog.stdioa.com/2015/07/deploy-a-LAMP-environment/index.html">
 <meta property="og:site_name" content="Stdio's Blog">
 <meta property="og:description" content="闲来无事，在虚拟机上搭了一个LAMP服务器环境，把安装及配置过程记了下来。">
-<meta property="og:image" content="https://o0h1xli3b.qnssl.com/blog/pics/apache.jpg">
-<meta property="og:updated_time" content="2016-01-05T09:30:11.156Z">
+<meta property="og:image" content="//blog.stdioa.com/pics/apache.jpg">
+<meta property="og:updated_time" content="2016-01-06T07:15:24.302Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LAMP环境搭建心得">
 <meta name="twitter:description" content="闲来无事，在虚拟机上搭了一个LAMP服务器环境，把安装及配置过程记了下来。">
@@ -32,7 +32,7 @@
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			
-			<img lazy-src="/avatar.jpg" class="js-avatar">
+			<img lazy-src="/pics/avatar.jpg" class="js-avatar">
 			
 		</a>
 
@@ -160,7 +160,7 @@
 		<header id="header" class="inner">
 			<div class="profilepic">
 			
-				<img lazy-src="/avatar.jpg" class="js-avatar">
+				<img lazy-src="/pics/avatar.jpg" class="js-avatar">
 			
 			</div>
 			<hgroup>
@@ -260,7 +260,7 @@
 <h2 id="3-_搭建过程">3. 搭建过程</h2><h3 id="3-1_安装">3.1 安装</h3><ol>
 <li><p>Linux<br>我手上现在没实体机了，只有一个树莓派，我也不想每天带着它去上班，何况AMD架构上面软件好像少一点点，更何况树莓派性能挺差的（此处省略一坨借口），所以我只用Virtual Box装了一个虚拟机。<br>说到Linux，选一个用起来比较舒服的的发行版还是挺重要的。Linux发行版众多，一般用Red Hat或者CentOS（RH的社区版）或者Ubuntu Server来做服务器，不过…这学期用Debian系发行版用习惯了，再换到RH系的感觉有点不适应，于是我选择了Ubuntu Server. 当然，如果你想锻炼一下，推荐使用Arch Linux来搭建服务器。<br>下载Linux镜像，搭虚拟机，配置虚拟网络&amp;SSH，更改软件源，更新软件，配置自己需要的vim &amp; tmux &amp; vsftpd，不多说，想详细了解的可以去看某Linux虚拟机安装及配置指南（代号<a href="http://cslab.nju.edu.cn/ics/index.php/Ics:2013/PA0" target="_blank" rel="external">PA0</a>）。上学期装Linux装了绝不下10遍，再说下去自己都要吐了。<br>不过值得一提的是，Ubuntu Server安装程序的用户体验简直棒，安装过程中有一步是设置键盘布局，以前都要自己去一个长长的列表里翻自己的键盘布局（通常是US），而Ubuntu Server提供了一个小脚本来进行自动检测：依照提示敲几个字母/符号，再回答一个问题，安装程序会自动检测出适合你的键盘布局。</p>
 </li>
-<li><p>Apache<br>输入<code>apt-get install apache2</code>命令安装apache.<br>安装过程中apache服务已经启动，如果未启动，则输入<code>service apache2 start</code>启动apache服务。<br>启动后访问服务器ip，会出现apache的测试页面。<br><img src="https://o0h1xli3b.qnssl.com/blog/pics/apache.jpg" alt=""></p>
+<li><p>Apache<br>输入<code>apt-get install apache2</code>命令安装apache.<br>安装过程中apache服务已经启动，如果未启动，则输入<code>service apache2 start</code>启动apache服务。<br>启动后访问服务器ip，会出现apache的测试页面。<br><img src="/pics/apache.jpg" alt=""></p>
 </li>
 <li><p>MySQL<br>输入<code>apt-get install mysql-server-5.6 mysql-client-5.6</code>进行安装。<br>安装过程中需要输入MySQL root密码。 </p>
 </li>
