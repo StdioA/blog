@@ -58,8 +58,10 @@ require([], function (){
 		require(['/fancybox/jquery.fancybox.js'], function(pc){
 			var isFancy = $(".isFancy");
 			if(isFancy.length != 0){
-				var imgArr = $(".article-inner p img");
+				var imgArr = $(".article-inner img");
 				for(var i=0,len=imgArr.length;i<len;i++){
+					if(imgArr.eq(i).attr("class"))
+						continue;
 					var src = imgArr.eq(i).attr("src");
 					var title = imgArr.eq(i).attr("alt");
 					imgArr.eq(i).replaceWith("<a href='"+src+"' title='"+title+"' rel='fancy-group' class='fancy-ctn fancybox'><img src='"+src+"' title='"+title+"'></a>");
