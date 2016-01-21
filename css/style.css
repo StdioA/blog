@@ -900,7 +900,7 @@ a {
 .article img {
   max-width: 100%;
 }
-.article .fancy-ctn.fancybox img {
+.article .emoji {
   width: 1.2em;
   height: 1.2em;
   position: relative;
