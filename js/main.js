@@ -60,7 +60,7 @@ require([], function (){
 			if(isFancy.length != 0){
 				var imgArr = $(".article-inner img");
 				for(var i=0,len=imgArr.length;i<len;i++){
-					if(imgArr.eq(i).attr("class"))
+					if(imgArr.eq(i).attr("class") == "emoji")
 						continue;
 					var src = imgArr.eq(i).attr("src");
 					var title = imgArr.eq(i).attr("alt");
