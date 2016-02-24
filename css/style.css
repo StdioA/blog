@@ -1008,6 +1008,8 @@ a {
   margin: 0 3px;
   background: #ddd;
   border: 1px solid #ccc;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
 /*font-family: Menlo,Monaco,"Andale Mono","lucida console","Courier New",monospace;*/
   word-wrap: break-word;
 /*font-size: 14px;*/

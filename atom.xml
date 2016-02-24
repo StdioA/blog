@@ -4,7 +4,7 @@
   <subtitle><![CDATA[随便写写]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="//blog.stdioa.com/"/>
-  <updated>2016-01-20T03:52:12.762Z</updated>
+  <updated>2016-02-24T13:08:45.241Z</updated>
   <id>//blog.stdioa.com/</id>
   
   <author>
@@ -13,6 +13,107 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Javascript学习总结]]></title>
+    <link href="//blog.stdioa.com/2016/02/learning-javascript/"/>
+    <id>//blog.stdioa.com/2016/02/learning-javascript/</id>
+    <published>2016-02-24T11:31:42.000Z</published>
+    <updated>2016-02-24T13:08:45.241Z</updated>
+    <content type="html"><![CDATA[<p>从开始写Javascript到现在，已经有一个月了，这一个月学了不少新姿势，随便写写，简单整理一下。</p>
+<a id="more"></a>
+<h1 id="1-_Javascript">1. Javascript</h1><p>这个没什么好整理的…随便写几条。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">space<span class="keyword">var</span> a;							<span class="comment">// 防止变量作用域提升</span></span><br><span class="line">spacedo_something();</span><br><span class="line">&#125;());</span><br><span class="line"></span><br><span class="line">some_list.map(<span class="function"><span class="keyword">function</span> (<span class="params">obj</span>) </span>&#123;</span><br><span class="line">spacespace<span class="keyword">this</span>.do_something(obj);</span><br><span class="line">space&#125;, <span class="keyword">this</span>);						<span class="comment">// 把this传到map里面的匿名函数中，否则里面的this为undefined</span></span><br><span class="line"></span><br><span class="line">setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;, <span class="number">1000</span>);</span><br><span class="line">setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;, <span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
+<h1 id="2-_jQuery">2. jQuery</h1><h2 id="2-1_选择器">2.1 选择器</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"input[type=text]"</span>)	<span class="comment">// 选择属性</span></span><br><span class="line">$(<span class="string">"ul&gt;li:eq(3)"</span>)		<span class="comment">// 选择第4个li元素</span></span><br><span class="line">$(<span class="string">"ul&gt;li"</span>).eq(<span class="number">3</span>)		<span class="comment">// 选择所有"ul&gt;li"中的第4个元素（注意与上面那个选择器的不同）</span></span><br><span class="line">$(<span class="string">"ul&gt;li:even"</span>)			<span class="comment">// 选择所有奇数li元素（odd同理）</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-2_杂项">2.2 杂项</h2><p>获取表单内容时，要用<code>$(&quot;...&quot;).val()</code>而不是<code>$(&quot;...&quot;).text()</code>.</p>
+<h1 id="3-_Node-js">3. Node.js</h1><p>不知道写什么，随便写几个好玩的库：</p>
+<ul>
+<li><code>cheerio</code>, 在服务器端解析html，跟jQuery用法差不多</li>
+<li><code>chalk</code>, 输出彩色文字</li>
+<li><code>gulp</code>, 流式自动化构建工具，后面细写</li>
+</ul>
+<h1 id="4-_React-js">4. React.js</h1><h2 id="4-1_JSX与Babel">4.1 JSX与Babel</h2><p>JSX是一种语言，babel是一种预处理工具。<br>JSX可以在浏览器中转换为javascript并执行，有两个前提：</p>
+<ol>
+<li>包含了<code>browser.js</code></li>
+<li>script标签的类型为<code>text/babel</code></li>
+</ol>
+<p>看<a href="https://facebook.github.io/react/docs/getting-started.html" target="_blank" rel="external">这里</a>。</p>
+<p>在很久以前，JSX代码转换库包含在React库里，名叫<code>JSXTransformer.js</code>, 那时script标签的类型为<code>text/jsx</code>, 但是后来JSX代码改用babel来转换了，所以script标签的类型也就变为了<code>text/babel</code>, 代码转换库也不再由React提供。</p>
+<p>吐槽：最初看tutorial的时候看的<a href="http://reactjs.cn/react/docs/getting-started.html" target="_blank" rel="external">中文页面</a>，这个页面很久很久没有更新过了，很多内容都过时了，在离线转换的时候需要安装包，npm报出一堆<code>package deprecated</code>的信息，整个人一个大写的卧槽。后来看了上面的英文页面才知道<code>JSXTransformer</code>已经不再使用了，现在大家都用<a href="https://babeljs.io/" target="_blank" rel="external">Babel</a>.</p>
+<h2 id="4-2_React">4.2 React</h2><ol>
+<li><p><a href="http://www.ruanyifeng.com/blog/2015/03/react.html" target="_blank" rel="external">阮一峰大大写的React入门教程</a>很不错，我基本上是看这个入门的。</p>
+</li>
+<li><p>写JSX时，要注意DOM节点的<code>class</code>和<code>for</code>属性要写为<code>className</code>和<code>htmlFor</code>，因为<code>class</code>和<code>for</code>是javascript的关键字。</p>
+</li>
+<li><p>组件的生命周期：看<a href="https://facebook.github.io/react/docs/working-with-the-browser.html#component-lifecycle" target="_blank" rel="external">官方文档</a>，<code>render</code>函数中<strong>不要</strong>改变组件的state，若组件的props改变而需要相应更改state, 则要在<code>componentWillReceiveProps</code>函数中完成state更改。函数执行完后，render函数会被执行，组件重新渲染。</p>
+</li>
+</ol>
+<h1 id="5-_gulp">5. gulp</h1><h2 id="5-1_简介">5.1 简介</h2><p>流式自动化构建工具，用于各类文件的转换（如jsx→js→min.js），监控文件变化，搭建静态文件服务器等，可以类比为makefile, 拥有种类繁多的插件。</p>
+<p><a href="http://gulpjs.com/" target="_blank" rel="external">gulp官网</a>，<a href="http://www.gulpjs.com.cn/" target="_blank" rel="external">中文网，包含中文文档</a>。</p>
+<h2 id="5-2_操作">5.2 操作</h2><ul>
+<li><p><code>gulp.task(name[, deps], fn)</code>, 注册一个任务</p>
+<ul>
+<li>name: 任务名称</li>
+<li>deps: 依赖的前置任务，string[]</li>
+<li>fn: 任务函数，在里面写该任务需要完成的具体事项</li>
+</ul>
+</li>
+<li><p><code>gulp.src(globs[, options])</code>, 输出一个满足匹配模式的stream, stream可以用pipe连接起来，类比shell的管道<code>|</code>.</p>
+</li>
+<li><p><code>gulp.dest(path[, options])</code>, 将stream写到某个path当中。</p>
+</li>
+<li><p><code>gulp.watch(glob [, opts], tasks)</code> 或 <code>gulp.watch(glob [, opts, cb])</code>, 监控满足匹配模式的文件，若文件变化，则执行某些任务。</p>
+</li>
+</ul>
+<p>直接看一个例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">gulp.task(<span class="string">'render'</span>, [<span class="string">'array'</span>, <span class="string">'of'</span>, <span class="string">'task'</span>, <span class="string">'names'</span>], <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">spacegulp.src(<span class="string">'./client/templates/*.jade'</span>)								<span class="comment">// 找到原路径所有的jade文件</span></span><br><span class="line">spacespace.pipe(jade())													<span class="comment">// 渲染模板</span></span><br><span class="line">spacespace.pipe(gulp.dest(<span class="string">'./build/templates'</span>))							<span class="comment">// 输出到某目录</span></span><br><span class="line">spacespace.pipe(minify())													<span class="comment">// minify</span></span><br><span class="line">spacespace.pipe(gulp.dest(<span class="string">'./build/minified_templates'</span>));					<span class="comment">// 输出到另一目录</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'watch'</span>, [<span class="string">"compress"</span>], <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">space<span class="keyword">var</span> watcher = gulp.watch(<span class="string">'./public/src/*.jsx'</span>, [<span class="string">'compress'</span>]);		<span class="comment">// 监控文件，若文件变化则执行compress任务</span></span><br><span class="line">spacewatcher.on(<span class="string">'change'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;								<span class="comment">// 监听change事件</span></span><br><span class="line">spacespace<span class="built_in">console</span>.log(<span class="string">'File '</span> + event.path + <span class="string">' was '</span> + event.type + <span class="string">', running tasks...'</span>);</span><br><span class="line">space&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h1 id="6-_React工具集成:_React+Babel+gulp">6. React工具集成: React+Babel+gulp</h1><p>用gulp执行任务，用babel转换JSX.</p>
+<h2 id="6-1_gulp">6.1 gulp</h2><p>所需插件:</p>
+<ul>
+<li>gulp</li>
+<li>gulp-babel</li>
+<li>gulp-uglify (压缩js文件用，可选)</li>
+</ul>
+<p>gulpfile:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp  = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</span><br><span class="line"><span class="keyword">var</span> babel = <span class="built_in">require</span>(<span class="string">'gulp-babel'</span>);</span><br><span class="line"><span class="keyword">var</span> uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>);</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'transform'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">space<span class="keyword">return</span> gulp.src(<span class="string">'./public/src/*.jsx'</span>)</span><br><span class="line">spacespacespacespace.pipe(babel())</span><br><span class="line">spacespacespacespace.pipe(gulp.dest(<span class="string">'./public/build'</span>));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">"compress"</span>, [<span class="string">"transform"</span>], <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">space<span class="keyword">return</span> gulp.src(<span class="string">'./public/build/!(*.min).js'</span>)</span><br><span class="line">spacespacespace.pipe(uglify())</span><br><span class="line">spacespacespace.pipe(rename(&#123; suffix: <span class="string">".min"</span> &#125;))</span><br><span class="line">spacespacespace.pipe(gulp.dest(<span class="string">'./public/build'</span>))</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h2 id="6-2_Babel">6.2 Babel</h2><p>所需插件：</p>
+<ul>
+<li>babel-preset-es2015</li>
+<li>babel-preset-react</li>
+</ul>
+<p><code>.babelrc</code>文件：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">space"<span class="attribute">presets</span>": <span class="value">[</span><br><span class="line">spacespace<span class="string">"es2015"</span>,</span><br><span class="line">spacespace<span class="string">"react"</span></span><br><span class="line">space]</span>,</span><br><span class="line">space"<span class="attribute">plugins</span>": <span class="value">[]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure></p>
+<p>若在全局安装了<code>babel-cli</code>，则可以用babel命令转换文件：</p>
+<ol>
+<li>若当前目录存在上述babelrc文件：<br> 执行<code>babel public\src --out-dir public\build</code></li>
+<li>若当前目录不存在bebelrc文件：<br> 执行<code>babel --presets react public\src --out-dir public\build</code></li>
+</ol>
+<h1 id="7-_Semantic_UI">7. Semantic UI</h1><p>超级棒的一个前端组件库，去看<a href="http://www.semantic-ui.cn/" target="_blank" rel="external">文档</a>吧。</p>
+<h1 id="7-_后记">7. 后记</h1><p>终于写完了。</p>
+<p>又一个月没有写东西了，代码写了不少，所学到的知识却没有及时整理下来。真是太懒，懒得整理知识。到现在还欠着一篇Django的生产环境配置的文章没写（其实就是一条命令+nginx配置而已），改天补上。</p>
+<p>寒假算是荒废过去了，本来能够写更多东西的，却被一些事情打乱了计划。</p>
+<p>以前觉得javascript是一门很糟糕的语言，代码写起来很乱，四五层回调看起来头都大了，但真正写了一个月以后感觉舒服了很多，很多代码写起来得心应手。JS的生态也让我很喜欢，各种工具组件层出不穷，使用起来也及其方便。</p>
+<p>这一个月所写的js项目：</p>
+<ul>
+<li><a href="https://github.com/StdioA/carrez" target="_blank" rel="external">carrez</a><br>  前后端都有，后端Express, 解析html, 前端使用ajax和后端进行信息交互</li>
+<li><a href="https://github.com/StdioA/starwars" target="_blank" rel="external">starwars</a><br>  纯前端项目，使用React, 用了很久的<code>browser.js</code>, 本地工具集成鼓捣了很久才鼓捣明白</li>
+<li><a href="https://github.com/StdioA/git_modifier" target="_blank" rel="external">git_modifier</a><br>  算是半个JS项目（Github告诉我我这是个JS项目，因为JS代码占比最大），后端Flask, 前端React, 说是Web App其实是个本地项目，用来读取及修改本地git repo的commit信息用的，奇怪的需求，写来自己用，方便伪造commit信息，帮某人作弊😂😂😂。</li>
+</ul>
+<p>后面看看要不要写<code>Mocha</code>吧。</p>
+<p>最后，郑重感谢phoenixe同学给了我一个比较系统地学习和使用javascript的机会。谢谢你。</p>
+<p>以上。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>从开始写Javascript到现在，已经有一个月了，这一个月学了不少新姿势，随便写写，简单整理一下。</p>]]>
+    
+    </summary>
+    
+      <category term="Javascript" scheme="//blog.stdioa.com/tags/Javascript/"/>
+    
+      <category term="node.js" scheme="//blog.stdioa.com/tags/node-js/"/>
+    
+      <category term="前端开发" scheme="//blog.stdioa.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="Javascript" scheme="//blog.stdioa.com/categories/Javascript/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[博客迁移记（三）]]></title>

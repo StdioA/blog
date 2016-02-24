@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.stdioa.com/2016/02/learning-javascript/</loc>
+    <lastmod>2016-02-24T13:08:45.241Z</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.stdioa.com/about/index.html</loc>
     <lastmod>2016-02-24T09:22:22.610Z</lastmod>
   </url>

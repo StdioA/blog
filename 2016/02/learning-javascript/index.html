@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>Javascript学习总结 | Stdio&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <script src="//cdn.bootcss.com/twemoji/1.4.2/twemoji.min.js"></script>
+  <meta name="description" content="从开始写Javascript到现在，已经有一个月了，这一个月学了不少新姿势，随便写写，简单整理一下。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript学习总结">
+<meta property="og:url" content="//blog.stdioa.com/2016/02/learning-javascript/index.html">
+<meta property="og:site_name" content="Stdio's Blog">
+<meta property="og:description" content="从开始写Javascript到现在，已经有一个月了，这一个月学了不少新姿势，随便写写，简单整理一下。">
+<meta property="og:updated_time" content="2016-02-24T13:08:45.241Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Javascript学习总结">
+<meta name="twitter:description" content="从开始写Javascript到现在，已经有一个月了，这一个月学了不少新姿势，随便写写，简单整理一下。">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/pics/avatar.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">David Dai</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">随便写写</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="https://www.stdioa.com/">个人主页</a></li>
+				        
+							<li><a href="/">博客主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/about">关于我</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/StdioA" title="github">github</a>
+					        
+								<a class="telegram" target="_blank" href="https://telegram.me/StdioA" title="telegram">telegram</a>
+					        
+								<a class="mail" target="_blank" href="mailto:stdio_dai@nuaa.edu.cn" title="mail">mail</a>
+					        
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/Apache/" style="font-size: 10px;">Apache</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Github/" style="font-size: 13.33px;">Github</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/KMS/" style="font-size: 10px;">KMS</a> <a href="/tags/Let-s-Encrypt/" style="font-size: 10px;">Let's Encrypt</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/collections/" style="font-size: 10px;">collections</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/logging/" style="font-size: 10px;">logging</a> <a href="/tags/nginx/" style="font-size: 16.67px;">nginx</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/openssl/" style="font-size: 10px;">openssl</a> <a href="/tags/pip/" style="font-size: 10px;">pip</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/requests/" style="font-size: 10px;">requests</a> <a href="/tags/unittest/" style="font-size: 10px;">unittest</a> <a href="/tags/virtualenv/" style="font-size: 10px;">virtualenv</a> <a href="/tags/wget/" style="font-size: 10px;">wget</a> <a href="/tags/七牛/" style="font-size: 10px;">七牛</a> <a href="/tags/上下文管理/" style="font-size: 10px;">上下文管理</a> <a href="/tags/前端开发/" style="font-size: 13.33px;">前端开发</a> <a href="/tags/编程工具/" style="font-size: 10px;">编程工具</a> <a href="/tags/迭代器/" style="font-size: 10px;">迭代器</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://sheet.stdioa.com/">我的乐谱分享站</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://rexskz.info/">Rexskz</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">集死宅和现充于一身的小孩子。</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">David Dai</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/pics/avatar.jpg" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">David Dai</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">随便写写</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="https://www.stdioa.com/">个人主页</a></li>
+		        
+					<li><a href="/">博客主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/about">关于我</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/StdioA" title="github">github</a>
+			        
+						<a class="telegram" target="_blank" href="https://telegram.me/StdioA" title="telegram">telegram</a>
+			        
+						<a class="mail" target="_blank" href="mailto:stdio_dai@nuaa.edu.cn" title="mail">mail</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-learning-javascript" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/learning-javascript/" class="article-date">
+  	<time datetime="2016-02-24T11:31:42.000Z" itemprop="datePublished">2016-02-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Javascript学习总结
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/">node.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端开发/">前端开发</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Javascript/">Javascript</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-_Javascript"><span class="toc-text">1. Javascript</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-_jQuery"><span class="toc-text">2. jQuery</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1_选择器"><span class="toc-text">2.1 选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2_杂项"><span class="toc-text">2.2 杂项</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-_Node-js"><span class="toc-text">3. Node.js</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-_React-js"><span class="toc-text">4. React.js</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1_JSX与Babel"><span class="toc-text">4.1 JSX与Babel</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2_React"><span class="toc-text">4.2 React</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-_gulp"><span class="toc-text">5. gulp</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1_简介"><span class="toc-text">5.1 简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2_操作"><span class="toc-text">5.2 操作</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-_React工具集成:_React+Babel+gulp"><span class="toc-text">6. React工具集成: React+Babel+gulp</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1_gulp"><span class="toc-text">6.1 gulp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2_Babel"><span class="toc-text">6.2 Babel</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-_Semantic_UI"><span class="toc-text">7. Semantic UI</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-_后记"><span class="toc-text">7. 后记</span></a></li></ol>
+        
+        <p>从开始写Javascript到现在，已经有一个月了，这一个月学了不少新姿势，随便写写，简单整理一下。</p>
+<a id="more"></a>
+<h1 id="1-_Javascript">1. Javascript</h1><p>这个没什么好整理的…随便写几条。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">space<span class="keyword">var</span> a;							<span class="comment">// 防止变量作用域提升</span></span><br><span class="line">spacedo_something();</span><br><span class="line">&#125;());</span><br><span class="line"></span><br><span class="line">some_list.map(<span class="function"><span class="keyword">function</span> (<span class="params">obj</span>) </span>&#123;</span><br><span class="line">spacespace<span class="keyword">this</span>.do_something(obj);</span><br><span class="line">space&#125;, <span class="keyword">this</span>);						<span class="comment">// 把this传到map里面的匿名函数中，否则里面的this为undefined</span></span><br><span class="line"></span><br><span class="line">setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;, <span class="number">1000</span>);</span><br><span class="line">setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;, <span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
+<h1 id="2-_jQuery">2. jQuery</h1><h2 id="2-1_选择器">2.1 选择器</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"input[type=text]"</span>)	<span class="comment">// 选择属性</span></span><br><span class="line">$(<span class="string">"ul&gt;li:eq(3)"</span>)		<span class="comment">// 选择第4个li元素</span></span><br><span class="line">$(<span class="string">"ul&gt;li"</span>).eq(<span class="number">3</span>)		<span class="comment">// 选择所有"ul&gt;li"中的第4个元素（注意与上面那个选择器的不同）</span></span><br><span class="line">$(<span class="string">"ul&gt;li:even"</span>)			<span class="comment">// 选择所有奇数li元素（odd同理）</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-2_杂项">2.2 杂项</h2><p>获取表单内容时，要用<code>$(&quot;...&quot;).val()</code>而不是<code>$(&quot;...&quot;).text()</code>.</p>
+<h1 id="3-_Node-js">3. Node.js</h1><p>不知道写什么，随便写几个好玩的库：</p>
+<ul>
+<li><code>cheerio</code>, 在服务器端解析html，跟jQuery用法差不多</li>
+<li><code>chalk</code>, 输出彩色文字</li>
+<li><code>gulp</code>, 流式自动化构建工具，后面细写</li>
+</ul>
+<h1 id="4-_React-js">4. React.js</h1><h2 id="4-1_JSX与Babel">4.1 JSX与Babel</h2><p>JSX是一种语言，babel是一种预处理工具。<br>JSX可以在浏览器中转换为javascript并执行，有两个前提：</p>
+<ol>
+<li>包含了<code>browser.js</code></li>
+<li>script标签的类型为<code>text/babel</code></li>
+</ol>
+<p>看<a href="https://facebook.github.io/react/docs/getting-started.html" target="_blank" rel="external">这里</a>。</p>
+<p>在很久以前，JSX代码转换库包含在React库里，名叫<code>JSXTransformer.js</code>, 那时script标签的类型为<code>text/jsx</code>, 但是后来JSX代码改用babel来转换了，所以script标签的类型也就变为了<code>text/babel</code>, 代码转换库也不再由React提供。</p>
+<p>吐槽：最初看tutorial的时候看的<a href="http://reactjs.cn/react/docs/getting-started.html" target="_blank" rel="external">中文页面</a>，这个页面很久很久没有更新过了，很多内容都过时了，在离线转换的时候需要安装包，npm报出一堆<code>package deprecated</code>的信息，整个人一个大写的卧槽。后来看了上面的英文页面才知道<code>JSXTransformer</code>已经不再使用了，现在大家都用<a href="https://babeljs.io/" target="_blank" rel="external">Babel</a>.</p>
+<h2 id="4-2_React">4.2 React</h2><ol>
+<li><p><a href="http://www.ruanyifeng.com/blog/2015/03/react.html" target="_blank" rel="external">阮一峰大大写的React入门教程</a>很不错，我基本上是看这个入门的。</p>
+</li>
+<li><p>写JSX时，要注意DOM节点的<code>class</code>和<code>for</code>属性要写为<code>className</code>和<code>htmlFor</code>，因为<code>class</code>和<code>for</code>是javascript的关键字。</p>
+</li>
+<li><p>组件的生命周期：看<a href="https://facebook.github.io/react/docs/working-with-the-browser.html#component-lifecycle" target="_blank" rel="external">官方文档</a>，<code>render</code>函数中<strong>不要</strong>改变组件的state，若组件的props改变而需要相应更改state, 则要在<code>componentWillReceiveProps</code>函数中完成state更改。函数执行完后，render函数会被执行，组件重新渲染。</p>
+</li>
+</ol>
+<h1 id="5-_gulp">5. gulp</h1><h2 id="5-1_简介">5.1 简介</h2><p>流式自动化构建工具，用于各类文件的转换（如jsx→js→min.js），监控文件变化，搭建静态文件服务器等，可以类比为makefile, 拥有种类繁多的插件。</p>
+<p><a href="http://gulpjs.com/" target="_blank" rel="external">gulp官网</a>，<a href="http://www.gulpjs.com.cn/" target="_blank" rel="external">中文网，包含中文文档</a>。</p>
+<h2 id="5-2_操作">5.2 操作</h2><ul>
+<li><p><code>gulp.task(name[, deps], fn)</code>, 注册一个任务</p>
+<ul>
+<li>name: 任务名称</li>
+<li>deps: 依赖的前置任务，string[]</li>
+<li>fn: 任务函数，在里面写该任务需要完成的具体事项</li>
+</ul>
+</li>
+<li><p><code>gulp.src(globs[, options])</code>, 输出一个满足匹配模式的stream, stream可以用pipe连接起来，类比shell的管道<code>|</code>.</p>
+</li>
+<li><p><code>gulp.dest(path[, options])</code>, 将stream写到某个path当中。</p>
+</li>
+<li><p><code>gulp.watch(glob [, opts], tasks)</code> 或 <code>gulp.watch(glob [, opts, cb])</code>, 监控满足匹配模式的文件，若文件变化，则执行某些任务。</p>
+</li>
+</ul>
+<p>直接看一个例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">gulp.task(<span class="string">'render'</span>, [<span class="string">'array'</span>, <span class="string">'of'</span>, <span class="string">'task'</span>, <span class="string">'names'</span>], <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">spacegulp.src(<span class="string">'./client/templates/*.jade'</span>)								<span class="comment">// 找到原路径所有的jade文件</span></span><br><span class="line">spacespace.pipe(jade())													<span class="comment">// 渲染模板</span></span><br><span class="line">spacespace.pipe(gulp.dest(<span class="string">'./build/templates'</span>))							<span class="comment">// 输出到某目录</span></span><br><span class="line">spacespace.pipe(minify())													<span class="comment">// minify</span></span><br><span class="line">spacespace.pipe(gulp.dest(<span class="string">'./build/minified_templates'</span>));					<span class="comment">// 输出到另一目录</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'watch'</span>, [<span class="string">"compress"</span>], <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">space<span class="keyword">var</span> watcher = gulp.watch(<span class="string">'./public/src/*.jsx'</span>, [<span class="string">'compress'</span>]);		<span class="comment">// 监控文件，若文件变化则执行compress任务</span></span><br><span class="line">spacewatcher.on(<span class="string">'change'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;								<span class="comment">// 监听change事件</span></span><br><span class="line">spacespace<span class="built_in">console</span>.log(<span class="string">'File '</span> + event.path + <span class="string">' was '</span> + event.type + <span class="string">', running tasks...'</span>);</span><br><span class="line">space&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h1 id="6-_React工具集成:_React+Babel+gulp">6. React工具集成: React+Babel+gulp</h1><p>用gulp执行任务，用babel转换JSX.</p>
+<h2 id="6-1_gulp">6.1 gulp</h2><p>所需插件:</p>
+<ul>
+<li>gulp</li>
+<li>gulp-babel</li>
+<li>gulp-uglify (压缩js文件用，可选)</li>
+</ul>
+<p>gulpfile:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp  = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</span><br><span class="line"><span class="keyword">var</span> babel = <span class="built_in">require</span>(<span class="string">'gulp-babel'</span>);</span><br><span class="line"><span class="keyword">var</span> uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>);</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'transform'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">space<span class="keyword">return</span> gulp.src(<span class="string">'./public/src/*.jsx'</span>)</span><br><span class="line">spacespacespacespace.pipe(babel())</span><br><span class="line">spacespacespacespace.pipe(gulp.dest(<span class="string">'./public/build'</span>));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">"compress"</span>, [<span class="string">"transform"</span>], <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">space<span class="keyword">return</span> gulp.src(<span class="string">'./public/build/!(*.min).js'</span>)</span><br><span class="line">spacespacespace.pipe(uglify())</span><br><span class="line">spacespacespace.pipe(rename(&#123; suffix: <span class="string">".min"</span> &#125;))</span><br><span class="line">spacespacespace.pipe(gulp.dest(<span class="string">'./public/build'</span>))</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h2 id="6-2_Babel">6.2 Babel</h2><p>所需插件：</p>
+<ul>
+<li>babel-preset-es2015</li>
+<li>babel-preset-react</li>
+</ul>
+<p><code>.babelrc</code>文件：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">space"<span class="attribute">presets</span>": <span class="value">[</span><br><span class="line">spacespace<span class="string">"es2015"</span>,</span><br><span class="line">spacespace<span class="string">"react"</span></span><br><span class="line">space]</span>,</span><br><span class="line">space"<span class="attribute">plugins</span>": <span class="value">[]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure></p>
+<p>若在全局安装了<code>babel-cli</code>，则可以用babel命令转换文件：</p>
+<ol>
+<li>若当前目录存在上述babelrc文件：<br> 执行<code>babel public\src --out-dir public\build</code></li>
+<li>若当前目录不存在bebelrc文件：<br> 执行<code>babel --presets react public\src --out-dir public\build</code></li>
+</ol>
+<h1 id="7-_Semantic_UI">7. Semantic UI</h1><p>超级棒的一个前端组件库，去看<a href="http://www.semantic-ui.cn/" target="_blank" rel="external">文档</a>吧。</p>
+<h1 id="7-_后记">7. 后记</h1><p>终于写完了。</p>
+<p>又一个月没有写东西了，代码写了不少，所学到的知识却没有及时整理下来。真是太懒，懒得整理知识。到现在还欠着一篇Django的生产环境配置的文章没写（其实就是一条命令+nginx配置而已），改天补上。</p>
+<p>寒假算是荒废过去了，本来能够写更多东西的，却被一些事情打乱了计划。</p>
+<p>以前觉得javascript是一门很糟糕的语言，代码写起来很乱，四五层回调看起来头都大了，但真正写了一个月以后感觉舒服了很多，很多代码写起来得心应手。JS的生态也让我很喜欢，各种工具组件层出不穷，使用起来也及其方便。</p>
+<p>这一个月所写的js项目：</p>
+<ul>
+<li><a href="https://github.com/StdioA/carrez" target="_blank" rel="external">carrez</a><br>  前后端都有，后端Express, 解析html, 前端使用ajax和后端进行信息交互</li>
+<li><a href="https://github.com/StdioA/starwars" target="_blank" rel="external">starwars</a><br>  纯前端项目，使用React, 用了很久的<code>browser.js</code>, 本地工具集成鼓捣了很久才鼓捣明白</li>
+<li><a href="https://github.com/StdioA/git_modifier" target="_blank" rel="external">git_modifier</a><br>  算是半个JS项目（Github告诉我我这是个JS项目，因为JS代码占比最大），后端Flask, 前端React, 说是Web App其实是个本地项目，用来读取及修改本地git repo的commit信息用的，奇怪的需求，写来自己用，方便伪造commit信息，帮某人作弊😂😂😂。</li>
+</ul>
+<p>后面看看要不要写<code>Mocha</code>吧。</p>
+<p>最后，郑重感谢phoenixe同学给了我一个比较系统地学习和使用javascript的机会。谢谢你。</p>
+<p>以上。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/01/blog-migration-iii/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">博客迁移记（三）</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'stdioa'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 David Dai
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="//7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-65107715-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<script>
+twemoji.parse(document.getElementsByClassName("article-inner")[0], {
+		folder: "svg", 
+		ext: ".svg"
+	});
+</script>
+
+  </div>
+</body>
+</html>
