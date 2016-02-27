@@ -4,7 +4,7 @@
   <subtitle><![CDATA[随便写写]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="//blog.stdioa.com/"/>
-  <updated>2016-02-24T13:13:18.257Z</updated>
+  <updated>2016-02-27T04:53:09.030Z</updated>
   <id>//blog.stdioa.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="//blog.stdioa.com/2016/02/learning-javascript/"/>
     <id>//blog.stdioa.com/2016/02/learning-javascript/</id>
     <published>2016-02-24T11:31:42.000Z</published>
-    <updated>2016-02-24T13:13:18.257Z</updated>
+    <updated>2016-02-27T04:53:09.030Z</updated>
     <content type="html"><![CDATA[<p>从开始写Javascript到现在，已经有一个月了，这一个月学了不少新姿势，随便写写，简单整理一下。</p>
 <a id="more"></a>
 <h1 id="1-_Javascript">1. Javascript</h1><p>这个没什么好整理的…随便写几条。</p>
@@ -86,7 +86,7 @@
 <li>若当前目录不存在bebelrc文件：<br> 执行<code>babel --presets react public\src --out-dir public\build</code></li>
 </ol>
 <h1 id="7-_Semantic_UI">7. Semantic UI</h1><p>超级棒的一个前端组件库，去看<a href="http://www.semantic-ui.cn/" target="_blank" rel="external">文档</a>吧。</p>
-<h1 id="7-_后记">7. 后记</h1><p>终于写完了。</p>
+<h1 id="8-_后记">8. 后记</h1><p>终于写完了。</p>
 <p>又一个月没有写东西了，代码写了不少，所学到的知识却没有及时整理下来。真是太懒，懒得整理知识。到现在还欠着一篇Django的生产环境配置的文章没写（其实就是一条命令+nginx配置而已），改天补上。</p>
 <p>寒假算是荒废过去了，本来能够写更多东西的，却被一些事情打乱了计划。</p>
 <p>以前觉得javascript是一门很糟糕的语言，代码写起来很乱，四五层回调看起来头都大了，但真正写了一个月以后感觉舒服了很多，很多代码写起来得心应手。JS的生态也让我很喜欢，各种工具组件层出不穷，使用起来也及其方便。</p>
