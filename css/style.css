@@ -883,6 +883,7 @@ a {
   position: relative;
   border: 1px solid #ddd;
   background: #fff;
+  color: #333;
   -webkit-transition: all 0.2s ease-in;
 }
 .article.show {
@@ -1059,13 +1060,15 @@ a {
 }
 .article-entry h1 {
   margin-top: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
 }
 .article-entry h2 {
   margin-top: 20px;
   font-weight: 300;
-  color: #574c4c;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #ddd;
+/*color: #574C4C;*/
+/*padding-bottom: 5px;*/
+/*border-bottom: 1px solid #ddd;*/
 }
 .article-entry h3,
 .article-entry h4,
@@ -1074,8 +1077,8 @@ a {
   margin-top: 20px;
   font-weight: 300;
   color: #574c4c;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #ddd;
+/*padding-bottom: 5px;*/
+/*border-bottom: 1px solid #ddd;*/
 }
 .article-entry video {
   max-width: 100%;
