@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//blog.stdioa.com/"/>
-  <updated>2016-03-27T05:15:52.793Z</updated>
+  <updated>2016-03-27T06:33:01.283Z</updated>
   <id>//blog.stdioa.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="//blog.stdioa.com/2016/03/essay-atom-using-experience/"/>
     <id>//blog.stdioa.com/2016/03/essay-atom-using-experience/</id>
     <published>2016-03-27T02:40:03.000Z</published>
-    <updated>2016-03-27T05:15:52.793Z</updated>
+    <updated>2016-03-27T06:33:01.283Z</updated>
     
     <content type="html">&lt;p&gt;昨天看到了 Atom 官方发布了一篇 &lt;a href=&quot;http://flight-manual.atom.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Atom Flight Manual&lt;/a&gt;, 看了两页觉得有些感兴趣所以下了一个体验一下。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -37,11 +37,11 @@ for the 21st Century&amp;quot;, 有些感兴趣于是就搞了一个内测码下
 &lt;p&gt;来说一说我看好 Atom 的地方吧。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;Web-Based
+&lt;p&gt;Web-Based&lt;br&gt;
 Atom 编辑器是基于 V8，整个 Atom 编辑页面就是一个网页。不知道为什么，感觉网页对我来说更有亲切感😳，当然这也使得 Atom 更加容易修改，方便了插件的开发。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Git Diff &amp;amp; Markdown Preview 集成
+&lt;p&gt;Git Diff &amp;amp; Markdown Preview 集成&lt;br&gt;
 Atom 自带了两个插件：&lt;code&gt;Git Diff&lt;/code&gt; 和 &lt;code&gt;Markdown Preview&lt;/code&gt;.&lt;br&gt;
 &lt;code&gt;Git Diff&lt;/code&gt; 可以实时显示当前文件的 Git Diff 信息。嗯那个 Git Diff 还是蛮漂亮的~&lt;br&gt;
 &lt;img src=&quot;/pics/atom/git_diff.jpg&quot; alt=&quot;Git Diff&quot;&gt;&lt;br&gt;
@@ -49,7 +49,7 @@ Atom 自带了两个插件：&lt;code&gt;Git Diff&lt;/code&gt; 和 &lt;code&gt;M
 同时，Atom 还集成了 Git 的常用功能，如当前目录所在 Git 分支。这个功能也要点个赞。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Package/Theme 安装及配置
+&lt;p&gt;Package/Theme 安装及配置&lt;br&gt;
 这点上 Atom 做的要比 ST 好得多。Atom 可以在线查看 Package 的 README 信息，每一个 Package 也有其独立的配置页面，不必像 ST 那样直接去修改配置文件。&lt;br&gt;
 &lt;img src=&quot;/pics/atom/package_settings.jpg&quot; alt=&quot;Package Settings&quot;&gt;&lt;/p&gt;
 &lt;p&gt;当然，Atom 自带了一个叫做 &lt;code&gt;apm&lt;/code&gt; 的包管理工具，这个就不错评价咯，人家只是浅度使用嘛（傲娇脸&lt;/p&gt;
