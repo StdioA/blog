@@ -21,7 +21,7 @@
   
     <link rel="icon" href="/favicon.ico">
   
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -120,7 +120,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/Apache/" style="font-size: 10px;">Apache</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Github/" style="font-size: 13.33px;">Github</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/KMS/" style="font-size: 10px;">KMS</a> <a href="/tags/Let-s-Encrypt/" style="font-size: 10px;">Let's Encrypt</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/collections/" style="font-size: 10px;">collections</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/logging/" style="font-size: 10px;">logging</a> <a href="/tags/nginx/" style="font-size: 16.67px;">nginx</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/openssl/" style="font-size: 10px;">openssl</a> <a href="/tags/pip/" style="font-size: 10px;">pip</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/requests/" style="font-size: 10px;">requests</a> <a href="/tags/unittest/" style="font-size: 10px;">unittest</a> <a href="/tags/virtualenv/" style="font-size: 10px;">virtualenv</a> <a href="/tags/wget/" style="font-size: 10px;">wget</a> <a href="/tags/七牛/" style="font-size: 10px;">七牛</a> <a href="/tags/上下文管理/" style="font-size: 10px;">上下文管理</a> <a href="/tags/前端开发/" style="font-size: 13.33px;">前端开发</a> <a href="/tags/编程工具/" style="font-size: 10px;">编程工具</a> <a href="/tags/迭代器/" style="font-size: 10px;">迭代器</a>
+						<a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/Apache/" style="font-size: 10px;">Apache</a> <a href="/tags/Atom/" style="font-size: 10px;">Atom</a> <a href="/tags/Git/" style="font-size: 13.33px;">Git</a> <a href="/tags/Github/" style="font-size: 13.33px;">Github</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/KMS/" style="font-size: 10px;">KMS</a> <a href="/tags/Let-s-Encrypt/" style="font-size: 10px;">Let's Encrypt</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Sublime-Text/" style="font-size: 10px;">Sublime Text</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/collections/" style="font-size: 10px;">collections</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/logging/" style="font-size: 10px;">logging</a> <a href="/tags/nginx/" style="font-size: 16.67px;">nginx</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/openssl/" style="font-size: 10px;">openssl</a> <a href="/tags/pip/" style="font-size: 10px;">pip</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/requests/" style="font-size: 10px;">requests</a> <a href="/tags/unittest/" style="font-size: 10px;">unittest</a> <a href="/tags/virtualenv/" style="font-size: 10px;">virtualenv</a> <a href="/tags/wget/" style="font-size: 10px;">wget</a> <a href="/tags/七牛/" style="font-size: 10px;">七牛</a> <a href="/tags/上下文管理/" style="font-size: 10px;">上下文管理</a> <a href="/tags/前端开发/" style="font-size: 13.33px;">前端开发</a> <a href="/tags/文本编辑器/" style="font-size: 10px;">文本编辑器</a> <a href="/tags/编程工具/" style="font-size: 10px;">编程工具</a> <a href="/tags/迭代器/" style="font-size: 10px;">迭代器</a>
 					</div>
 				</section>
 				
@@ -242,30 +242,52 @@
     <div class="article-entry" itemprop="articleBody">
       
         
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-_背景介绍"><span class="toc-text">1. 背景介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-_博客托管"><span class="toc-text">2. 博客托管</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1_搭建静态文件服务器"><span class="toc-text">2.1 搭建静态文件服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1_使用Python的SimpleHTTPServer"><span class="toc-text">2.1.1 使用Python的SimpleHTTPServer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2_使用Nginx托管文件服务器"><span class="toc-text">2.1.2 使用Nginx托管文件服务器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2_借助Webhook实现博客的自动部署"><span class="toc-text">2.2 借助Webhook实现博客的自动部署</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-_后记"><span class="toc-text">3. 后记</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-text">1. 背景介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-text">2. 博客托管</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">2.1 搭建静态文件服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">2.1.1 使用Python的SimpleHTTPServer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">2.1.2 使用Nginx托管文件服务器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">2.2 借助Webhook实现博客的自动部署</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-text">3. 后记</span></a></li></ol>
         
         <p>昨天买了一个VPS、一个域名，决定把博客迁移到VPS上。</p>
 <a id="more"></a>
-<h1 id="1-_背景介绍">1. 背景介绍</h1><p>首先打个广告：借助“腾讯云+校园”计划，我成功地用上了1元/月的服务器和11元/月的.com域名。<br>有了国内访问速度极快的VPS，有了域名，就想自己鼓捣鼓捣，把自己的博客和其他站点托管到VPS上。</p>
-<h1 id="2-_博客托管">2. 博客托管</h1><h2 id="2-1_搭建静态文件服务器">2.1 搭建静态文件服务器</h2><p>因为自己的博客是静态博客，之前托管在<a href="https://github.com/StdioA/stdioa.github.io" target="_blank" rel="external">Github</a>上，依靠Github Pages实现部署，所以我先将文件clone了下来，存放在<code>~/blog</code>目录中。<br>下面要做的，是搭建一个静态服务器。</p>
-<h3 id="2-1-1_使用Python的SimpleHTTPServer">2.1.1 使用Python的SimpleHTTPServer</h3><p>Python的SimpleHTTPServer是一个非常实用、方便的库，可以使用简单一条命令在当前目录创建一个HTTP文件服务器。所以输入<code>sudo python -m SimpleHTTPServer 80</code>命令，即可搭建一个静态文件服务器，实现从外网对静态博客的直接访问。<br>然而搭建好后，我发现了一个问题：因为我的blog文件夹本身是一个Git Repo, 所以我可以直接从外网访问.git文件夹，虽然我的.git目录没有保存任何设置及账户等，但这样会带来一定的安全隐患，所以要想办法禁止外部用户对.git文件夹的访问。</p>
-<h3 id="2-1-2_使用Nginx托管文件服务器">2.1.2 使用Nginx托管文件服务器</h3><p>关于Nginx的介绍，请自行访问<a href="http://nginx.org/" target="_blank" rel="external">官网</a>与<a href="https://en.wikipedia.org/wiki/Nginx" target="_blank" rel="external">维基百科</a>。<br>之前用过Apache, 但是在接触Nginx后，我认为我对Nginx更有好感，所以采用了Nginx做为文件托管服务器。<br>首先安装Nginx，删掉<code>/etc/nginx/sites-enabled</code>目录（我的系统是Ubuntu Server 14.04 LTS），在<code>conf.d</code>目录中设置配置文件：<br><figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">server </span><span class="expression">&#123;</span><br><span class="line">    <span class="variable">listen</span> 80;                              <span class="begin-block"># </span>监听端口</span><br><span class="line">    <span class="variable">server</span>_<span class="variable">name</span> <span class="variable">server</span>;</span><br><span class="line">    <span class="variable">root</span> <span class="end-block">/home</span><span class="end-block">/ubuntu</span><span class="end-block">/blog</span>;                 <span class="begin-block"># </span>托管目录</span><br><span class="line">    <span class="variable">index</span> <span class="variable">index.html</span>;</span><br><span class="line">    <span class="variable">access</span>_<span class="variable">log</span> <span class="end-block">/var</span><span class="end-block">/log</span><span class="end-block">/nginx</span><span class="end-block">/access</span>_<span class="variable">blog.log</span></span><br><span class="line">    <span class="variable">error</span>_<span class="variable">log</span> <span class="end-block">/var</span><span class="end-block">/log</span><span class="end-block">/nginx</span><span class="end-block">/error</span>_<span class="variable">blog.log</span></span><br><span class="line"></span><br><span class="line">    <span class="begin-block"># </span>禁止对<span class="variable">.git</span>目录的访问</span><br><span class="line">    <span class="variable">location</span> ^~ <span class="end-block">/.git </span>&#123;</span><br><span class="line">        <span class="variable">deny</span> <span class="variable">all</span>;</span><br><span class="line">    &#125;</span><span class="xml"></span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<h1>1. 背景介绍</h1>
+<p>首先打个广告：借助“腾讯云+校园”计划，我成功地用上了1元/月的服务器和11元/月的.com域名。
+有了国内访问速度极快的VPS，有了域名，就想自己鼓捣鼓捣，把自己的博客和其他站点托管到VPS上。</p>
+<h1>2. 博客托管</h1>
+<h2>2.1 搭建静态文件服务器</h2>
+<p>因为自己的博客是静态博客，之前托管在<a href="https://github.com/StdioA/stdioa.github.io" target="_blank" rel="external">Github</a>上，依靠Github Pages实现部署，所以我先将文件clone了下来，存放在<code>~/blog</code>目录中。
+下面要做的，是搭建一个静态服务器。</p>
+<h3>2.1.1 使用Python的SimpleHTTPServer</h3>
+<p>Python的SimpleHTTPServer是一个非常实用、方便的库，可以使用简单一条命令在当前目录创建一个HTTP文件服务器。所以输入<code>sudo python -m SimpleHTTPServer 80</code>命令，即可搭建一个静态文件服务器，实现从外网对静态博客的直接访问。
+然而搭建好后，我发现了一个问题：因为我的blog文件夹本身是一个Git Repo, 所以我可以直接从外网访问.git文件夹，虽然我的.git目录没有保存任何设置及账户等，但这样会带来一定的安全隐患，所以要想办法禁止外部用户对.git文件夹的访问。</p>
+<h3>2.1.2 使用Nginx托管文件服务器</h3>
+<p>关于Nginx的介绍，请自行访问<a href="http://nginx.org/" target="_blank" rel="external">官网</a>与<a href="https://en.wikipedia.org/wiki/Nginx" target="_blank" rel="external">维基百科</a>。
+之前用过Apache, 但是在接触Nginx后，我认为我对Nginx更有好感，所以采用了Nginx做为文件托管服务器。
+首先安装Nginx，删掉<code>/etc/nginx/sites-enabled</code>目录（我的系统是Ubuntu Server 14.04 LTS），在<code>conf.d</code>目录中设置配置文件：</p>
+<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen <span class="number">80</span>;                              <span class="meta"># 监听端口</span></span><br><span class="line">    server_name server;</span><br><span class="line">    root /home/ubuntu/blog;                 <span class="meta"># 托管目录</span></span><br><span class="line">    <span class="keyword">index</span> <span class="keyword">index</span>.html;</span><br><span class="line">    access_log /var/<span class="built_in">log</span>/nginx/access_blog.<span class="built_in">log</span></span><br><span class="line">    error_log /var/<span class="built_in">log</span>/nginx/error_blog.<span class="built_in">log</span></span><br><span class="line"></span><br><span class="line">    <span class="meta"># 禁止对.git目录的访问</span></span><br><span class="line">    <span class="keyword">location</span> ^~ /.git &#123;</span><br><span class="line">        deny <span class="built_in">all</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>配置完成后，重启Nginx, 所有服务正常运行，访问.git目录时会返回403.</p>
 <p><em>SimpleHTTPServer在建立服务器的时候只能监听<code>0.0.0.0</code>而不能只监听<code>127.0.0.1</code>, 之前搭建服务器的时候用的SimpleHTTPServer+Nginx反向代理，现在看起来感觉我就是个傻逼…</em></p>
-<h2 id="2-2_借助Webhook实现博客的自动部署">2.2 借助Webhook实现博客的自动部署</h2><p>因为之前静态博客托管在Github Pages上，所以向Github Repo上面进行push操作之后会动态更新页面。但是如果将静态博客托管在VPS上，则需要每次执行<code>git pull</code>才能够将内容更新。所以我在VPS上写了一个脚本，能够在Push之后自动进行<code>git pull</code>来更新内容。</p>
+<h2>2.2 借助Webhook实现博客的自动部署</h2>
+<p>因为之前静态博客托管在Github Pages上，所以向Github Repo上面进行push操作之后会动态更新页面。但是如果将静态博客托管在VPS上，则需要每次执行<code>git pull</code>才能够将内容更新。所以我在VPS上写了一个脚本，能够在Push之后自动进行<code>git pull</code>来更新内容。</p>
 <ol>
-<li><p>在Github上的repo设置Webhook<br>在repo的设置页面可以设置Webhook, 可在该repo收到push之后，Github可以向一个特定的URL发送一个POST请求。所以我设置了一个Webhook, 在push之后可以向我的VPS的特定端口发送POST请求。</p>
+<li>
+<p>在Github上的repo设置Webhook
+在repo的设置页面可以设置Webhook, 可在该repo收到push之后，Github可以向一个特定的URL发送一个POST请求。所以我设置了一个Webhook, 在push之后可以向我的VPS的特定端口发送POST请求。</p>
 </li>
-<li><p>设置服务器接收Webhook<br>在VPS中配置一个服务器，开放VPS的一个端口来接收来自Github的Webhook，这里使用bottle来搭建服务器框架。服务器代码:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># coding: utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> bottle <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="decorator">@route("/push", method=["POST"])    # 监听Webhook</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pull</span><span class="params">()</span>:</span></span><br><span class="line">    os.system(<span class="string">"./auto_pull.sh"</span>)     <span class="comment"># 执行git pull脚本</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"OK"</span></span><br><span class="line"></span><br><span class="line">run(host=<span class="string">"0.0.0.0"</span>, port=<span class="number">23333</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>编写自动pull脚本<br>编写自动pull脚本<code>auto_pull.sh</code>:</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env sh&#10;&#10;cd ~/blog&#10;git pull</span><br></pre></td></tr></table></figure>
+<li>
+<p>设置服务器接收Webhook
+在VPS中配置一个服务器，开放VPS的一个端口来接收来自Github的Webhook，这里使用bottle来搭建服务器框架。服务器代码:</p>
 </li>
 </ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># coding: utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> bottle <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="meta">@route("/push", method=["POST"])    # 监听Webhook</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pull</span><span class="params">()</span>:</span></span><br><span class="line">    os.system(<span class="string">"./auto_pull.sh"</span>)     <span class="comment"># 执行git pull脚本</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"OK"</span></span><br><span class="line"></span><br><span class="line">run(host=<span class="string">"0.0.0.0"</span>, port=<span class="number">23333</span>)</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>编写自动pull脚本
+编写自动pull脚本<code>auto_pull.sh</code>:</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env sh</span><br><span class="line"></span><br><span class="line">cd ~/blog</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
 <p>运行服务器，则可监听23333端口的POST请求，然后自动执行<code>git pull</code>更新博客内容。</p>
-<h1 id="3-_后记">3. 后记</h1><p>至此，博客<strong>部分</strong>成功迁移到VPS.<br>为什么要说“部分”？因为我的域名在做备案啊QvQ备案好麻烦还要打印材料还要跑到市中心去照相还要发快递到北京QvQ都做好还得等待管局审核QvQ<br>吐槽时间结束。后面等域名备案好以后可能会鼓捣一阵子Nginx，为服务器启用HTTPS等…<br><strong>唉，还是先去复习吧_(:зゝ∠)_</strong></p>
-<p><em>在写博文时，去编译升级了一下Nginx, 鼓捣配置文件又弄了半天</em>╮(╯_╰)╭</p>
+<h1>3. 后记</h1>
+<p>至此，博客<strong>部分</strong>成功迁移到VPS.
+为什么要说“部分”？因为我的域名在做备案啊QvQ备案好麻烦还要打印材料还要跑到市中心去照相还要发快递到北京QvQ都做好还得等待管局审核QvQ
+吐槽时间结束。后面等域名备案好以后可能会鼓捣一阵子Nginx，为服务器启用HTTPS等…
+<strong>唉，还是先去复习吧_(:зゝ∠)_</strong></p>
+<p>_在写博文时，去编译升级了一下Nginx, 鼓捣配置文件又弄了半天_╮(╯_╰)╭</p>
 
       
     </div>
@@ -333,7 +355,7 @@
 </footer>
     </div>
     
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 
 
 <script>
@@ -349,8 +371,8 @@
 		open_in_new: false
 	}
 </script>
-<script src="//7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="/js/main.js" type="text/javascript"></script>
+<script src="//7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
 
 
 

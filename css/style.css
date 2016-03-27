@@ -899,7 +899,8 @@ a {
   visibility: hidden;
 }
 .article img {
-  max-width: 100%;
+  max-width: 60%;
+  max-height: 600px;
 }
 .article .emoji {
   width: 1.2em;

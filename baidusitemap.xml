@@ -4,18 +4,45 @@
 
     
   <url>
-    <loc>https://blog.stdioa.com/2016/02/learning-javascript/</loc>
+    <loc>//blog.stdioa.com/2016/03/essay-atom-using-experience/</loc>
+    <lastmod>2016-03-27T05:15:52.793Z</lastmod>
+    <data>
+        <display>
+        <title>Atom 浅度体验感受</title>
+        <pubTime>2016-03-27T02:40:03.000Z</pubTime>
+        
+        <tag>Atom</tag>
+         
+        <tag>Sublime Text</tag>
+         
+        <tag>文本编辑器</tag>
+         
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="随笔" url="//blog.stdioa.com/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>//blog.stdioa.com/2016/02/learning-javascript/</loc>
     <lastmod>2016-02-27T04:53:09.030Z</lastmod>
     <data>
         <display>
         <title>Javascript学习总结</title>
         <pubTime>2016-02-24T11:31:42.000Z</pubTime>
         
+        <tag>前端开发</tag>
+         
         <tag>Javascript</tag>
          
         <tag>node.js</tag>
-         
-        <tag>前端开发</tag>
          
          
            
@@ -27,20 +54,19 @@
     </url>
 
     
-    
   <url>
-    <loc>https://blog.stdioa.com/2016/01/blog-migration-iii/</loc>
+    <loc>//blog.stdioa.com/2016/01/blog-migration-iii/</loc>
     <lastmod>2016-01-20T03:52:12.762Z</lastmod>
     <data>
         <display>
         <title>博客迁移记（三）</title>
         <pubTime>2016-01-20T03:40:00.000Z</pubTime>
         
-        <tag>git</tag>
-         
         <tag>nginx</tag>
          
         <tag>七牛</tag>
+         
+        <tag>git</tag>
          
          
            
@@ -53,18 +79,18 @@
 
     
   <url>
-    <loc>https://blog.stdioa.com/2015/12/blog-migration-ii/</loc>
+    <loc>//blog.stdioa.com/2015/12/blog-migration-ii/</loc>
     <lastmod>2016-01-06T07:15:24.817Z</lastmod>
     <data>
         <display>
         <title>博客迁移记（二）</title>
         <pubTime>2015-12-18T07:55:37.000Z</pubTime>
         
+        <tag>nginx</tag>
+         
         <tag>Github</tag>
          
         <tag>Let&#39;s Encrypt</tag>
-         
-        <tag>nginx</tag>
          
          
            
@@ -77,16 +103,16 @@
 
     
   <url>
-    <loc>https://blog.stdioa.com/2015/07/deploy-a-LAMP-environment/</loc>
+    <loc>//blog.stdioa.com/2015/07/deploy-a-LAMP-environment/</loc>
     <lastmod>2016-01-06T07:15:24.302Z</lastmod>
     <data>
         <display>
         <title>LAMP环境搭建心得</title>
         <pubTime>2015-07-09T12:05:00.000Z</pubTime>
         
-        <tag>Apache</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Apache</tag>
          
         <tag>MySQL</tag>
          
@@ -103,7 +129,7 @@
 
     
   <url>
-    <loc>https://blog.stdioa.com/2015/10/essay-git/</loc>
+    <loc>//blog.stdioa.com/2015/10/essay-git/</loc>
     <lastmod>2016-01-06T07:15:23.755Z</lastmod>
     <data>
         <display>
@@ -125,7 +151,7 @@
 
     
   <url>
-    <loc>https://blog.stdioa.com/2015/09/using-wget-in-Windows/</loc>
+    <loc>//blog.stdioa.com/2015/09/using-wget-in-Windows/</loc>
     <lastmod>2016-01-06T07:15:23.258Z</lastmod>
     <data>
         <display>
@@ -147,7 +173,7 @@
 
     
   <url>
-    <loc>https://blog.stdioa.com/2015/10/learning-python-virtualenv/</loc>
+    <loc>//blog.stdioa.com/2015/10/learning-python-virtualenv/</loc>
     <lastmod>2015-12-20T02:22:28.361Z</lastmod>
     <data>
         <display>
@@ -169,7 +195,7 @@
 
     
   <url>
-    <loc>https://blog.stdioa.com/2015/11/learning-python-unittest/</loc>
+    <loc>//blog.stdioa.com/2015/11/learning-python-unittest/</loc>
     <lastmod>2015-12-20T02:22:25.400Z</lastmod>
     <data>
         <display>
@@ -191,16 +217,16 @@
 
     
   <url>
-    <loc>https://blog.stdioa.com/2015/10/learning-python-logging/</loc>
+    <loc>//blog.stdioa.com/2015/10/learning-python-logging/</loc>
     <lastmod>2015-12-20T02:22:22.025Z</lastmod>
     <data>
         <display>
         <title>Python学习之logging</title>
         <pubTime>2015-10-21T08:00:00.000Z</pubTime>
         
-        <tag>logging</tag>
-         
         <tag>python</tag>
+         
+        <tag>logging</tag>
          
          
            
@@ -213,16 +239,16 @@
 
     
   <url>
-    <loc>https://blog.stdioa.com/2015/10/learning-python-collections/</loc>
+    <loc>//blog.stdioa.com/2015/10/learning-python-collections/</loc>
     <lastmod>2015-12-20T02:22:17.054Z</lastmod>
     <data>
         <display>
         <title>Python学习之collections</title>
         <pubTime>2015-10-29T12:55:00.000Z</pubTime>
         
-        <tag>collections</tag>
-         
         <tag>python</tag>
+         
+        <tag>collections</tag>
          
          
            
@@ -235,7 +261,7 @@
 
     
   <url>
-    <loc>https://blog.stdioa.com/2015/10/learning-python-iterator/</loc>
+    <loc>//blog.stdioa.com/2015/10/learning-python-iterator/</loc>
     <lastmod>2015-12-20T02:22:13.570Z</lastmod>
     <data>
         <display>
@@ -257,7 +283,7 @@
 
     
   <url>
-    <loc>https://blog.stdioa.com/2015/10/learning-python-context-management/</loc>
+    <loc>//blog.stdioa.com/2015/10/learning-python-context-management/</loc>
     <lastmod>2015-12-20T02:22:08.283Z</lastmod>
     <data>
         <display>
@@ -279,16 +305,16 @@
 
     
   <url>
-    <loc>https://blog.stdioa.com/2015/12/essay-solve-InsecurePlatformWarning/</loc>
+    <loc>//blog.stdioa.com/2015/12/essay-solve-InsecurePlatformWarning/</loc>
     <lastmod>2015-12-20T02:21:53.885Z</lastmod>
     <data>
         <display>
         <title>随手记 - 解决InsecurePlatformWarning</title>
         <pubTime>2015-12-07T15:01:00.000Z</pubTime>
         
-        <tag>openssl</tag>
-         
         <tag>python</tag>
+         
+        <tag>openssl</tag>
          
         <tag>requests</tag>
          
@@ -303,16 +329,16 @@
 
     
   <url>
-    <loc>https://blog.stdioa.com/2015/09/essay-pip-acceleration/</loc>
+    <loc>//blog.stdioa.com/2015/09/essay-pip-acceleration/</loc>
     <lastmod>2015-12-20T02:21:47.485Z</lastmod>
     <data>
         <display>
         <title>随手记 - 用国内镜像加速pip</title>
         <pubTime>2015-09-29T15:01:00.000Z</pubTime>
         
-        <tag>pip</tag>
-         
         <tag>python</tag>
+         
+        <tag>pip</tag>
          
          
            
@@ -325,7 +351,7 @@
 
     
   <url>
-    <loc>https://blog.stdioa.com/2015/09/essay-ajax/</loc>
+    <loc>//blog.stdioa.com/2015/09/essay-ajax/</loc>
     <lastmod>2015-12-20T02:21:41.907Z</lastmod>
     <data>
         <display>
@@ -347,7 +373,7 @@
 
     
   <url>
-    <loc>https://blog.stdioa.com/2015/09/building-a-private-kms-server/</loc>
+    <loc>//blog.stdioa.com/2015/09/building-a-private-kms-server/</loc>
     <lastmod>2015-12-20T02:21:36.423Z</lastmod>
     <data>
         <display>
@@ -367,16 +393,16 @@
 
     
   <url>
-    <loc>https://blog.stdioa.com/2015/12/blog-migration/</loc>
+    <loc>//blog.stdioa.com/2015/12/blog-migration/</loc>
     <lastmod>2015-12-18T05:53:29.525Z</lastmod>
     <data>
         <display>
         <title>博客迁移记（一）</title>
         <pubTime>2015-12-17T11:55:37.000Z</pubTime>
         
-        <tag>Github</tag>
-         
         <tag>nginx</tag>
+         
+        <tag>Github</tag>
          
         <tag>python</tag>
          
