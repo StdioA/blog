@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>//blog.stdioa.com/2016/02/learning-javascript/</loc>
+    
+    <lastmod>2016-03-27T06:27:19.506Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>//blog.stdioa.com/2016/03/essay-atom-using-experience/</loc>
     
     <lastmod>2016-03-27T05:15:52.793Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>//blog.stdioa.com/about/index.html</loc>
     
     <lastmod>2016-03-22T13:11:21.432Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//blog.stdioa.com/2016/02/learning-javascript/</loc>
-    
-    <lastmod>2016-02-27T04:53:09.030Z</lastmod>
     
   </url>
   

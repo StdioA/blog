@@ -242,13 +242,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-text">1. 简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-text">2. 创建virtualenv环境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-text">3. 进入及退出虚拟环境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-text">4. 使用虚拟环境</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">4.1 安装第三方模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">4.2 设置环境变量</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-text">5. 参考文档</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-text">6. 后记</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1"><span class="toc-text">1. 简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-virtualenv"><span class="toc-text">2. 创建virtualenv环境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3"><span class="toc-text">3. 进入及退出虚拟环境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4"><span class="toc-text">4. 使用虚拟环境</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#41"><span class="toc-text">4.1 安装第三方模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#42"><span class="toc-text">4.2 设置环境变量</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5"><span class="toc-text">5. 参考文档</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6"><span class="toc-text">6. 后记</span></a></li></ol>
         
         <p>用过virtualenv的人都说好，可是我没有具体使用过，所以尝试了一下，用完我也说好~233333</p>
 <a id="more"></a>
-<h1>1. 简介</h1>
+<h1 id="1">1. 简介</h1>
 <p>virtualenv是一个python库，用于创建独立python开发及运行环境。一般linux环境下如果在全局用pip安装模块时需要使用sudo命令，可是在共享主机上将root权限交给一般用户是不显示而且不安全的。可是有了virtualenv, 普通用户就可以创建一个虚拟环境，然后在虚拟环境中以普通用户权限安装模块，更改环境变量，进行开发和运行python程序而不会影响系统环境的环境变量和Python模块。</p>
-<h1>2. 创建virtualenv环境</h1>
+<h1 id="2-virtualenv">2. 创建virtualenv环境</h1>
 <p>输入<code>virtualenv venv</code>创建名为venv的虚拟环境。
 创建虚拟环境的常用选项：</p>
 <blockquote>
@@ -259,19 +259,19 @@
 <p>当然，也可以使用虚拟环境和系统配置文件来设置virtualenv默认创建选项，详情见<a href="http://virtualenv-chinese-docs.readthedocs.org/en/latest/#id7" target="_blank" rel="external">这里</a>。</p>
 <p>输出：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">G:\&gt;virtualenv venv</span><br><span class="line">New python executable in venv\Scripts\python.exe</span><br><span class="line">Installing setuptools, pip, wheel...done.</span><br></pre></td></tr></table></figure>
-<h1>3. 进入及退出虚拟环境</h1>
+<h1 id="3">3. 进入及退出虚拟环境</h1>
 <p>进入venv目录，Linux下输入<code>bin/activate</code>, Windows下输入<code>Scripts\activate</code>进入虚拟环境。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">G:\venv&gt;Scripts\activate</span><br><span class="line">(venv) G:\venv&gt;</span><br></pre></td></tr></table></figure>
 <p>进入环境后，输入<code>deactivate</code>退出。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(venv) G:\venv&gt;deactivate</span><br><span class="line">G:\venv&gt;</span><br></pre></td></tr></table></figure>
-<h1>4. 使用虚拟环境</h1>
-<h2>4.1 安装第三方模块</h2>
+<h1 id="4">4. 使用虚拟环境</h1>
+<h2 id="41">4.1 安装第三方模块</h2>
 <p>安装过程与平时相符（比如使用<code>pip install</code>), 只不过安装后的包会存储在虚拟环境中。</p>
-<h2>4.2 设置环境变量</h2>
+<h2 id="42">4.2 设置环境变量</h2>
 <p>Linux下输入<code>export VAR1=&quot;value1&quot;</code>, Windows下输入<code>set VAR1=value1</code>来设置虚拟环境的环境变量</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(venv) C:\Users\Stdio\Desktop\temp\venv&gt;set VAR1=value1</span><br><span class="line"></span><br><span class="line">(venv) C:\Users\Stdio\Desktop\temp\venv&gt;echo %VAR1%</span><br><span class="line">value1</span><br></pre></td></tr></table></figure>
 <p>环境变量设置成功后，即可在Python程序中利用虚拟环境的环境变量进行程序配置（比如flask中的<code>app.config.from_envvar(&quot;FLASK_SETTINGS&quot;)</code>）。该环境变量只在虚拟环境中有效，退出虚拟环境后环境变量即消失。</p>
-<h1>5. 参考文档</h1>
+<h1 id="5">5. 参考文档</h1>
 <ol>
 <li><a href="http://virtualenv.readthedocs.org/en/latest/index.html" target="_blank" rel="external">Virtualenv - virtualenv 13.1.2 documentation</a></li>
 <li><a href="http://virtualenv.readthedocs.org/en/latest/index.html" target="_blank" rel="external">Virtualenv - virtualenv 1.7.1.2.post1 documentation 中文版</a></li>
@@ -279,7 +279,7 @@
 <li><a href="http://www.cnblogs.com/tk091/p/3700013.html" target="_blank" rel="external">virtualenv – python虚拟沙盒</a></li>
 <li><a href="http://www.nowamagic.net/academy/detail/1330228" target="_blank" rel="external">用virtualenv建立多个Python独立开发环境</a></li>
 </ol>
-<h1>6. 后记</h1>
+<h1 id="6">6. 后记</h1>
 <p>又填完一个坑，本来打算昨天就写好的，结果昨天没写完…</p>
 
       
