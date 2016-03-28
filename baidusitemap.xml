@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>//blog.stdioa.com/2016/03/essay-vue/</loc>
+    <lastmod>2016-03-28T14:17:39.716Z</lastmod>
+    <data>
+        <display>
+        <title>随手记之Vue.js</title>
+        <pubTime>2016-03-28T13:40:03.000Z</pubTime>
+        
+        <tag>Javascript</tag>
+         
+        <tag>node.js</tag>
+         
+        <tag>vue.js</tag>
+         
+        <tag>前端开发</tag>
+         
+         
+           
+             
+              <breadCrumb title="Javascript" url="//blog.stdioa.com/categories/Javascript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>//blog.stdioa.com/2016/03/essay-atom-using-experience/</loc>
     <lastmod>2016-03-27T06:33:01.283Z</lastmod>
     <data>
