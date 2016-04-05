@@ -15,7 +15,7 @@
 <meta property="og:description" content="之前的那门 JS 和前端课结课了，最后花了一周时间写了一个 project，使用 Vue.js 的一套工具写了一个单页面应用，先将使用到及学到的知识来整理一下。">
 <meta property="og:image" content="http://vuejs.org.cn/images/vue-component-with-pre-processors.png">
 <meta property="og:image" content="http://vuejs.github.io/vuex/en/vuex.png">
-<meta property="og:updated_time" content="2016-03-28T14:22:32.920Z">
+<meta property="og:updated_time" content="2016-04-05T01:58:01.139Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="随手记之Vue.js">
 <meta name="twitter:description" content="之前的那门 JS 和前端课结课了，最后花了一周时间写了一个 project，使用 Vue.js 的一套工具写了一个单页面应用，先将使用到及学到的知识来整理一下。">
@@ -264,7 +264,7 @@
 <p><a href="https://github.com/vuejs/vue-router/" target="_blank" rel="external"><code>vue-router</code></a> 是 <code>vue</code> 官方提供的路由模块，可以实现 <code>SPA</code> 中的路由操作。具体文档看<a href="http://vuejs.github.io/vue-router/zh-cn/index.html" target="_blank" rel="external">这里</a>。顺便提一句，<code>vue-router</code> 的中文文档已经过时了。</p>
 <h2 id="31">3.1 初始化</h2>
 <p>首先使用 <code>npm</code> 安装 <code>vue-router</code>, 然后在程序入口点配置 <code>vue-router</code>.</p>
-<figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span><span class="string"> Vue from 'vue'</span></span><br><span class="line"><span class="keyword">import</span><span class="string"> Router from 'vue-router'</span></span><br><span class="line"><span class="keyword">import</span><span class="string"> App from './components/App'                    </span><span class="comment">// 程序的核心 Vue 应用</span></span><br><span class="line"><span class="keyword">import</span><span class="string"> HomePageView from './components/HomePageView'  </span><span class="comment">// 导入所有的 View 组件</span></span><br><span class="line"><span class="keyword">import</span><span class="string"> ItemView from './components/ItemView'</span></span><br><span class="line"></span><br><span class="line">Vue.use(Router)                                       <span class="comment">// Vue 配置</span></span><br><span class="line"><span class="built_in">var</span> router = <span class="keyword">new</span> Router()                             <span class="comment">// 生成路由对象</span></span><br><span class="line">router.map(&#123;                                          <span class="comment">// 配置路由</span></span><br><span class="line">  <span class="string">'/'</span>: &#123;</span><br><span class="line">    <span class="attribute">name</span>: <span class="string">'homepage'</span>,</span><br><span class="line">    <span class="attribute">component</span>: HomePageView</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">'/home'</span>: &#123;</span><br><span class="line">    <span class="attribute">name</span>: <span class="string">'homepage'</span>,</span><br><span class="line">    <span class="attribute">component</span>: HomePageView</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">'/item/:id'</span>: &#123;                                    <span class="comment">// 支持动态路径</span></span><br><span class="line">    <span class="attribute">name</span>: <span class="string">'item'</span>,</span><br><span class="line">    <span class="attribute">component</span>: ItemView</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">router.redirect(&#123;                                   <span class="comment">// 设置重定向选项</span></span><br><span class="line">  <span class="string">'*'</span>: <span class="string">'/home'</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">router.start(App, <span class="string">'[app]'</span>)                           <span class="comment">// 挂载 Vue 主应用</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> Router <span class="keyword">from</span> <span class="string">'vue-router'</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./components/App'</span>                    <span class="comment">// 程序的核心 Vue 应用</span></span><br><span class="line"><span class="keyword">import</span> HomePageView <span class="keyword">from</span> <span class="string">'./components/HomePageView'</span>  <span class="comment">// 导入所有的 View 组件</span></span><br><span class="line"><span class="keyword">import</span> ItemView <span class="keyword">from</span> <span class="string">'./components/ItemView'</span></span><br><span class="line"></span><br><span class="line">Vue.use(Router)                                       <span class="comment">// Vue 配置</span></span><br><span class="line"><span class="keyword">var</span> router = <span class="keyword">new</span> Router()                             <span class="comment">// 生成路由对象</span></span><br><span class="line">router.map(&#123;                                          <span class="comment">// 配置路由</span></span><br><span class="line">  <span class="string">'/'</span>: &#123;</span><br><span class="line">    name: <span class="string">'homepage'</span>,</span><br><span class="line">    component: HomePageView</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">'/home'</span>: &#123;</span><br><span class="line">    name: <span class="string">'homepage'</span>,</span><br><span class="line">    component: HomePageView</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">'/item/:id'</span>: &#123;                                    <span class="comment">// 支持动态路径</span></span><br><span class="line">    name: <span class="string">'item'</span>,</span><br><span class="line">    component: ItemView</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">router.redirect(&#123;                                   <span class="comment">// 设置重定向选项</span></span><br><span class="line">  <span class="string">'*'</span>: <span class="string">'/home'</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">router.start(App, <span class="string">'[app]'</span>)                           <span class="comment">// 挂载 Vue 主应用</span></span><br></pre></td></tr></table></figure>
 <p>然后在 <code>App.vue</code> 的 template 中设置 <code>router-view</code>.</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">router-view</span></span><br><span class="line">    <span class="attr">keep-alive</span></span><br><span class="line">    <span class="attr">transition</span>=<span class="string">"fade"</span></span><br><span class="line">    <span class="attr">transition-mode</span>=<span class="string">"out-in"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="32-vue-router">3.2 vue-router 的使用</h2>
@@ -309,23 +309,27 @@
 
 
 
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="essay-vue" data-title="随手记之Vue.js" data-url="//blog.stdioa.com/2016/03/essay-vue/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"stdioa"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
-<section id="comments">
-  <div id="disqus_thread"></div>
-    <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'stdioa'; // required: replace example with your forum shortname
 
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</section>
 
 </div>
       <footer id="footer">

@@ -260,7 +260,7 @@
 <p>关于Nginx的介绍，请自行访问<a href="http://nginx.org/" target="_blank" rel="external">官网</a>与<a href="https://en.wikipedia.org/wiki/Nginx" target="_blank" rel="external">维基百科</a>。
 之前用过Apache, 但是在接触Nginx后，我认为我对Nginx更有好感，所以采用了Nginx做为文件托管服务器。
 首先安装Nginx，删掉<code>/etc/nginx/sites-enabled</code>目录（我的系统是Ubuntu Server 14.04 LTS），在<code>conf.d</code>目录中设置配置文件：</p>
-<figure class="highlight glsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen <span class="number">80</span>;                              <span class="meta"># 监听端口</span></span><br><span class="line">    server_name server;</span><br><span class="line">    root /home/ubuntu/blog;                 <span class="meta"># 托管目录</span></span><br><span class="line">    <span class="keyword">index</span> <span class="keyword">index</span>.html;</span><br><span class="line">    access_log /var/<span class="built_in">log</span>/nginx/access_blog.<span class="built_in">log</span></span><br><span class="line">    error_log /var/<span class="built_in">log</span>/nginx/error_blog.<span class="built_in">log</span></span><br><span class="line"></span><br><span class="line">    <span class="meta"># 禁止对.git目录的访问</span></span><br><span class="line">    <span class="keyword">location</span> ^~ /.git &#123;</span><br><span class="line">        deny <span class="built_in">all</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80;                              # 监听端口</span><br><span class="line">    server_name server;</span><br><span class="line">    root /home/ubuntu/blog;                 # 托管目录</span><br><span class="line">    index index.html;</span><br><span class="line">    access_log /var/log/nginx/access_blog.log</span><br><span class="line">    error_log /var/log/nginx/error_blog.log</span><br><span class="line"></span><br><span class="line">    # 禁止对.git目录的访问</span><br><span class="line">    location ^~ /.git &#123;</span><br><span class="line">        deny all;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>配置完成后，重启Nginx, 所有服务正常运行，访问.git目录时会返回403.</p>
 <p><em>SimpleHTTPServer在建立服务器的时候只能监听<code>0.0.0.0</code>而不能只监听<code>127.0.0.1</code>, 之前搭建服务器的时候用的SimpleHTTPServer+Nginx反向代理，现在看起来感觉我就是个傻逼…</em></p>
 <h2 id="22-webhook">2.2 借助Webhook实现博客的自动部署</h2>
@@ -322,23 +322,27 @@
 
 
 
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="blog-migration" data-title="博客迁移记（一）" data-url="//blog.stdioa.com/2015/12/blog-migration/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"stdioa"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
-<section id="comments">
-  <div id="disqus_thread"></div>
-    <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'stdioa'; // required: replace example with your forum shortname
 
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</section>
 
 </div>
       <footer id="footer">
