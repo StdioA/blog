@@ -1652,10 +1652,13 @@ pre .class .params {
 }
 pre .tag,
 pre .doctype,
-pre .params,
 pre .function,
 pre .css .value {
   color: #fff;
+}
+pre .function .params {
+  color: #fd971f;
+  font-style: italic;
 }
 pre .css ~ * .tag,
 pre .title,
