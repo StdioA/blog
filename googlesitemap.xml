@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>//blog.stdioa.com/about/index.html</loc>
+    
+    <lastmod>2016-04-22T10:32:47.952Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.stdioa.com/2016/03/essay-vue/</loc>
+    
+    <lastmod>2016-04-22T10:32:15.199Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.stdioa.com/google1bd457e9176e5497.html</loc>
+    
+    <lastmod>2016-04-21T13:09:45.107Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>//blog.stdioa.com/2016/04/leetcode-database-solutions/</loc>
     
     <lastmod>2016-04-06T09:40:29.147Z</lastmod>
@@ -16,13 +37,6 @@
   </url>
   
   <url>
-    <loc>//blog.stdioa.com/2016/03/essay-vue/</loc>
-    
-    <lastmod>2016-04-05T01:58:01.139Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>//blog.stdioa.com/2016/03/essay-atom-using-experience/</loc>
     
     <lastmod>2016-03-27T06:33:01.283Z</lastmod>
@@ -33,13 +47,6 @@
     <loc>//blog.stdioa.com/2016/02/learning-javascript/</loc>
     
     <lastmod>2016-03-27T06:27:19.506Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//blog.stdioa.com/about/index.html</loc>
-    
-    <lastmod>2016-03-22T13:11:21.432Z</lastmod>
     
   </url>
   

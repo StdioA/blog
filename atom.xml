@@ -88,7 +88,7 @@
     <link href="//blog.stdioa.com/2016/03/essay-vue/"/>
     <id>//blog.stdioa.com/2016/03/essay-vue/</id>
     <published>2016-03-28T13:40:03.000Z</published>
-    <updated>2016-04-05T01:58:01.139Z</updated>
+    <updated>2016-04-22T10:32:15.199Z</updated>
     
     <content type="html">&lt;p&gt;之前的那门 JS 和前端课结课了，最后花了一周时间写了一个 project，使用 Vue.js 的一套工具写了一个单页面应用，先将使用到及学到的知识来整理一下。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -101,7 +101,7 @@
 &lt;p&gt;&lt;a href=&quot;https://github.com/vuejs/vue-cli#usage&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;具体使用方法&lt;/a&gt;：生成一个工程极为简单，只需一两条命令即可。&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ vue init webpack my-project     // 使用 webpack 模板生成工程 my-project&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; my-project&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ npm install&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ npm run dev&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;然后，借助 &lt;code&gt;webpack&lt;/code&gt; 与 &lt;code&gt;vue-loader&lt;/code&gt;, 你可以将一个 &lt;code&gt;Vue&lt;/code&gt; 组件的模板、核心js代码和CSS写在&lt;strong&gt;一个文件里&lt;/strong&gt;，甚至还可以使用 &lt;code&gt;CSS&lt;/code&gt; 与 &lt;code&gt;HTML&lt;/code&gt; 的预处理器，像这样：
-&lt;img src=&quot;http://vuejs.org.cn/images/vue-component-with-pre-processors.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;
+&lt;img src=&quot;/pics/vue/vue-component-with-pre-processors.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;
 &lt;span style=&quot;font-size: 0.75em;&quot;&gt;图片来自&lt;a href=&quot;http://vuejs.org.cn/guide/application.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt; Vue.js 官方教程 - 构建大型应用&lt;/a&gt;。&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&quot;3-vue-router&quot;&gt;3. Vue-router&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/vuejs/vue-router/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;vue-router&lt;/code&gt;&lt;/a&gt; 是 &lt;code&gt;vue&lt;/code&gt; 官方提供的路由模块，可以实现 &lt;code&gt;SPA&lt;/code&gt; 中的路由操作。具体文档看&lt;a href=&quot;http://vuejs.github.io/vue-router/zh-cn/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;。顺便提一句，&lt;code&gt;vue-router&lt;/code&gt; 的中文文档已经过时了。&lt;/p&gt;
@@ -115,7 +115,7 @@
 &lt;p&gt;此外，还可以在页面切换时在组件的 &lt;code&gt;route&lt;/code&gt; 配置中使用路由切换钩子控制 &lt;code&gt;vue-router&lt;/code&gt;，详情请看&lt;a href=&quot;http://vuejs.github.io/vue-router/zh-cn/pipeline/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;文档&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;4-vuex&quot;&gt;4. Vuex&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/vuejs/vuex/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;code&gt;Vuex&lt;/code&gt;&lt;/a&gt; 是一个借鉴于 &lt;code&gt;Flux&lt;/code&gt;，但是专门为 &lt;code&gt;Vue.js&lt;/code&gt; 所设计的状态管理方案。&lt;code&gt;Flux&lt;/code&gt; 采用了 &lt;code&gt;Action → Dispatcher → Store → View&lt;/code&gt; 的状态管理机制，而 &lt;code&gt;Vuex&lt;/code&gt; 跟它差不多：Vue 组件调用 action，action dispatches mutation, mutation 改变 store 中的 state，state 改变 View. 下面是 &lt;code&gt;Vuex&lt;/code&gt; 的数据流。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://vuejs.github.io/vuex/en/vuex.png&quot; alt=&quot;Vuex Data Flow&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/pics/vue/vuex.png&quot; alt=&quot;Vuex Data Flow&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;41&quot;&gt;4.1 使用方法&lt;/h2&gt;
 &lt;p&gt;程序入口点：&lt;/p&gt;
 &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; Vuex &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;vuex&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Vue.use(Vuex)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;

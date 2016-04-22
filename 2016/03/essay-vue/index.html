@@ -13,13 +13,13 @@
 <meta property="og:url" content="//blog.stdioa.com/2016/03/essay-vue/index.html">
 <meta property="og:site_name" content="Stdio's Blog">
 <meta property="og:description" content="之前的那门 JS 和前端课结课了，最后花了一周时间写了一个 project，使用 Vue.js 的一套工具写了一个单页面应用，先将使用到及学到的知识来整理一下。">
-<meta property="og:image" content="http://vuejs.org.cn/images/vue-component-with-pre-processors.png">
-<meta property="og:image" content="http://vuejs.github.io/vuex/en/vuex.png">
-<meta property="og:updated_time" content="2016-04-05T01:58:01.139Z">
+<meta property="og:image" content="//blog.stdioa.com/pics/vue/vue-component-with-pre-processors.png">
+<meta property="og:image" content="//blog.stdioa.com/pics/vue/vuex.png">
+<meta property="og:updated_time" content="2016-04-22T10:32:15.199Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="随手记之Vue.js">
 <meta name="twitter:description" content="之前的那门 JS 和前端课结课了，最后花了一周时间写了一个 project，使用 Vue.js 的一套工具写了一个单页面应用，先将使用到及学到的知识来整理一下。">
-<meta name="twitter:image" content="http://vuejs.org.cn/images/vue-component-with-pre-processors.png">
+<meta name="twitter:image" content="//blog.stdioa.com/pics/vue/vue-component-with-pre-processors.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -258,7 +258,7 @@
 <p><a href="https://github.com/vuejs/vue-cli#usage" target="_blank" rel="external">具体使用方法</a>：生成一个工程极为简单，只需一两条命令即可。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ vue init webpack my-project     // 使用 webpack 模板生成工程 my-project</span><br><span class="line">$ <span class="built_in">cd</span> my-project</span><br><span class="line">$ npm install</span><br><span class="line">$ npm run dev</span><br></pre></td></tr></table></figure>
 <p>然后，借助 <code>webpack</code> 与 <code>vue-loader</code>, 你可以将一个 <code>Vue</code> 组件的模板、核心js代码和CSS写在<strong>一个文件里</strong>，甚至还可以使用 <code>CSS</code> 与 <code>HTML</code> 的预处理器，像这样：
-<img src="http://vuejs.org.cn/images/vue-component-with-pre-processors.png" alt=""><br>
+<img src="/pics/vue/vue-component-with-pre-processors.png" alt=""><br>
 <span style="font-size: 0.75em;">图片来自<a href="http://vuejs.org.cn/guide/application.html" target="_blank" rel="external"> Vue.js 官方教程 - 构建大型应用</a>。</span></p>
 <h1 id="3-vue-router">3. Vue-router</h1>
 <p><a href="https://github.com/vuejs/vue-router/" target="_blank" rel="external"><code>vue-router</code></a> 是 <code>vue</code> 官方提供的路由模块，可以实现 <code>SPA</code> 中的路由操作。具体文档看<a href="http://vuejs.github.io/vue-router/zh-cn/index.html" target="_blank" rel="external">这里</a>。顺便提一句，<code>vue-router</code> 的中文文档已经过时了。</p>
@@ -272,7 +272,7 @@
 <p>此外，还可以在页面切换时在组件的 <code>route</code> 配置中使用路由切换钩子控制 <code>vue-router</code>，详情请看<a href="http://vuejs.github.io/vue-router/zh-cn/pipeline/index.html" target="_blank" rel="external">文档</a></p>
 <h1 id="4-vuex">4. Vuex</h1>
 <p><a href="https://github.com/vuejs/vuex/" target="_blank" rel="external"><code>Vuex</code></a> 是一个借鉴于 <code>Flux</code>，但是专门为 <code>Vue.js</code> 所设计的状态管理方案。<code>Flux</code> 采用了 <code>Action → Dispatcher → Store → View</code> 的状态管理机制，而 <code>Vuex</code> 跟它差不多：Vue 组件调用 action，action dispatches mutation, mutation 改变 store 中的 state，state 改变 View. 下面是 <code>Vuex</code> 的数据流。</p>
-<p><img src="http://vuejs.github.io/vuex/en/vuex.png" alt="Vuex Data Flow"></p>
+<p><img src="/pics/vue/vuex.png" alt="Vuex Data Flow"></p>
 <h2 id="41">4.1 使用方法</h2>
 <p>程序入口点：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line"></span><br><span class="line">Vue.use(Vuex)</span><br></pre></td></tr></table></figure>
