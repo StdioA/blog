@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//blog.stdioa.com/"/>
-  <updated>2016-04-06T09:40:29.147Z</updated>
+  <updated>2016-04-25T05:43:54.721Z</updated>
   <id>//blog.stdioa.com/</id>
   
   <author>
@@ -14,6 +14,125 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第一届 NUAACTF 非官方 Writeup</title>
+    <link href="//blog.stdioa.com/2016/04/nuaactf-unofficial-writeup/"/>
+    <id>//blog.stdioa.com/2016/04/nuaactf-unofficial-writeup/</id>
+    <published>2016-04-25T04:01:04.000Z</published>
+    <updated>2016-04-25T05:43:54.721Z</updated>
+    
+    <content type="html">&lt;p&gt;学校组织了第一届 NUAACTF，参加去玩玩，开开脑洞😂，嗯，还蛮好玩的~&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;web-0&quot;&gt;Web 0&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;huan’ying’lai’dao&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;签到题，F12 即可得到 flag.
+Flag 藏在页面的某个 &lt;code&gt;js&lt;/code&gt; 文件里，用 jsfuck 混淆了。&lt;/p&gt;
+&lt;h1 id=&quot;web-1&quot;&gt;Web 1&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;百度一下，你就知道&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;题目貌似改过一回。&lt;/p&gt;
+&lt;p&gt;改之前直接点击网页上的一个链接，跳转到某个网页，源代码里面有一段 php，具体内容不记得了，里面
+有一串 MD5 &lt;code&gt;095a655fc809cbbdffa207717a5233f5&lt;/code&gt;. Google 一下找到某白菜的博客，得到原文 &lt;code&gt;bnVhYWN0ZiU3Qi93ZWIyL2NlYmE2ZmJiZjBlZGU0MzI1MjY0MWNkMzM2ZTM2YTAzJTdE&lt;/code&gt;.&lt;br&gt;
+看起来像 &lt;code&gt;Base64&lt;/code&gt;，于是 decode 一下，然后 &lt;code&gt;decodeURIComponents&lt;/code&gt; 得到 flag.&lt;/p&gt;
+&lt;p&gt;后来题目改了，直接按照题目要求去百度就能直接找到某白菜的博客。&lt;/p&gt;
+&lt;h1 id=&quot;web-2&quot;&gt;Web 2&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;不是 bug 是 feature&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Web 2 的入口点在 Web 1 的 flag 里。进去以后会跳转到某个 php, 然而某白菜又把 php 源码写进去了，思路跟上个题好像一样，也是去百度一下 MD5 得到密码，添加 &lt;code&gt;GET&lt;/code&gt; 参数即可拿到 flag.&lt;/p&gt;
+&lt;h1 id=&quot;web-3&quot;&gt;Web 3&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;笨笨的程序猿&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Web 3 的入口点在 Web 2 的 flag 里。进去以后跳转到某 php, 里面只有一个登录表单。看起来像是 SQL 注入，就用 &lt;code&gt;sqlmap&lt;/code&gt; 扫了一下，把表 dump 出来，发现有两个账户 admin 和 user，密码都是一坨看起来什么都不像的东西，然后线索就断了。&lt;br&gt;
+最后一个小时决定手动注入一下，然而并不怎么会 SQL 注入于是就找了几篇博客来看。注入了半天密码框均无果，最后试了一下注入用户名输入框 &lt;code&gt;admin&#39; or &#39;1&#39;=&#39;1&lt;/code&gt;，成功登录。&lt;br&gt;
+登录以后 flag 一闪而过，本来想截屏然而懒得截了就抓了包，拿到 flag.&lt;/p&gt;
+&lt;h1 id=&quot;web-4&quot;&gt;Web 4 (未解出)&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;你从哪里来，我的朋友。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Web 3 成功登录后就跳转到 Web 4，网页写着&amp;quot;0nly welc0me pe0ple who c0me from &lt;a href=&quot;http://cs.nuaa.edu.cn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://cs.nuaa.edu.cn&lt;/a&gt; &amp;quot;。结合“你从哪里来”，想到了请求来源，但是我只想到了 &lt;code&gt;Referer&lt;/code&gt;, 修改后无果。&lt;br&gt;
+比赛结束后听说要改 &lt;code&gt;Origin&lt;/code&gt; 和 &lt;code&gt;X-Forwarded-For&lt;/code&gt;, 然而改了也没做出来，不知道哪里出了问题。&lt;/p&gt;
+&lt;h1 id=&quot;rev-1&quot;&gt;Rev 1&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;曾老师的 Android 课&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;把 apk 下载下来，用 &lt;code&gt;jd-gui&lt;/code&gt; 打开，一阵乱翻以后发现 flag 藏在 &lt;code&gt;MainActivity.class&lt;/code&gt; 里。&lt;/p&gt;
+&lt;h1 id=&quot;rev-2&quot;&gt;Rev 2 (未解出)&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;奇妙的声音&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;又看见安卓了，下下来以后一阵乱翻，没有头绪。&lt;/p&gt;
+&lt;p&gt;刚才看了别人的题解，发现 flag 在资源目录里面。&lt;br&gt;
+拿出来 &lt;code&gt;res/raw/sound.wav&lt;/code&gt;, 用随便什么鬼打开（来之前见识过这个脑洞，专门准备的 Sonic Visualiser, 然而卡住了没有用上），发现里面有四个声道，下面两个声道像是个方波。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/pics/nuaactf/rev2.png&quot; alt=&quot;Rev 2&quot;&gt;&lt;/p&gt;
+&lt;p&gt;然后一点一点数 01 数出来，得到：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;01101110
+01110101
+01100001
+01100001
+01100011
+01110100
+01100110
+01111011
+01110011
+01101000
+00110000
+01110010
+01110100
+01011111
+01100110
+00110001
+01000001
+01100111&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;数格子数的眼都要花了…&lt;br&gt;
+每一行 8 位二进制转 ASCII 码，得到 flag &lt;code&gt;nuaactf{sh0rt_f1Ag&lt;/code&gt;, 少了一个右括号😂&lt;br&gt;
+真是幸亏 flag 短…&lt;/p&gt;
+&lt;h1 id=&quot;rev-3&quot;&gt;Rev 3&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;不喜欢写界面的白菜哥&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;.NET&lt;/code&gt; 逆向，直接拖到 IDA 里面，一阵乱翻，翻到了三段 base64 和一个摩尔斯电码表。把三段 base64 拼起来以后 decode, 得到一段摩尔斯电码 &lt;code&gt;-. ..- .- .- -.-. - ..-. 2D3f ... .- .--. .--. -.-- -.-. .-. .- -.-. -....- .---- -. --. -.-. ... ... .- .-. .--. -...--.-&lt;/code&gt; (2D3f 是什么鬼😂)，解码后得到 flag &lt;code&gt;NUAACTF{SAPPYCRACK1NGCSSARP}&lt;/code&gt;，放到源程序里面，显示 flag 正确。&lt;/p&gt;
+&lt;p&gt;然后，提交以后说 flag 不对！&lt;br&gt;
+为什么 flag 不是 Happy Cracking CSharp? 看了半天，又交了半天的 flag，没找出问题。后来发现程序编码表里面 H 和 S 的编码一样😂 所以里面所有的 S 换成 H，源程序都会提示 flag 正确…&lt;br&gt;
+把 H 和 S 转换，一个一个试，最后试出来 flag 是 &lt;code&gt;NUAACTF{HAPPYCRACK1NGCHHARP}&lt;/code&gt;，也是醉人。&lt;/p&gt;
+&lt;h1 id=&quot;pwn-1&quot;&gt;Pwn 1&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;乱码！乱码！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;签到题。下载下来一个 txt，打开以后发现是 jsfuck，放到浏览器里运行得到 flag.&lt;/p&gt;
+&lt;h1 id=&quot;pwn-2&quot;&gt;Pwn 2 （未解出）&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;回家的路&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;CTF 竞赛考了算法…最短路…真是醉醉哒。&lt;br&gt;
+一开始没有细想，瞎写了一个深度优先搜索，出来好多解，然而没有一个是对的，也是悲催。&lt;br&gt;
+到最后也没有做。&lt;/p&gt;
+&lt;h1 id=&quot;misc-1&quot;&gt;Misc 1&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;奇怪的压缩包&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;嘛，隐写的题都蛮好玩哒😜&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/pics/nuaactf/misc1.rar&quot;&gt;misc1.rar&lt;/a&gt; 下载下来后无法打开，&lt;code&gt;file&lt;/code&gt; 一下发现是个 PNG，改拓展名后打开，得到 flag。这个也算签到题吧。&lt;/p&gt;
+&lt;h1 id=&quot;misc-2&quot;&gt;Misc 2&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;奇怪的图片&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/pics/nuaactf/misc2.png&quot; alt=&quot;misc2.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;下载 &lt;code&gt;misc2.png&lt;/code&gt;, &lt;code&gt;pngcheck&lt;/code&gt; 提示 &lt;code&gt;additional data after IEND chunk&lt;/code&gt;, 看来最后一块后面还有东西，用记事本打开，发现文件最后用明文写着 key.&lt;/p&gt;
+&lt;p&gt;刚刚在文件末尾发现了一个文件头 &lt;code&gt;PK\x03\x04&lt;/code&gt;, 觉得应该是个 zip 文件，&lt;code&gt;binwalk&lt;/code&gt; 一下然后用 &lt;code&gt;dd&lt;/code&gt; 分开，得到一个 zip 文件，解压后得到 flag. 这应该是这个题的标准做法吧，只是为什么做 zip 文件的时候没有压缩🌚&lt;/p&gt;
+&lt;h1 id=&quot;misc-3&quot;&gt;Misc 3&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;更奇怪的图片&lt;/strong&gt;（你们这起的都是什么名字）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/pics/nuaactf/misc3.png&quot; alt=&quot;misc3.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;下载下来（听说这是舰娘？），&lt;code&gt;pngcheck&lt;/code&gt; 没有错误，卡了一会。后来用 PS 打开，把色阶拉低，发现图的左下角有个二维码，扫码得 &lt;code&gt;QlpoOTFBWSZTWXhAk1kAAAtfgAAQIABgAAgAAACvIbYKIAAigNHqNGmnqFMJpoDTEO0CXcIvl9SeOAB3axLQYn4u5IpwoSDwgSay&lt;/code&gt;.&lt;br&gt;
+解码后发现是乱码，不知道怎么做了，卡了很久😷 比赛的最后一个小时看见了解码后字符串开头的 BZ，突然意识到这可能是个文件头，于是将解码后的内容写入文件，&lt;code&gt;file&lt;/code&gt; 一下发现果然是个 &lt;code&gt;bz&lt;/code&gt; 压缩文件，解压后得到 flag.&lt;/p&gt;
+&lt;h1 id=&quot;misc-4&quot;&gt;Misc 4 （未解出）&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;讨厌的 APP&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;觅动校园什么鬼？！&lt;/p&gt;
+&lt;h1 id=&quot;&quot;&gt;总结&lt;/h1&gt;
+&lt;p&gt;比赛五个小时，解了 10 道题，前半小时解出来 5 道，后面各种卡，最后一个小时脑洞大开又解出来 3 道题😂
+CTF 真好玩，考到了各种姿势各种脑洞，还是蛮有意思哒~&lt;br&gt;
+然而五个小时的比赛真的太累了…血的教训，下次题目做不出来还是要跑出去歇一会再回来做_(:зゝ∠)_&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;学校组织了第一届 NUAACTF，参加去玩玩，开开脑洞😂，嗯，还蛮好玩的~&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="乱七八糟" scheme="//blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
+    
+    
+      <category term="CTF" scheme="//blog.stdioa.com/tags/CTF/"/>
+    
+      <category term="脑洞" scheme="//blog.stdioa.com/tags/%E8%84%91%E6%B4%9E/"/>
+    
+      <category term="Python" scheme="//blog.stdioa.com/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>LeetCode 数据库题目解答</title>
@@ -578,9 +697,9 @@ HTTPS配置好后访问博客，Chrome提示“存在不安全的内容”，选
     
       <category term="nginx" scheme="//blog.stdioa.com/tags/nginx/"/>
     
-      <category term="Github" scheme="//blog.stdioa.com/tags/Github/"/>
-    
       <category term="python" scheme="//blog.stdioa.com/tags/python/"/>
+    
+      <category term="Github" scheme="//blog.stdioa.com/tags/Github/"/>
     
   </entry>
   
@@ -1475,131 +1594,6 @@ Windows 10 Enterprise 2015 LTSB N - 2F77B-TNFGY-69QQF-B8YKP-D69TJ&lt;/p&gt;
     
     
       <category term="KMS" scheme="//blog.stdioa.com/tags/KMS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LAMP环境搭建心得</title>
-    <link href="//blog.stdioa.com/2015/07/deploy-a-LAMP-environment/"/>
-    <id>//blog.stdioa.com/2015/07/deploy-a-LAMP-environment/</id>
-    <published>2015-07-09T12:05:00.000Z</published>
-    <updated>2016-01-06T07:15:24.302Z</updated>
-    
-    <content type="html">&lt;p&gt;闲来无事，在虚拟机上搭了一个LAMP服务器环境，把安装及配置过程记了下来。&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;1&quot;&gt;1. 引子&lt;/h2&gt;
-&lt;h3 id=&quot;11&quot;&gt;1.1 环境版本&lt;/h3&gt;
-&lt;p&gt;此次搭建的LAMP环境版本：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Ubuntu 14.04 LTS&lt;/li&gt;
-&lt;li&gt;Apache 2.4.7&lt;/li&gt;
-&lt;li&gt;mysql 5.6.19&lt;/li&gt;
-&lt;li&gt;php 5.5.9&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;12-hucheyitong&quot;&gt;1.2 写(hu)在(che)开(yi)头(tong)&lt;/h3&gt;
-&lt;p&gt;额…其实没什么好说的，自己一直想自己动手搭建、配置一个服务器，暑假之前师太（别问是谁）说如果要搞安全的话最好先自己从头搭一个服务器，把各种服务弄清楚，对整个架构有一个系统的理解，这样再深入搞安全的话接受一些观念也会更快更容易；但是因为自己太懒，再加上上学期忙成狗（其实还是太懒），一直没有去做这件事。暑假在一个小公司做软件测试，每天好像也没什么事干，有大把的时间做自己的事情，于是自己用了一中午加半个下午的时间照着一份&lt;a href=&quot;http://segmentfault.com/q/1010000002397754&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;指南&lt;/a&gt;把它搭好了。 &lt;em&gt;不过话说回来，软件测试真的很无聊&lt;/em&gt;_(:зゝ∠)_&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;2&quot;&gt;2. 科普&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/LAMP&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;LAMP&lt;/a&gt;: &lt;a href=&quot;https://zh.wikipedia.org/wiki/Linux&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Linux&lt;/a&gt; + &lt;a href=&quot;https://zh.wikipedia.org/wiki/Apache_HTTP_Server&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Apache&lt;/a&gt; + &lt;a href=&quot;https://zh.wikipedia.org/wiki/MySQL&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Mysql&lt;/a&gt; + &lt;a href=&quot;https://zh.wikipedia.org/wiki/PHP&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;PHP&lt;/a&gt;&lt;br&gt;
-科普结束。&lt;br&gt;
-刚看到LAMP里面的P还能指Python 0.0&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;3&quot;&gt;3. 搭建过程&lt;/h2&gt;
-&lt;h3 id=&quot;31&quot;&gt;3.1 安装&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Linux&lt;br&gt;
-我手上现在没实体机了，只有一个树莓派，我也不想每天带着它去上班，何况AMD架构上面软件好像少一点点，更何况树莓派性能挺差的（此处省略一坨借口），所以我只用Virtual Box装了一个虚拟机。
-说到Linux，选一个用起来比较舒服的的发行版还是挺重要的。Linux发行版众多，一般用Red Hat或者CentOS（RH的社区版）或者Ubuntu Server来做服务器，不过…这学期用Debian系发行版用习惯了，再换到RH系的感觉有点不适应，于是我选择了Ubuntu Server. 当然，如果你想锻炼一下，推荐使用Arch Linux来搭建服务器。&lt;br&gt;
-下载Linux镜像，搭虚拟机，配置虚拟网络&amp;amp;SSH，更改软件源，更新软件，配置自己需要的vim &amp;amp; tmux &amp;amp; vsftpd，不多说，想详细了解的可以去看某Linux虚拟机安装及配置指南（代号&lt;a href=&quot;http://cslab.nju.edu.cn/ics/index.php/Ics:2013/PA0&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;PA0&lt;/a&gt;）。上学期装Linux装了绝不下10遍，再说下去自己都要吐了。&lt;br&gt;
-不过值得一提的是，Ubuntu Server安装程序的用户体验简直棒，安装过程中有一步是设置键盘布局，以前都要自己去一个长长的列表里翻自己的键盘布局（通常是US），而Ubuntu Server提供了一个小脚本来进行自动检测：依照提示敲几个字母/符号，再回答一个问题，安装程序会自动检测出适合你的键盘布局。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Apache
-输入&lt;code&gt;apt-get install apache2&lt;/code&gt;命令安装apache.
-安装过程中apache服务已经启动，如果未启动，则输入&lt;code&gt;service apache2 start&lt;/code&gt;启动apache服务。
-启动后访问服务器ip，会出现apache的测试页面。&lt;br&gt;
-&lt;img src=&quot;/pics/apache.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;MySQL
-输入&lt;code&gt;apt-get install mysql-server-5.6 mysql-client-5.6&lt;/code&gt;进行安装。
-安装过程中需要输入MySQL root密码。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;PHP
-输入&lt;code&gt;apt-get install php5 libapache2-mod-php5&lt;/code&gt;安装php, 安装过后需要输入&lt;code&gt;service apache2 restart&lt;/code&gt;重启apache服务。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&quot;32&quot;&gt;3.2 配置&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;安装phpMyAdmin&lt;br&gt;
-输入&lt;code&gt;apt-get install phpmyadmin&lt;/code&gt;进行安装，安装的时候会提示输入mysql的root密码，并且提示新建一个数据库，当然也可以按需求不新建。&lt;br&gt;
-安装好以后访问http://localhost/phpmyadmin/index.php ，登录之后页面下方会有警告“缺少 mcrypt 扩展。请检查 PHP 配置。”此时按照指南的方法做没有效果，经百度+Google后找到了解决方案：安装php5-mcrypt后，更改php.ini后问题未解决，根据&lt;a href=&quot;http://php.net/manual/en/mcrypt.setup.php&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方的mcrypt安装指南&lt;/a&gt;，输入&lt;code&gt;php5enmod mcrypt&lt;/code&gt;后，问题解决。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;MySQL命令行无法启动&lt;br&gt;
-注：这段是自己瞎折腾的，啥都没看就乱玩遇到的问题。
-输入mysql后遇到问题：&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-  &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;➜  ~  mysql&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ERROR 1045 (28000): Access denied for user &amp;apos;stdio&amp;apos;@&amp;apos;localhost&amp;apos; (using password: NO)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;尝试用root权限运行，得到同样的结果。&lt;/p&gt;
-  &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;➜  ~  sudo mysql&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ERROR 1045 (28000): Access denied for user &amp;apos;root&amp;apos;@&amp;apos;localhost&amp;apos; (using password: NO)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;一番百度+google+SegmentFault后，找到正确进入命令行的姿势：&lt;/p&gt;
-  &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;➜  ~  sudo mysql -u root -p&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Enter password:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Welcome to the MySQL monitor.  Commands end with ; or \g.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Your MySQL connection id is 55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Server version: 5.6.19-0ubuntu0.14.04.1 (Ubuntu)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Copyright (c) 2000, 2014, Oracle and/or its affiliates. All rights reserved.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Oracle is a registered trademark of Oracle Corporation and/or its&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;affiliates. Other names may be trademarks of their respective&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;owners.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Type &amp;apos;help;&amp;apos; or &amp;apos;\h&amp;apos; for help. Type &amp;apos;\c&amp;apos; to clear the current input statement.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mysql&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ol start=&quot;3&quot;&gt;
-&lt;li&gt;
-&lt;p&gt;设置Apache虚拟目录&lt;br&gt;
-把所有文件全部放在/var/www下真的好麻烦，何况普通账户没有/var/www的写权限，所以设置一个alias，将某个Apache虚拟目录映射到home目录下，以后操作起来就会方便很多。
-修改/etc/apache2/mods-enabled/alias.conf文件，添加如下行，然后重启Apache服务：&lt;/p&gt;
- &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Alias /web &amp;quot;/home/stdio/websites/&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;Directory &amp;quot;/home/stdio/websites/&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Options None &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    AllowOverride None&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Order allow,deny&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Allow from all&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/Directory&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;然而在我访问http://localhost/web时，却得到了503 Forbidden的状态码，各种乱访问无果，于是在网上乱搜解决方案，有让改httpd的（httpd跟Apache有啥关系），有改alias配置的（我的alias配置的没有问题啊），最后看到了一个方案，查看apache2.conf的目录权限配置。
-修改/etc/apache2/apache2.conf文件，发现以下设置：&lt;/p&gt;
- &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;Directory /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Options FollowSymLinks&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    AllowOverride None&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Require all denied&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/Directory&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;Directory /usr/share&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    AllowOverride None&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Require all granted&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/Directory&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;Directory /var/www/&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Options Indexes FollowSymLinks&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    AllowOverride None&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Require all granted&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/Directory&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;因为Apache的默认配置是不能访问/的，所以我没有对~/websites的访问权限（这里逻辑好混乱）。添加配置：&lt;/p&gt;
- &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;Directory /home/stdio/websites&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Options FollowSymLinks&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    AllowOverride None&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Require all granted&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/Directory&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;重启Apache服务，&lt;a href=&quot;http://localhost/web%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E6%96%87%E4%BB%B6%E5%9D%87%E5%8F%AF%E6%AD%A3%E5%B8%B8%E8%AE%BF%E9%97%AE%E3%80%82&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://localhost/web目录下的文件均可正常访问。&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;4&quot;&gt;4. 乱搞&lt;/h2&gt;
-&lt;p&gt;去年开学的时候用php写过一个小的文件浏览器（就像Apache自带的文件服务器那样的），闲得无聊想把它部署到自己刚搭好的服务器上，看看能不能正常运行，于是就把文件传到服务器上访问，&lt;strong&gt;不出意外，失败了&lt;/strong&gt;。然后就找呀找呀找bug，找到一个小bug（请自动脑补背景音乐），找了半个点最后发现，在从配置文档读取根目录路径的时候，会在目录结尾加一个空格（现在想起来觉得应该是^M）导致路径拼接时出错，于是在$rootpath前面加了trim，然后就好了…我真是能作_(:зゝ∠)_&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;5&quot;&gt;5. 总结&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;自己动手搭建LAMP环境还是一件挺有意思的事情，遇到问题自己去找答案自己解决，最后所有的服务全都正常运行时还是有一点点成就感的~&lt;/li&gt;
-&lt;li&gt;半年没碰PHP，一共就写了不到10行代码，还写错了一半，比如把&lt;code&gt;phpinfo()&lt;/code&gt;写成&lt;code&gt;php_info&lt;/code&gt;，忘了在&lt;code&gt;&amp;lt;?&lt;/code&gt;后面加php神马的…（我记得以前谁跟我说&lt;code&gt;&amp;lt;?&lt;/code&gt;后面可以不加php的啊）&lt;/li&gt;
-&lt;li&gt;一篇文章写了一晚上。好久没写过博文了，写这篇文章主要是把自己的经验记下来，如果这篇文章可以帮到谁的话，那当然更好~&lt;/li&gt;
-&lt;li&gt;Linux挺好玩的，比软件测试好玩多了！（果然到了最后还是要黑一把测试）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;6&quot;&gt;6. 参考文档&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;http://segmentfault.com/a/1190000000619342&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ubuntu下搭建LAMP&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://php.net/manual/en/mcrypt.setup.php&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;PHP Mcrypt Installing/Configuring&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.douban.com/note/410696698/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;apache服务出现Forbidden 403问题的解决方法总结&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://segmentfault.com/q/1010000000263069&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ERROR 1045 (28000): Access denied for user ‘root’@‘localhost’ (using password: NO)&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;闲来无事，在虚拟机上搭了一个LAMP服务器环境，把安装及配置过程记了下来。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="网络" scheme="//blog.stdioa.com/categories/%E7%BD%91%E7%BB%9C/"/>
-    
-    
-      <category term="Linux" scheme="//blog.stdioa.com/tags/Linux/"/>
-    
-      <category term="Apache" scheme="//blog.stdioa.com/tags/Apache/"/>
-    
-      <category term="MySQL" scheme="//blog.stdioa.com/tags/MySQL/"/>
-    
-      <category term="PHP" scheme="//blog.stdioa.com/tags/PHP/"/>
     
   </entry>
   
