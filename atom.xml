@@ -698,9 +698,9 @@ HTTPS配置好后访问博客，Chrome提示“存在不安全的内容”，选
     
       <category term="nginx" scheme="//blog.stdioa.com/tags/nginx/"/>
     
-      <category term="python" scheme="//blog.stdioa.com/tags/python/"/>
-    
       <category term="Github" scheme="//blog.stdioa.com/tags/Github/"/>
+    
+      <category term="python" scheme="//blog.stdioa.com/tags/python/"/>
     
   </entry>
   
