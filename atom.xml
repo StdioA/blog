@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//blog.stdioa.com/"/>
-  <updated>2016-04-25T05:43:54.721Z</updated>
+  <updated>2016-04-25T05:53:16.800Z</updated>
   <id>//blog.stdioa.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="//blog.stdioa.com/2016/04/nuaactf-unofficial-writeup/"/>
     <id>//blog.stdioa.com/2016/04/nuaactf-unofficial-writeup/</id>
     <published>2016-04-25T04:01:04.000Z</published>
-    <updated>2016-04-25T05:43:54.721Z</updated>
+    <updated>2016-04-25T05:53:16.800Z</updated>
     
     <content type="html">&lt;p&gt;学校组织了第一届 NUAACTF，参加去玩玩，开开脑洞😂，嗯，还蛮好玩的~&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -80,6 +80,7 @@ Flag 藏在页面的某个 &lt;code&gt;js&lt;/code&gt; 文件里，用 jsfuck �
 &lt;p&gt;数格子数的眼都要花了…&lt;br&gt;
 每一行 8 位二进制转 ASCII 码，得到 flag &lt;code&gt;nuaactf{sh0rt_f1Ag&lt;/code&gt;, 少了一个右括号😂&lt;br&gt;
 真是幸亏 flag 短…&lt;/p&gt;
+&lt;p&gt;顺便说一句，那个音频真好听，听说是锤子手机的默认铃声😳&lt;/p&gt;
 &lt;h1 id=&quot;rev-3&quot;&gt;Rev 3&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;不喜欢写界面的白菜哥&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;.NET&lt;/code&gt; 逆向，直接拖到 IDA 里面，一阵乱翻，翻到了三段 base64 和一个摩尔斯电码表。把三段 base64 拼起来以后 decode, 得到一段摩尔斯电码 &lt;code&gt;-. ..- .- .- -.-. - ..-. 2D3f ... .- .--. .--. -.-- -.-. .-. .- -.-. -....- .---- -. --. -.-. ... ... .- .-. .--. -...--.-&lt;/code&gt; (2D3f 是什么鬼😂)，解码后得到 flag &lt;code&gt;NUAACTF{SAPPYCRACK1NGCSSARP}&lt;/code&gt;，放到源程序里面，显示 flag 正确。&lt;/p&gt;

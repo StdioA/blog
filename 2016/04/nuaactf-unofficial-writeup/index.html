@@ -16,7 +16,7 @@
 <meta property="og:image" content="//blog.stdioa.com/pics/nuaactf/rev2.png">
 <meta property="og:image" content="//blog.stdioa.com/pics/nuaactf/misc2.png">
 <meta property="og:image" content="//blog.stdioa.com/pics/nuaactf/misc3.png">
-<meta property="og:updated_time" content="2016-04-25T05:43:54.721Z">
+<meta property="og:updated_time" content="2016-04-25T05:53:16.800Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一届 NUAACTF 非官方 Writeup">
 <meta name="twitter:description" content="学校组织了第一届 NUAACTF，参加去玩玩，开开脑洞😂，嗯，还蛮好玩的~">
@@ -306,6 +306,7 @@ Flag 藏在页面的某个 <code>js</code> 文件里，用 jsfuck 混淆了。</
 <p>数格子数的眼都要花了…<br>
 每一行 8 位二进制转 ASCII 码，得到 flag <code>nuaactf{sh0rt_f1Ag</code>, 少了一个右括号😂<br>
 真是幸亏 flag 短…</p>
+<p>顺便说一句，那个音频真好听，听说是锤子手机的默认铃声😳</p>
 <h1 id="rev-3">Rev 3</h1>
 <p><strong>不喜欢写界面的白菜哥</strong></p>
 <p><code>.NET</code> 逆向，直接拖到 IDA 里面，一阵乱翻，翻到了三段 base64 和一个摩尔斯电码表。把三段 base64 拼起来以后 decode, 得到一段摩尔斯电码 <code>-. ..- .- .- -.-. - ..-. 2D3f ... .- .--. .--. -.-- -.-. .-. .- -.-. -....- .---- -. --. -.-. ... ... .- .-. .--. -...--.-</code> (2D3f 是什么鬼😂)，解码后得到 flag <code>NUAACTF{SAPPYCRACK1NGCSSARP}</code>，放到源程序里面，显示 flag 正确。</p>
