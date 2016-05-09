@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>//blog.stdioa.com/2016/05/django-mysql-charset-problem/</loc>
+    <lastmod>2016-05-09T02:20:13.196Z</lastmod>
+    <data>
+        <display>
+        <title>解决 MySQL 编码问题</title>
+        <pubTime>2016-05-09T01:40:46.000Z</pubTime>
+        
+        <tag>MySQL</tag>
+         
+        <tag>Django</tag>
+         
+         
+           
+             
+              <breadCrumb title="开发" url="//blog.stdioa.com/categories/%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>//blog.stdioa.com/2016/04/nuaactf-unofficial-writeup/</loc>
     <lastmod>2016-04-25T05:53:16.800Z</lastmod>
     <data>
@@ -476,9 +498,9 @@
         
         <tag>nginx</tag>
          
-        <tag>Github</tag>
-         
         <tag>python</tag>
+         
+        <tag>Github</tag>
          
          
            

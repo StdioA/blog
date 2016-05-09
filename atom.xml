@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//blog.stdioa.com/"/>
-  <updated>2016-04-25T05:53:16.800Z</updated>
+  <updated>2016-05-09T02:20:13.196Z</updated>
   <id>//blog.stdioa.com/</id>
   
   <author>
@@ -14,6 +14,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决 MySQL 编码问题</title>
+    <link href="//blog.stdioa.com/2016/05/django-mysql-charset-problem/"/>
+    <id>//blog.stdioa.com/2016/05/django-mysql-charset-problem/</id>
+    <published>2016-05-09T01:40:46.000Z</published>
+    <updated>2016-05-09T02:20:13.196Z</updated>
+    
+    <content type="html">&lt;p&gt;很久以前写了一个 Django 项目，数据库用的 MySQL. 很久没用，后来发现 MySQL 编码设置有问题，导致中文全部变成了问号。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;1-mysql&quot;&gt;1. 设置 MySQL 服务端默认字符集&lt;/h1&gt;
+&lt;p&gt;在 &lt;code&gt;my.cnf&lt;/code&gt; 中设置默认字符集：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[mysqld]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;character-set-server=utf8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;同时，可以设置 MySQL 客户端的默认字符集：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[mysql]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;character-set-default=utf-8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;配置完成后，重启 MySQL 服务，输入 &lt;code&gt;SHOW VARIABLES LIKE &#39;%CHAR&#39;;&lt;/code&gt; 检查字符集是否正确。&lt;/p&gt;
+&lt;h1 id=&quot;2&quot;&gt;2. 手动设置数据库编码&lt;/h1&gt;
+&lt;p&gt;修改默认编码其实是没用的😂，还需要手动设置数据库编码，而数据库编码需要在建立时指定，所以…真是一个悲伤的故事😢（反正我的服务也没人用&lt;/p&gt;
+&lt;p&gt;重新建立数据库：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;DROP DATABASE spaste;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;CREATE DATABASE spaste DEFAULT CHARACTER SET utf8;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;重建数据库后，输入 &lt;code&gt;python manager.py migrate&lt;/code&gt; 重新迁移数据库。&lt;/p&gt;
+&lt;h1 id=&quot;3&quot;&gt;3. 参考资料&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://dev.mysql.com/doc/refman/5.7/en/charset-applications.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Configuring the Character Set and Collation for Applications - MySQL 5.7 Reference Manual&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://shikezhi.com/html/2015/mysql_0827/204288.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;django 解决 mysql 数据库输入中文乱码问题&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;4&quot;&gt;4. 后记&lt;/h1&gt;
+&lt;p&gt;好短的一篇文章…&lt;/p&gt;
+&lt;p&gt;最近在爬 B 站用户的公开用户数据，数据库用了 MongoDB, 爬完以后好好玩一玩😳&lt;br&gt;
+B 站基佬好多啊_(:зゝ∠)_&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;很久以前写了一个 Django 项目，数据库用的 MySQL. 很久没用，后来发现 MySQL 编码设置有问题，导致中文全部变成了问号。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="开发" scheme="//blog.stdioa.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="MySQL" scheme="//blog.stdioa.com/tags/MySQL/"/>
+    
+      <category term="Django" scheme="//blog.stdioa.com/tags/Django/"/>
+    
+  </entry>
   
   <entry>
     <title>第一届 NUAACTF 非官方 Writeup</title>
@@ -698,9 +744,9 @@ HTTPS配置好后访问博客，Chrome提示“存在不安全的内容”，选
     
       <category term="nginx" scheme="//blog.stdioa.com/tags/nginx/"/>
     
-      <category term="Github" scheme="//blog.stdioa.com/tags/Github/"/>
-    
       <category term="python" scheme="//blog.stdioa.com/tags/python/"/>
+    
+      <category term="Github" scheme="//blog.stdioa.com/tags/Github/"/>
     
   </entry>
   
@@ -1516,85 +1562,6 @@ Wikipedia链接: &lt;a href=&quot;https://en.wikipedia.org/wiki/Git_(software)&q
       <category term="Windows" scheme="//blog.stdioa.com/tags/Windows/"/>
     
       <category term="wget" scheme="//blog.stdioa.com/tags/wget/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>搭建私有KMS服务器</title>
-    <link href="//blog.stdioa.com/2015/09/building-a-private-kms-server/"/>
-    <id>//blog.stdioa.com/2015/09/building-a-private-kms-server/</id>
-    <published>2015-09-02T14:26:00.000Z</published>
-    <updated>2015-12-20T02:21:36.423Z</updated>
-    
-    <content type="html">&lt;p&gt;最近win10又频繁提示“许可即将过期”，之前找到的kms服务器又挂掉了，于是就决定自己搭一个自己用。&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h1 id=&quot;1&quot;&gt;1. 引子&lt;/h1&gt;
-&lt;p&gt;好久没更新日志了，暑假在家每天过的乱七八糟，就没怎么研究技术，于是博客也没怎么更新…今天随便写点什么凑个数_(:зゝ∠)_&lt;/p&gt;
-&lt;h1 id=&quot;2&quot;&gt;2. 科普&lt;/h1&gt;
-&lt;p&gt;KMS (Key Management Service), 密钥管理服务，是一种对Windows及Office产品进行批量授权的服务，通常被部署在大型企业局域网中，用于对批量授权版（即VOL版）Windows系统进行大批量的激活。KMS服务器的作用是给局域网中的所有计算机的操作系统提供一个有效的产品序列号，然后计算机里面的KMS服务就会自动将系统激活。每一个由KMS Server提供的序列号的有效期只有180天，而不是其他版本的永久使用一个序列号。所以操作者必须在快到期的时候在此手动连接KMS服务器让它提供一个新的序列号，否则180天以后就会回到试用版本状态。由于KMS系统部署较为容易，所以在国内很多人通过MSDN等渠道下载VOL版本的软件，然后通过KMS服务进行激活，已达到盗版的目的。&lt;/p&gt;
-&lt;h1 id=&quot;3-luangao&quot;&gt;3. 搭(luan)建(gao)过程&lt;/h1&gt;
-&lt;p&gt;昨天在满大街乱找野生KMS服务器的时候发现了一个帖子：&lt;a href=&quot;http://wrlog.com/activate-kms-vlmcsd.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;使用KMS激活windows系统及VL-office系列&lt;/a&gt;, 里面提供了一个&lt;a href=&quot;http://forums.mydigitallife.info/threads/50234-Emulated-KMS-Servers-on-non-Windows-platforms&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;链接&lt;/a&gt;指向一个帖子，帖子中提供了Python和C版本的KMS服务器模拟器，可以在自己的服务器中进行KMS服务器部署。于是把代码搞了下来（为此还注册了个账号, python版的代码在&lt;a href=&quot;https://mega.co.nz/#F!6pIGEbhQ!DE2twA7dVG5C4knjAq56zQ&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;)，用VSFTP将代码传到了自己的树莓派上，然后运行&lt;code&gt;python server.py&lt;/code&gt;进行部署。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;python server.py
-TCP server listening at 0.0.0.0 on port 1688.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;然后在Windows系统中打开具有管理员权限的命令提示符，输入&lt;code&gt;slmgr -skms 192.168.155.2:1688&lt;/code&gt;设置KMS服务器地址（地址可以更换），然后输入`slmgr -ato’进行系统激活，此时服务器端显示：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Connection accepted: 192.168.56.1:13023
-Received V6 request on Wed Sep  2 22:59:55 2015.
-Connection closed: 192.168.56.1:13023
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Windows系统提示“成功地激活了产品”，激活成功。&lt;/p&gt;
-&lt;p&gt;在树莓派上部署成功以后，随手在VPS上部署了一份以备用。帖子中提了一种设置Linux系统启动项来使KMS服务器开机自动部署的方法，不过自己没有这个需求就没搞。&lt;/p&gt;
-&lt;h1 id=&quot;4&quot;&gt;4. 总结&lt;/h1&gt;
-&lt;p&gt;这篇文章好像有点水，主要是因为自己实在没什么东西写了…自己的暑假过的乱七八糟，浪费了很多时间在游戏上，没什么心情研究技术。现在开学了，有更多时间来钻研技术了，收收心找找状态，以后博客会定期更新的，我对树莓派电源灯发誓→_→&lt;/p&gt;
-&lt;h1 id=&quot;5-key&quot;&gt;5. 各种Key&lt;/h1&gt;
-&lt;p&gt;最后附上Office 2016和Windows 10的VOL版激活码，其它版本软件激活码请自行百度。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Office Professional Plus 2016 - XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99
-Office Standard 2016 - JNRGM-WHDWX-FJJG3-K47QV-DRTFM
-Project Professional 2016 - YG9NW-3K39V-2T3HJ-93F3Q-G83KT
-Project Standard 2016 - GNFHQ-F6YQM-KQDGJ-327XX-KQBVC
-Visio Professional 2016 - PD3PC-RHNGV-FXJ29-8JK7D-RJRJK
-Visio Standard 2016 - 7WHWN-4T7MP-G96JF-G33KR-W8GF4
-Access 2016 - GNH9Y-D2J4T-FJHGG-QRVH7-QPFDW
-Excel 2016 - 9C2PK-NWTVB-JMPW8-BFT28-7FTBF
-OneNote 2016 - DR92N-9HTF2-97XKM-XW2WJ-XW3J6
-Outlook 2016 - R69KK-NTPKF-7M3Q4-QYBHW-6MT9B
-PowerPoint 2016 - J7MQP-HNJ4Y-WJ7YM-PFYGF-BY6C6
-Publisher 2016 - F47MM-N3XJP-TQXJ9-BP99D-8K837
-Skype for Business 2016 - 869NQ-FJ69K-466HW-QYCP2-DDBV6
-Word 2016 - WXY84-JN2Q9-RBCCQ-3Q3J3-3PFJ6&lt;/p&gt;
-&lt;p&gt;Windows 10 Home - TX9XD-98N7V-6WMQ6-BX7FG-H8Q99
-Windows 10 Home N - 3KHY7-WNT83-DGQKR-F7HPR-844BM
-Windows 10 Home Single Language - 7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH
-Windows 10 Home Country Specific - PVMJN-6DFY6-9CCP6-7BKTT-D3WVR
-Windows 10 Professional - W269N-WFGWX-YVC9B-4J6C9-T83GX
-Windows 10 Professional N - MH37W-N47XK-V7XM9-C7227-GCQG9
-Windows 10 Education - NW6C2-QMPVW-D7KKK-3GKT6-VCFB2
-Windows 10 Education N - 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ
-Windows 10 Enterprise - NPPR9-FWDCX-D2C8J-H872K-2YT43
-Windows 10 Enterprise N - DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4
-Windows 10 Enterprise 2015 LTSB - WNMTR-4C88C-JK8YV-HQ7T2-76DF9
-Windows 10 Enterprise 2015 LTSB N - 2F77B-TNFGY-69QQF-B8YKP-D69TJ&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;em&gt;可以考虑有空搞一个Office 2016来玩玩。&lt;/em&gt;&lt;/p&gt;
-&lt;h1 id=&quot;6&quot;&gt;6. 参考文档&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.baike.com/wiki/KMS&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;KMS - 互动百科&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://wrlog.com/activate-kms-vlmcsd.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;使用KMS激活windows系统及VL-office系列&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://forums.mydigitallife.info/threads/50234-Emulated-KMS-Servers-on-non-Windows-platforms&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emulated KMS Servers on non-Windows platforms&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近win10又频繁提示“许可即将过期”，之前找到的kms服务器又挂掉了，于是就决定自己搭一个自己用。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="乱七八糟" scheme="//blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
-    
-    
-      <category term="KMS" scheme="//blog.stdioa.com/tags/KMS/"/>
     
   </entry>
   
