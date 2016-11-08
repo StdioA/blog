@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//blog.stdioa.com/"/>
-  <updated>2016-05-09T02:20:13.196Z</updated>
+  <updated>2016-11-08T14:12:03.796Z</updated>
   <id>//blog.stdioa.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="//blog.stdioa.com/2016/05/django-mysql-charset-problem/"/>
     <id>//blog.stdioa.com/2016/05/django-mysql-charset-problem/</id>
     <published>2016-05-09T01:40:46.000Z</published>
-    <updated>2016-05-09T02:20:13.196Z</updated>
+    <updated>2016-11-08T14:12:03.796Z</updated>
     
     <content type="html"><![CDATA[<p>很久以前写了一个 Django 项目，数据库用的 MySQL. 很久没用，后来发现 MySQL 编码设置有问题，导致中文全部变成了问号。</p>
 <a id="more"></a>
@@ -66,7 +66,7 @@ B 站基佬好多啊_(:зゝ∠)_</p>
     <link href="//blog.stdioa.com/2016/04/nuaactf-unofficial-writeup/"/>
     <id>//blog.stdioa.com/2016/04/nuaactf-unofficial-writeup/</id>
     <published>2016-04-25T04:01:04.000Z</published>
-    <updated>2016-11-08T12:49:36.020Z</updated>
+    <updated>2016-11-08T13:48:35.546Z</updated>
     
     <content type="html"><![CDATA[<p>学校组织了第一届 NUAACTF，参加去玩玩，开开脑洞😂，嗯，还蛮好玩的~</p>
 <a id="more"></a>
@@ -186,7 +186,7 @@ CTF 真好玩，考到了各种姿势各种脑洞，还是蛮有意思哒~<br>
     <link href="//blog.stdioa.com/2016/04/leetcode-database-solutions/"/>
     <id>//blog.stdioa.com/2016/04/leetcode-database-solutions/</id>
     <published>2016-04-06T08:02:00.000Z</published>
-    <updated>2016-04-06T09:40:29.147Z</updated>
+    <updated>2016-11-08T13:48:35.544Z</updated>
     
     <content type="html"><![CDATA[<p>前两天重刷了《SQL必知必会》，昨天想到了 LeetCode，于是去刷了几道数据库的题目，开了不少脑洞。</p>
 <a id="more"></a>
@@ -254,7 +254,7 @@ CTF 真好玩，考到了各种姿势各种脑洞，还是蛮有意思哒~<br>
     <link href="//blog.stdioa.com/2016/03/essay-vue/"/>
     <id>//blog.stdioa.com/2016/03/essay-vue/</id>
     <published>2016-03-28T13:40:03.000Z</published>
-    <updated>2016-11-08T12:51:21.716Z</updated>
+    <updated>2016-11-08T13:48:35.501Z</updated>
     
     <content type="html"><![CDATA[<p>之前的那门 JS 和前端课结课了，最后花了一周时间写了一个 project，使用 Vue.js 的一套工具写了一个单页面应用，先将使用到及学到的知识来整理一下。</p>
 <a id="more"></a>
@@ -266,7 +266,7 @@ CTF 真好玩，考到了各种姿势各种脑洞，还是蛮有意思哒~<br>
 <p><a href="https://github.com/vuejs/vue-cli" target="_blank" rel="external">vue-cli</a> 是一个 Vue.js 官方提供的脚手架工具，你可以使用它来轻松地构建出一个应用 <code>Vue.js</code> 的工程。官方提供 5 种模板，当然你也可以在 <code>github</code> 上或者本地构建自己的模板然后使用 vue-cli 生成工程。</p>
 <p><a href="https://github.com/vuejs/vue-cli#usage" target="_blank" rel="external">具体使用方法</a>：生成一个工程极为简单，只需一两条命令即可。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ vue init webpack my-project     // 使用 webpack 模板生成工程 my-project</div><div class="line">$ <span class="built_in">cd</span> my-project</div><div class="line">$ npm install</div><div class="line">$ npm run dev</div></pre></td></tr></table></figure>
-<p>然后，借助 <code>webpack</code> 与 <code>vue-loader</code>, 你可以将一个 <code>Vue</code> 组件的模板、核心js代码和CSS写在<strong>一个文件里</strong>，甚至还可以使用 <code>CSS</code> 与 <code>HTML</code> 的预处理器，像这样：
+<p>然后，借助 <code>webpack</code> 与 <code>vue-loader</code>, 你可以将一个 <code>Vue</code> 组件的模板、核心js代码和CSS写在<strong>一个文件里</strong>，甚至还可以使用 <code>CSS</code> 与 <code>HTML</code> 的预处理器，像这样：<br>
 <img src="/pics/vue/vue-component-with-pre-processors.png" alt=""><br>
 <span style="font-size: 0.75em;">图片来自<a href="http://vuejs.org.cn/guide/application.html" target="_blank" rel="external"> Vue.js 官方教程 - 构建大型应用</a>。</span></p>
 <h1 id="3-vue-router">3. Vue-router</h1>
@@ -319,7 +319,7 @@ CTF 真好玩，考到了各种姿势各种脑洞，还是蛮有意思哒~<br>
     <link href="//blog.stdioa.com/2016/03/essay-atom-using-experience/"/>
     <id>//blog.stdioa.com/2016/03/essay-atom-using-experience/</id>
     <published>2016-03-27T02:40:03.000Z</published>
-    <updated>2016-03-27T06:33:01.283Z</updated>
+    <updated>2016-11-08T13:48:35.480Z</updated>
     
     <content type="html"><![CDATA[<p>昨天看到了 Atom 官方发布了一篇 <a href="http://flight-manual.atom.io/" target="_blank" rel="external">Atom Flight Manual</a>, 看了两页觉得有些感兴趣所以下了一个体验一下。</p>
 <a id="more"></a>
@@ -394,7 +394,7 @@ Atom 自带了两个插件：<code>Git Diff</code> 和 <code>Markdown Preview</c
     <link href="//blog.stdioa.com/2016/02/learning-javascript/"/>
     <id>//blog.stdioa.com/2016/02/learning-javascript/</id>
     <published>2016-02-24T11:31:42.000Z</published>
-    <updated>2016-03-27T06:27:19.506Z</updated>
+    <updated>2016-11-08T13:48:35.510Z</updated>
     
     <content type="html"><![CDATA[<p>从开始写Javascript到现在，已经有一个月了，这一个月学了不少新姿势，随便写写，简单整理一下。</p>
 <a id="more"></a>
@@ -531,7 +531,7 @@ JSX可以在浏览器中转换为javascript并执行，有两个前提：</p>
     <link href="//blog.stdioa.com/2016/01/blog-migration-iii/"/>
     <id>//blog.stdioa.com/2016/01/blog-migration-iii/</id>
     <published>2016-01-20T03:40:00.000Z</published>
-    <updated>2016-01-20T03:52:12.762Z</updated>
+    <updated>2016-11-08T13:48:35.449Z</updated>
     
     <content type="html"><![CDATA[<p>一个月没更新，期末复习的时候光鼓捣网站却懒得写东西，期末考完了，把这一个月鼓捣的东西记录一下，比如利用七牛进行静态文件托管。</p>
 <a id="more"></a>
@@ -585,7 +585,7 @@ JSX可以在浏览器中转换为javascript并执行，有两个前提：</p>
     <link href="//blog.stdioa.com/2015/12/blog-migration-ii/"/>
     <id>//blog.stdioa.com/2015/12/blog-migration-ii/</id>
     <published>2015-12-18T07:55:37.000Z</published>
-    <updated>2016-01-06T07:15:24.817Z</updated>
+    <updated>2016-11-08T13:48:35.437Z</updated>
     
     <content type="html"><![CDATA[<p>域名依然在备案中，依然想将博客部署到新买的VPS的我和腾讯斗智斗勇（雾），为博客添加了HTTPS&gt;_&lt;
 同时，把自己的密码学课设也转移到VPS上来了。</p>
@@ -685,7 +685,7 @@ HTTPS配置好后访问博客，Chrome提示“存在不安全的内容”，选
     <link href="//blog.stdioa.com/2015/12/blog-migration/"/>
     <id>//blog.stdioa.com/2015/12/blog-migration/</id>
     <published>2015-12-17T11:55:37.000Z</published>
-    <updated>2015-12-18T05:53:29.525Z</updated>
+    <updated>2016-11-08T13:48:35.455Z</updated>
     
     <content type="html"><![CDATA[<p>昨天买了一个VPS、一个域名，决定把博客迁移到VPS上。</p>
 <a id="more"></a>
@@ -755,7 +755,7 @@ HTTPS配置好后访问博客，Chrome提示“存在不安全的内容”，选
     <link href="//blog.stdioa.com/2015/12/essay-solve-InsecurePlatformWarning/"/>
     <id>//blog.stdioa.com/2015/12/essay-solve-InsecurePlatformWarning/</id>
     <published>2015-12-07T15:01:00.000Z</published>
-    <updated>2015-12-20T02:21:53.885Z</updated>
+    <updated>2016-11-08T13:48:35.493Z</updated>
     
     <content type="html"><![CDATA[<p>第三次在VPS上面解决使用requests报InsecurePlatformWarning警告的问题。之前每次都要查资料折腾好久，这次决定把它记下来。</p>
 <a id="more"></a>
@@ -809,7 +809,7 @@ HTTPS配置好后访问博客，Chrome提示“存在不安全的内容”，选
     <link href="//blog.stdioa.com/2015/11/learning-python-unittest/"/>
     <id>//blog.stdioa.com/2015/11/learning-python-unittest/</id>
     <published>2015-11-12T10:53:02.000Z</published>
-    <updated>2016-04-06T08:24:45.487Z</updated>
+    <updated>2016-11-08T13:48:35.538Z</updated>
     
     <content type="html"><![CDATA[<p>单元测试，工程开发中重要的一环。</p>
 <a id="more"></a>
@@ -874,7 +874,7 @@ Git的坑还没填完不过自己的Pro Git看的差不多了，貌似也满足�
     <link href="//blog.stdioa.com/2015/10/learning-python-collections/"/>
     <id>//blog.stdioa.com/2015/10/learning-python-collections/</id>
     <published>2015-10-29T12:55:00.000Z</published>
-    <updated>2015-12-20T02:22:17.054Z</updated>
+    <updated>2016-11-08T13:48:35.517Z</updated>
     
     <content type="html"><![CDATA[<p>collection是Python内建的一个实用工具包，提供一些使用的容器，用于对传统容器类型进行功能提升。</p>
 <a id="more"></a>
@@ -1000,7 +1000,7 @@ deque对象也被包含在Queue模块中。</p>
     <link href="//blog.stdioa.com/2015/10/learning-python-iterator/"/>
     <id>//blog.stdioa.com/2015/10/learning-python-iterator/</id>
     <published>2015-10-26T07:43:00.000Z</published>
-    <updated>2015-12-20T02:22:13.570Z</updated>
+    <updated>2016-11-08T13:48:35.528Z</updated>
     
     <content type="html"><![CDATA[<p>昨晚用python写了个简单的链表，突然想起了迭代器，就随手整理一下，顺便过一下itertools模块。</p>
 <a id="more"></a>
@@ -1130,7 +1130,7 @@ izip的取最长序列的版本，短序列将填入fillvalue。
     <link href="//blog.stdioa.com/2015/10/learning-python-context-management/"/>
     <id>//blog.stdioa.com/2015/10/learning-python-context-management/</id>
     <published>2015-10-22T12:00:00.000Z</published>
-    <updated>2015-12-20T02:22:08.283Z</updated>
+    <updated>2016-11-08T13:48:35.523Z</updated>
     
     <content type="html"><![CDATA[<p>最近突发奇想，想写一个能改变当前输出环境，输出彩色文字的上下文管理器，于是学习了一下上下文管理。</p>
 <a id="more"></a>
@@ -1193,7 +1193,7 @@ Enter the runtime context and return either this object or another object relate
     <link href="//blog.stdioa.com/2015/10/learning-python-virtualenv/"/>
     <id>//blog.stdioa.com/2015/10/learning-python-virtualenv/</id>
     <published>2015-10-22T02:15:00.000Z</published>
-    <updated>2015-12-20T02:22:28.361Z</updated>
+    <updated>2016-11-08T13:48:35.543Z</updated>
     
     <content type="html"><![CDATA[<p>用过virtualenv的人都说好，可是我没有具体使用过，所以尝试了一下，用完我也说好~233333</p>
 <a id="more"></a>
@@ -1254,7 +1254,7 @@ Enter the runtime context and return either this object or another object relate
     <link href="//blog.stdioa.com/2015/10/learning-python-logging/"/>
     <id>//blog.stdioa.com/2015/10/learning-python-logging/</id>
     <published>2015-10-21T08:00:00.000Z</published>
-    <updated>2015-12-20T02:22:22.025Z</updated>
+    <updated>2016-11-08T13:48:35.533Z</updated>
     
     <content type="html"><![CDATA[<p>以前写代码的时候，所有信息包括调试信息全部输出在屏幕上，有的时候会看起来乱糟糟的，这时就需要logging模块来记录信息或生成日志文件。</p>
 <a id="more"></a>
@@ -1303,7 +1303,7 @@ logging默认的日志级别为WARNING，在当前级别下，只有warning及�
     <link href="//blog.stdioa.com/2015/10/essay-git/"/>
     <id>//blog.stdioa.com/2015/10/essay-git/</id>
     <published>2015-10-14T10:28:00.000Z</published>
-    <updated>2016-01-06T07:15:23.755Z</updated>
+    <updated>2016-11-08T13:48:35.485Z</updated>
     
     <content type="html"><![CDATA[<p>从一年前开始使用Git, 一直没系统整理过Git的命令，前几天在部署代码的时候出了问题不知道该如何解决，于是决定整理一份Git的使用方法。本博文会持续更新。</p>
 <a id="more"></a>
@@ -1453,7 +1453,7 @@ Wikipedia链接: <a href="https://en.wikipedia.org/wiki/Git_(software)" target="
     <link href="//blog.stdioa.com/2015/09/essay-pip-acceleration/"/>
     <id>//blog.stdioa.com/2015/09/essay-pip-acceleration/</id>
     <published>2015-09-29T15:01:00.000Z</published>
-    <updated>2015-12-20T02:21:47.485Z</updated>
+    <updated>2016-11-08T13:48:35.491Z</updated>
     
     <content type="html"><![CDATA[<p>原来Windows和Linux更改镜像源的方式是不一样的啊。</p>
 <a id="more"></a>
@@ -1490,7 +1490,7 @@ Wikipedia链接: <a href="https://en.wikipedia.org/wiki/Git_(software)" target="
     <link href="//blog.stdioa.com/2015/09/essay-ajax/"/>
     <id>//blog.stdioa.com/2015/09/essay-ajax/</id>
     <published>2015-09-22T13:07:00.000Z</published>
-    <updated>2015-12-20T02:21:41.907Z</updated>
+    <updated>2016-11-08T13:48:35.475Z</updated>
     
     <content type="html"><![CDATA[<p>之前自己没怎么写过前端，一直以为Ajax写起来很麻烦，也没怎么接触Ajax，今天写了个小网页用到了Ajax，感觉它并不是想象的那么复杂，写完网页随手总结一下。（喂我这个技能点是不是点的太晚了啊！）</p>
 <a id="more"></a>
@@ -1534,7 +1534,7 @@ Wikipedia链接: <a href="https://en.wikipedia.org/wiki/Git_(software)" target="
     <link href="//blog.stdioa.com/2015/09/using-wget-in-Windows/"/>
     <id>//blog.stdioa.com/2015/09/using-wget-in-Windows/</id>
     <published>2015-09-18T12:07:00.000Z</published>
-    <updated>2016-01-06T07:15:23.258Z</updated>
+    <updated>2016-11-08T13:48:35.551Z</updated>
     
     <content type="html"><![CDATA[<p>一直心心念念想在Windows里用wget，今天随便搞了搞，在Windows里面用上了wget，终于可以下载一些乱七八糟的小文件辣。</p>
 <a id="more"></a>

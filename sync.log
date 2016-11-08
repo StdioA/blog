@@ -1,4 +1,0 @@
-2016/11/08 21:23:05.383972 [ERROR][qbox.us/cc/config] load_conf.go:61: Load conf failed: open sync_conf.json: The system cannot find the file specified.
-2016/11/08 21:23:05 [WARN][qbox.us/shell/qrsync] qrsync.go:44: config.Load failed: failed:
- ==> open sync_conf.json: The system cannot find the file specified. ~ config.Load failed: sync_conf.json
- ==> open sync_conf.json: The system cannot find the file specified.

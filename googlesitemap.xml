@@ -2,170 +2,170 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>//blog.stdioa.com/2016/03/essay-vue/</loc>
+    <loc>//blog.stdioa.com/2016/05/django-mysql-charset-problem/</loc>
     
-    <lastmod>2016-11-08T12:51:21.716Z</lastmod>
+    <lastmod>2016-11-08T14:12:03.796Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.stdioa.com/about/index.html</loc>
     
-    <lastmod>2016-11-08T12:49:36.025Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//blog.stdioa.com/2016/04/nuaactf-unofficial-writeup/</loc>
-    
-    <lastmod>2016-11-08T12:49:36.020Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//blog.stdioa.com/2016/05/django-mysql-charset-problem/</loc>
-    
-    <lastmod>2016-05-09T02:20:13.196Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//blog.stdioa.com/2016/04/leetcode-database-solutions/</loc>
-    
-    <lastmod>2016-04-06T09:40:29.147Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//blog.stdioa.com/2015/11/learning-python-unittest/</loc>
-    
-    <lastmod>2016-04-06T08:24:45.487Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//blog.stdioa.com/2016/03/essay-atom-using-experience/</loc>
-    
-    <lastmod>2016-03-27T06:33:01.283Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//blog.stdioa.com/2016/02/learning-javascript/</loc>
-    
-    <lastmod>2016-03-27T06:27:19.506Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//blog.stdioa.com/2016/01/blog-migration-iii/</loc>
-    
-    <lastmod>2016-01-20T03:52:12.762Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//blog.stdioa.com/2015/12/blog-migration-ii/</loc>
-    
-    <lastmod>2016-01-06T07:15:24.817Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//blog.stdioa.com/2015/07/deploy-a-LAMP-environment/</loc>
-    
-    <lastmod>2016-01-06T07:15:24.302Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//blog.stdioa.com/2015/10/essay-git/</loc>
-    
-    <lastmod>2016-01-06T07:15:23.755Z</lastmod>
+    <lastmod>2016-11-08T13:48:35.556Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.stdioa.com/2015/09/using-wget-in-Windows/</loc>
     
-    <lastmod>2016-01-06T07:15:23.258Z</lastmod>
+    <lastmod>2016-11-08T13:48:35.551Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.stdioa.com/2016/04/nuaactf-unofficial-writeup/</loc>
+    
+    <lastmod>2016-11-08T13:48:35.546Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.stdioa.com/2016/04/leetcode-database-solutions/</loc>
+    
+    <lastmod>2016-11-08T13:48:35.544Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.stdioa.com/2015/10/learning-python-virtualenv/</loc>
     
-    <lastmod>2015-12-20T02:22:28.361Z</lastmod>
+    <lastmod>2016-11-08T13:48:35.543Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.stdioa.com/2015/11/learning-python-unittest/</loc>
+    
+    <lastmod>2016-11-08T13:48:35.538Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.stdioa.com/2015/10/learning-python-logging/</loc>
     
-    <lastmod>2015-12-20T02:22:22.025Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//blog.stdioa.com/2015/10/learning-python-collections/</loc>
-    
-    <lastmod>2015-12-20T02:22:17.054Z</lastmod>
+    <lastmod>2016-11-08T13:48:35.533Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.stdioa.com/2015/10/learning-python-iterator/</loc>
     
-    <lastmod>2015-12-20T02:22:13.570Z</lastmod>
+    <lastmod>2016-11-08T13:48:35.528Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.stdioa.com/2015/10/learning-python-context-management/</loc>
     
-    <lastmod>2015-12-20T02:22:08.283Z</lastmod>
+    <lastmod>2016-11-08T13:48:35.523Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.stdioa.com/2015/10/learning-python-collections/</loc>
+    
+    <lastmod>2016-11-08T13:48:35.517Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.stdioa.com/2016/02/learning-javascript/</loc>
+    
+    <lastmod>2016-11-08T13:48:35.510Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.stdioa.com/2016/03/essay-vue/</loc>
+    
+    <lastmod>2016-11-08T13:48:35.501Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.stdioa.com/2015/12/essay-solve-InsecurePlatformWarning/</loc>
     
-    <lastmod>2015-12-20T02:21:53.885Z</lastmod>
+    <lastmod>2016-11-08T13:48:35.493Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.stdioa.com/2015/09/essay-pip-acceleration/</loc>
     
-    <lastmod>2015-12-20T02:21:47.485Z</lastmod>
+    <lastmod>2016-11-08T13:48:35.491Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.stdioa.com/2015/10/essay-git/</loc>
+    
+    <lastmod>2016-11-08T13:48:35.485Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.stdioa.com/2016/03/essay-atom-using-experience/</loc>
+    
+    <lastmod>2016-11-08T13:48:35.480Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.stdioa.com/2015/09/essay-ajax/</loc>
     
-    <lastmod>2015-12-20T02:21:41.907Z</lastmod>
+    <lastmod>2016-11-08T13:48:35.475Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.stdioa.com/2015/07/deploy-a-LAMP-environment/</loc>
+    
+    <lastmod>2016-11-08T13:48:35.461Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.stdioa.com/2015/09/building-a-private-kms-server/</loc>
     
-    <lastmod>2015-12-20T02:21:36.423Z</lastmod>
+    <lastmod>2016-11-08T13:48:35.456Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.stdioa.com/2015/12/blog-migration/</loc>
     
-    <lastmod>2015-12-18T05:53:29.525Z</lastmod>
+    <lastmod>2016-11-08T13:48:35.455Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.stdioa.com/2016/01/blog-migration-iii/</loc>
+    
+    <lastmod>2016-11-08T13:48:35.449Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.stdioa.com/2015/12/blog-migration-ii/</loc>
+    
+    <lastmod>2016-11-08T13:48:35.437Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.stdioa.com/404.html</loc>
     
-    <lastmod>2015-10-26T03:37:51.961Z</lastmod>
+    <lastmod>2016-11-08T13:48:35.426Z</lastmod>
     
   </url>
   
