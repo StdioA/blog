@@ -539,13 +539,13 @@ Atom 自带了两个插件：<code>Git Diff</code> 和 <code>Markdown Preview</c
       <category term="随笔" scheme="//blog.stdioa.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="Git" scheme="//blog.stdioa.com/tags/Git/"/>
-    
       <category term="Atom" scheme="//blog.stdioa.com/tags/Atom/"/>
     
       <category term="Sublime Text" scheme="//blog.stdioa.com/tags/Sublime-Text/"/>
     
       <category term="文本编辑器" scheme="//blog.stdioa.com/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+    
+      <category term="Git" scheme="//blog.stdioa.com/tags/Git/"/>
     
   </entry>
   
