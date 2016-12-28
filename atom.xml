@@ -464,11 +464,11 @@ CTF 真好玩，考到了各种姿势各种脑洞，还是蛮有意思哒~<br>
       <category term="Javascript" scheme="//blog.stdioa.com/categories/Javascript/"/>
     
     
-      <category term="前端开发" scheme="//blog.stdioa.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-    
       <category term="Javascript" scheme="//blog.stdioa.com/tags/Javascript/"/>
     
       <category term="node.js" scheme="//blog.stdioa.com/tags/node-js/"/>
+    
+      <category term="前端开发" scheme="//blog.stdioa.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
       <category term="vue.js" scheme="//blog.stdioa.com/tags/vue-js/"/>
     
@@ -539,13 +539,13 @@ Atom 自带了两个插件：<code>Git Diff</code> 和 <code>Markdown Preview</c
       <category term="随笔" scheme="//blog.stdioa.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
+      <category term="Git" scheme="//blog.stdioa.com/tags/Git/"/>
+    
       <category term="Atom" scheme="//blog.stdioa.com/tags/Atom/"/>
     
       <category term="Sublime Text" scheme="//blog.stdioa.com/tags/Sublime-Text/"/>
     
       <category term="文本编辑器" scheme="//blog.stdioa.com/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    
-      <category term="Git" scheme="//blog.stdioa.com/tags/Git/"/>
     
   </entry>
   
@@ -678,11 +678,11 @@ JSX可以在浏览器中转换为javascript并执行，有两个前提：</p>
       <category term="Javascript" scheme="//blog.stdioa.com/categories/Javascript/"/>
     
     
-      <category term="前端开发" scheme="//blog.stdioa.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-    
       <category term="Javascript" scheme="//blog.stdioa.com/tags/Javascript/"/>
     
       <category term="node.js" scheme="//blog.stdioa.com/tags/node-js/"/>
+    
+      <category term="前端开发" scheme="//blog.stdioa.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
@@ -832,9 +832,9 @@ HTTPS配置好后访问博客，Chrome提示“存在不安全的内容”，选
       <category term="乱七八糟" scheme="//blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
     
     
-      <category term="nginx" scheme="//blog.stdioa.com/tags/nginx/"/>
-    
       <category term="Github" scheme="//blog.stdioa.com/tags/Github/"/>
+    
+      <category term="nginx" scheme="//blog.stdioa.com/tags/nginx/"/>
     
       <category term="Let&#39;s Encrypt" scheme="//blog.stdioa.com/tags/Let-s-Encrypt/"/>
     
@@ -902,11 +902,11 @@ HTTPS配置好后访问博客，Chrome提示“存在不安全的内容”，选
       <category term="乱七八糟" scheme="//blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
     
     
-      <category term="nginx" scheme="//blog.stdioa.com/tags/nginx/"/>
+      <category term="python" scheme="//blog.stdioa.com/tags/python/"/>
     
       <category term="Github" scheme="//blog.stdioa.com/tags/Github/"/>
     
-      <category term="python" scheme="//blog.stdioa.com/tags/python/"/>
+      <category term="nginx" scheme="//blog.stdioa.com/tags/nginx/"/>
     
   </entry>
   
@@ -1683,9 +1683,9 @@ Wikipedia链接: <a href="https://en.wikipedia.org/wiki/Git_(software)" target="
       <category term="网络" scheme="//blog.stdioa.com/categories/%E7%BD%91%E7%BB%9C/"/>
     
     
-      <category term="Ajax" scheme="//blog.stdioa.com/tags/Ajax/"/>
-    
       <category term="前端开发" scheme="//blog.stdioa.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="Ajax" scheme="//blog.stdioa.com/tags/Ajax/"/>
     
   </entry>
   
