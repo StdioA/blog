@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>//blog.stdioa.com/about/index.html</loc>
+    <loc>//blog.stdioa.com/2016/12/learning-python-ctypes/</loc>
     
-    <lastmod>2016-11-15T14:18:14.733Z</lastmod>
+    <lastmod>2016-12-30T03:27:58.118Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.stdioa.com/2016/11/SuCTF-Writeup/</loc>
     
-    <lastmod>2016-11-15T14:08:45.467Z</lastmod>
+    <lastmod>2016-12-30T03:19:23.750Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.stdioa.com/about/index.html</loc>
+    
+    <lastmod>2016-11-15T14:18:14.733Z</lastmod>
     
   </url>
   

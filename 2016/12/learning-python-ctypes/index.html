@@ -4,15 +4,19 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: 编程工具 | Stdio&#39;s Blog</title>
+  <title>Python 学习之 ctypes | Stdio&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <script src="//cdn.bootcss.com/twemoji/2.0.5/twemoji.min.js"></script>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Stdio's Blog">
-<meta property="og:url" content="//blog.stdioa.com/tags/编程工具/index.html">
+  <meta name="description" content="课设写不完，要炸了… Windows UI 好难写，只好用 PyQt 解决… 怎么把 Python 和 C 模块连起来？就用 ctypes.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python 学习之 ctypes">
+<meta property="og:url" content="//blog.stdioa.com/2016/12/learning-python-ctypes/index.html">
 <meta property="og:site_name" content="Stdio's Blog">
+<meta property="og:description" content="课设写不完，要炸了… Windows UI 好难写，只好用 PyQt 解决… 怎么把 Python 和 C 模块连起来？就用 ctypes.">
+<meta property="og:updated_time" content="2016-12-30T03:27:58.118Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Stdio's Blog">
+<meta name="twitter:title" content="Python 学习之 ctypes">
+<meta name="twitter:description" content="课设写不完，要炸了… Windows UI 好难写，只好用 PyQt 解决… 怎么把 Python 和 C 模块连起来？就用 ctypes.">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -196,57 +200,88 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-learning-python-ctypes" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/10/essay-git/" class="archive-article-date">
-  	<time datetime="2015-10-14T10:28:00.000Z" itemprop="datePublished">Oct 14</time>
+    <div class="article-meta">
+      <a href="/2016/12/learning-python-ctypes/" class="article-date">
+  	<time datetime="2016-12-30T03:27:00.000Z" itemprop="datePublished">2016-12-30</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/10/essay-git/">随手记之Git</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python 学习之 ctypes
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程工具/">编程工具</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ctypes/">ctypes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
 	</div>
 
-          
+        
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/随手记/">随手记</a>
+	<a class="article-category-link" href="/categories/Python/">Python</a>
 	</div>
 
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1"><span class="toc-text">1. 简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2"><span class="toc-text">2. 快速上手</span></a></li></ol>
+        
+        <p>课设写不完，要炸了… Windows UI 好难写，只好用 PyQt 解决… 怎么把 Python 和 C 模块连起来？就用 ctypes.</p>
+<a id="more"></a>
+<h1 id="1">1. 简介</h1>
+<p>ctypes 是一个 Python 外部库。它提供 C 语言兼容的数据结构，而且我们可以通过它来调用 DLL 或共享库(shared library)的函数。</p>
+<h1 id="2">2. 快速上手</h1>
+<p>编写 <code>mod.c</code>:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">return</span> a+b;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">char</span> *<span class="title">hello</span><span class="params">(<span class="keyword">char</span> *name)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">char</span> *str;</div><div class="line">    str = (<span class="keyword">char</span> *)<span class="built_in">malloc</span>(<span class="number">100</span>);</div><div class="line">    <span class="built_in">sprintf</span>(str, <span class="string">"Hello, %s"</span>, name);</div><div class="line">    <span class="keyword">return</span> str;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>将 C 程序编译为共享库：<code>gcc -fPIC -shared mod.c -o mod.so</code></p>
+<p>编写 Python 代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># coding: utf-8</span></div><div class="line"><span class="keyword">from</span> ctypes <span class="keyword">import</span> *</div><div class="line"> </div><div class="line">mod = CDLL(<span class="string">"./mod.so"</span>)</div><div class="line"> </div><div class="line">print(mod.add(<span class="number">1</span>, <span class="number">2</span>))        <span class="comment"># 3</span></div><div class="line"> </div><div class="line">hello = mod.hello</div><div class="line">hello.restype = c_char_p    <span class="comment"># Set response type,</span></div><div class="line">                            <span class="comment"># otherwise an address(integer) will be returned</span></div><div class="line"> </div><div class="line">world = create_string_buffer(<span class="string">b"World"</span>)</div><div class="line">res = hello(byref(world))   <span class="comment"># Pass by pointer</span></div><div class="line">print(res)</div></pre></td></tr></table></figure>
+<p>完。</p>
+<p>剩下的等写完课设再更。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/11/SuCTF-Writeup/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SUCTF 非官方 Writeup</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+
 
 </div>
       <footer id="footer">
@@ -281,9 +316,9 @@
     mathjax: true,
     animate: true,
     isHome: false,
-    isPost: false,
+    isPost: true,
     isArchive: false,
-    isTag: true,
+    isTag: false,
     isCategory: false,
     open_in_new: false
   }

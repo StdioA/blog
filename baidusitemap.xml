@@ -3,10 +3,31 @@
 
 
     
+  <url>
+    <loc>//blog.stdioa.com/2016/12/learning-python-ctypes/</loc>
+    <lastmod>2016-12-30T03:27:58.118Z</lastmod>
+    <data>
+        <display>
+        <title>Python 学习之 ctypes</title>
+        <pubTime>2016-12-30T03:27:00.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>ctypes</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="//blog.stdioa.com/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>//blog.stdioa.com/2016/11/SuCTF-Writeup/</loc>
-    <lastmod>2016-11-15T14:08:45.467Z</lastmod>
+    <lastmod>2016-12-30T03:19:23.750Z</lastmod>
     <data>
         <display>
         <title>SUCTF 非官方 Writeup</title>
@@ -25,6 +46,7 @@
     </data>
     </url>
 
+    
     
   <url>
     <loc>//blog.stdioa.com/2016/05/django-mysql-charset-problem/</loc>
@@ -258,11 +280,11 @@
         <title>Javascript学习总结</title>
         <pubTime>2016-02-24T11:31:42.000Z</pubTime>
         
+        <tag>前端开发</tag>
+         
         <tag>Javascript</tag>
          
         <tag>node.js</tag>
-         
-        <tag>前端开发</tag>
          
          
            
@@ -282,11 +304,11 @@
         <title>随手记之Vue.js</title>
         <pubTime>2016-03-28T13:40:03.000Z</pubTime>
         
+        <tag>前端开发</tag>
+         
         <tag>Javascript</tag>
          
         <tag>node.js</tag>
-         
-        <tag>前端开发</tag>
          
         <tag>vue.js</tag>
          
@@ -376,13 +398,13 @@
         <title>Atom 浅度体验感受</title>
         <pubTime>2016-03-27T02:40:03.000Z</pubTime>
         
-        <tag>Git</tag>
-         
         <tag>Atom</tag>
          
         <tag>Sublime Text</tag>
          
         <tag>文本编辑器</tag>
+         
+        <tag>Git</tag>
          
          
            
@@ -402,9 +424,9 @@
         <title>点点技能点之Ajax</title>
         <pubTime>2015-09-22T13:07:00.000Z</pubTime>
         
-        <tag>前端开发</tag>
-         
         <tag>Ajax</tag>
+         
+        <tag>前端开发</tag>
          
          
            
@@ -470,11 +492,11 @@
         <title>博客迁移记（一）</title>
         <pubTime>2015-12-17T11:55:37.000Z</pubTime>
         
-        <tag>python</tag>
+        <tag>nginx</tag>
          
         <tag>Github</tag>
          
-        <tag>nginx</tag>
+        <tag>python</tag>
          
          
            
@@ -518,9 +540,9 @@
         <title>博客迁移记（二）</title>
         <pubTime>2015-12-18T07:55:37.000Z</pubTime>
         
-        <tag>Github</tag>
-         
         <tag>nginx</tag>
+         
+        <tag>Github</tag>
          
         <tag>Let&#39;s Encrypt</tag>
          
