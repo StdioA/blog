@@ -133,6 +133,10 @@
 			        
 			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://rexskz.info/">Rexskz</a>
 			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://showlinkroom.me/">L1nk3d</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.moecai.com/">半见</a>
+			        
 			        </div>
 				</section>
 				
@@ -242,15 +246,21 @@
     <div class="article-entry" itemprop="articleBody">
       
         
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-引子"><span class="toc-text">1. 引子</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-过程"><span class="toc-text">2. 过程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-瞎写"><span class="toc-text">3. 瞎写</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1"><span class="toc-text">1. 引子</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2"><span class="toc-text">2. 过程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3"><span class="toc-text">3. 瞎写</span></a></li></ol>
         
         <p>原来Windows和Linux更改镜像源的方式是不一样的啊。</p>
 <a id="more"></a>
-<h1 id="1-引子"><a href="#1-引子" class="headerlink" title="1. 引子"></a>1. 引子</h1><p>偶然发现USTC有一个pypi的源(<a href="http://mirrors.ustc.edu.cn/pypi/" target="_blank" rel="external">在这里</a>)，照着USTC给的<a href="https://lug.ustc.edu.cn/wiki/mirrors/help/pypi" target="_blank" rel="external">镜像使用帮助</a>更改镜像源无果。今天闲来无事就多搜了一下。</p>
-<h1 id="2-过程"><a href="#2-过程" class="headerlink" title="2. 过程"></a>2. 过程</h1><p>USTC的镜像使用帮助里说，将<code>index-url = https://pypi.mirrors.ustc.edu.cn/simple</code>添加到<code>~/.pip/pip.conf</code>文件中，按照此思路看，如果我在Windows下使用的话，应该将配置信息添加到<code>C:\Users\Stdio\.pip\pip.conf</code>文件中。然而添加后并没有什么卵用。今天看见一个<a href="http://blog.csdn.net/sasoritattoo/article/details/10020547" target="_blank" rel="external">博文</a>说文件设置路径应为<code>%HOME%\pip\pip.ini</code>，于是试了一下（绝对路径为<code>C:\Users\Stdio\pip\pip.ini</code>），成功。用了USTC的源，装个软件速度简直飞起︿(￣︶￣)︿<br>弄好以后多了个心眼，去看看官方怎么说，于是找到了pip的Documentation（<a href="https://pip.pypa.io/en/stable/user_guide/#configuration" target="_blank" rel="external">在这里</a>）里面讲述了配置文件所在位置。</p>
+<h1 id="1">1. 引子</h1>
+<p>偶然发现USTC有一个pypi的源(<a href="http://mirrors.ustc.edu.cn/pypi/" target="_blank" rel="external">在这里</a>)，照着USTC给的<a href="https://lug.ustc.edu.cn/wiki/mirrors/help/pypi" target="_blank" rel="external">镜像使用帮助</a>更改镜像源无果。今天闲来无事就多搜了一下。</p>
+<h1 id="2">2. 过程</h1>
+<p>USTC的镜像使用帮助里说，将<code>index-url = https://pypi.mirrors.ustc.edu.cn/simple</code>添加到<code>~/.pip/pip.conf</code>文件中，按照此思路看，如果我在Windows下使用的话，应该将配置信息添加到<code>C:\Users\Stdio\.pip\pip.conf</code>文件中。然而添加后并没有什么卵用。今天看见一个<a href="http://blog.csdn.net/sasoritattoo/article/details/10020547" target="_blank" rel="external">博文</a>说文件设置路径应为<code>%HOME%\pip\pip.ini</code>，于是试了一下（绝对路径为<code>C:\Users\Stdio\pip\pip.ini</code>），成功。用了USTC的源，装个软件速度简直飞起︿(￣︶￣)︿<br>
+弄好以后多了个心眼，去看看官方怎么说，于是找到了pip的Documentation（<a href="https://pip.pypa.io/en/stable/user_guide/#configuration" target="_blank" rel="external">在这里</a>）里面讲述了配置文件所在位置。</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">Config file</div><div class="line">pip allows you to set all command line option defaults in a standard ini style config file.</div><div class="line"></div><div class="line">The names and locations of the configuration files vary slightly across platforms. You may have per-user, per-virtualenv or site-wide (shared amongst all users) configuration:</div><div class="line"></div><div class="line">Per-user:</div><div class="line"></div><div class="line">On Unix the default configuration file is: $HOME/.config/pip/pip.conf which respects the XDG<span class="emphasis">_CONFIG_</span>HOME environment variable.</div><div class="line">On Mac OS X the configuration file is $HOME/Library/Application Support/pip/pip.conf.</div><div class="line">On Windows the configuration file is %APPDATA%\pip\pip.ini.</div><div class="line">There are also a legacy per-user configuration file which is also respected, these are located at:</div><div class="line"></div><div class="line">On Unix and Mac OS X the configuration file is: $HOME/.pip/pip.conf</div><div class="line">On Windows the configuration file is: %HOME%\pip\pip.ini</div><div class="line">You can set a custom path location for this config file using the environment variable PIP<span class="emphasis">_CONFIG_</span>FILE.</div><div class="line"></div><div class="line">Inside a virtualenv:</div><div class="line"></div><div class="line">On Unix and Mac OS X the file is $VIRTUAL_ENV/pip.conf</div><div class="line">On Windows the file is: %VIRTUAL_ENV%\pip.ini</div></pre></td></tr></table></figure>
-<p>于是自己将配置文件放在了<code>%APPDATA%\pip\pip.ini</code>，即<code>C:\Users\Stdio\AppData\Roaming\pip\pip.ini</code>下，经实验，加速成功。<br>经测试，系统层面的全局设置会影响到virtualenv建立的虚拟环境设置，所以可以通过设置虚拟环境的配置文件来更改虚拟环境设置，设置文件就放在虚拟环境根目录下就好了。</p>
-<h1 id="3-瞎写"><a href="#3-瞎写" class="headerlink" title="3. 瞎写"></a>3. 瞎写</h1><p>改了软件源以后为了做测试升级了numpy，然后编译用了半天中间电脑卡到死，现在它还在我的腿上发烫真是伤不起- -<br>写的东西越来越没有营养了，就当是写着玩顺带积累一下知识吧。如果不出意外的话，下一篇应该是关于Python Qt Creater和Qt GUI设计的小文章0.0也许是virtualenv的随手记吧。</p>
+<p>于是自己将配置文件放在了<code>%APPDATA%\pip\pip.ini</code>，即<code>C:\Users\Stdio\AppData\Roaming\pip\pip.ini</code>下，经实验，加速成功。
+经测试，系统层面的全局设置会影响到virtualenv建立的虚拟环境设置，所以可以通过设置虚拟环境的配置文件来更改虚拟环境设置，设置文件就放在虚拟环境根目录下就好了。</p>
+<h1 id="3">3. 瞎写</h1>
+<p>改了软件源以后为了做测试升级了numpy，然后编译用了半天中间电脑卡到死，现在它还在我的腿上发烫真是伤不起- -<br>
+写的东西越来越没有营养了，就当是写着玩顺带积累一下知识吧。如果不出意外的话，下一篇应该是关于Python Qt Creater和Qt GUI设计的小文章0.0也许是virtualenv的随手记吧。</p>
 
       
     </div>
