@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>//blog.stdioa.com/2016/12/learning-python-ctypes/</loc>
+    <loc>//blog.stdioa.com/2017/03/DRF-demo/</loc>
     
-    <lastmod>2016-12-30T03:27:58.118Z</lastmod>
+    <lastmod>2017-03-09T08:13:46.126Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.stdioa.com/2016/03/essay-vue/</loc>
+    
+    <lastmod>2017-03-09T07:45:34.731Z</lastmod>
     
   </url>
   
   <url>
     <loc>//blog.stdioa.com/2016/11/SuCTF-Writeup/</loc>
     
-    <lastmod>2016-12-30T03:19:23.750Z</lastmod>
+    <lastmod>2017-03-09T07:05:01.442Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>//blog.stdioa.com/2016/12/learning-python-ctypes/</loc>
+    
+    <lastmod>2016-12-30T03:27:58.118Z</lastmod>
     
   </url>
   
@@ -96,13 +110,6 @@
     <loc>//blog.stdioa.com/2016/02/learning-javascript/</loc>
     
     <lastmod>2016-11-08T13:48:35.510Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//blog.stdioa.com/2016/03/essay-vue/</loc>
-    
-    <lastmod>2016-11-08T13:48:35.501Z</lastmod>
     
   </url>
   

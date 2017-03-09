@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//blog.stdioa.com/"/>
-  <updated>2016-12-30T03:27:58.118Z</updated>
+  <updated>2017-03-09T08:13:46.126Z</updated>
   <id>//blog.stdioa.com/</id>
   
   <author>
@@ -14,6 +14,89 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Django REST Framework 入门</title>
+    <link href="//blog.stdioa.com/2017/03/DRF-demo/"/>
+    <id>//blog.stdioa.com/2017/03/DRF-demo/</id>
+    <published>2017-03-09T06:52:00.000Z</published>
+    <updated>2017-03-09T08:13:46.126Z</updated>
+    
+    <content type="html"><![CDATA[<p>拖了很久，终于用 Django REST Framework 写了个小 Demo.</p>
+<a id="more"></a>
+<h1 id="1-django-rest-framework">1. Django REST Framework</h1>
+<p><a href="http://www.django-rest-framework.org/" target="_blank" rel="external">Django REST Framework</a> 是一个用来构造 Web API 的、强大而灵活的工具包。</p>
+<p>最早认识这个框架是在我翻译的<a href="https://linux.cn/article-7679-1.html" target="_blank" rel="external">《5 个最受人喜爱的开源 Django 包》</a>中，而真正接触它的时候已经是在五个月之后。那个时候在扇贝实习，第一次体会到了这个框架的简单易用。但那个时候也仅仅是做码农堆代码，并没有对这个框架产生特别深的了解。<br>
+前两天写了一个小 Demo，尝试着用比较少的代码实现对某个模型的增删改查操作，今天简单把实现过程记录一下。完整的代码在<a href="https://github.com/StdioA/drf_demo" target="_blank" rel="external">这里</a>。</p>
+<h1 id="2">2. 一点准备工作</h1>
+<p>先安装依赖（推荐使用 virtualenv，虽然我从来不用🌚）：<code>pip install Django djangorestframework</code>.</p>
+<p>然后创建工程，创建 app.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">django-admin startproject drf_demo</div><div class="line"><span class="built_in">cd</span> drf_demo</div><div class="line">./manage.py startapp demo</div></pre></td></tr></table></figure>
+<p>简单写一个 model：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># demo/models.py</span></div><div class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</div><div class="line"> </div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Data</span><span class="params">(models.Model)</span>:</span></div><div class="line">    content = models.CharField(max_length=<span class="number">128</span>)</div></pre></td></tr></table></figure>
+<p>迁移数据库：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">./manage.py makemigrations</div><div class="line">./manage.py migrate</div></pre></td></tr></table></figure>
+<p>在项目设置中添加 APP，顺便把 DRF 也添加进去：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># drf_demo/settings.py</span></div><div class="line">INSTALLED_APPS = [</div><div class="line">    <span class="comment"># ...</span></div><div class="line">    <span class="string">'rest_framework'</span>,</div><div class="line">    <span class="string">'demo'</span></div><div class="line">]</div></pre></td></tr></table></figure>
+<p>在 root URL conf 中添加 APP 的 URL：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># drf_femo/urls.py</span></div><div class="line">urlpatterns = [</div><div class="line">    <span class="comment"># ...</span></div><div class="line">    url(<span class="string">r'^'</span>, include(<span class="string">'demo.urls'</span>))</div><div class="line">]</div></pre></td></tr></table></figure>
+<h1 id="3-api">3. 开始动手写 API</h1>
+<p>如果在 Django 中写一个页面，你需要：</p>
+<ol>
+<li>在 <code>urls.py</code> 中注册 view；</li>
+<li>在 <code>views.py</code> 中编写 view；</li>
+<li>在 <code>templates</code> 文件夹中编写模板。</li>
+</ol>
+<p>相对地，如果使用 DRF 创建一组 API，你需要：</p>
+<ol>
+<li>在 <code>urls.py</code> 中定义并注册 router；</li>
+<li>在 <code>views.py</code> 中定义 ViewSet；</li>
+<li>在 <code>serializers.py</code> 中定义 serializer.</li>
+</ol>
+<h2 id="31-serializer">3.1 创建 serializer</h2>
+<p>serializer 是什么？<br>
+简单而言，serializer 就是一种根据配置，用来把数据在 model instance 及 raw data 之间转换的对象。</p>
+<p>比如：我们可以针对刚刚定义的 model <code>Data</code> 来创建一个 serializer:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># demo/serializers.py</span></div><div class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> Data</div><div class="line"><span class="keyword">from</span> rest_framework.serializers <span class="keyword">import</span> ModelSerializer</div><div class="line"> </div><div class="line"> </div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">DataSerializer</span><span class="params">(ModelSerializer)</span>:</span></div><div class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span></div><div class="line">        model = Data</div><div class="line">        fields = (<span class="string">"id"</span>, <span class="string">"content"</span>)</div></pre></td></tr></table></figure>
+<p>然后，我们就可以通过这个 serializer 将数据在 <code>Data</code> 对象及 <code>JSON</code> 数据之间转换：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> demo.serializers <span class="keyword">import</span> Data, DataSerializer</div><div class="line"><span class="keyword">from</span> rest_framework.renderers <span class="keyword">import</span> JSONRenderer   <span class="comment"># 用于 JSON 渲染及解析</span></div><div class="line"><span class="keyword">from</span> rest_framework.parsers <span class="keyword">import</span> JSONParser</div><div class="line"><span class="keyword">from</span> django.utils.six <span class="keyword">import</span> BytesIO</div><div class="line"> </div><div class="line">instance = Data(content=<span class="string">"test"</span>)</div><div class="line">instance.save()</div><div class="line"> </div><div class="line">serializer = DataSerializer(instance)</div><div class="line">JSONRenderer().render(serializer.data)              <span class="comment"># b'&#123;"id":1,"content":"test"&#125;'</span></div><div class="line"> </div><div class="line">raw = <span class="string">b'&#123;"id":2,"content":"another"&#125;'</span></div><div class="line">stream = BytesIO(raw)                               <span class="comment"># 将 JSON 数据变成 Python dict</span></div><div class="line">data = JSONParser().parse(stream)</div><div class="line"> </div><div class="line">serializer = DataSerializer(data=data)</div><div class="line">ins = serializer.save()                             <span class="comment"># &lt;Data: Data object&gt;</span></div><div class="line">ins.__dict__                                        <span class="comment"># &#123;'content': 'another', 'id': 2&#125;</span></div></pre></td></tr></table></figure>
+<h2 id="32-viewset">3.2 创建 ViewSet</h2>
+<p>非常简单，在 <code>views.py</code> 中定义一个 ViewSet 类，标明对应的 model 以及 serializer 即可：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># demo/views.py</span></div><div class="line"><span class="keyword">from</span> rest_framework.viewsets <span class="keyword">import</span> ModelViewSet</div><div class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> Data</div><div class="line"><span class="keyword">from</span> .serializers <span class="keyword">import</span> DataSerializer</div><div class="line"> </div><div class="line"> </div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">DataViewSet</span><span class="params">(ModelViewSet)</span>:</span></div><div class="line">    queryset = Data.objects.all()</div><div class="line">    serializer_class = DataSerializer</div></pre></td></tr></table></figure>
+<h2 id="33-router">3.3 定义、配置并注册 router</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># demo/urls.py</span></div><div class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url, include</div><div class="line"><span class="keyword">from</span> rest_framework.routers <span class="keyword">import</span> DefaultRouter</div><div class="line"><span class="keyword">from</span> .views <span class="keyword">import</span> DataViewSet</div><div class="line"> </div><div class="line">router = DefaultRouter()                        <span class="comment"># 定义 router</span></div><div class="line">router.register(<span class="string">'data'</span>, DataViewSet)            <span class="comment"># 注册 viewset</span></div><div class="line"> </div><div class="line">urlpatterns = [</div><div class="line">    url(<span class="string">r'^'</span>, include(router.urls)),            <span class="comment"># 在 urlpatterns 里包含 router</span></div><div class="line">]</div></pre></td></tr></table></figure>
+<h1 id="4">4. 大功告成！</h1>
+<p>启动服务器，访问 <code>/data/</code>，你就会看到 DRF 精美的调试界面，真是感动😭</p>
+<p>按照 RESTful API 规范，在列表界面，你可以通过 POST 表单来创建新对象：<br>
+<img src="/pics/DRF/DRF-list-view.jpg" alt="DRF 列表界面"></p>
+<p>在详情界面（<code>/data/1/</code>），你可以通过 PUT 表单修改对象，或通过 DELETE 按钮来删除对象:<br>
+<img src="/pics/DRF/DRF-detail-view.jpg" alt="DRF 详情界面"></p>
+<p>当然，如果你乐意，使用 CURL 来调试也是可以的，服务器会给你返回 JSON 而不是 HTML:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$  curl -XPUT --data <span class="string">"content=edit"</span> http://localhost:8000/data/1/</div><div class="line">&#123;<span class="string">"id"</span>:1,<span class="string">"content"</span>:<span class="string">"edit"</span>&#125;</div></pre></td></tr></table></figure>
+<h1 id="5">5. 等等…别忘了写测试！</h1>
+<p>DRF 提供了一系列工具来协助 RESTful API 测试，比如 <code>rest_framework.test.APIClient</code>. <code>APIClient</code> 在发送请求时会根据配置自动设定 <code>Content-Type</code>, 而不是用 Django 自带 <code>djanto.test.Client</code> 的 <code>application/octet-stream</code>，方便了 API 测试。<br>
+测试代码不在这里贴出（有些无趣），感兴趣的同学可以戳戳戳<a href="https://github.com/StdioA/drf_demo/blob/master/demo/tests.py" target="_blank" rel="external">这里</a>。</p>
+<p>教程结束。<br>
+这两天我还会继续看 DRF，后面还会继续更新相关内容。<br>
+<s>又立 flag!</s></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;拖了很久，终于用 Django REST Framework 写了个小 Demo.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="//blog.stdioa.com/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="//blog.stdioa.com/tags/Python/"/>
+    
+      <category term="Django" scheme="//blog.stdioa.com/tags/Django/"/>
+    
+      <category term="Django REST Framework" scheme="//blog.stdioa.com/tags/Django-REST-Framework/"/>
+    
+  </entry>
   
   <entry>
     <title>Python 学习之 ctypes</title>
@@ -56,7 +139,7 @@
     <link href="//blog.stdioa.com/2016/11/SuCTF-Writeup/"/>
     <id>//blog.stdioa.com/2016/11/SuCTF-Writeup/</id>
     <published>2016-11-15T11:23:58.000Z</published>
-    <updated>2016-12-30T03:19:23.750Z</updated>
+    <updated>2017-03-09T07:05:01.442Z</updated>
     
     <content type="html"><![CDATA[<p>又玩了一场 CTF，虽然是个人赛，但是有老司机带我飞。继续开脑洞，也学到了不少，做了很多之前没做过的题。</p>
 <a id="more"></a>
@@ -153,12 +236,12 @@ Tips:Audio</p>
 然后线索就断了。</p>
 <h1 id="re">Re</h1>
 <h2 id="-6">先利其器</h2>
-<p>下载一个<a href="/suctf/use_of_ida.exe">文件</a>。<br>
+<p>下载一个<a href="/suctf/use_of_ida_exe">文件</a>。<br>
 拖进 IDA，找到两段代码：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ...</span></div><div class="line"><span class="keyword">if</span> ( num &gt; <span class="number">9</span> ) &#123;</div><div class="line">    plaintext = <span class="string">'I'</span>;</div><div class="line">    flag(&amp;plaintext);</div><div class="line">&#125;</div><div class="line"><span class="comment">// ...</span></div><div class="line"> </div><div class="line"><span class="keyword">signed</span> <span class="keyword">int</span> __<span class="function">cdecl <span class="title">flag</span><span class="params">(<span class="keyword">int</span> *ret)</span> </span>&#123;</div><div class="line">    ret[<span class="number">12</span>] = <span class="string">'a'</span>;</div><div class="line">    ret[<span class="number">11</span>] = <span class="string">'6'</span>;</div><div class="line">    ret[<span class="number">10</span>] = <span class="string">'I'</span>;</div><div class="line">    ret[<span class="number">9</span>] = <span class="string">'_'</span>;</div><div class="line">    ret[<span class="number">8</span>] = <span class="string">'e'</span>;</div><div class="line">    ret[<span class="number">7</span>] = <span class="string">'5'</span>;</div><div class="line">    ret[<span class="number">6</span>] = <span class="string">'U'</span>;</div><div class="line">    ret[<span class="number">5</span>] = <span class="string">'_'</span>;</div><div class="line">    ret[<span class="number">4</span>] = <span class="string">'n'</span>;</div><div class="line">    ret[<span class="number">3</span>] = <span class="string">'@'</span>;</div><div class="line">    ret[<span class="number">2</span>] = <span class="string">'c'</span>;</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>然后拼起来，flag 里还差个下划线，没看代码，猜出来了：<code>suctf{I_c@n_U5e_I6a}</code></p>
 <h2 id="pe-format">PE_Format</h2>
-<p><a href="/suctf/Do_you_know_pe.exe">文件</a>。<br>
+<p><a href="/suctf/Do_you_know_pe_exe">文件</a>。<br>
 不懂 PE 格式，下下来以后看了半天。后来发现出题人竟然把 MZ 头和 PE 头里的 <code>MZ</code> 和 <code>PE</code> 给调过来了😂 改正后，把 MZ 头中 PE 头的位置从 0x40 改到 0x80, 程序就能跑起来了。</p>
 <p>拖到 IDA 里反编译，程序竟然是用 C艹 写的…啃代码啃代码，最后发现 flag 被按位非了，写个程序解出来：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"> </div><div class="line"><span class="comment">// char secret[] = "» ¦Š ”‘ˆ ¯º ¹’ž‹À";</span></div><div class="line"><span class="keyword">char</span> secret[] = <span class="string">"\xBB\x90\xA0\xA6\x90\x8A\xA0\x94\x91\x90\x88\xA0\xAF\xBA\xA0\xB9\x90\x8D\x92\x9E\x8B\xC0"</span>;</div><div class="line"><span class="keyword">char</span> v35[<span class="number">40</span>];</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">char</span> c;</div><div class="line">    <span class="keyword">int</span> len = <span class="built_in">strlen</span>(secret);</div><div class="line">    <span class="built_in">memset</span>(v35, <span class="number">0</span>, <span class="number">30</span>);</div><div class="line">    <span class="built_in">strcpy</span>(v35, secret);</div><div class="line"> </div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++)</div><div class="line">        v35[i] = ~v35[i];</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%s\n"</span>, v35);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -172,7 +255,7 @@ Tips:Audio</p>
 然后用 gdb，在 v7 赋值后下断点，改掉 v7 的值，然后让程序继续运行。最后得到 flag: <code>suctf{Thl5_way_ls_r!8ht}</code>.</p>
 <p>看小伙伴的 Writeup 时，发现 IDA 反编译出的源码是可以在 Linux 中编译的，他直接把源码里的 v5 改成 v7，然后编译一下就出来了。神奇😳</p>
 <h2 id="reverse04">reverse04</h2>
-<p><a href="/suctf/reverse03.exe">文件</a>。尼玛，为啥题目是 04，文件是 03…</p>
+<p><a href="/suctf/reverse03_exe">文件</a>。尼玛，为啥题目是 04，文件是 03…</p>
 <p>程序里用了各种反动态调试技术，于是我就静态分析了，反正也不会。结果分析了半天，各种算地址，最后算出来的 flag 都有问题，就放弃了…<br>
 据说我只跟 flag 差一个凯撒加密？噫，那天状态真是差。flag: <code>suctf{antidebugabc}</code>.</p>
 <h1 id="crypto">Crypto</h1>
@@ -251,9 +334,9 @@ B 站基佬好多啊_(:зゝ∠)_</p>
       <category term="开发" scheme="//blog.stdioa.com/categories/%E5%BC%80%E5%8F%91/"/>
     
     
-      <category term="MySQL" scheme="//blog.stdioa.com/tags/MySQL/"/>
-    
       <category term="Django" scheme="//blog.stdioa.com/tags/Django/"/>
+    
+      <category term="MySQL" scheme="//blog.stdioa.com/tags/MySQL/"/>
     
   </entry>
   
@@ -369,11 +452,11 @@ CTF 真好玩，考到了各种姿势各种脑洞，还是蛮有意思哒~<br>
       <category term="乱七八糟" scheme="//blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
     
     
+      <category term="Python" scheme="//blog.stdioa.com/tags/Python/"/>
+    
       <category term="CTF" scheme="//blog.stdioa.com/tags/CTF/"/>
     
       <category term="脑洞" scheme="//blog.stdioa.com/tags/%E8%84%91%E6%B4%9E/"/>
-    
-      <category term="Python" scheme="//blog.stdioa.com/tags/Python/"/>
     
   </entry>
   
@@ -450,7 +533,7 @@ CTF 真好玩，考到了各种姿势各种脑洞，还是蛮有意思哒~<br>
     <link href="//blog.stdioa.com/2016/03/essay-vue/"/>
     <id>//blog.stdioa.com/2016/03/essay-vue/</id>
     <published>2016-03-28T13:40:03.000Z</published>
-    <updated>2016-11-08T13:48:35.501Z</updated>
+    <updated>2017-03-09T07:45:34.731Z</updated>
     
     <content type="html"><![CDATA[<p>之前的那门 JS 和前端课结课了，最后花了一周时间写了一个 project，使用 Vue.js 的一套工具写了一个单页面应用，先将使用到及学到的知识来整理一下。</p>
 <a id="more"></a>
@@ -469,7 +552,7 @@ CTF 真好玩，考到了各种姿势各种脑洞，还是蛮有意思哒~<br>
 <p><a href="https://github.com/vuejs/vue-router/" target="_blank" rel="external"><code>vue-router</code></a> 是 <code>vue</code> 官方提供的路由模块，可以实现 <code>SPA</code> 中的路由操作。具体文档看<a href="http://vuejs.github.io/vue-router/zh-cn/index.html" target="_blank" rel="external">这里</a>。顺便提一句，<code>vue-router</code> 的中文文档已经过时了。</p>
 <h2 id="31">3.1 初始化</h2>
 <p>首先使用 <code>npm</code> 安装 <code>vue-router</code>, 然后在程序入口点配置 <code>vue-router</code>.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"><span class="keyword">import</span> Router <span class="keyword">from</span> <span class="string">'vue-router'</span></div><div class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./components/App'</span>                    <span class="comment">// 程序的核心 Vue 应用</span></div><div class="line"><span class="keyword">import</span> HomePageView <span class="keyword">from</span> <span class="string">'./components/HomePageView'</span>  <span class="comment">// 导入所有的 View 组件</span></div><div class="line"><span class="keyword">import</span> ItemView <span class="keyword">from</span> <span class="string">'./components/ItemView'</span></div><div class="line"></div><div class="line">Vue.use(Router)                                       <span class="comment">// Vue 配置</span></div><div class="line"><span class="keyword">var</span> router = <span class="keyword">new</span> Router()                             <span class="comment">// 生成路由对象</span></div><div class="line">router.map(&#123;                                          <span class="comment">// 配置路由</span></div><div class="line">  <span class="string">'/'</span>: &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'homepage'</span>,</div><div class="line">    <span class="attr">component</span>: HomePageView</div><div class="line">  &#125;,</div><div class="line">  <span class="string">'/home'</span>: &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'homepage'</span>,</div><div class="line">    <span class="attr">component</span>: HomePageView</div><div class="line">  &#125;,</div><div class="line">  <span class="string">'/item/:id'</span>: &#123;                                    <span class="comment">// 支持动态路径</span></div><div class="line">    name: <span class="string">'item'</span>,</div><div class="line">    <span class="attr">component</span>: ItemView</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">router.redirect(&#123;                                   <span class="comment">// 设置重定向选项</span></div><div class="line">  <span class="string">'*'</span>: <span class="string">'/home'</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line">router.start(App, <span class="string">'[app]'</span>)                           <span class="comment">// 挂载 Vue 主应用</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"><span class="keyword">import</span> Router <span class="keyword">from</span> <span class="string">'vue-router'</span></div><div class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./components/App'</span>                    <span class="comment">// 程序的核心 Vue 应用</span></div><div class="line"><span class="keyword">import</span> HomePageView <span class="keyword">from</span> <span class="string">'./components/HomePageView'</span>  <span class="comment">// 导入所有的 View 组件</span></div><div class="line"><span class="keyword">import</span> ItemView <span class="keyword">from</span> <span class="string">'./components/ItemView'</span></div><div class="line"> </div><div class="line">Vue.use(Router)                                       <span class="comment">// Vue 配置</span></div><div class="line"><span class="keyword">var</span> router = <span class="keyword">new</span> Router()                             <span class="comment">// 生成路由对象</span></div><div class="line">router.map(&#123;                                          <span class="comment">// 配置路由</span></div><div class="line">  <span class="string">'/'</span>: &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'homepage'</span>,</div><div class="line">    <span class="attr">component</span>: HomePageView</div><div class="line">  &#125;,</div><div class="line">  <span class="string">'/home'</span>: &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'homepage'</span>,</div><div class="line">    <span class="attr">component</span>: HomePageView</div><div class="line">  &#125;,</div><div class="line">  <span class="string">'/item/:id'</span>: &#123;                                    <span class="comment">// 支持动态路径</span></div><div class="line">    name: <span class="string">'item'</span>,</div><div class="line">    <span class="attr">component</span>: ItemView</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"> </div><div class="line">router.redirect(&#123;                                   <span class="comment">// 设置重定向选项</span></div><div class="line">  <span class="string">'*'</span>: <span class="string">'/home'</span></div><div class="line">&#125;)</div><div class="line"> </div><div class="line">router.start(App, <span class="string">'[app]'</span>)                           <span class="comment">// 挂载 Vue 主应用</span></div></pre></td></tr></table></figure>
 <p>然后在 <code>App.vue</code> 的 template 中设置 <code>router-view</code>.</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">router-view</span></span></div><div class="line">    <span class="attr">keep-alive</span></div><div class="line">    <span class="attr">transition</span>=<span class="string">"fade"</span></div><div class="line">    <span class="attr">transition-mode</span>=<span class="string">"out-in"</span>&gt;</div><div class="line">  <span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div></pre></td></tr></table></figure>
 <h2 id="32-vue-router">3.2 vue-router 的使用</h2>
@@ -500,13 +583,13 @@ CTF 真好玩，考到了各种姿势各种脑洞，还是蛮有意思哒~<br>
       <category term="Javascript" scheme="//blog.stdioa.com/categories/Javascript/"/>
     
     
+      <category term="前端开发" scheme="//blog.stdioa.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
       <category term="Javascript" scheme="//blog.stdioa.com/tags/Javascript/"/>
     
       <category term="node.js" scheme="//blog.stdioa.com/tags/node-js/"/>
     
       <category term="vue.js" scheme="//blog.stdioa.com/tags/vue-js/"/>
-    
-      <category term="前端开发" scheme="//blog.stdioa.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
@@ -714,11 +797,11 @@ JSX可以在浏览器中转换为javascript并执行，有两个前提：</p>
       <category term="Javascript" scheme="//blog.stdioa.com/categories/Javascript/"/>
     
     
+      <category term="前端开发" scheme="//blog.stdioa.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
       <category term="Javascript" scheme="//blog.stdioa.com/tags/Javascript/"/>
     
       <category term="node.js" scheme="//blog.stdioa.com/tags/node-js/"/>
-    
-      <category term="前端开发" scheme="//blog.stdioa.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
@@ -940,9 +1023,9 @@ HTTPS配置好后访问博客，Chrome提示“存在不安全的内容”，选
     
       <category term="nginx" scheme="//blog.stdioa.com/tags/nginx/"/>
     
-      <category term="python" scheme="//blog.stdioa.com/tags/python/"/>
-    
       <category term="Github" scheme="//blog.stdioa.com/tags/Github/"/>
+    
+      <category term="python" scheme="//blog.stdioa.com/tags/python/"/>
     
   </entry>
   
@@ -1641,43 +1724,6 @@ Wikipedia链接: <a href="https://en.wikipedia.org/wiki/Git_(software)" target="
       <category term="Git" scheme="//blog.stdioa.com/tags/Git/"/>
     
       <category term="编程工具" scheme="//blog.stdioa.com/tags/%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>随手记 - 用国内镜像加速pip</title>
-    <link href="//blog.stdioa.com/2015/09/essay-pip-acceleration/"/>
-    <id>//blog.stdioa.com/2015/09/essay-pip-acceleration/</id>
-    <published>2015-09-29T15:01:00.000Z</published>
-    <updated>2016-11-08T13:48:35.491Z</updated>
-    
-    <content type="html"><![CDATA[<p>原来Windows和Linux更改镜像源的方式是不一样的啊。</p>
-<a id="more"></a>
-<h1 id="1">1. 引子</h1>
-<p>偶然发现USTC有一个pypi的源(<a href="http://mirrors.ustc.edu.cn/pypi/" target="_blank" rel="external">在这里</a>)，照着USTC给的<a href="https://lug.ustc.edu.cn/wiki/mirrors/help/pypi" target="_blank" rel="external">镜像使用帮助</a>更改镜像源无果。今天闲来无事就多搜了一下。</p>
-<h1 id="2">2. 过程</h1>
-<p>USTC的镜像使用帮助里说，将<code>index-url = https://pypi.mirrors.ustc.edu.cn/simple</code>添加到<code>~/.pip/pip.conf</code>文件中，按照此思路看，如果我在Windows下使用的话，应该将配置信息添加到<code>C:\Users\Stdio\.pip\pip.conf</code>文件中。然而添加后并没有什么卵用。今天看见一个<a href="http://blog.csdn.net/sasoritattoo/article/details/10020547" target="_blank" rel="external">博文</a>说文件设置路径应为<code>%HOME%\pip\pip.ini</code>，于是试了一下（绝对路径为<code>C:\Users\Stdio\pip\pip.ini</code>），成功。用了USTC的源，装个软件速度简直飞起︿(￣︶￣)︿<br>
-弄好以后多了个心眼，去看看官方怎么说，于是找到了pip的Documentation（<a href="https://pip.pypa.io/en/stable/user_guide/#configuration" target="_blank" rel="external">在这里</a>）里面讲述了配置文件所在位置。</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">Config file</div><div class="line">pip allows you to set all command line option defaults in a standard ini style config file.</div><div class="line"></div><div class="line">The names and locations of the configuration files vary slightly across platforms. You may have per-user, per-virtualenv or site-wide (shared amongst all users) configuration:</div><div class="line"></div><div class="line">Per-user:</div><div class="line"></div><div class="line">On Unix the default configuration file is: $HOME/.config/pip/pip.conf which respects the XDG<span class="emphasis">_CONFIG_</span>HOME environment variable.</div><div class="line">On Mac OS X the configuration file is $HOME/Library/Application Support/pip/pip.conf.</div><div class="line">On Windows the configuration file is %APPDATA%\pip\pip.ini.</div><div class="line">There are also a legacy per-user configuration file which is also respected, these are located at:</div><div class="line"></div><div class="line">On Unix and Mac OS X the configuration file is: $HOME/.pip/pip.conf</div><div class="line">On Windows the configuration file is: %HOME%\pip\pip.ini</div><div class="line">You can set a custom path location for this config file using the environment variable PIP<span class="emphasis">_CONFIG_</span>FILE.</div><div class="line"></div><div class="line">Inside a virtualenv:</div><div class="line"></div><div class="line">On Unix and Mac OS X the file is $VIRTUAL_ENV/pip.conf</div><div class="line">On Windows the file is: %VIRTUAL_ENV%\pip.ini</div></pre></td></tr></table></figure>
-<p>于是自己将配置文件放在了<code>%APPDATA%\pip\pip.ini</code>，即<code>C:\Users\Stdio\AppData\Roaming\pip\pip.ini</code>下，经实验，加速成功。
-经测试，系统层面的全局设置会影响到virtualenv建立的虚拟环境设置，所以可以通过设置虚拟环境的配置文件来更改虚拟环境设置，设置文件就放在虚拟环境根目录下就好了。</p>
-<h1 id="3">3. 瞎写</h1>
-<p>改了软件源以后为了做测试升级了numpy，然后编译用了半天中间电脑卡到死，现在它还在我的腿上发烫真是伤不起- -<br>
-写的东西越来越没有营养了，就当是写着玩顺带积累一下知识吧。如果不出意外的话，下一篇应该是关于Python Qt Creater和Qt GUI设计的小文章0.0也许是virtualenv的随手记吧。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;原来Windows和Linux更改镜像源的方式是不一样的啊。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="随手记" scheme="//blog.stdioa.com/categories/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
-    
-    
-      <category term="python" scheme="//blog.stdioa.com/tags/python/"/>
-    
-      <category term="pip" scheme="//blog.stdioa.com/tags/pip/"/>
     
   </entry>
   
