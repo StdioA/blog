@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//blog.stdioa.com/"/>
-  <updated>2017-03-09T08:13:46.126Z</updated>
+  <updated>2017-03-19T11:34:06.075Z</updated>
   <id>//blog.stdioa.com/</id>
   
   <author>
@@ -16,11 +16,78 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>使用 supervisor 及 gunicorn 部署 Web 应用</title>
+    <link href="//blog.stdioa.com/2017/03/deploy-apps-with-supervisor-and-gunicorn/"/>
+    <id>//blog.stdioa.com/2017/03/deploy-apps-with-supervisor-and-gunicorn/</id>
+    <published>2017-03-19T09:00:00.000Z</published>
+    <updated>2017-03-19T11:34:06.075Z</updated>
+    
+    <content type="html"><![CDATA[<p>很久之前就想尝试一下用 supervisor 部署 Web 应用，几个月前把 Python 应用的服务器都换成了 gunicorn，今天终于把进程管理服务换成了 supervisor. 看我的拖延症。</p>
+<a id="more"></a>
+<h1 id="1">1. 前言</h1>
+<p>之前一直在用 tmux 来托管各种 Web 应用进程，感觉这种想法真的很蠢，于是今天把托管方式换成了更专业的 supervisor，并用它托管了三个 Django APP，一个 flask APP，还有一个 node APP.</p>
+<p>简单看看今天要用的东西：</p>
+<ul>
+<li><a href="http://gunicorn.org" target="_blank" rel="external">gunicorn</a>，一个 Python 实现的 WSGI 服务器；</li>
+<li><a href="http://supervisord.org/" target="_blank" rel="external">supervisor</a>，一个进程管理工具。</li>
+<li>Django, Flask, Node.js，不多说。</li>
+</ul>
+<h1 id="2-supervisor">2. supervisor 安装及基础配置</h1>
+<p><code>pip2 install supervisor</code> 即可。注意，supervisor 不支持 Python 3.</p>
+<p>supervisor 提供了一个配置生成程序 <code>echo_supervisord_conf</code>，可以用它来直接生成一个实例配置文件。直接输入 <code>echo_supervisord_conf &gt; /etc/supervisor/supervisord.conf</code>，将配置写入文件。</p>
+<p>随后，修改配置文件，开启 http 管理服务：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="section">[inet_http_server]</span>            <span class="comment">; inet (TCP) server disabled by default</span></div><div class="line"><span class="attr">port</span> = <span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">9001</span>         ; (ip_address:port specifier, *:port for all iface)</div><div class="line"><span class="attr">username</span> = stdio              ; (default is <span class="literal">no</span> username (open server))</div><div class="line"><span class="attr">password</span> = password           ; (default is <span class="literal">no</span> password (open server))</div></pre></td></tr></table></figure>
+<p>添加选项，包含子目录 <code>conf.d</code> 下的所有配置文件：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="section">[include]</span></div><div class="line"><span class="attr">files</span> = conf.d/*.conf</div></pre></td></tr></table></figure>
+<p>随后，使用 <code>sudo supervisord -c /etc/supervisor/supervisord.conf</code>，启动 supervisor 守护进程。</p>
+<p>配置一下 Nginx，登录管理页面，可以看到 supervisor 正在运行，不过现在还没有配置任何服务。<br>
+同理，可以使用 <code>supervisorctl</code> 程序，来查看服务运行状态。</p>
+<h1 id="3">3. 服务托管</h1>
+<h2 id="31-django">3.1 托管一个 Django 应用</h2>
+<p>进入 <code>conf.d</code> 文件夹，创建配置文件（如 <code>baybook.conf</code>）。</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="section">[program:baybook]</span></div><div class="line"><span class="attr">command</span> = gunicorn baybook.wsgi -b <span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">8002</span> -n baybook      ; 运行命令</div><div class="line"><span class="attr">directory</span> = /home/stdio/websites/baybook                          ; 运行路径</div><div class="line"><span class="attr">user</span> = stdio</div><div class="line"><span class="attr">autostart</span> = <span class="literal">true</span></div><div class="line"><span class="attr">autorestart</span> = <span class="literal">true</span></div><div class="line"><span class="attr">startsecs</span> = <span class="number">5</span></div><div class="line"><span class="attr">startretries</span> = <span class="number">3</span></div><div class="line"><span class="attr">stdout_logfile</span> = /var/log/supervisor/baybook_stdout.log</div><div class="line"><span class="attr">stderr_logfile</span> = /var/log/supervisor/baybook_stderr.log</div><div class="line"><span class="attr">environment</span>=DJANGO_SETTINGS_MODULE=<span class="string">"baybook.settings.production"</span></div></pre></td></tr></table></figure>
+<p>其中，<code>environment</code> 选项可以配置运行环境的环境变量，比如在此处更改了 Django 的配置文件选项；<code>startsecs</code> 选项表示正常启动所需的时间，比如，当程序已持续运行超过 5 秒时，则视为程序启动成功。</p>
+<p>具体的配置选项可以查看<a href="http://supervisord.org/configuration.html" target="_blank" rel="external">文档</a>。</p>
+<p>保存文件后，运行 <code>supervisorctl update</code> 使配置生效。<br>
+随后可以输入 <code>supervisorctl status</code> 来查看配置状态。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ sudo supervisorctl status</div><div class="line">baybook                          RUNNING   pid 7658, uptime 1:19:55</div></pre></td></tr></table></figure>
+<p>supervisor 提供了一个命令行界面，直接输入 <code>supervisorctl</code> 即可进入，随后可以输入一系列命令，如 <code>start</code>, <code>stop</code>, <code>status</code>, <code>restart</code> 来查看和控制服务运行状态。</p>
+<p>当然，也可以在 Web 管理页面中，查看及控制服务的运行状态。</p>
+<p><img src="/pics/supervisor-status.png" alt="supervisor 管理页面"></p>
+<h2 id="32-node">3.2 托管 Node 应用</h2>
+<p>Node 和 Django 的配置文件基本相同，不过，因为我的 node 应用 的启动速度比较慢，所以我把 <code>startsecs</code> 调高到了 30 秒。</p>
+<h2 id="33-flask">3.3 托管 Flask 应用</h2>
+<p>因为我的 Flask 应用运行在 <code>virtualenv</code> 创建的虚拟环境中，所以 <code>command</code> 命令要稍微改一下，将 <code>gunicorn</code> 可执行文件的路径改为虚拟环境中的 <code>gunicorn</code> 绝对路径，如 <code>/home/stdio/websites/crypt/venv/bin/gunicorn</code>.</p>
+<h1 id="4">4. 后记</h1>
+<p>好像可写的就这么多…<br>
+以后研究一下 gunicorn，再补充 gunicorn 的相关内容吧。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;很久之前就想尝试一下用 supervisor 部署 Web 应用，几个月前把 Python 应用的服务器都换成了 gunicorn，今天终于把进程管理服务换成了 supervisor. 看我的拖延症。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Web" scheme="//blog.stdioa.com/categories/Web/"/>
+    
+    
+      <category term="Python" scheme="//blog.stdioa.com/tags/Python/"/>
+    
+      <category term="Django" scheme="//blog.stdioa.com/tags/Django/"/>
+    
+      <category term="supervisor" scheme="//blog.stdioa.com/tags/supervisor/"/>
+    
+      <category term="gunicorn" scheme="//blog.stdioa.com/tags/gunicorn/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Django REST Framework 入门</title>
     <link href="//blog.stdioa.com/2017/03/DRF-demo/"/>
     <id>//blog.stdioa.com/2017/03/DRF-demo/</id>
     <published>2017-03-09T06:52:00.000Z</published>
-    <updated>2017-03-09T08:13:46.126Z</updated>
+    <updated>2017-03-19T09:00:08.028Z</updated>
     
     <content type="html"><![CDATA[<p>拖了很久，终于用 Django REST Framework 写了个小 Demo.</p>
 <a id="more"></a>
@@ -77,8 +144,11 @@
 <p>DRF 提供了一系列工具来协助 RESTful API 测试，比如 <code>rest_framework.test.APIClient</code>. <code>APIClient</code> 在发送请求时会根据配置自动设定 <code>Content-Type</code>, 而不是用 Django 自带 <code>djanto.test.Client</code> 的 <code>application/octet-stream</code>，方便了 API 测试。<br>
 测试代码不在这里贴出（有些无趣），感兴趣的同学可以戳戳戳<a href="https://github.com/StdioA/drf_demo/blob/master/demo/tests.py" target="_blank" rel="external">这里</a>。</p>
 <p>教程结束。<br>
-这两天我还会继续看 DRF，后面还会继续更新相关内容。<br>
-<s>又立 flag!</s></p>
+这两天我还会继续看 DRF，后面还会继续更新相关内容。</p>
+<hr>
+<p>更新…<br>
+然而并没有更新。<br>
+我看完了 DRF 的 tutorial，也在某个项目里碰到了坑/难用的地方，不过这些都没有太多可写的地方，所以就算了吧，遇到问题翻文档就好，DRF 的文档写的还是挺不错的。</p>
 ]]></content>
     
     <summary type="html">
@@ -951,9 +1021,9 @@ HTTPS配置好后访问博客，Chrome提示“存在不安全的内容”，选
       <category term="乱七八糟" scheme="//blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
     
     
-      <category term="nginx" scheme="//blog.stdioa.com/tags/nginx/"/>
-    
       <category term="Github" scheme="//blog.stdioa.com/tags/Github/"/>
+    
+      <category term="nginx" scheme="//blog.stdioa.com/tags/nginx/"/>
     
       <category term="Let&#39;s Encrypt" scheme="//blog.stdioa.com/tags/Let-s-Encrypt/"/>
     
@@ -1021,11 +1091,11 @@ HTTPS配置好后访问博客，Chrome提示“存在不安全的内容”，选
       <category term="乱七八糟" scheme="//blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
     
     
-      <category term="nginx" scheme="//blog.stdioa.com/tags/nginx/"/>
+      <category term="python" scheme="//blog.stdioa.com/tags/python/"/>
     
       <category term="Github" scheme="//blog.stdioa.com/tags/Github/"/>
     
-      <category term="python" scheme="//blog.stdioa.com/tags/python/"/>
+      <category term="nginx" scheme="//blog.stdioa.com/tags/nginx/"/>
     
   </entry>
   
@@ -1574,156 +1644,6 @@ logging默认的日志级别为WARNING，在当前级别下，只有warning及�
       <category term="python" scheme="//blog.stdioa.com/tags/python/"/>
     
       <category term="logging" scheme="//blog.stdioa.com/tags/logging/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>随手记之Git</title>
-    <link href="//blog.stdioa.com/2015/10/essay-git/"/>
-    <id>//blog.stdioa.com/2015/10/essay-git/</id>
-    <published>2015-10-14T10:28:00.000Z</published>
-    <updated>2016-11-08T13:48:35.485Z</updated>
-    
-    <content type="html"><![CDATA[<p>从一年前开始使用Git, 一直没系统整理过Git的命令，前几天在部署代码的时候出了问题不知道该如何解决，于是决定整理一份Git的使用方法。本博文会持续更新。</p>
-<a id="more"></a>
-<h1 id="1-git">1. 什么是Git</h1>
-<p>Linus大神写的分布式版本控制工具，具体请访问官网<a href="http://git-scm.com" target="_blank" rel="external">http://git-scm.com</a>.
-Wikipedia链接: <a href="https://en.wikipedia.org/wiki/Git_(software)" target="_blank" rel="external">Git (software)</a></p>
-<h1 id="2">2. 基本操作</h1>
-<p>初始化版本仓库: <code>git init</code>
-从远程仓库克隆: <code>git clone [url] [repo_name]</code><br>
-例: <code>git clone https://github.com/user/repo my_repo</code></p>
-<p><img src="/pics/lifecycle.png" alt="life-cycle"></p>
-<center><small>文件的状态变化周期</small></center>
-<p>检查文件状态: <code>git status</code>
-状态简览: <code>git status -s</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ git status -s</div><div class="line"> M README</div><div class="line">MM Rakefile</div><div class="line">A  lib/git.rb</div><div class="line">M  lib/simplegit.rb</div><div class="line">?? LICENSE.txt</div></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">字母</th>
-<th style="text-align:center">所代表的状态</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">??</td>
-<td style="text-align:center">未追踪</td>
-</tr>
-<tr>
-<td style="text-align:left">   M</td>
-<td style="text-align:center">已修改，未暂存</td>
-</tr>
-<tr>
-<td style="text-align:left">MM</td>
-<td style="text-align:center">修改后暂存，然后又修改</td>
-</tr>
-<tr>
-<td style="text-align:left">A</td>
-<td style="text-align:center">新添加到暂存区</td>
-</tr>
-<tr>
-<td style="text-align:left">M</td>
-<td style="text-align:center">修改后添加到暂存区</td>
-</tr>
-</tbody>
-</table>
-<p>忽略文件： 编辑<code>.gitignore</code>文件。<br>
-文件 .gitignore 的格式规范如下：</p>
-<ul>
-<li>所有空行或者以 ＃ 开头的行都会被 Git 忽略。</li>
-<li>可以使用标准的 glob 模式匹配。</li>
-<li>匹配模式可以以（/）开头防止递归。</li>
-<li>匹配模式可以以（/）结尾指定目录。</li>
-<li>要忽略指定模式以外的文件或目录，可以在模式前加上惊叹号（!）取反。
-具体例子见<a href="http://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93" target="_blank" rel="external">Git-基础</a>。</li>
-</ul>
-<p>查看尚未暂存的文件更新部分: <code>git diff</code>
-查看已暂存的文件更新的部分: <code>git diff --staged</code></p>
-<p>提交更新: <code>git commit</code>
-<code>git commit -a</code> = <code>git add --all; git commit</code>
-提交时输入单行信息(Commit log): <code>git commit -m</code></p>
-<p>添加文件: <code>git add [filename]</code>, 使git跟踪文件
-删除文件: <code>git rm [filename]</code>, 使git停止跟踪文件并将文件删除
-停止跟踪文件: <code>git rm --cached</code>, 停止跟踪但不删除文件
-移动文件: <code>git mv</code>, 规则和<code>mv</code>基本相同</p>
-<p>查看提交历史: <code>git log</code>
-显示每次提交的内容差异: <code>git log -p</code>
-查看每次提交的简略统计信息: <code>git log --stat</code>
-查看每次提交的代码更改详情：<code>git log --cc</code>
-显示ASCII图形表示的分支合并历史: <code>git log --graph</code>
-粗略显示: <code>git log --oneline --graph --decorate --all</code></p>
-<p>更多请输入<code>git log --help</code>查看man page.</p>
-<p>更改上次提交: <code>git commit --amend</code>
-取消暂存: <code>git reset HEAD [filename]</code>
-取消暂存并丢弃现有的更改: <code>git reset HEAD --hard [filename]</code>, 未提交的更改会丢失
-撤销对文件的更改: <code>git checkout -- [filename]</code>, 未提交的更改会丢失</p>
-<p><code>git push origin --delete [branch]</code>, 删除远程分支</p>
-<h1 id="3">3. 分支操作</h1>
-<p><code>git branch [branch]</code>, 在当前引用上建立新分支
-<code>git checkout -b [branch]</code>, 建立新分支并检出到该分支上</p>
-<p>commit引用方式:</p>
-<ul>
-<li>
-<p>直接hash引用: <code>d921970aadf03b3cf0e71becdaab3147ba71cdef</code>, <code>d921970</code></p>
-</li>
-<li>
-<p>分支引用: <code>HEAD</code>, <code>master</code></p>
-</li>
-<li>
-<p>相对引用: <code>HEAD^</code>, <code>HEAD^^</code>, <code>HEAD~2</code></p>
-</li>
-<li>
-<p>若<code>a</code>是一个合并提交，有两个父引用，则<code>a^</code>为a的第一父引用，<code>a^2</code>为a的第二父引用。</p>
-</li>
-<li>
-<p>条件引用: <code>master@{yesterday}</code>, <code>master@{1.week.before}</code></p>
-</li>
-<li>
-<p>引用区间:</p>
-<ul>
-<li><code>refA..refB</code>选择从refA和refB的共同祖先开始直到refB的所有提交。例:</li>
-</ul>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">若 1 - 2 - 3 - 4 ← refA</div><div class="line">         \ 5 - 6 ← refB</div><div class="line">refA..refB 即为6 5, refB..refA 即为4 3.</div><div class="line">origin/master..master为master分支上还未提交到远端的所有引用</div></pre></td></tr></table></figure>
-<ul>
-<li>区间筛选，例：以下三条命令等价：
-<code>$ git log refA..refB</code>
-<code>$ git log ^refA refB</code>
-<code>$ git log refB --not refA</code></li>
-<li><code>refA...refB</code>选择出被两个引用中的一个包含但又不被两者同时包含的提交，即<code>refA..refB</code>+<code>refB..refA</code></li>
-</ul>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ git log --left-to-right refA...refB</div><div class="line">&lt; 4</div><div class="line">&lt; 3</div><div class="line">&gt; 6</div><div class="line">&gt; 5</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="4">4. 工作储藏</h1>
-<p><code>git stash &quot;comments&quot;</code>, 储藏所有工作，包括已添加的和已更改未添加的
-<code>git stash apply stash@{0}</code>, 恢复储藏，可能会产生冲突，解决冲突后<code>git add</code>添加
-<code>git stash list</code>, 列出储藏栈
-<code>git stash show [stashname]</code>, 查看储藏的更改
-<code>git stash pop</code>, 应用栈顶储藏并弹出储藏
-<code>git stash drop [stashname]</code>, 删除储藏
-<code>git stash branch [branchname]</code>, 应用储藏到某分支并切换到该分支
-<code>git stash --keep-index</code>, 只储藏已更改未添加的改动，不储藏 已添加的
-<code>git stash --include-untracked</code>, 储藏未追踪的文件（未追踪文件）并将其从工作目录中删除
-<code>git stash --all</code>, 贮藏所有文件</p>
-<h1 id="5-git-reset">5. git reset</h1>
-<p><code>git reset --soft HEAD^</code>, 将HEAD指针及当前分支指针指向HEAD^, 工作目录中所有的文件均添加暂存(staged), 类似“撤销<code>git commit</code>命令”，但如果重新提交，会创造一个hash不同的commit，即时提交内容完全相同。
-<code>git reset --mixed HEAD^</code>, 将HEAD指针及当前分支指针指向HEAD^, 工作目录中的更改未暂存(modified but not staged), 类似“撤销<code>git add</code>和<code>git commit</code>命令”
-<code>git reset --hard HEAD^</code>, 将HEAD指针及当前分支指针指向HEAD^, 工作目录中的更改完全丢失，相当于“撤销更改, <code>git add</code>和<code>git commit</code>”.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;从一年前开始使用Git, 一直没系统整理过Git的命令，前几天在部署代码的时候出了问题不知道该如何解决，于是决定整理一份Git的使用方法。本博文会持续更新。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="随手记" scheme="//blog.stdioa.com/categories/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
-    
-    
-      <category term="Git" scheme="//blog.stdioa.com/tags/Git/"/>
-    
-      <category term="编程工具" scheme="//blog.stdioa.com/tags/%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   

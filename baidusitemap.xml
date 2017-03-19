@@ -4,8 +4,34 @@
 
     
   <url>
+    <loc>//blog.stdioa.com/2017/03/deploy-apps-with-supervisor-and-gunicorn/</loc>
+    <lastmod>2017-03-19T11:34:06.075Z</lastmod>
+    <data>
+        <display>
+        <title>使用 supervisor 及 gunicorn 部署 Web 应用</title>
+        <pubTime>2017-03-19T09:00:00.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>Django</tag>
+         
+        <tag>supervisor</tag>
+         
+        <tag>gunicorn</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="//blog.stdioa.com/categories/Web/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>//blog.stdioa.com/2017/03/DRF-demo/</loc>
-    <lastmod>2017-03-09T08:13:46.126Z</lastmod>
+    <lastmod>2017-03-19T09:00:08.028Z</lastmod>
     <data>
         <display>
         <title>Django REST Framework 入门</title>
@@ -516,11 +542,11 @@
         <title>博客迁移记（一）</title>
         <pubTime>2015-12-17T11:55:37.000Z</pubTime>
         
-        <tag>nginx</tag>
+        <tag>python</tag>
          
         <tag>Github</tag>
          
-        <tag>python</tag>
+        <tag>nginx</tag>
          
          
            
@@ -564,9 +590,9 @@
         <title>博客迁移记（二）</title>
         <pubTime>2015-12-18T07:55:37.000Z</pubTime>
         
-        <tag>nginx</tag>
-         
         <tag>Github</tag>
+         
+        <tag>nginx</tag>
          
         <tag>Let&#39;s Encrypt</tag>
          

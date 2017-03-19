@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>//blog.stdioa.com/2017/03/deploy-apps-with-supervisor-and-gunicorn/</loc>
+    
+    <lastmod>2017-03-19T11:34:06.075Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>//blog.stdioa.com/2017/03/DRF-demo/</loc>
     
-    <lastmod>2017-03-09T08:13:46.126Z</lastmod>
+    <lastmod>2017-03-19T09:00:08.028Z</lastmod>
     
   </url>
   
