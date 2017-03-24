@@ -169,30 +169,6 @@
 
     
   <url>
-    <loc>//blog.stdioa.com/2016/04/nuaactf-unofficial-writeup/</loc>
-    <lastmod>2016-11-08T13:48:35.546Z</lastmod>
-    <data>
-        <display>
-        <title>第一届 NUAACTF 非官方 Writeup</title>
-        <pubTime>2016-04-25T04:01:04.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>CTF</tag>
-         
-        <tag>脑洞</tag>
-         
-         
-           
-             
-              <breadCrumb title="乱七八糟" url="//blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>//blog.stdioa.com/2016/04/leetcode-database-solutions/</loc>
     <lastmod>2016-11-08T13:48:35.544Z</lastmod>
     <data>
