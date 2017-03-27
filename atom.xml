@@ -411,6 +411,126 @@ B 站基佬好多啊_(:зゝ∠)_</p>
   </entry>
   
   <entry>
+    <title>第一届 NUAACTF 非官方 Writeup</title>
+    <link href="//blog.stdioa.com/2016/04/nuaactf-unofficial-writeup/"/>
+    <id>//blog.stdioa.com/2016/04/nuaactf-unofficial-writeup/</id>
+    <published>2016-04-25T04:01:04.000Z</published>
+    <updated>2016-11-08T13:48:35.546Z</updated>
+    
+    <content type="html"><![CDATA[<p>学校组织了第一届 NUAACTF，参加去玩玩，开开脑洞😂，嗯，还蛮好玩的~</p>
+<a id="more"></a>
+<h1 id="web-0">Web 0</h1>
+<p><strong>huan’ying’lai’dao</strong></p>
+<p>签到题，F12 即可得到 flag.
+Flag 藏在页面的某个 <code>js</code> 文件里，用 jsfuck 混淆了。</p>
+<h1 id="web-1">Web 1</h1>
+<p><strong>百度一下，你就知道</strong></p>
+<p>题目貌似改过一回。</p>
+<p>改之前直接点击网页上的一个链接，跳转到某个网页，源代码里面有一段 php，具体内容不记得了，里面
+有一串 MD5 <code>095a655fc809cbbdffa207717a5233f5</code>. Google 一下找到某白菜的博客，得到原文 <code>bnVhYWN0ZiU3Qi93ZWIyL2NlYmE2ZmJiZjBlZGU0MzI1MjY0MWNkMzM2ZTM2YTAzJTdE</code>.<br>
+看起来像 <code>Base64</code>，于是 decode 一下，然后 <code>decodeURIComponents</code> 得到 flag.</p>
+<p>后来题目改了，直接按照题目要求去百度就能直接找到某白菜的博客。</p>
+<h1 id="web-2">Web 2</h1>
+<p><strong>不是 bug 是 feature</strong></p>
+<p>Web 2 的入口点在 Web 1 的 flag 里。进去以后会跳转到某个 php, 然而某白菜又把 php 源码写进去了，思路跟上个题好像一样，也是去百度一下 MD5 得到密码，添加 <code>GET</code> 参数即可拿到 flag.</p>
+<h1 id="web-3">Web 3</h1>
+<p><strong>笨笨的程序猿</strong></p>
+<p>Web 3 的入口点在 Web 2 的 flag 里。进去以后跳转到某 php, 里面只有一个登录表单。看起来像是 SQL 注入，就用 <code>sqlmap</code> 扫了一下，把表 dump 出来，发现有两个账户 admin 和 user，密码都是一坨看起来什么都不像的东西，然后线索就断了。<br>
+最后一个小时决定手动注入一下，然而并不怎么会 SQL 注入于是就找了几篇博客来看。注入了半天密码框均无果，最后试了一下注入用户名输入框 <code>admin' or '1'='1</code>，成功登录。<br>
+登录以后 flag 一闪而过，本来想截屏然而懒得截了就抓了包，拿到 flag.</p>
+<h1 id="web-4">Web 4 (未解出)</h1>
+<p><strong>你从哪里来，我的朋友。</strong></p>
+<p>Web 3 成功登录后就跳转到 Web 4，网页写着&quot;0nly welc0me pe0ple who c0me from <a href="http://cs.nuaa.edu.cn" target="_blank" rel="external">http://cs.nuaa.edu.cn</a> &quot;。结合“你从哪里来”，想到了请求来源，但是我只想到了 <code>Referer</code>, 修改后无果。<br>
+比赛结束后听说要改 <code>Origin</code> 和 <code>X-Forwarded-For</code>, 然而改了也没做出来，不知道哪里出了问题。</p>
+<h1 id="rev-1">Rev 1</h1>
+<p><strong>曾老师的 Android 课</strong></p>
+<p>把 apk 下载下来，用 <code>jd-gui</code> 打开，一阵乱翻以后发现 flag 藏在 <code>MainActivity.class</code> 里。</p>
+<h1 id="rev-2">Rev 2 (未解出)</h1>
+<p><strong>奇妙的声音</strong></p>
+<p>又看见安卓了，下下来以后一阵乱翻，没有头绪。</p>
+<p>刚才看了别人的题解，发现 flag 在资源目录里面。<br>
+拿出来 <code>res/raw/sound.wav</code>, 用随便什么鬼打开（来之前见识过这个脑洞，专门准备的 Sonic Visualiser, 然而卡住了没有用上），发现里面有四个声道，下面两个声道像是个方波。</p>
+<p><img src="/pics/nuaactf/rev2.png" alt="Rev 2"></p>
+<p>然后一点一点数 01 数出来，得到：</p>
+<blockquote>
+<p>01101110
+01110101
+01100001
+01100001
+01100011
+01110100
+01100110
+01111011
+01110011
+01101000
+00110000
+01110010
+01110100
+01011111
+01100110
+00110001
+01000001
+01100111</p>
+</blockquote>
+<p>数格子数的眼都要花了…<br>
+每一行 8 位二进制转 ASCII 码，得到 flag <code>nuaactf{sh0rt_f1Ag</code>, 少了一个右括号😂<br>
+真是幸亏 flag 短…</p>
+<p>顺便说一句，那个音频真好听，听说是锤子手机的默认铃声😳</p>
+<h1 id="rev-3">Rev 3</h1>
+<p><strong>不喜欢写界面的白菜哥</strong></p>
+<p><code>.NET</code> 逆向，直接拖到 IDA 里面，一阵乱翻，翻到了三段 base64 和一个摩尔斯电码表。把三段 base64 拼起来以后 decode, 得到一段摩尔斯电码 <code>-. ..- .- .- -.-. - ..-. 2D3f ... .- .--. .--. -.-- -.-. .-. .- -.-. -....- .---- -. --. -.-. ... ... .- .-. .--. -...--.-</code> (2D3f 是什么鬼😂)，解码后得到 flag <code>NUAACTF{SAPPYCRACK1NGCSSARP}</code>，放到源程序里面，显示 flag 正确。</p>
+<p>然后，提交以后说 flag 不对！<br>
+为什么 flag 不是 Happy Cracking CSharp? 看了半天，又交了半天的 flag，没找出问题。后来发现程序编码表里面 H 和 S 的编码一样😂 所以里面所有的 S 换成 H，源程序都会提示 flag 正确…<br>
+把 H 和 S 转换，一个一个试，最后试出来 flag 是 <code>NUAACTF{HAPPYCRACK1NGCHHARP}</code>，也是醉人。</p>
+<h1 id="pwn-1">Pwn 1</h1>
+<p><strong>乱码！乱码！</strong></p>
+<p>签到题。下载下来一个 txt，打开以后发现是 jsfuck，放到浏览器里运行得到 flag.</p>
+<h1 id="pwn-2">Pwn 2 （未解出）</h1>
+<p><strong>回家的路</strong></p>
+<p>CTF 竞赛考了算法…最短路…真是醉醉哒。<br>
+一开始没有细想，瞎写了一个深度优先搜索，出来好多解，然而没有一个是对的，也是悲催。<br>
+到最后也没有做。</p>
+<h1 id="misc-1">Misc 1</h1>
+<p><strong>奇怪的压缩包</strong></p>
+<p>嘛，隐写的题都蛮好玩哒😜</p>
+<p><a href="/pics/nuaactf/misc1.rar">misc1.rar</a> 下载下来后无法打开，<code>file</code> 一下发现是个 PNG，改拓展名后打开，得到 flag。这个也算签到题吧。</p>
+<h1 id="misc-2">Misc 2</h1>
+<p><strong>奇怪的图片</strong></p>
+<p><img src="/pics/nuaactf/misc2.png" alt="misc2.png"></p>
+<p>下载 <code>misc2.png</code>, <code>pngcheck</code> 提示 <code>additional data after IEND chunk</code>, 看来最后一块后面还有东西，用记事本打开，发现文件最后用明文写着 key.</p>
+<p>刚刚在文件末尾发现了一个文件头 <code>PK\x03\x04</code>, 觉得应该是个 zip 文件，<code>binwalk</code> 一下然后用 <code>dd</code> 分开，得到一个 zip 文件，解压后得到 flag. 这应该是这个题的标准做法吧，只是为什么做 zip 文件的时候没有压缩🌚</p>
+<h1 id="misc-3">Misc 3</h1>
+<p><strong>更奇怪的图片</strong>（你们这起的都是什么名字）</p>
+<p><img src="/pics/nuaactf/misc3.png" alt="misc3.png"></p>
+<p>下载下来（听说这是舰娘？），<code>pngcheck</code> 没有错误，卡了一会。后来用 PS 打开，把色阶拉低，发现图的左下角有个二维码，扫码得 <code>QlpoOTFBWSZTWXhAk1kAAAtfgAAQIABgAAgAAACvIbYKIAAigNHqNGmnqFMJpoDTEO0CXcIvl9SeOAB3axLQYn4u5IpwoSDwgSay</code>.<br>
+解码后发现是乱码，不知道怎么做了，卡了很久😷 比赛的最后一个小时看见了解码后字符串开头的 BZ，突然意识到这可能是个文件头，于是将解码后的内容写入文件，<code>file</code> 一下发现果然是个 <code>bz</code> 压缩文件，解压后得到 flag.</p>
+<h1 id="misc-4">Misc 4 （未解出）</h1>
+<p><strong>讨厌的 APP</strong></p>
+<p>觅动校园什么鬼？！</p>
+<h1 id="">总结</h1>
+<p>比赛五个小时，解了 10 道题，前半小时解出来 5 道，后面各种卡，最后一个小时脑洞大开又解出来 3 道题😂
+CTF 真好玩，考到了各种姿势各种脑洞，还是蛮有意思哒~<br>
+然而五个小时的比赛真的太累了…血的教训，下次题目做不出来还是要跑出去歇一会再回来做_(:зゝ∠)_</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;学校组织了第一届 NUAACTF，参加去玩玩，开开脑洞😂，嗯，还蛮好玩的~&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="乱七八糟" scheme="//blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
+    
+    
+      <category term="Python" scheme="//blog.stdioa.com/tags/Python/"/>
+    
+      <category term="CTF" scheme="//blog.stdioa.com/tags/CTF/"/>
+    
+      <category term="脑洞" scheme="//blog.stdioa.com/tags/%E8%84%91%E6%B4%9E/"/>
+    
+  </entry>
+  
+  <entry>
     <title>LeetCode 数据库题目解答</title>
     <link href="//blog.stdioa.com/2016/04/leetcode-database-solutions/"/>
     <id>//blog.stdioa.com/2016/04/leetcode-database-solutions/</id>
@@ -1524,156 +1644,6 @@ logging默认的日志级别为WARNING，在当前级别下，只有warning及�
       <category term="python" scheme="//blog.stdioa.com/tags/python/"/>
     
       <category term="logging" scheme="//blog.stdioa.com/tags/logging/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>随手记之Git</title>
-    <link href="//blog.stdioa.com/2015/10/essay-git/"/>
-    <id>//blog.stdioa.com/2015/10/essay-git/</id>
-    <published>2015-10-14T10:28:00.000Z</published>
-    <updated>2016-11-08T13:48:35.485Z</updated>
-    
-    <content type="html"><![CDATA[<p>从一年前开始使用Git, 一直没系统整理过Git的命令，前几天在部署代码的时候出了问题不知道该如何解决，于是决定整理一份Git的使用方法。本博文会持续更新。</p>
-<a id="more"></a>
-<h1 id="1-git">1. 什么是Git</h1>
-<p>Linus大神写的分布式版本控制工具，具体请访问官网<a href="http://git-scm.com" target="_blank" rel="external">http://git-scm.com</a>.
-Wikipedia链接: <a href="https://en.wikipedia.org/wiki/Git_(software)" target="_blank" rel="external">Git (software)</a></p>
-<h1 id="2">2. 基本操作</h1>
-<p>初始化版本仓库: <code>git init</code>
-从远程仓库克隆: <code>git clone [url] [repo_name]</code><br>
-例: <code>git clone https://github.com/user/repo my_repo</code></p>
-<p><img src="/pics/lifecycle.png" alt="life-cycle"></p>
-<center><small>文件的状态变化周期</small></center>
-<p>检查文件状态: <code>git status</code>
-状态简览: <code>git status -s</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ git status -s</div><div class="line"> M README</div><div class="line">MM Rakefile</div><div class="line">A  lib/git.rb</div><div class="line">M  lib/simplegit.rb</div><div class="line">?? LICENSE.txt</div></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">字母</th>
-<th style="text-align:center">所代表的状态</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">??</td>
-<td style="text-align:center">未追踪</td>
-</tr>
-<tr>
-<td style="text-align:left">   M</td>
-<td style="text-align:center">已修改，未暂存</td>
-</tr>
-<tr>
-<td style="text-align:left">MM</td>
-<td style="text-align:center">修改后暂存，然后又修改</td>
-</tr>
-<tr>
-<td style="text-align:left">A</td>
-<td style="text-align:center">新添加到暂存区</td>
-</tr>
-<tr>
-<td style="text-align:left">M</td>
-<td style="text-align:center">修改后添加到暂存区</td>
-</tr>
-</tbody>
-</table>
-<p>忽略文件： 编辑<code>.gitignore</code>文件。<br>
-文件 .gitignore 的格式规范如下：</p>
-<ul>
-<li>所有空行或者以 ＃ 开头的行都会被 Git 忽略。</li>
-<li>可以使用标准的 glob 模式匹配。</li>
-<li>匹配模式可以以（/）开头防止递归。</li>
-<li>匹配模式可以以（/）结尾指定目录。</li>
-<li>要忽略指定模式以外的文件或目录，可以在模式前加上惊叹号（!）取反。
-具体例子见<a href="http://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93" target="_blank" rel="external">Git-基础</a>。</li>
-</ul>
-<p>查看尚未暂存的文件更新部分: <code>git diff</code>
-查看已暂存的文件更新的部分: <code>git diff --staged</code></p>
-<p>提交更新: <code>git commit</code>
-<code>git commit -a</code> = <code>git add --all; git commit</code>
-提交时输入单行信息(Commit log): <code>git commit -m</code></p>
-<p>添加文件: <code>git add [filename]</code>, 使git跟踪文件
-删除文件: <code>git rm [filename]</code>, 使git停止跟踪文件并将文件删除
-停止跟踪文件: <code>git rm --cached</code>, 停止跟踪但不删除文件
-移动文件: <code>git mv</code>, 规则和<code>mv</code>基本相同</p>
-<p>查看提交历史: <code>git log</code>
-显示每次提交的内容差异: <code>git log -p</code>
-查看每次提交的简略统计信息: <code>git log --stat</code>
-查看每次提交的代码更改详情：<code>git log --cc</code>
-显示ASCII图形表示的分支合并历史: <code>git log --graph</code>
-粗略显示: <code>git log --oneline --graph --decorate --all</code></p>
-<p>更多请输入<code>git log --help</code>查看man page.</p>
-<p>更改上次提交: <code>git commit --amend</code>
-取消暂存: <code>git reset HEAD [filename]</code>
-取消暂存并丢弃现有的更改: <code>git reset HEAD --hard [filename]</code>, 未提交的更改会丢失
-撤销对文件的更改: <code>git checkout -- [filename]</code>, 未提交的更改会丢失</p>
-<p><code>git push origin --delete [branch]</code>, 删除远程分支</p>
-<h1 id="3">3. 分支操作</h1>
-<p><code>git branch [branch]</code>, 在当前引用上建立新分支
-<code>git checkout -b [branch]</code>, 建立新分支并检出到该分支上</p>
-<p>commit引用方式:</p>
-<ul>
-<li>
-<p>直接hash引用: <code>d921970aadf03b3cf0e71becdaab3147ba71cdef</code>, <code>d921970</code></p>
-</li>
-<li>
-<p>分支引用: <code>HEAD</code>, <code>master</code></p>
-</li>
-<li>
-<p>相对引用: <code>HEAD^</code>, <code>HEAD^^</code>, <code>HEAD~2</code></p>
-</li>
-<li>
-<p>若<code>a</code>是一个合并提交，有两个父引用，则<code>a^</code>为a的第一父引用，<code>a^2</code>为a的第二父引用。</p>
-</li>
-<li>
-<p>条件引用: <code>master@{yesterday}</code>, <code>master@{1.week.before}</code></p>
-</li>
-<li>
-<p>引用区间:</p>
-<ul>
-<li><code>refA..refB</code>选择从refA和refB的共同祖先开始直到refB的所有提交。例:</li>
-</ul>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">若 1 - 2 - 3 - 4 ← refA</div><div class="line">         \ 5 - 6 ← refB</div><div class="line">refA..refB 即为6 5, refB..refA 即为4 3.</div><div class="line">origin/master..master为master分支上还未提交到远端的所有引用</div></pre></td></tr></table></figure>
-<ul>
-<li>区间筛选，例：以下三条命令等价：
-<code>$ git log refA..refB</code>
-<code>$ git log ^refA refB</code>
-<code>$ git log refB --not refA</code></li>
-<li><code>refA...refB</code>选择出被两个引用中的一个包含但又不被两者同时包含的提交，即<code>refA..refB</code>+<code>refB..refA</code></li>
-</ul>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ git log --left-to-right refA...refB</div><div class="line">&lt; 4</div><div class="line">&lt; 3</div><div class="line">&gt; 6</div><div class="line">&gt; 5</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="4">4. 工作储藏</h1>
-<p><code>git stash &quot;comments&quot;</code>, 储藏所有工作，包括已添加的和已更改未添加的
-<code>git stash apply stash@{0}</code>, 恢复储藏，可能会产生冲突，解决冲突后<code>git add</code>添加
-<code>git stash list</code>, 列出储藏栈
-<code>git stash show [stashname]</code>, 查看储藏的更改
-<code>git stash pop</code>, 应用栈顶储藏并弹出储藏
-<code>git stash drop [stashname]</code>, 删除储藏
-<code>git stash branch [branchname]</code>, 应用储藏到某分支并切换到该分支
-<code>git stash --keep-index</code>, 只储藏已更改未添加的改动，不储藏 已添加的
-<code>git stash --include-untracked</code>, 储藏未追踪的文件（未追踪文件）并将其从工作目录中删除
-<code>git stash --all</code>, 贮藏所有文件</p>
-<h1 id="5-git-reset">5. git reset</h1>
-<p><code>git reset --soft HEAD^</code>, 将HEAD指针及当前分支指针指向HEAD^, 工作目录中所有的文件均添加暂存(staged), 类似“撤销<code>git commit</code>命令”，但如果重新提交，会创造一个hash不同的commit，即时提交内容完全相同。
-<code>git reset --mixed HEAD^</code>, 将HEAD指针及当前分支指针指向HEAD^, 工作目录中的更改未暂存(modified but not staged), 类似“撤销<code>git add</code>和<code>git commit</code>命令”
-<code>git reset --hard HEAD^</code>, 将HEAD指针及当前分支指针指向HEAD^, 工作目录中的更改完全丢失，相当于“撤销更改, <code>git add</code>和<code>git commit</code>”.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;从一年前开始使用Git, 一直没系统整理过Git的命令，前几天在部署代码的时候出了问题不知道该如何解决，于是决定整理一份Git的使用方法。本博文会持续更新。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="随手记" scheme="//blog.stdioa.com/categories/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
-    
-    
-      <category term="Git" scheme="//blog.stdioa.com/tags/Git/"/>
-    
-      <category term="编程工具" scheme="//blog.stdioa.com/tags/%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
