@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>//blog.stdioa.com/2016/11/SuCTF-Writeup/</loc>
+    
+    <lastmod>2017-04-20T07:03:17.075Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>//blog.stdioa.com/2017/03/deploy-apps-with-supervisor-and-gunicorn/</loc>
     
     <lastmod>2017-03-19T11:34:06.075Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>//blog.stdioa.com/2016/03/essay-vue/</loc>
     
     <lastmod>2017-03-09T07:45:34.731Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//blog.stdioa.com/2016/11/SuCTF-Writeup/</loc>
-    
-    <lastmod>2017-03-09T07:05:01.442Z</lastmod>
     
   </url>
   

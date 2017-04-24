@@ -209,7 +209,7 @@
     <link href="//blog.stdioa.com/2016/11/SuCTF-Writeup/"/>
     <id>//blog.stdioa.com/2016/11/SuCTF-Writeup/</id>
     <published>2016-11-15T11:23:58.000Z</published>
-    <updated>2017-03-09T07:05:01.442Z</updated>
+    <updated>2017-04-20T07:03:17.075Z</updated>
     
     <content type="html"><![CDATA[<p>又玩了一场 CTF，虽然是个人赛，但是有老司机带我飞。继续开脑洞，也学到了不少，做了很多之前没做过的题。</p>
 <a id="more"></a>
@@ -247,10 +247,10 @@
 <p>看了别人的 Writeup，麻蛋这竟然是道隐写？把 URL 中的 <code>xss2.php</code> 去掉竟然能把目录列出来…里面有个 TIFF 文件，文件里有 flag… 肠子搜悔青了😢</p>
 <h1 id="mobile">Mobile</h1>
 <h2 id="-4">最基础的安卓逆向题</h2>
-<p>文件在<a href="/suctf/SimpleAndroid.apk">这儿</a>。<br>
+<p>文件在<a href="/suctf/SimpleAndroid_apk">这儿</a>。<br>
 先用 <code>dex2jar</code> 解出 jar 包，然后用 <code>jd-gui</code> 反编译，最后发现 flag 在 <code>MainActivity</code> 里：<code>suctf{Crack_Andr01d+50-3asy}</code></p>
 <h2 id="mob200">Mob200</h2>
-<p><a href="/suctf/CrackMe.apk">文件</a>。<br>
+<p><a href="/suctf/CrackMe_apk">文件</a>。<br>
 反编译以后改代码，把加密过程逆过来，放到安卓系统里跑一下就能出结果。<br>
 然而 Android Studio 跟我有仇… 工程跑不起来，算了。</p>
 <h2 id="mips">mips</h2>
@@ -1021,9 +1021,9 @@ HTTPS配置好后访问博客，Chrome提示“存在不安全的内容”，选
       <category term="乱七八糟" scheme="//blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
     
     
-      <category term="Github" scheme="//blog.stdioa.com/tags/Github/"/>
-    
       <category term="nginx" scheme="//blog.stdioa.com/tags/nginx/"/>
+    
+      <category term="Github" scheme="//blog.stdioa.com/tags/Github/"/>
     
       <category term="Let&#39;s Encrypt" scheme="//blog.stdioa.com/tags/Let-s-Encrypt/"/>
     
@@ -1091,11 +1091,11 @@ HTTPS配置好后访问博客，Chrome提示“存在不安全的内容”，选
       <category term="乱七八糟" scheme="//blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
     
     
-      <category term="python" scheme="//blog.stdioa.com/tags/python/"/>
+      <category term="nginx" scheme="//blog.stdioa.com/tags/nginx/"/>
     
       <category term="Github" scheme="//blog.stdioa.com/tags/Github/"/>
     
-      <category term="nginx" scheme="//blog.stdioa.com/tags/nginx/"/>
+      <category term="python" scheme="//blog.stdioa.com/tags/python/"/>
     
   </entry>
   

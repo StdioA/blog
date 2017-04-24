@@ -13,7 +13,7 @@
 <meta property="og:url" content="//blog.stdioa.com/2016/11/SuCTF-Writeup/index.html">
 <meta property="og:site_name" content="Stdio's Blog">
 <meta property="og:description" content="又玩了一场 CTF，虽然是个人赛，但是有老司机带我飞。继续开脑洞，也学到了不少，做了很多之前没做过的题。">
-<meta property="og:updated_time" content="2017-03-09T07:05:01.442Z">
+<meta property="og:updated_time" content="2017-04-20T07:03:17.075Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SUCTF 非官方 Writeup">
 <meta name="twitter:description" content="又玩了一场 CTF，虽然是个人赛，但是有老司机带我飞。继续开脑洞，也学到了不少，做了很多之前没做过的题。">
@@ -284,10 +284,10 @@
 <p>看了别人的 Writeup，麻蛋这竟然是道隐写？把 URL 中的 <code>xss2.php</code> 去掉竟然能把目录列出来…里面有个 TIFF 文件，文件里有 flag… 肠子搜悔青了😢</p>
 <h1 id="mobile">Mobile</h1>
 <h2 id="-4">最基础的安卓逆向题</h2>
-<p>文件在<a href="/suctf/SimpleAndroid.apk">这儿</a>。<br>
+<p>文件在<a href="/suctf/SimpleAndroid_apk">这儿</a>。<br>
 先用 <code>dex2jar</code> 解出 jar 包，然后用 <code>jd-gui</code> 反编译，最后发现 flag 在 <code>MainActivity</code> 里：<code>suctf{Crack_Andr01d+50-3asy}</code></p>
 <h2 id="mob200">Mob200</h2>
-<p><a href="/suctf/CrackMe.apk">文件</a>。<br>
+<p><a href="/suctf/CrackMe_apk">文件</a>。<br>
 反编译以后改代码，把加密过程逆过来，放到安卓系统里跑一下就能出结果。<br>
 然而 Android Studio 跟我有仇… 工程跑不起来，算了。</p>
 <h2 id="mips">mips</h2>
@@ -419,6 +419,22 @@ WW91IGFyZSBsdWNreQ==</p>
 
 
 
+
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'stdioa'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
 
 </div>
       <footer id="footer">
