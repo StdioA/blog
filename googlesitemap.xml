@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>//blog.stdioa.com/2016/02/learning-javascript/</loc>
+    
+    <lastmod>2017-05-02T08:43:42.570Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>//blog.stdioa.com/2016/11/SuCTF-Writeup/</loc>
     
     <lastmod>2017-04-20T07:03:17.075Z</lastmod>
@@ -110,13 +117,6 @@
     <loc>//blog.stdioa.com/2015/10/learning-python-collections/</loc>
     
     <lastmod>2016-11-08T13:48:35.517Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>//blog.stdioa.com/2016/02/learning-javascript/</loc>
-    
-    <lastmod>2016-11-08T13:48:35.510Z</lastmod>
     
   </url>
   
