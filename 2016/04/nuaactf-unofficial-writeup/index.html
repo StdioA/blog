@@ -6,20 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>第一届 NUAACTF 非官方 Writeup | Stdio&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <script src="//cdn.bootcss.com/twemoji/2.0.5/twemoji.min.js"></script>
-  <meta name="description" content="学校组织了第一届 NUAACTF，参加去玩玩，开开脑洞😂，嗯，还蛮好玩的~">
+  <script src="//cdn.bootcss.com/twemoji/2.6.0/twemoji.min.js"></script>
+  <meta name="description" content="学校组织了第一届 NUAACTF，参加去玩玩，开开脑洞:joy:，嗯，还蛮好玩的~">
+<meta name="keywords" content="Python,CTF,脑洞">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第一届 NUAACTF 非官方 Writeup">
 <meta property="og:url" content="//blog.stdioa.com/2016/04/nuaactf-unofficial-writeup/index.html">
-<meta property="og:site_name" content="Stdio's Blog">
-<meta property="og:description" content="学校组织了第一届 NUAACTF，参加去玩玩，开开脑洞😂，嗯，还蛮好玩的~">
+<meta property="og:site_name" content="Stdio&#39;s Blog">
+<meta property="og:description" content="学校组织了第一届 NUAACTF，参加去玩玩，开开脑洞:joy:，嗯，还蛮好玩的~">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="//blog.stdioa.com/pics/nuaactf/rev2.png">
 <meta property="og:image" content="//blog.stdioa.com/pics/nuaactf/misc2.png">
 <meta property="og:image" content="//blog.stdioa.com/pics/nuaactf/misc3.png">
-<meta property="og:updated_time" content="2016-11-08T13:48:35.546Z">
+<meta property="og:updated_time" content="2017-06-29T04:38:40.638Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一届 NUAACTF 非官方 Writeup">
-<meta name="twitter:description" content="学校组织了第一届 NUAACTF，参加去玩玩，开开脑洞😂，嗯，还蛮好玩的~">
+<meta name="twitter:description" content="学校组织了第一届 NUAACTF，参加去玩玩，开开脑洞:joy:，嗯，还蛮好玩的~">
 <meta name="twitter:image" content="//blog.stdioa.com/pics/nuaactf/rev2.png">
   
   
@@ -111,9 +113,9 @@
 							
 								<a class="github" target="_blank" href="https://github.com/StdioA" title="github">github</a>
 					        
-								<a class="telegram" target="_blank" href="https://telegram.me/StdioA" title="telegram">telegram</a>
+								<a class="telegram" target="_blank" href="https://t.me/StdioA" title="telegram">telegram</a>
 					        
-								<a class="mail" target="_blank" href="mailto:stdio_dai@nuaa.edu.cn" title="mail">mail</a>
+								<a class="mail" target="_blank" href="mailto:stdioa@163.com" title="mail">mail</a>
 					        
 								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 					        
@@ -196,9 +198,9 @@
 					
 						<a class="github" target="_blank" href="https://github.com/StdioA" title="github">github</a>
 			        
-						<a class="telegram" target="_blank" href="https://telegram.me/StdioA" title="telegram">telegram</a>
+						<a class="telegram" target="_blank" href="https://t.me/StdioA" title="telegram">telegram</a>
 			        
-						<a class="mail" target="_blank" href="mailto:stdio_dai@nuaa.edu.cn" title="mail">mail</a>
+						<a class="mail" target="_blank" href="mailto:stdioa@163.com" title="mail">mail</a>
 			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 			        
@@ -250,102 +252,54 @@
     <div class="article-entry" itemprop="articleBody">
       
         
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#web-0"><span class="toc-text">Web 0</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#web-1"><span class="toc-text">Web 1</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#web-2"><span class="toc-text">Web 2</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#web-3"><span class="toc-text">Web 3</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#web-4"><span class="toc-text">Web 4 (未解出)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#rev-1"><span class="toc-text">Rev 1</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#rev-2"><span class="toc-text">Rev 2 (未解出)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#rev-3"><span class="toc-text">Rev 3</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pwn-1"><span class="toc-text">Pwn 1</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pwn-2"><span class="toc-text">Pwn 2 （未解出）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#misc-1"><span class="toc-text">Misc 1</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#misc-2"><span class="toc-text">Misc 2</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#misc-3"><span class="toc-text">Misc 3</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#misc-4"><span class="toc-text">Misc 4 （未解出）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-text">总结</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Web-0"><span class="toc-text">Web 0</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Web-1"><span class="toc-text">Web 1</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Web-2"><span class="toc-text">Web 2</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Web-3"><span class="toc-text">Web 3</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Web-4-未解出"><span class="toc-text">Web 4 (未解出)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rev-1"><span class="toc-text">Rev 1</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rev-2-未解出"><span class="toc-text">Rev 2 (未解出)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Rev-3"><span class="toc-text">Rev 3</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Pwn-1"><span class="toc-text">Pwn 1</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Pwn-2-（未解出）"><span class="toc-text">Pwn 2 （未解出）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Misc-1"><span class="toc-text">Misc 1</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Misc-2"><span class="toc-text">Misc 2</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Misc-3"><span class="toc-text">Misc 3</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Misc-4-（未解出）"><span class="toc-text">Misc 4 （未解出）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol>
         
-        <p>学校组织了第一届 NUAACTF，参加去玩玩，开开脑洞😂，嗯，还蛮好玩的~</p>
+        <p>学校组织了第一届 NUAACTF，参加去玩玩，开开脑洞:joy:，嗯，还蛮好玩的~</p>
 <a id="more"></a>
-<h1 id="web-0">Web 0</h1>
-<p><strong>huan’ying’lai’dao</strong></p>
-<p>签到题，F12 即可得到 flag.
-Flag 藏在页面的某个 <code>js</code> 文件里，用 jsfuck 混淆了。</p>
-<h1 id="web-1">Web 1</h1>
-<p><strong>百度一下，你就知道</strong></p>
+<h1 id="Web-0"><a href="#Web-0" class="headerlink" title="Web 0"></a>Web 0</h1><p><strong>huan’ying’lai’dao</strong></p>
+<p>签到题，F12 即可得到 flag.<br>Flag 藏在页面的某个 <code>js</code> 文件里，用 jsfuck 混淆了。</p>
+<h1 id="Web-1"><a href="#Web-1" class="headerlink" title="Web 1"></a>Web 1</h1><p><strong>百度一下，你就知道</strong></p>
 <p>题目貌似改过一回。</p>
-<p>改之前直接点击网页上的一个链接，跳转到某个网页，源代码里面有一段 php，具体内容不记得了，里面
-有一串 MD5 <code>095a655fc809cbbdffa207717a5233f5</code>. Google 一下找到某白菜的博客，得到原文 <code>bnVhYWN0ZiU3Qi93ZWIyL2NlYmE2ZmJiZjBlZGU0MzI1MjY0MWNkMzM2ZTM2YTAzJTdE</code>.<br>
-看起来像 <code>Base64</code>，于是 decode 一下，然后 <code>decodeURIComponents</code> 得到 flag.</p>
+<p>改之前直接点击网页上的一个链接，跳转到某个网页，源代码里面有一段 php，具体内容不记得了，里面<br>有一串 MD5 <code>095a655fc809cbbdffa207717a5233f5</code>. Google 一下找到某白菜的博客，得到原文 <code>bnVhYWN0ZiU3Qi93ZWIyL2NlYmE2ZmJiZjBlZGU0MzI1MjY0MWNkMzM2ZTM2YTAzJTdE</code>.<br>看起来像 <code>Base64</code>，于是 decode 一下，然后 <code>decodeURIComponents</code> 得到 flag.</p>
 <p>后来题目改了，直接按照题目要求去百度就能直接找到某白菜的博客。</p>
-<h1 id="web-2">Web 2</h1>
-<p><strong>不是 bug 是 feature</strong></p>
+<h1 id="Web-2"><a href="#Web-2" class="headerlink" title="Web 2"></a>Web 2</h1><p><strong>不是 bug 是 feature</strong></p>
 <p>Web 2 的入口点在 Web 1 的 flag 里。进去以后会跳转到某个 php, 然而某白菜又把 php 源码写进去了，思路跟上个题好像一样，也是去百度一下 MD5 得到密码，添加 <code>GET</code> 参数即可拿到 flag.</p>
-<h1 id="web-3">Web 3</h1>
-<p><strong>笨笨的程序猿</strong></p>
-<p>Web 3 的入口点在 Web 2 的 flag 里。进去以后跳转到某 php, 里面只有一个登录表单。看起来像是 SQL 注入，就用 <code>sqlmap</code> 扫了一下，把表 dump 出来，发现有两个账户 admin 和 user，密码都是一坨看起来什么都不像的东西，然后线索就断了。<br>
-最后一个小时决定手动注入一下，然而并不怎么会 SQL 注入于是就找了几篇博客来看。注入了半天密码框均无果，最后试了一下注入用户名输入框 <code>admin' or '1'='1</code>，成功登录。<br>
-登录以后 flag 一闪而过，本来想截屏然而懒得截了就抓了包，拿到 flag.</p>
-<h1 id="web-4">Web 4 (未解出)</h1>
-<p><strong>你从哪里来，我的朋友。</strong></p>
-<p>Web 3 成功登录后就跳转到 Web 4，网页写着&quot;0nly welc0me pe0ple who c0me from <a href="http://cs.nuaa.edu.cn" target="_blank" rel="external">http://cs.nuaa.edu.cn</a> &quot;。结合“你从哪里来”，想到了请求来源，但是我只想到了 <code>Referer</code>, 修改后无果。<br>
-比赛结束后听说要改 <code>Origin</code> 和 <code>X-Forwarded-For</code>, 然而改了也没做出来，不知道哪里出了问题。</p>
-<h1 id="rev-1">Rev 1</h1>
-<p><strong>曾老师的 Android 课</strong></p>
+<h1 id="Web-3"><a href="#Web-3" class="headerlink" title="Web 3"></a>Web 3</h1><p><strong>笨笨的程序猿</strong></p>
+<p>Web 3 的入口点在 Web 2 的 flag 里。进去以后跳转到某 php, 里面只有一个登录表单。看起来像是 SQL 注入，就用 <code>sqlmap</code> 扫了一下，把表 dump 出来，发现有两个账户 admin 和 user，密码都是一坨看起来什么都不像的东西，然后线索就断了。<br>最后一个小时决定手动注入一下，然而并不怎么会 SQL 注入于是就找了几篇博客来看。注入了半天密码框均无果，最后试了一下注入用户名输入框 <code>admin&#39; or &#39;1&#39;=&#39;1</code>，成功登录。<br>登录以后 flag 一闪而过，本来想截屏然而懒得截了就抓了包，拿到 flag.</p>
+<h1 id="Web-4-未解出"><a href="#Web-4-未解出" class="headerlink" title="Web 4 (未解出)"></a>Web 4 (未解出)</h1><p><strong>你从哪里来，我的朋友。</strong></p>
+<p>Web 3 成功登录后就跳转到 Web 4，网页写着”0nly welc0me pe0ple who c0me from <a href="http://cs.nuaa.edu.cn" target="_blank" rel="noopener">http://cs.nuaa.edu.cn</a> “。结合“你从哪里来”，想到了请求来源，但是我只想到了 <code>Referer</code>, 修改后无果。<br>比赛结束后听说要改 <code>Origin</code> 和 <code>X-Forwarded-For</code>, 然而改了也没做出来，不知道哪里出了问题。</p>
+<h1 id="Rev-1"><a href="#Rev-1" class="headerlink" title="Rev 1"></a>Rev 1</h1><p><strong>曾老师的 Android 课</strong></p>
 <p>把 apk 下载下来，用 <code>jd-gui</code> 打开，一阵乱翻以后发现 flag 藏在 <code>MainActivity.class</code> 里。</p>
-<h1 id="rev-2">Rev 2 (未解出)</h1>
-<p><strong>奇妙的声音</strong></p>
+<h1 id="Rev-2-未解出"><a href="#Rev-2-未解出" class="headerlink" title="Rev 2 (未解出)"></a>Rev 2 (未解出)</h1><p><strong>奇妙的声音</strong></p>
 <p>又看见安卓了，下下来以后一阵乱翻，没有头绪。</p>
-<p>刚才看了别人的题解，发现 flag 在资源目录里面。<br>
-拿出来 <code>res/raw/sound.wav</code>, 用随便什么鬼打开（来之前见识过这个脑洞，专门准备的 Sonic Visualiser, 然而卡住了没有用上），发现里面有四个声道，下面两个声道像是个方波。</p>
+<p>刚才看了别人的题解，发现 flag 在资源目录里面。<br>拿出来 <code>res/raw/sound.wav</code>, 用随便什么鬼打开（来之前见识过这个脑洞，专门准备的 Sonic Visualiser, 然而卡住了没有用上），发现里面有四个声道，下面两个声道像是个方波。</p>
 <p><img src="/pics/nuaactf/rev2.png" alt="Rev 2"></p>
 <p>然后一点一点数 01 数出来，得到：</p>
 <blockquote>
-<p>01101110
-01110101
-01100001
-01100001
-01100011
-01110100
-01100110
-01111011
-01110011
-01101000
-00110000
-01110010
-01110100
-01011111
-01100110
-00110001
-01000001
-01100111</p>
+<p>01101110<br>01110101<br>01100001<br>01100001<br>01100011<br>01110100<br>01100110<br>01111011<br>01110011<br>01101000<br>00110000<br>01110010<br>01110100<br>01011111<br>01100110<br>00110001<br>01000001<br>01100111</p>
 </blockquote>
-<p>数格子数的眼都要花了…<br>
-每一行 8 位二进制转 ASCII 码，得到 flag <code>nuaactf{sh0rt_f1Ag</code>, 少了一个右括号😂<br>
-真是幸亏 flag 短…</p>
-<p>顺便说一句，那个音频真好听，听说是锤子手机的默认铃声😳</p>
-<h1 id="rev-3">Rev 3</h1>
-<p><strong>不喜欢写界面的白菜哥</strong></p>
-<p><code>.NET</code> 逆向，直接拖到 IDA 里面，一阵乱翻，翻到了三段 base64 和一个摩尔斯电码表。把三段 base64 拼起来以后 decode, 得到一段摩尔斯电码 <code>-. ..- .- .- -.-. - ..-. 2D3f ... .- .--. .--. -.-- -.-. .-. .- -.-. -....- .---- -. --. -.-. ... ... .- .-. .--. -...--.-</code> (2D3f 是什么鬼😂)，解码后得到 flag <code>NUAACTF{SAPPYCRACK1NGCSSARP}</code>，放到源程序里面，显示 flag 正确。</p>
-<p>然后，提交以后说 flag 不对！<br>
-为什么 flag 不是 Happy Cracking CSharp? 看了半天，又交了半天的 flag，没找出问题。后来发现程序编码表里面 H 和 S 的编码一样😂 所以里面所有的 S 换成 H，源程序都会提示 flag 正确…<br>
-把 H 和 S 转换，一个一个试，最后试出来 flag 是 <code>NUAACTF{HAPPYCRACK1NGCHHARP}</code>，也是醉人。</p>
-<h1 id="pwn-1">Pwn 1</h1>
-<p><strong>乱码！乱码！</strong></p>
+<p>数格子数的眼都要花了…<br>每一行 8 位二进制转 ASCII 码，得到 flag <code>nuaactf{sh0rt_f1Ag</code>, 少了一个右括号:joy:<br>真是幸亏 flag 短…</p>
+<p>顺便说一句，那个音频真好听，听说是锤子手机的默认铃声:flushed:</p>
+<h1 id="Rev-3"><a href="#Rev-3" class="headerlink" title="Rev 3"></a>Rev 3</h1><p><strong>不喜欢写界面的白菜哥</strong></p>
+<p><code>.NET</code> 逆向，直接拖到 IDA 里面，一阵乱翻，翻到了三段 base64 和一个摩尔斯电码表。把三段 base64 拼起来以后 decode, 得到一段摩尔斯电码 <code>-. ..- .- .- -.-. - ..-. 2D3f ... .- .--. .--. -.-- -.-. .-. .- -.-. -....- .---- -. --. -.-. ... ... .- .-. .--. -...--.-</code> (2D3f 是什么鬼:joy:)，解码后得到 flag <code>NUAACTF{SAPPYCRACK1NGCSSARP}</code>，放到源程序里面，显示 flag 正确。</p>
+<p>然后，提交以后说 flag 不对！<br>为什么 flag 不是 Happy Cracking CSharp? 看了半天，又交了半天的 flag，没找出问题。后来发现程序编码表里面 H 和 S 的编码一样:joy: 所以里面所有的 S 换成 H，源程序都会提示 flag 正确…<br>把 H 和 S 转换，一个一个试，最后试出来 flag 是 <code>NUAACTF{HAPPYCRACK1NGCHHARP}</code>，也是醉人。</p>
+<h1 id="Pwn-1"><a href="#Pwn-1" class="headerlink" title="Pwn 1"></a>Pwn 1</h1><p><strong>乱码！乱码！</strong></p>
 <p>签到题。下载下来一个 txt，打开以后发现是 jsfuck，放到浏览器里运行得到 flag.</p>
-<h1 id="pwn-2">Pwn 2 （未解出）</h1>
-<p><strong>回家的路</strong></p>
-<p>CTF 竞赛考了算法…最短路…真是醉醉哒。<br>
-一开始没有细想，瞎写了一个深度优先搜索，出来好多解，然而没有一个是对的，也是悲催。<br>
-到最后也没有做。</p>
-<h1 id="misc-1">Misc 1</h1>
-<p><strong>奇怪的压缩包</strong></p>
-<p>嘛，隐写的题都蛮好玩哒😜</p>
+<h1 id="Pwn-2-（未解出）"><a href="#Pwn-2-（未解出）" class="headerlink" title="Pwn 2 （未解出）"></a>Pwn 2 （未解出）</h1><p><strong>回家的路</strong></p>
+<p>CTF 竞赛考了算法…最短路…真是醉醉哒。<br>一开始没有细想，瞎写了一个深度优先搜索，出来好多解，然而没有一个是对的，也是悲催。<br>到最后也没有做。</p>
+<h1 id="Misc-1"><a href="#Misc-1" class="headerlink" title="Misc 1"></a>Misc 1</h1><p><strong>奇怪的压缩包</strong></p>
+<p>嘛，隐写的题都蛮好玩哒:stuck_out_tongue_winking_eye:</p>
 <p><a href="/pics/nuaactf/misc1.rar">misc1.rar</a> 下载下来后无法打开，<code>file</code> 一下发现是个 PNG，改拓展名后打开，得到 flag。这个也算签到题吧。</p>
-<h1 id="misc-2">Misc 2</h1>
-<p><strong>奇怪的图片</strong></p>
+<h1 id="Misc-2"><a href="#Misc-2" class="headerlink" title="Misc 2"></a>Misc 2</h1><p><strong>奇怪的图片</strong></p>
 <p><img src="/pics/nuaactf/misc2.png" alt="misc2.png"></p>
 <p>下载 <code>misc2.png</code>, <code>pngcheck</code> 提示 <code>additional data after IEND chunk</code>, 看来最后一块后面还有东西，用记事本打开，发现文件最后用明文写着 key.</p>
-<p>刚刚在文件末尾发现了一个文件头 <code>PK\x03\x04</code>, 觉得应该是个 zip 文件，<code>binwalk</code> 一下然后用 <code>dd</code> 分开，得到一个 zip 文件，解压后得到 flag. 这应该是这个题的标准做法吧，只是为什么做 zip 文件的时候没有压缩🌚</p>
-<h1 id="misc-3">Misc 3</h1>
-<p><strong>更奇怪的图片</strong>（你们这起的都是什么名字）</p>
+<p>刚刚在文件末尾发现了一个文件头 <code>PK\x03\x04</code>, 觉得应该是个 zip 文件，<code>binwalk</code> 一下然后用 <code>dd</code> 分开，得到一个 zip 文件，解压后得到 flag. 这应该是这个题的标准做法吧，只是为什么做 zip 文件的时候没有压缩:new_moon_with_face:</p>
+<h1 id="Misc-3"><a href="#Misc-3" class="headerlink" title="Misc 3"></a>Misc 3</h1><p><strong>更奇怪的图片</strong>（你们这起的都是什么名字）</p>
 <p><img src="/pics/nuaactf/misc3.png" alt="misc3.png"></p>
-<p>下载下来（听说这是舰娘？），<code>pngcheck</code> 没有错误，卡了一会。后来用 PS 打开，把色阶拉低，发现图的左下角有个二维码，扫码得 <code>QlpoOTFBWSZTWXhAk1kAAAtfgAAQIABgAAgAAACvIbYKIAAigNHqNGmnqFMJpoDTEO0CXcIvl9SeOAB3axLQYn4u5IpwoSDwgSay</code>.<br>
-解码后发现是乱码，不知道怎么做了，卡了很久😷 比赛的最后一个小时看见了解码后字符串开头的 BZ，突然意识到这可能是个文件头，于是将解码后的内容写入文件，<code>file</code> 一下发现果然是个 <code>bz</code> 压缩文件，解压后得到 flag.</p>
-<h1 id="misc-4">Misc 4 （未解出）</h1>
-<p><strong>讨厌的 APP</strong></p>
+<p>下载下来（听说这是舰娘？），<code>pngcheck</code> 没有错误，卡了一会。后来用 PS 打开，把色阶拉低，发现图的左下角有个二维码，扫码得 <code>QlpoOTFBWSZTWXhAk1kAAAtfgAAQIABgAAgAAACvIbYKIAAigNHqNGmnqFMJpoDTEO0CXcIvl9SeOAB3axLQYn4u5IpwoSDwgSay</code>.<br>解码后发现是乱码，不知道怎么做了，卡了很久:mask: 比赛的最后一个小时看见了解码后字符串开头的 BZ，突然意识到这可能是个文件头，于是将解码后的内容写入文件，<code>file</code> 一下发现果然是个 <code>bz</code> 压缩文件，解压后得到 flag.</p>
+<h1 id="Misc-4-（未解出）"><a href="#Misc-4-（未解出）" class="headerlink" title="Misc 4 （未解出）"></a>Misc 4 （未解出）</h1><p><strong>讨厌的 APP</strong></p>
 <p>觅动校园什么鬼？！</p>
-<h1 id="">总结</h1>
-<p>比赛五个小时，解了 10 道题，前半小时解出来 5 道，后面各种卡，最后一个小时脑洞大开又解出来 3 道题😂
-CTF 真好玩，考到了各种姿势各种脑洞，还是蛮有意思哒~<br>
-然而五个小时的比赛真的太累了…血的教训，下次题目做不出来还是要跑出去歇一会再回来做_(:зゝ∠)_</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>比赛五个小时，解了 10 道题，前半小时解出来 5 道，后面各种卡，最后一个小时脑洞大开又解出来 3 道题:joy:<br>CTF 真好玩，考到了各种姿势各种脑洞，还是蛮有意思哒~<br>然而五个小时的比赛真的太累了…血的教训，下次题目做不出来还是要跑出去歇一会再回来做_(:зゝ∠)_</p>
 
       
     </div>
@@ -382,28 +336,12 @@ CTF 真好玩，考到了各种姿势各种脑洞，还是蛮有意思哒~<br>
 
 
 
-<section id="comments">
-  <div id="disqus_thread"></div>
-    <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'stdioa'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</section>
-
 </div>
       <footer id="footer">
   <div class="outer">
     <div id="footer-info">
       <div class="footer-left">
-        &copy; 2017 David Dai
+        &copy; 2018 David Dai
       </div>
       <div class="footer-middle">
         <span id="busuanzi_container_site_pv" style="display: inline;">
@@ -488,7 +426,7 @@ MathJax.Hub.Queue(function() {
 twemoji.parse(document.getElementsByClassName("article-inner")[0], {
     folder: "svg", 
     ext: ".svg",
-    base: "//cdn.bootcss.com/twemoji/2.0.5/"
+    base: "//cdn.bootcss.com/twemoji/2.6.0/"
   });
 </script>
 <!-- 不蒜子 -->

@@ -6,16 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>Django REST Framework 入门 | Stdio&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <script src="//cdn.bootcss.com/twemoji/2.0.5/twemoji.min.js"></script>
+  <script src="//cdn.bootcss.com/twemoji/2.6.0/twemoji.min.js"></script>
   <meta name="description" content="拖了很久，终于用 Django REST Framework 写了个小 Demo.">
+<meta name="keywords" content="Python,Django,Django REST Framework">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Django REST Framework 入门">
 <meta property="og:url" content="//blog.stdioa.com/2017/03/DRF-demo/index.html">
-<meta property="og:site_name" content="Stdio's Blog">
+<meta property="og:site_name" content="Stdio&#39;s Blog">
 <meta property="og:description" content="拖了很久，终于用 Django REST Framework 写了个小 Demo.">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="//blog.stdioa.com/pics/DRF/DRF-list-view.jpg">
 <meta property="og:image" content="//blog.stdioa.com/pics/DRF/DRF-detail-view.jpg">
-<meta property="og:updated_time" content="2017-03-19T09:00:08.028Z">
+<meta property="og:updated_time" content="2018-04-23T13:37:52.809Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Django REST Framework 入门">
 <meta name="twitter:description" content="拖了很久，终于用 Django REST Framework 写了个小 Demo.">
@@ -110,9 +112,9 @@
 							
 								<a class="github" target="_blank" href="https://github.com/StdioA" title="github">github</a>
 					        
-								<a class="telegram" target="_blank" href="https://telegram.me/StdioA" title="telegram">telegram</a>
+								<a class="telegram" target="_blank" href="https://t.me/StdioA" title="telegram">telegram</a>
 					        
-								<a class="mail" target="_blank" href="mailto:stdio_dai@nuaa.edu.cn" title="mail">mail</a>
+								<a class="mail" target="_blank" href="mailto:stdioa@163.com" title="mail">mail</a>
 					        
 								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 					        
@@ -195,9 +197,9 @@
 					
 						<a class="github" target="_blank" href="https://github.com/StdioA" title="github">github</a>
 			        
-						<a class="telegram" target="_blank" href="https://telegram.me/StdioA" title="telegram">telegram</a>
+						<a class="telegram" target="_blank" href="https://t.me/StdioA" title="telegram">telegram</a>
 			        
-						<a class="mail" target="_blank" href="mailto:stdio_dai@nuaa.edu.cn" title="mail">mail</a>
+						<a class="mail" target="_blank" href="mailto:stdioa@163.com" title="mail">mail</a>
 			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 			        
@@ -249,27 +251,27 @@
     <div class="article-entry" itemprop="articleBody">
       
         
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-django-rest-framework"><span class="toc-text">1. Django REST Framework</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2"><span class="toc-text">2. 一点准备工作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-api"><span class="toc-text">3. 开始动手写 API</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#31-serializer"><span class="toc-text">3.1 创建 serializer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#32-viewset"><span class="toc-text">3.2 创建 ViewSet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#33-router"><span class="toc-text">3.3 定义、配置并注册 router</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4"><span class="toc-text">4. 大功告成！</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5"><span class="toc-text">5. 等等…别忘了写测试！</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-django-rest-framework"><span class="toc-text"> 1. Django REST Framework</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-一点准备工作"><span class="toc-text"> 2. 一点准备工作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-开始动手写-api"><span class="toc-text"> 3. 开始动手写 API</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#31-创建-serializer"><span class="toc-text"> 3.1 创建 serializer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#32-创建-viewset"><span class="toc-text"> 3.2 创建 ViewSet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#33-定义-配置并注册-router"><span class="toc-text"> 3.3 定义、配置并注册 router</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-大功告成"><span class="toc-text"> 4. 大功告成！</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-等等别忘了写测试"><span class="toc-text"> 5. 等等…别忘了写测试！</span></a></li></ol>
         
         <p>拖了很久，终于用 Django REST Framework 写了个小 Demo.</p>
 <a id="more"></a>
-<h1 id="1-django-rest-framework">1. Django REST Framework</h1>
-<p><a href="http://www.django-rest-framework.org/" target="_blank" rel="external">Django REST Framework</a> 是一个用来构造 Web API 的、强大而灵活的工具包。</p>
-<p>最早认识这个框架是在我翻译的<a href="https://linux.cn/article-7679-1.html" target="_blank" rel="external">《5 个最受人喜爱的开源 Django 包》</a>中，而真正接触它的时候已经是在五个月之后。那个时候在扇贝实习，第一次体会到了这个框架的简单易用。但那个时候也仅仅是做码农堆代码，并没有对这个框架产生特别深的了解。<br>
-前两天写了一个小 Demo，尝试着用比较少的代码实现对某个模型的增删改查操作，今天简单把实现过程记录一下。完整的代码在<a href="https://github.com/StdioA/drf_demo" target="_blank" rel="external">这里</a>。</p>
-<h1 id="2">2. 一点准备工作</h1>
+<h1 id="1-django-rest-framework"><a class="markdownIt-Anchor" href="#1-django-rest-framework"></a> 1. Django REST Framework</h1>
+<p><a href="http://www.django-rest-framework.org/" target="_blank" rel="noopener">Django REST Framework</a> 是一个用来构造 Web API 的、强大而灵活的工具包。</p>
+<p>最早认识这个框架是在我翻译的<a href="https://linux.cn/article-7679-1.html" target="_blank" rel="noopener">《5 个最受人喜爱的开源 Django 包》</a>中，而真正接触它的时候已经是在五个月之后。那个时候在扇贝实习，第一次体会到了这个框架的简单易用。但那个时候也仅仅是做码农堆代码，并没有对这个框架产生特别深的了解。<br>
+前两天写了一个小 Demo，尝试着用比较少的代码实现对某个模型的增删改查操作，今天简单把实现过程记录一下。完整的代码在<a href="https://github.com/StdioA/drf_demo" target="_blank" rel="noopener">这里</a>。</p>
+<h1 id="2-一点准备工作"><a class="markdownIt-Anchor" href="#2-一点准备工作"></a> 2. 一点准备工作</h1>
 <p>先安装依赖（推荐使用 virtualenv，虽然我从来不用🌚）：<code>pip install Django djangorestframework</code>.</p>
 <p>然后创建工程，创建 app.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">django-admin startproject drf_demo</div><div class="line"><span class="built_in">cd</span> drf_demo</div><div class="line">./manage.py startapp demo</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">django-admin startproject drf_demo</span><br><span class="line"><span class="built_in">cd</span> drf_demo</span><br><span class="line">./manage.py startapp demo</span><br></pre></td></tr></table></figure>
 <p>简单写一个 model：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># demo/models.py</span></div><div class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</div><div class="line"> </div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Data</span><span class="params">(models.Model)</span>:</span></div><div class="line">    content = models.CharField(max_length=<span class="number">128</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># demo/models.py</span></span><br><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Data</span><span class="params">(models.Model)</span>:</span></span><br><span class="line">    content = models.CharField(max_length=<span class="number">128</span>)</span><br></pre></td></tr></table></figure>
 <p>迁移数据库：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">./manage.py makemigrations</div><div class="line">./manage.py migrate</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./manage.py makemigrations</span><br><span class="line">./manage.py migrate</span><br></pre></td></tr></table></figure>
 <p>在项目设置中添加 APP，顺便把 DRF 也添加进去：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># drf_demo/settings.py</span></div><div class="line">INSTALLED_APPS = [</div><div class="line">    <span class="comment"># ...</span></div><div class="line">    <span class="string">'rest_framework'</span>,</div><div class="line">    <span class="string">'demo'</span></div><div class="line">]</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># drf_demo/settings.py</span></span><br><span class="line">INSTALLED_APPS = [</span><br><span class="line">    <span class="comment"># ...</span></span><br><span class="line">    <span class="string">'rest_framework'</span>,</span><br><span class="line">    <span class="string">'demo'</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 <p>在 root URL conf 中添加 APP 的 URL：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># drf_femo/urls.py</span></div><div class="line">urlpatterns = [</div><div class="line">    <span class="comment"># ...</span></div><div class="line">    url(<span class="string">r'^'</span>, include(<span class="string">'demo.urls'</span>))</div><div class="line">]</div></pre></td></tr></table></figure>
-<h1 id="3-api">3. 开始动手写 API</h1>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># drf_femo/urls.py</span></span><br><span class="line">urlpatterns = [</span><br><span class="line">    <span class="comment"># ...</span></span><br><span class="line">    url(<span class="string">r'^'</span>, include(<span class="string">'demo.urls'</span>))</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<h1 id="3-开始动手写-api"><a class="markdownIt-Anchor" href="#3-开始动手写-api"></a> 3. 开始动手写 API</h1>
 <p>如果在 Django 中写一个页面，你需要：</p>
 <ol>
 <li>在 <code>urls.py</code> 中注册 view；</li>
@@ -282,29 +284,29 @@
 <li>在 <code>views.py</code> 中定义 ViewSet；</li>
 <li>在 <code>serializers.py</code> 中定义 serializer.</li>
 </ol>
-<h2 id="31-serializer">3.1 创建 serializer</h2>
+<h2 id="31-创建-serializer"><a class="markdownIt-Anchor" href="#31-创建-serializer"></a> 3.1 创建 serializer</h2>
 <p>serializer 是什么？<br>
 简单而言，serializer 就是一种根据配置，用来把数据在 model instance 及 raw data 之间转换的对象。</p>
 <p>比如：我们可以针对刚刚定义的 model <code>Data</code> 来创建一个 serializer:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># demo/serializers.py</span></div><div class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> Data</div><div class="line"><span class="keyword">from</span> rest_framework.serializers <span class="keyword">import</span> ModelSerializer</div><div class="line"> </div><div class="line"> </div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">DataSerializer</span><span class="params">(ModelSerializer)</span>:</span></div><div class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span></div><div class="line">        model = Data</div><div class="line">        fields = (<span class="string">"id"</span>, <span class="string">"content"</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># demo/serializers.py</span></span><br><span class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> Data</span><br><span class="line"><span class="keyword">from</span> rest_framework.serializers <span class="keyword">import</span> ModelSerializer</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DataSerializer</span><span class="params">(ModelSerializer)</span>:</span></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span></span><br><span class="line">        model = Data</span><br><span class="line">        fields = (<span class="string">"id"</span>, <span class="string">"content"</span>)</span><br></pre></td></tr></table></figure>
 <p>然后，我们就可以通过这个 serializer 将数据在 <code>Data</code> 对象及 <code>JSON</code> 数据之间转换：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> demo.serializers <span class="keyword">import</span> Data, DataSerializer</div><div class="line"><span class="keyword">from</span> rest_framework.renderers <span class="keyword">import</span> JSONRenderer   <span class="comment"># 用于 JSON 渲染及解析</span></div><div class="line"><span class="keyword">from</span> rest_framework.parsers <span class="keyword">import</span> JSONParser</div><div class="line"><span class="keyword">from</span> django.utils.six <span class="keyword">import</span> BytesIO</div><div class="line"> </div><div class="line">instance = Data(content=<span class="string">"test"</span>)</div><div class="line">instance.save()</div><div class="line"> </div><div class="line">serializer = DataSerializer(instance)</div><div class="line">JSONRenderer().render(serializer.data)              <span class="comment"># b'&#123;"id":1,"content":"test"&#125;'</span></div><div class="line"> </div><div class="line">raw = <span class="string">b'&#123;"id":2,"content":"another"&#125;'</span></div><div class="line">stream = BytesIO(raw)                               <span class="comment"># 将 JSON 数据变成 Python dict</span></div><div class="line">data = JSONParser().parse(stream)</div><div class="line"> </div><div class="line">serializer = DataSerializer(data=data)</div><div class="line">ins = serializer.save()                             <span class="comment"># &lt;Data: Data object&gt;</span></div><div class="line">ins.__dict__                                        <span class="comment"># &#123;'content': 'another', 'id': 2&#125;</span></div></pre></td></tr></table></figure>
-<h2 id="32-viewset">3.2 创建 ViewSet</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> demo.serializers <span class="keyword">import</span> Data, DataSerializer</span><br><span class="line"><span class="keyword">from</span> rest_framework.renderers <span class="keyword">import</span> JSONRenderer   <span class="comment"># 用于 JSON 渲染及解析</span></span><br><span class="line"><span class="keyword">from</span> rest_framework.parsers <span class="keyword">import</span> JSONParser</span><br><span class="line"><span class="keyword">from</span> django.utils.six <span class="keyword">import</span> BytesIO</span><br><span class="line"> </span><br><span class="line">instance = Data(content=<span class="string">"test"</span>)</span><br><span class="line">instance.save()</span><br><span class="line"> </span><br><span class="line">serializer = DataSerializer(instance)</span><br><span class="line">JSONRenderer().render(serializer.data)              <span class="comment"># b'&#123;"id":1,"content":"test"&#125;'</span></span><br><span class="line"> </span><br><span class="line">raw = <span class="string">b'&#123;"id":2,"content":"another"&#125;'</span></span><br><span class="line">stream = BytesIO(raw)                               <span class="comment"># 将 JSON 数据变成 Python dict</span></span><br><span class="line">data = JSONParser().parse(stream)</span><br><span class="line"> </span><br><span class="line">serializer = DataSerializer(data=data)</span><br><span class="line">ins = serializer.save()                             <span class="comment"># &lt;Data: Data object&gt;</span></span><br><span class="line">ins.__dict__                                        <span class="comment"># &#123;'content': 'another', 'id': 2&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="32-创建-viewset"><a class="markdownIt-Anchor" href="#32-创建-viewset"></a> 3.2 创建 ViewSet</h2>
 <p>非常简单，在 <code>views.py</code> 中定义一个 ViewSet 类，标明对应的 model 以及 serializer 即可：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># demo/views.py</span></div><div class="line"><span class="keyword">from</span> rest_framework.viewsets <span class="keyword">import</span> ModelViewSet</div><div class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> Data</div><div class="line"><span class="keyword">from</span> .serializers <span class="keyword">import</span> DataSerializer</div><div class="line"> </div><div class="line"> </div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">DataViewSet</span><span class="params">(ModelViewSet)</span>:</span></div><div class="line">    queryset = Data.objects.all()</div><div class="line">    serializer_class = DataSerializer</div></pre></td></tr></table></figure>
-<h2 id="33-router">3.3 定义、配置并注册 router</h2>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># demo/urls.py</span></div><div class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url, include</div><div class="line"><span class="keyword">from</span> rest_framework.routers <span class="keyword">import</span> DefaultRouter</div><div class="line"><span class="keyword">from</span> .views <span class="keyword">import</span> DataViewSet</div><div class="line"> </div><div class="line">router = DefaultRouter()                        <span class="comment"># 定义 router</span></div><div class="line">router.register(<span class="string">'data'</span>, DataViewSet)            <span class="comment"># 注册 viewset</span></div><div class="line"> </div><div class="line">urlpatterns = [</div><div class="line">    url(<span class="string">r'^'</span>, include(router.urls)),            <span class="comment"># 在 urlpatterns 里包含 router</span></div><div class="line">]</div></pre></td></tr></table></figure>
-<h1 id="4">4. 大功告成！</h1>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># demo/views.py</span></span><br><span class="line"><span class="keyword">from</span> rest_framework.viewsets <span class="keyword">import</span> ModelViewSet</span><br><span class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> Data</span><br><span class="line"><span class="keyword">from</span> .serializers <span class="keyword">import</span> DataSerializer</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DataViewSet</span><span class="params">(ModelViewSet)</span>:</span></span><br><span class="line">    queryset = Data.objects.all()</span><br><span class="line">    serializer_class = DataSerializer</span><br></pre></td></tr></table></figure>
+<h2 id="33-定义-配置并注册-router"><a class="markdownIt-Anchor" href="#33-定义-配置并注册-router"></a> 3.3 定义、配置并注册 router</h2>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># demo/urls.py</span></span><br><span class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url, include</span><br><span class="line"><span class="keyword">from</span> rest_framework.routers <span class="keyword">import</span> DefaultRouter</span><br><span class="line"><span class="keyword">from</span> .views <span class="keyword">import</span> DataViewSet</span><br><span class="line"> </span><br><span class="line">router = DefaultRouter()                        <span class="comment"># 定义 router</span></span><br><span class="line">router.register(<span class="string">'data'</span>, DataViewSet)            <span class="comment"># 注册 viewset</span></span><br><span class="line"> </span><br><span class="line">urlpatterns = [</span><br><span class="line">    url(<span class="string">r'^'</span>, include(router.urls)),            <span class="comment"># 在 urlpatterns 里包含 router</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<h1 id="4-大功告成"><a class="markdownIt-Anchor" href="#4-大功告成"></a> 4. 大功告成！</h1>
 <p>启动服务器，访问 <code>/data/</code>，你就会看到 DRF 精美的调试界面，真是感动😭</p>
 <p>按照 RESTful API 规范，在列表界面，你可以通过 POST 表单来创建新对象：<br>
 <img src="/pics/DRF/DRF-list-view.jpg" alt="DRF 列表界面"></p>
 <p>在详情界面（<code>/data/1/</code>），你可以通过 PUT 表单修改对象，或通过 DELETE 按钮来删除对象:<br>
 <img src="/pics/DRF/DRF-detail-view.jpg" alt="DRF 详情界面"></p>
 <p>当然，如果你乐意，使用 CURL 来调试也是可以的，服务器会给你返回 JSON 而不是 HTML:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$  curl -XPUT --data <span class="string">"content=edit"</span> http://localhost:8000/data/1/</div><div class="line">&#123;<span class="string">"id"</span>:1,<span class="string">"content"</span>:<span class="string">"edit"</span>&#125;</div></pre></td></tr></table></figure>
-<h1 id="5">5. 等等…别忘了写测试！</h1>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$  curl -XPUT --data <span class="string">"content=edit"</span> http://localhost:8000/data/1/</span><br><span class="line">&#123;<span class="string">"id"</span>:1,<span class="string">"content"</span>:<span class="string">"edit"</span>&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="5-等等别忘了写测试"><a class="markdownIt-Anchor" href="#5-等等别忘了写测试"></a> 5. 等等…别忘了写测试！</h1>
 <p>DRF 提供了一系列工具来协助 RESTful API 测试，比如 <code>rest_framework.test.APIClient</code>. <code>APIClient</code> 在发送请求时会根据配置自动设定 <code>Content-Type</code>, 而不是用 Django 自带 <code>djanto.test.Client</code> 的 <code>application/octet-stream</code>，方便了 API 测试。<br>
-测试代码不在这里贴出（有些无趣），感兴趣的同学可以戳戳戳<a href="https://github.com/StdioA/drf_demo/blob/master/demo/tests.py" target="_blank" rel="external">这里</a>。</p>
+测试代码不在这里贴出（有些无趣），感兴趣的同学可以戳戳戳<a href="https://github.com/StdioA/drf_demo/blob/master/demo/tests.py" target="_blank" rel="noopener">这里</a>。</p>
 <p>教程结束。<br>
 这两天我还会继续看 DRF，后面还会继续更新相关内容。</p>
 <hr>
@@ -347,28 +349,12 @@
 
 
 
-<section id="comments">
-  <div id="disqus_thread"></div>
-    <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'stdioa'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</section>
-
 </div>
       <footer id="footer">
   <div class="outer">
     <div id="footer-info">
       <div class="footer-left">
-        &copy; 2017 David Dai
+        &copy; 2018 David Dai
       </div>
       <div class="footer-middle">
         <span id="busuanzi_container_site_pv" style="display: inline;">
@@ -453,7 +439,7 @@ MathJax.Hub.Queue(function() {
 twemoji.parse(document.getElementsByClassName("article-inner")[0], {
     folder: "svg", 
     ext: ".svg",
-    base: "//cdn.bootcss.com/twemoji/2.0.5/"
+    base: "//cdn.bootcss.com/twemoji/2.6.0/"
   });
 </script>
 <!-- 不蒜子 -->

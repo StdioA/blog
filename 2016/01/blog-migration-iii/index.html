@@ -6,14 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>博客迁移记（三） | Stdio&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <script src="//cdn.bootcss.com/twemoji/2.0.5/twemoji.min.js"></script>
+  <script src="//cdn.bootcss.com/twemoji/2.6.0/twemoji.min.js"></script>
   <meta name="description" content="一个月没更新，期末复习的时候光鼓捣网站却懒得写东西，期末考完了，把这一个月鼓捣的东西记录一下，比如利用七牛进行静态文件托管。">
+<meta name="keywords" content="nginx,七牛,git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="博客迁移记（三）">
 <meta property="og:url" content="//blog.stdioa.com/2016/01/blog-migration-iii/index.html">
-<meta property="og:site_name" content="Stdio's Blog">
+<meta property="og:site_name" content="Stdio&#39;s Blog">
 <meta property="og:description" content="一个月没更新，期末复习的时候光鼓捣网站却懒得写东西，期末考完了，把这一个月鼓捣的东西记录一下，比如利用七牛进行静态文件托管。">
-<meta property="og:updated_time" content="2016-11-08T13:48:35.449Z">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-06-29T04:38:40.515Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客迁移记（三）">
 <meta name="twitter:description" content="一个月没更新，期末复习的时候光鼓捣网站却懒得写东西，期末考完了，把这一个月鼓捣的东西记录一下，比如利用七牛进行静态文件托管。">
@@ -107,9 +109,9 @@
 							
 								<a class="github" target="_blank" href="https://github.com/StdioA" title="github">github</a>
 					        
-								<a class="telegram" target="_blank" href="https://telegram.me/StdioA" title="telegram">telegram</a>
+								<a class="telegram" target="_blank" href="https://t.me/StdioA" title="telegram">telegram</a>
 					        
-								<a class="mail" target="_blank" href="mailto:stdio_dai@nuaa.edu.cn" title="mail">mail</a>
+								<a class="mail" target="_blank" href="mailto:stdioa@163.com" title="mail">mail</a>
 					        
 								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 					        
@@ -192,9 +194,9 @@
 					
 						<a class="github" target="_blank" href="https://github.com/StdioA" title="github">github</a>
 			        
-						<a class="telegram" target="_blank" href="https://telegram.me/StdioA" title="telegram">telegram</a>
+						<a class="telegram" target="_blank" href="https://t.me/StdioA" title="telegram">telegram</a>
 			        
-						<a class="mail" target="_blank" href="mailto:stdio_dai@nuaa.edu.cn" title="mail">mail</a>
+						<a class="mail" target="_blank" href="mailto:stdioa@163.com" title="mail">mail</a>
 			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 			        
@@ -246,36 +248,20 @@
     <div class="article-entry" itemprop="articleBody">
       
         
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1"><span class="toc-text">1. 使用七牛托管静态文件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#11"><span class="toc-text">1.1 背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12"><span class="toc-text">1.2 操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#121"><span class="toc-text">1.2.1 同步文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#122"><span class="toc-text">1.2.2 在服务器端设置跳转</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-git-hook"><span class="toc-text">1.3 效率提升——Git hook</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2"><span class="toc-text">2. 谱站搭建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3"><span class="toc-text">3. 后记</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4"><span class="toc-text">4. 参考资料</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-使用七牛托管静态文件"><span class="toc-text">1. 使用七牛托管静态文件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-背景"><span class="toc-text">1.1 背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-操作"><span class="toc-text">1.2 操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-1-同步文件"><span class="toc-text">1.2.1 同步文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-2-在服务器端设置跳转"><span class="toc-text">1.2.2 在服务器端设置跳转</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-效率提升——Git-hook"><span class="toc-text">1.3 效率提升——Git hook</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-谱站搭建"><span class="toc-text">2. 谱站搭建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-后记"><span class="toc-text">3. 后记</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-参考资料"><span class="toc-text">4. 参考资料</span></a></li></ol>
         
         <p>一个月没更新，期末复习的时候光鼓捣网站却懒得写东西，期末考完了，把这一个月鼓捣的东西记录一下，比如利用七牛进行静态文件托管。</p>
 <a id="more"></a>
-<h1 id="1">1. 使用七牛托管静态文件</h1>
-<h2 id="11">1.1 背景</h2>
-<p>博客的事情处理完成后，我又做了一个网站主页，其中包括一个100KB+的背景图片。不过因为我的VPS出站带宽只有1Mb/s, 所以背景图片加载时间过长，导致网站访问速度较慢。所以我将绝大部分的资源全部挂到了七牛上，在服务器端对静态资源请求进行302跳转，将流量转移到七牛的节点，提高访问速度。</p>
-<h2 id="12">1.2 操作</h2>
-<h3 id="121">1.2.1 同步文件</h3>
-<p>我需要托管的文件包括博客和个人主页的所有图片文件。首先，我在七牛上建立了空间<code>cdn-stdioa</code>并绑定了个人域名、申请了HTTPS域名。为方便将本地文件与七牛空间同步，七牛提供了命令行同步工具<code>qrsync</code>. 查看<a href="http://developer.qiniu.com/docs/v6/tools/qrsync.html" target="_blank" rel="external">文档</a>后，我新建并修改了配置文件<code>sync_conf.json</code>，内容如下：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"src"</span>:          <span class="string">"blog/source/pics"</span>,</div><div class="line">    <span class="attr">"dest"</span>:         <span class="string">"qiniu:access_key=&lt;your_access_key&gt;&amp;secret_key=&lt;your_secret&gt;key&gt;&amp;bucket=cdn-stdioa&amp;key_prefix=blog/pics/"</span>,</div><div class="line">    <span class="attr">"debug_level"</span>:  <span class="number">1</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="1-使用七牛托管静态文件"><a href="#1-使用七牛托管静态文件" class="headerlink" title="1. 使用七牛托管静态文件"></a>1. 使用七牛托管静态文件</h1><h2 id="1-1-背景"><a href="#1-1-背景" class="headerlink" title="1.1 背景"></a>1.1 背景</h2><p>博客的事情处理完成后，我又做了一个网站主页，其中包括一个100KB+的背景图片。不过因为我的VPS出站带宽只有1Mb/s, 所以背景图片加载时间过长，导致网站访问速度较慢。所以我将绝大部分的资源全部挂到了七牛上，在服务器端对静态资源请求进行302跳转，将流量转移到七牛的节点，提高访问速度。</p>
+<h2 id="1-2-操作"><a href="#1-2-操作" class="headerlink" title="1.2 操作"></a>1.2 操作</h2><h3 id="1-2-1-同步文件"><a href="#1-2-1-同步文件" class="headerlink" title="1.2.1 同步文件"></a>1.2.1 同步文件</h3><p>我需要托管的文件包括博客和个人主页的所有图片文件。首先，我在七牛上建立了空间<code>cdn-stdioa</code>并绑定了个人域名、申请了HTTPS域名。为方便将本地文件与七牛空间同步，七牛提供了命令行同步工具<code>qrsync</code>. 查看<a href="http://developer.qiniu.com/docs/v6/tools/qrsync.html" target="_blank" rel="noopener">文档</a>后，我新建并修改了配置文件<code>sync_conf.json</code>，内容如下：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"src"</span>:          <span class="string">"blog/source/pics"</span>,</span><br><span class="line">    <span class="attr">"dest"</span>:         <span class="string">"qiniu:access_key=&lt;your_access_key&gt;&amp;secret_key=&lt;your_secret&gt;key&gt;&amp;bucket=cdn-stdioa&amp;key_prefix=blog/pics/"</span>,</span><br><span class="line">    <span class="attr">"debug_level"</span>:  <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>若添加资源，则执行<code>qrsync sync_conf.json</code>, 即可完成静态资源与七牛空间的自动同步。</p>
-<h3 id="122">1.2.2 在服务器端设置跳转</h3>
-<p>为了提高访问速度，需要在nginx端将所有指向图片的请求全部跳转到七牛的链接上。学习了一下location重定向规则，直接上配置文件吧。</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">location</span><span class="regexp"> ^~</span> /pics &#123;</div><div class="line">    <span class="attribute">return</span> https://xxx.qnssl.com/blog<span class="variable">$request_uri</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="1-2-2-在服务器端设置跳转"><a href="#1-2-2-在服务器端设置跳转" class="headerlink" title="1.2.2 在服务器端设置跳转"></a>1.2.2 在服务器端设置跳转</h3><p>为了提高访问速度，需要在nginx端将所有指向图片的请求全部跳转到七牛的链接上。学习了一下location重定向规则，直接上配置文件吧。<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">location</span><span class="regexp"> ^~</span> /pics &#123;</span><br><span class="line">    <span class="attribute">return</span> https://xxx.qnssl.com/blog<span class="variable">$request_uri</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>这样，就可以将所有指向<code>/pics</code>的请求全部重定向到七牛的链接。顺便，在七牛设置了一下防盗链。</p>
-<h2 id="13-git-hook">1.3 效率提升——Git hook</h2>
-<p>因为我的博客和个人主页都是使用Coding+webhook部署的，所以每次更改页面后要推代码，还要同步静态资源。有没有方法可以把这两条操作简化一下呢？一开始写了个批处理脚本，后来觉得一定有更好的办法，于是翻了翻，遇到了<code>Git hook</code>这种神器。
-<code>Git hook</code>跟webhook类似，都是在某个操作上挂一个“钩子”，使得在进行某操作发生时自动触发自定义脚本来达到某些目的，实现快捷操作。所有的钩子均在<code>.git/hooks</code>目录下，在该目录下设置特殊文件名的脚本文件来设置钩子。因为我需要在推送代码之前进行资源同步，所以我需要设置<code>pre-push</code>脚本。脚本内容如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line"></div><div class="line"><span class="built_in">echo</span> <span class="_">-e</span> <span class="string">"Sync up the static resources with Qiniu..."</span></div><div class="line"><span class="built_in">cd</span> /f/websites/blog/</div><div class="line">qrsync sync_conf.json 2&gt;&gt;sync.log</div><div class="line"><span class="built_in">echo</span> <span class="_">-e</span> <span class="string">"Done!"</span></div></pre></td></tr></table></figure>
+<h2 id="1-3-效率提升——Git-hook"><a href="#1-3-效率提升——Git-hook" class="headerlink" title="1.3 效率提升——Git hook"></a>1.3 效率提升——Git hook</h2><p>因为我的博客和个人主页都是使用Coding+webhook部署的，所以每次更改页面后要推代码，还要同步静态资源。有没有方法可以把这两条操作简化一下呢？一开始写了个批处理脚本，后来觉得一定有更好的办法，于是翻了翻，遇到了<code>Git hook</code>这种神器。<br><code>Git hook</code>跟webhook类似，都是在某个操作上挂一个“钩子”，使得在进行某操作发生时自动触发自定义脚本来达到某些目的，实现快捷操作。所有的钩子均在<code>.git/hooks</code>目录下，在该目录下设置特殊文件名的脚本文件来设置钩子。因为我需要在推送代码之前进行资源同步，所以我需要设置<code>pre-push</code>脚本。脚本内容如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"Sync up the static resources with Qiniu..."</span></span><br><span class="line"><span class="built_in">cd</span> /f/websites/blog/</span><br><span class="line">qrsync sync_conf.json 2&gt;&gt;sync.log</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"Done!"</span></span><br></pre></td></tr></table></figure></p>
 <p>这样，我就可以在每次执行<code>git push</code>之前自动同步静态资源，少敲一条命令，提升工作效率→_→</p>
-<h1 id="2">2. 谱站搭建</h1>
-<p>内容不是太多，就写在这里啦。
-我有一个乐谱分享站，里面存放一些自己收集的钢琴谱。一年以前写了一个程序，用来为每个文件夹生成index页面。前几天翻开那个程序，一下子被自己写的连环replace吓到了（那个时候连正则还都不会，不过转念一想要是会了正则，写出来的东西会多可怕😂），于是怒用<code>Jinja</code>模板渲染引擎重写了一个，把原来最核心部分的十几行代码变为了一行渲染语句，代码看起来清爽多了。
-嗯，具体链接可以在左侧或顶栏的“友情链接”中找。</p>
-<h1 id="3">3. 后记</h1>
-<p>历经一个月，博客的迁移工作基本完成（刚刚写博客的工夫还给它添加了<code>twemoji</code>支持😶），以后还要做个人页面，不过可能不会有太多可写的地方了。就酱，后面看一阵子go以后可以来写写golang的东西。</p>
-<h1 id="4">4. 参考资料</h1>
-<p><a href="http://www.seo-guwen.com/post-17.html" target="_blank" rel="external">Nginx重定向规则详细介绍</a>
-<a href="http://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90" target="_blank" rel="external">自定义 Git - Git 钩子</a></p>
+<h1 id="2-谱站搭建"><a href="#2-谱站搭建" class="headerlink" title="2. 谱站搭建"></a>2. 谱站搭建</h1><p>内容不是太多，就写在这里啦。<br>我有一个乐谱分享站，里面存放一些自己收集的钢琴谱。一年以前写了一个程序，用来为每个文件夹生成index页面。前几天翻开那个程序，一下子被自己写的连环replace吓到了（那个时候连正则还都不会，不过转念一想要是会了正则，写出来的东西会多可怕😂），于是怒用<code>Jinja</code>模板渲染引擎重写了一个，把原来最核心部分的十几行代码变为了一行渲染语句，代码看起来清爽多了。<br>嗯，具体链接可以在左侧或顶栏的“友情链接”中找。</p>
+<h1 id="3-后记"><a href="#3-后记" class="headerlink" title="3. 后记"></a>3. 后记</h1><p>历经一个月，博客的迁移工作基本完成（刚刚写博客的工夫还给它添加了<code>twemoji</code>支持😶），以后还要做个人页面，不过可能不会有太多可写的地方了。就酱，后面看一阵子go以后可以来写写golang的东西。</p>
+<h1 id="4-参考资料"><a href="#4-参考资料" class="headerlink" title="4. 参考资料"></a>4. 参考资料</h1><p><a href="http://www.seo-guwen.com/post-17.html" target="_blank" rel="noopener">Nginx重定向规则详细介绍</a><br><a href="http://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90" target="_blank" rel="noopener">自定义 Git - Git 钩子</a></p>
 
       
     </div>
@@ -312,28 +298,12 @@
 
 
 
-<section id="comments">
-  <div id="disqus_thread"></div>
-    <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'stdioa'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</section>
-
 </div>
       <footer id="footer">
   <div class="outer">
     <div id="footer-info">
       <div class="footer-left">
-        &copy; 2017 David Dai
+        &copy; 2018 David Dai
       </div>
       <div class="footer-middle">
         <span id="busuanzi_container_site_pv" style="display: inline;">
@@ -418,7 +388,7 @@ MathJax.Hub.Queue(function() {
 twemoji.parse(document.getElementsByClassName("article-inner")[0], {
     folder: "svg", 
     ext: ".svg",
-    base: "//cdn.bootcss.com/twemoji/2.0.5/"
+    base: "//cdn.bootcss.com/twemoji/2.6.0/"
   });
 </script>
 <!-- 不蒜子 -->

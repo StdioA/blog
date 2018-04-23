@@ -6,16 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>随手记之Vue.js | Stdio&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <script src="//cdn.bootcss.com/twemoji/2.0.5/twemoji.min.js"></script>
+  <script src="//cdn.bootcss.com/twemoji/2.6.0/twemoji.min.js"></script>
   <meta name="description" content="之前的那门 JS 和前端课结课了，最后花了一周时间写了一个 project，使用 Vue.js 的一套工具写了一个单页面应用，先将使用到及学到的知识来整理一下。">
+<meta name="keywords" content="前端开发,Javascript,node.js,vue.js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="随手记之Vue.js">
 <meta property="og:url" content="//blog.stdioa.com/2016/03/essay-vue/index.html">
-<meta property="og:site_name" content="Stdio's Blog">
+<meta property="og:site_name" content="Stdio&#39;s Blog">
 <meta property="og:description" content="之前的那门 JS 和前端课结课了，最后花了一周时间写了一个 project，使用 Vue.js 的一套工具写了一个单页面应用，先将使用到及学到的知识来整理一下。">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="//blog.stdioa.com/pics/vue/vue-component-with-pre-processors.png">
 <meta property="og:image" content="//blog.stdioa.com/pics/vue/vuex.png">
-<meta property="og:updated_time" content="2017-03-09T07:45:34.731Z">
+<meta property="og:updated_time" content="2017-06-29T04:38:40.199Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="随手记之Vue.js">
 <meta name="twitter:description" content="之前的那门 JS 和前端课结课了，最后花了一周时间写了一个 project，使用 Vue.js 的一套工具写了一个单页面应用，先将使用到及学到的知识来整理一下。">
@@ -110,9 +112,9 @@
 							
 								<a class="github" target="_blank" href="https://github.com/StdioA" title="github">github</a>
 					        
-								<a class="telegram" target="_blank" href="https://telegram.me/StdioA" title="telegram">telegram</a>
+								<a class="telegram" target="_blank" href="https://t.me/StdioA" title="telegram">telegram</a>
 					        
-								<a class="mail" target="_blank" href="mailto:stdio_dai@nuaa.edu.cn" title="mail">mail</a>
+								<a class="mail" target="_blank" href="mailto:stdioa@163.com" title="mail">mail</a>
 					        
 								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 					        
@@ -195,9 +197,9 @@
 					
 						<a class="github" target="_blank" href="https://github.com/StdioA" title="github">github</a>
 			        
-						<a class="telegram" target="_blank" href="https://telegram.me/StdioA" title="telegram">telegram</a>
+						<a class="telegram" target="_blank" href="https://t.me/StdioA" title="telegram">telegram</a>
 			        
-						<a class="mail" target="_blank" href="mailto:stdio_dai@nuaa.edu.cn" title="mail">mail</a>
+						<a class="mail" target="_blank" href="mailto:stdioa@163.com" title="mail">mail</a>
 			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
 			        
@@ -249,44 +251,31 @@
     <div class="article-entry" itemprop="articleBody">
       
         
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-vuejs"><span class="toc-text">1. Vue.js</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-vue-cli"><span class="toc-text">2. vue-cli</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-vue-router"><span class="toc-text">3. Vue-router</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#31"><span class="toc-text">3.1 初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#32-vue-router"><span class="toc-text">3.2 vue-router 的使用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-vuex"><span class="toc-text">4. Vuex</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#41"><span class="toc-text">4.1 使用方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5"><span class="toc-text">5. 总结 & 后记</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Vue-js"><span class="toc-text">1. Vue.js</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-vue-cli"><span class="toc-text">2. vue-cli</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Vue-router"><span class="toc-text">3. Vue-router</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-初始化"><span class="toc-text">3.1 初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-vue-router-的使用"><span class="toc-text">3.2 vue-router 的使用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Vuex"><span class="toc-text">4. Vuex</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-使用方法"><span class="toc-text">4.1 使用方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-总结-amp-后记"><span class="toc-text">5. 总结 &amp; 后记</span></a></li></ol>
         
         <p>之前的那门 JS 和前端课结课了，最后花了一周时间写了一个 project，使用 Vue.js 的一套工具写了一个单页面应用，先将使用到及学到的知识来整理一下。</p>
 <a id="more"></a>
 <p>想了想，之前自己学习 <code>Vue.js</code> 的时候一直在翻文档，翻到哪些让人眼前一亮的功能时就将它加进自己的项目里，并没有什么系统地进行学习，所以想到哪写到哪好了。前方高乱预警。</p>
-<h1 id="1-vuejs">1. Vue.js</h1>
-<p>之前用 <code>React</code> 用得有些不爽了所以想换换口味, 于是 用<a href="http://vuejs.org.cn/" target="_blank" rel="external"><code>Vue.js</code></a> 写了一个小应用的前端部分。它的轻量以及MVVM架构让我在两天之内爱上了它，于是决定用它代替 React 去完成 final project 的前端部分。</p>
-<p>不知道为什么，我觉得 <code>Vue.js</code> 比 <code>React</code> 更容易上手，所以很快就学会了它。想了想确实不知道该整理一些什么，因为 <a href="http://vuejs.org.cn/guide/" target="_blank" rel="external">Vue 的官方教程</a>写的确实很直白清楚，所以在此不再赘述，有时间的话可能会考虑写一个 Vue 的教程。</p>
-<h1 id="2-vue-cli">2. vue-cli</h1>
-<p><a href="https://github.com/vuejs/vue-cli" target="_blank" rel="external">vue-cli</a> 是一个 Vue.js 官方提供的脚手架工具，你可以使用它来轻松地构建出一个应用 <code>Vue.js</code> 的工程。官方提供 5 种模板，当然你也可以在 <code>github</code> 上或者本地构建自己的模板然后使用 vue-cli 生成工程。</p>
-<p><a href="https://github.com/vuejs/vue-cli#usage" target="_blank" rel="external">具体使用方法</a>：生成一个工程极为简单，只需一两条命令即可。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ vue init webpack my-project     // 使用 webpack 模板生成工程 my-project</div><div class="line">$ <span class="built_in">cd</span> my-project</div><div class="line">$ npm install</div><div class="line">$ npm run dev</div></pre></td></tr></table></figure>
-<p>然后，借助 <code>webpack</code> 与 <code>vue-loader</code>, 你可以将一个 <code>Vue</code> 组件的模板、核心js代码和CSS写在<strong>一个文件里</strong>，甚至还可以使用 <code>CSS</code> 与 <code>HTML</code> 的预处理器，像这样：<br>
-<img src="/pics/vue/vue-component-with-pre-processors.png" alt=""><br>
-<span style="font-size: 0.75em;">图片来自<a href="http://vuejs.org.cn/guide/application.html" target="_blank" rel="external"> Vue.js 官方教程 - 构建大型应用</a>。</span></p>
-<h1 id="3-vue-router">3. Vue-router</h1>
-<p><a href="https://github.com/vuejs/vue-router/" target="_blank" rel="external"><code>vue-router</code></a> 是 <code>vue</code> 官方提供的路由模块，可以实现 <code>SPA</code> 中的路由操作。具体文档看<a href="http://vuejs.github.io/vue-router/zh-cn/index.html" target="_blank" rel="external">这里</a>。顺便提一句，<code>vue-router</code> 的中文文档已经过时了。</p>
-<h2 id="31">3.1 初始化</h2>
-<p>首先使用 <code>npm</code> 安装 <code>vue-router</code>, 然后在程序入口点配置 <code>vue-router</code>.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"><span class="keyword">import</span> Router <span class="keyword">from</span> <span class="string">'vue-router'</span></div><div class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./components/App'</span>                    <span class="comment">// 程序的核心 Vue 应用</span></div><div class="line"><span class="keyword">import</span> HomePageView <span class="keyword">from</span> <span class="string">'./components/HomePageView'</span>  <span class="comment">// 导入所有的 View 组件</span></div><div class="line"><span class="keyword">import</span> ItemView <span class="keyword">from</span> <span class="string">'./components/ItemView'</span></div><div class="line"> </div><div class="line">Vue.use(Router)                                       <span class="comment">// Vue 配置</span></div><div class="line"><span class="keyword">var</span> router = <span class="keyword">new</span> Router()                             <span class="comment">// 生成路由对象</span></div><div class="line">router.map(&#123;                                          <span class="comment">// 配置路由</span></div><div class="line">  <span class="string">'/'</span>: &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'homepage'</span>,</div><div class="line">    <span class="attr">component</span>: HomePageView</div><div class="line">  &#125;,</div><div class="line">  <span class="string">'/home'</span>: &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">'homepage'</span>,</div><div class="line">    <span class="attr">component</span>: HomePageView</div><div class="line">  &#125;,</div><div class="line">  <span class="string">'/item/:id'</span>: &#123;                                    <span class="comment">// 支持动态路径</span></div><div class="line">    name: <span class="string">'item'</span>,</div><div class="line">    <span class="attr">component</span>: ItemView</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"> </div><div class="line">router.redirect(&#123;                                   <span class="comment">// 设置重定向选项</span></div><div class="line">  <span class="string">'*'</span>: <span class="string">'/home'</span></div><div class="line">&#125;)</div><div class="line"> </div><div class="line">router.start(App, <span class="string">'[app]'</span>)                           <span class="comment">// 挂载 Vue 主应用</span></div></pre></td></tr></table></figure>
+<h1 id="1-Vue-js"><a href="#1-Vue-js" class="headerlink" title="1. Vue.js"></a>1. Vue.js</h1><p>之前用 <code>React</code> 用得有些不爽了所以想换换口味, 于是 用<a href="http://vuejs.org.cn/" target="_blank" rel="noopener"><code>Vue.js</code></a> 写了一个小应用的前端部分。它的轻量以及MVVM架构让我在两天之内爱上了它，于是决定用它代替 React 去完成 final project 的前端部分。</p>
+<p>不知道为什么，我觉得 <code>Vue.js</code> 比 <code>React</code> 更容易上手，所以很快就学会了它。想了想确实不知道该整理一些什么，因为 <a href="http://vuejs.org.cn/guide/" target="_blank" rel="noopener">Vue 的官方教程</a>写的确实很直白清楚，所以在此不再赘述，有时间的话可能会考虑写一个 Vue 的教程。</p>
+<h1 id="2-vue-cli"><a href="#2-vue-cli" class="headerlink" title="2. vue-cli"></a>2. vue-cli</h1><p><a href="https://github.com/vuejs/vue-cli" target="_blank" rel="noopener">vue-cli</a> 是一个 Vue.js 官方提供的脚手架工具，你可以使用它来轻松地构建出一个应用 <code>Vue.js</code> 的工程。官方提供 5 种模板，当然你也可以在 <code>github</code> 上或者本地构建自己的模板然后使用 vue-cli 生成工程。</p>
+<p><a href="https://github.com/vuejs/vue-cli#usage" target="_blank" rel="noopener">具体使用方法</a>：生成一个工程极为简单，只需一两条命令即可。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ vue init webpack my-project     // 使用 webpack 模板生成工程 my-project</span><br><span class="line">$ <span class="built_in">cd</span> my-project</span><br><span class="line">$ npm install</span><br><span class="line">$ npm run dev</span><br></pre></td></tr></table></figure>
+<p>然后，借助 <code>webpack</code> 与 <code>vue-loader</code>, 你可以将一个 <code>Vue</code> 组件的模板、核心js代码和CSS写在<strong>一个文件里</strong>，甚至还可以使用 <code>CSS</code> 与 <code>HTML</code> 的预处理器，像这样：<br><img src="/pics/vue/vue-component-with-pre-processors.png" alt=""><br><span style="font-size: 0.75em;">图片来自<a href="http://vuejs.org.cn/guide/application.html" target="_blank" rel="noopener"> Vue.js 官方教程 - 构建大型应用</a>。</span></p>
+<h1 id="3-Vue-router"><a href="#3-Vue-router" class="headerlink" title="3. Vue-router"></a>3. Vue-router</h1><p><a href="https://github.com/vuejs/vue-router/" target="_blank" rel="noopener"><code>vue-router</code></a> 是 <code>vue</code> 官方提供的路由模块，可以实现 <code>SPA</code> 中的路由操作。具体文档看<a href="http://vuejs.github.io/vue-router/zh-cn/index.html" target="_blank" rel="noopener">这里</a>。顺便提一句，<code>vue-router</code> 的中文文档已经过时了。</p>
+<h2 id="3-1-初始化"><a href="#3-1-初始化" class="headerlink" title="3.1 初始化"></a>3.1 初始化</h2><p>首先使用 <code>npm</code> 安装 <code>vue-router</code>, 然后在程序入口点配置 <code>vue-router</code>.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> Router <span class="keyword">from</span> <span class="string">'vue-router'</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./components/App'</span>                    <span class="comment">// 程序的核心 Vue 应用</span></span><br><span class="line"><span class="keyword">import</span> HomePageView <span class="keyword">from</span> <span class="string">'./components/HomePageView'</span>  <span class="comment">// 导入所有的 View 组件</span></span><br><span class="line"><span class="keyword">import</span> ItemView <span class="keyword">from</span> <span class="string">'./components/ItemView'</span></span><br><span class="line"> </span><br><span class="line">Vue.use(Router)                                       <span class="comment">// Vue 配置</span></span><br><span class="line"><span class="keyword">var</span> router = <span class="keyword">new</span> Router()                             <span class="comment">// 生成路由对象</span></span><br><span class="line">router.map(&#123;                                          <span class="comment">// 配置路由</span></span><br><span class="line">  <span class="string">'/'</span>: &#123;</span><br><span class="line">    name: <span class="string">'homepage'</span>,</span><br><span class="line">    component: HomePageView</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">'/home'</span>: &#123;</span><br><span class="line">    name: <span class="string">'homepage'</span>,</span><br><span class="line">    component: HomePageView</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">'/item/:id'</span>: &#123;                                    <span class="comment">// 支持动态路径</span></span><br><span class="line">    name: <span class="string">'item'</span>,</span><br><span class="line">    component: ItemView</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">router.redirect(&#123;                                   <span class="comment">// 设置重定向选项</span></span><br><span class="line">  <span class="string">'*'</span>: <span class="string">'/home'</span></span><br><span class="line">&#125;)</span><br><span class="line"> </span><br><span class="line">router.start(App, <span class="string">'[app]'</span>)                           <span class="comment">// 挂载 Vue 主应用</span></span><br></pre></td></tr></table></figure>
 <p>然后在 <code>App.vue</code> 的 template 中设置 <code>router-view</code>.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">router-view</span></span></div><div class="line">    <span class="attr">keep-alive</span></div><div class="line">    <span class="attr">transition</span>=<span class="string">"fade"</span></div><div class="line">    <span class="attr">transition-mode</span>=<span class="string">"out-in"</span>&gt;</div><div class="line">  <span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="32-vue-router">3.2 vue-router 的使用</h2>
-<p><code>Vue Router</code> 对象被嵌入到每个 <code>vue</code> 组件中，可以在组件中调用 <code>this.$router</code> 来控制 router 对象，如进行页面跳转等。</p>
-<p>此外，还可以在页面切换时在组件的 <code>route</code> 配置中使用路由切换钩子控制 <code>vue-router</code>，详情请看<a href="http://vuejs.github.io/vue-router/zh-cn/pipeline/index.html" target="_blank" rel="external">文档</a></p>
-<h1 id="4-vuex">4. Vuex</h1>
-<p><a href="https://github.com/vuejs/vuex/" target="_blank" rel="external"><code>Vuex</code></a> 是一个借鉴于 <code>Flux</code>，但是专门为 <code>Vue.js</code> 所设计的状态管理方案。<code>Flux</code> 采用了 <code>Action → Dispatcher → Store → View</code> 的状态管理机制，而 <code>Vuex</code> 跟它差不多：Vue 组件调用 action，action dispatches mutation, mutation 改变 store 中的 state，state 改变 View. 下面是 <code>Vuex</code> 的数据流。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">router-view</span></span></span><br><span class="line"><span class="tag">    <span class="attr">keep-alive</span></span></span><br><span class="line"><span class="tag">    <span class="attr">transition</span>=<span class="string">"fade"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">transition-mode</span>=<span class="string">"out-in"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-2-vue-router-的使用"><a href="#3-2-vue-router-的使用" class="headerlink" title="3.2 vue-router 的使用"></a>3.2 vue-router 的使用</h2><p><code>Vue Router</code> 对象被嵌入到每个 <code>vue</code> 组件中，可以在组件中调用 <code>this.$router</code> 来控制 router 对象，如进行页面跳转等。</p>
+<p>此外，还可以在页面切换时在组件的 <code>route</code> 配置中使用路由切换钩子控制 <code>vue-router</code>，详情请看<a href="http://vuejs.github.io/vue-router/zh-cn/pipeline/index.html" target="_blank" rel="noopener">文档</a></p>
+<h1 id="4-Vuex"><a href="#4-Vuex" class="headerlink" title="4. Vuex"></a>4. Vuex</h1><p><a href="https://github.com/vuejs/vuex/" target="_blank" rel="noopener"><code>Vuex</code></a> 是一个借鉴于 <code>Flux</code>，但是专门为 <code>Vue.js</code> 所设计的状态管理方案。<code>Flux</code> 采用了 <code>Action → Dispatcher → Store → View</code> 的状态管理机制，而 <code>Vuex</code> 跟它差不多：Vue 组件调用 action，action dispatches mutation, mutation 改变 store 中的 state，state 改变 View. 下面是 <code>Vuex</code> 的数据流。</p>
 <p><img src="/pics/vue/vuex.png" alt="Vuex Data Flow"></p>
-<h2 id="41">4.1 使用方法</h2>
-<p>程序入口点：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">'vuex'</span></div><div class="line"></div><div class="line">Vue.use(Vuex)</div></pre></td></tr></table></figure>
-<p>主应用：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'../store'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  store,                      <span class="comment">// 引用store</span></div><div class="line">  ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>其它组件：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  ...,</div><div class="line">  <span class="attr">vuex</span>: &#123;</div><div class="line">    <span class="comment">// 定义 getter 从 store 中获取 state 并注册至应用中</span></div><div class="line">    getters: &#123;</div><div class="line">      <span class="attr">logged_in</span>: <span class="function"><span class="keyword">function</span> (<span class="params">state</span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> state.user.logged_in</div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line">    <span class="comment">// 定义 action, 组件可在自己的函数中调用 action 来 dispatch mutations.</span></div><div class="line">    actions: &#123;</div><div class="line">      <span class="attr">login</span>: <span class="function">(<span class="params">&#123; dispatch &#125;, user</span>) =&gt;</span> &#123;</div><div class="line">        dispatch(<span class="string">'LOGIN'</span>, user)</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>关于 store 及 mutation 的定义方式，请参考<a href="http://vuejs.github.io/vuex/en/tutorial.html" target="_blank" rel="external"> Vuex 文档</a>。</p>
-<h1 id="5">5. 总结 &amp; 后记</h1>
-<p>跟 React 相比，个人感觉 Vue 要更容易上手，易于使用，文档也很清楚（比 Hexo 的高到不知道那里去了，前两天被 Hexo 整疯了必须要黑一下它）；Vue 的一系列工具也很易于使用，与 Vue 整合度高，可以在组件中方便地进行操作。</p>
+<h2 id="4-1-使用方法"><a href="#4-1-使用方法" class="headerlink" title="4.1 使用方法"></a>4.1 使用方法</h2><p>程序入口点：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line"></span><br><span class="line">Vue.use(Vuex)</span><br></pre></td></tr></table></figure></p>
+<p>主应用：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'../store'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  store,                      <span class="comment">// 引用store</span></span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>其它组件：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  ...,</span><br><span class="line">  vuex: &#123;</span><br><span class="line">    <span class="comment">// 定义 getter 从 store 中获取 state 并注册至应用中</span></span><br><span class="line">    getters: &#123;</span><br><span class="line">      logged_in: <span class="function"><span class="keyword">function</span> (<span class="params">state</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> state.user.logged_in</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 定义 action, 组件可在自己的函数中调用 action 来 dispatch mutations.</span></span><br><span class="line">    actions: &#123;</span><br><span class="line">      login: <span class="function">(<span class="params">&#123; dispatch &#125;, user</span>) =&gt;</span> &#123;</span><br><span class="line">        dispatch(<span class="string">'LOGIN'</span>, user)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>关于 store 及 mutation 的定义方式，请参考<a href="http://vuejs.github.io/vuex/en/tutorial.html" target="_blank" rel="noopener"> Vuex 文档</a>。</p>
+<h1 id="5-总结-amp-后记"><a href="#5-总结-amp-后记" class="headerlink" title="5. 总结 &amp; 后记"></a>5. 总结 &amp; 后记</h1><p>跟 React 相比，个人感觉 Vue 要更容易上手，易于使用，文档也很清楚（比 Hexo 的高到不知道那里去了，前两天被 Hexo 整疯了必须要黑一下它）；Vue 的一系列工具也很易于使用，与 Vue 整合度高，可以在组件中方便地进行操作。</p>
 <p>前端课结课，准备退坑了，过几天可能会学习并整理一些后端的知识。</p>
 
       
@@ -324,28 +313,12 @@
 
 
 
-<section id="comments">
-  <div id="disqus_thread"></div>
-    <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'stdioa'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</section>
-
 </div>
       <footer id="footer">
   <div class="outer">
     <div id="footer-info">
       <div class="footer-left">
-        &copy; 2017 David Dai
+        &copy; 2018 David Dai
       </div>
       <div class="footer-middle">
         <span id="busuanzi_container_site_pv" style="display: inline;">
@@ -430,7 +403,7 @@ MathJax.Hub.Queue(function() {
 twemoji.parse(document.getElementsByClassName("article-inner")[0], {
     folder: "svg", 
     ext: ".svg",
-    base: "//cdn.bootcss.com/twemoji/2.0.5/"
+    base: "//cdn.bootcss.com/twemoji/2.6.0/"
   });
 </script>
 <!-- 不蒜子 -->
