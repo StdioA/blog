@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//blog.stdioa.com/"/>
-  <updated>2018-06-06T08:00:50.035Z</updated>
+  <updated>2018-06-18T08:16:53.589Z</updated>
   <id>//blog.stdioa.com/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>GitLab CI/CD 基础教程（二）</title>
+    <link href="//blog.stdioa.com/2018/06/gitlab-cicd-deploy/"/>
+    <id>//blog.stdioa.com/2018/06/gitlab-cicd-deploy/</id>
+    <published>2018-06-18T07:46:00.000Z</published>
+    <updated>2018-06-18T08:16:53.589Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文是 GitLab CI/CD 系列的第二篇，主要介绍 GitLab CI Runner 在 Docker 和 Kubernetes 环境下的部署方式。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="DevOps" scheme="//blog.stdioa.com/categories/DevOps/"/>
+    
+    
+      <category term="DevOps" scheme="//blog.stdioa.com/tags/DevOps/"/>
+    
+      <category term="GitLab" scheme="//blog.stdioa.com/tags/GitLab/"/>
+    
+      <category term="CI/CD" scheme="//blog.stdioa.com/tags/CI-CD/"/>
+    
+  </entry>
+  
+  <entry>
     <title>GitLab CI/CD 基础教程（一）</title>
     <link href="//blog.stdioa.com/2018/06/gitlab-cicd-fundmental/"/>
     <id>//blog.stdioa.com/2018/06/gitlab-cicd-fundmental/</id>
     <published>2018-06-06T07:46:00.000Z</published>
-    <updated>2018-06-06T08:00:50.035Z</updated>
+    <updated>2018-06-06T08:37:58.796Z</updated>
     
     <summary type="html">
     
@@ -461,28 +485,6 @@
       <category term="python" scheme="//blog.stdioa.com/tags/python/"/>
     
       <category term="上下文管理" scheme="//blog.stdioa.com/tags/%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python学习之virtualenv</title>
-    <link href="//blog.stdioa.com/2015/10/learning-python-virtualenv/"/>
-    <id>//blog.stdioa.com/2015/10/learning-python-virtualenv/</id>
-    <published>2015-10-22T02:15:00.000Z</published>
-    <updated>2017-06-29T04:38:40.434Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;用过virtualenv的人都说好，可是我没有具体使用过，所以尝试了一下，用完我也说好~233333&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Python" scheme="//blog.stdioa.com/categories/Python/"/>
-    
-    
-      <category term="python" scheme="//blog.stdioa.com/tags/python/"/>
-    
-      <category term="virtualenv" scheme="//blog.stdioa.com/tags/virtualenv/"/>
     
   </entry>
   
