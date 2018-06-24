@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//blog.stdioa.com/"/>
-  <updated>2018-06-18T08:16:53.589Z</updated>
+  <updated>2018-06-24T02:34:16.511Z</updated>
   <id>//blog.stdioa.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GitLab CI/CD 基础教程（三）</title>
+    <link href="//blog.stdioa.com/2018/06/gitlab-cicd-usage/"/>
+    <id>//blog.stdioa.com/2018/06/gitlab-cicd-usage/</id>
+    <published>2018-06-23T12:53:00.000Z</published>
+    <updated>2018-06-24T02:34:16.511Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前两篇我们讲了 GitLab CI/CD 的简单应用及部署方式，这一篇简单讲一下如何将 GitLab CI/CD 与日常开发部署流程结合。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="DevOps" scheme="//blog.stdioa.com/categories/DevOps/"/>
+    
+    
+      <category term="DevOps" scheme="//blog.stdioa.com/tags/DevOps/"/>
+    
+      <category term="GitLab" scheme="//blog.stdioa.com/tags/GitLab/"/>
+    
+      <category term="CI/CD" scheme="//blog.stdioa.com/tags/CI-CD/"/>
+    
+  </entry>
   
   <entry>
     <title>GitLab CI/CD 基础教程（二）</title>
@@ -463,28 +487,6 @@
       <category term="python" scheme="//blog.stdioa.com/tags/python/"/>
     
       <category term="迭代器" scheme="//blog.stdioa.com/tags/%E8%BF%AD%E4%BB%A3%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python学习之上下文管理</title>
-    <link href="//blog.stdioa.com/2015/10/learning-python-context-management/"/>
-    <id>//blog.stdioa.com/2015/10/learning-python-context-management/</id>
-    <published>2015-10-22T12:00:00.000Z</published>
-    <updated>2017-06-29T04:38:40.600Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近突发奇想，想写一个能改变当前输出环境，输出彩色文字的上下文管理器，于是学习了一下上下文管理。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Python" scheme="//blog.stdioa.com/categories/Python/"/>
-    
-    
-      <category term="python" scheme="//blog.stdioa.com/tags/python/"/>
-    
-      <category term="上下文管理" scheme="//blog.stdioa.com/tags/%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
