@@ -5,9 +5,9 @@
   <subtitle>随便写写</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="//blog.stdioa.com/"/>
+  <link href="https://blog.stdioa.com/"/>
   <updated>2018-06-24T02:34:16.511Z</updated>
-  <id>//blog.stdioa.com/</id>
+  <id>https://blog.stdioa.com/</id>
   
   <author>
     <name>David Dai</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>GitLab CI/CD 基础教程（三）</title>
-    <link href="//blog.stdioa.com/2018/06/gitlab-cicd-usage/"/>
-    <id>//blog.stdioa.com/2018/06/gitlab-cicd-usage/</id>
+    <link href="https://blog.stdioa.com/2018/06/gitlab-cicd-usage/"/>
+    <id>https://blog.stdioa.com/2018/06/gitlab-cicd-usage/</id>
     <published>2018-06-23T12:53:00.000Z</published>
     <updated>2018-06-24T02:34:16.511Z</updated>
     
@@ -29,21 +29,21 @@
     
     </summary>
     
-      <category term="DevOps" scheme="//blog.stdioa.com/categories/DevOps/"/>
+      <category term="DevOps" scheme="https://blog.stdioa.com/categories/DevOps/"/>
     
     
-      <category term="DevOps" scheme="//blog.stdioa.com/tags/DevOps/"/>
+      <category term="DevOps" scheme="https://blog.stdioa.com/tags/DevOps/"/>
     
-      <category term="GitLab" scheme="//blog.stdioa.com/tags/GitLab/"/>
+      <category term="GitLab" scheme="https://blog.stdioa.com/tags/GitLab/"/>
     
-      <category term="CI/CD" scheme="//blog.stdioa.com/tags/CI-CD/"/>
+      <category term="CI/CD" scheme="https://blog.stdioa.com/tags/CI-CD/"/>
     
   </entry>
   
   <entry>
     <title>GitLab CI/CD 基础教程（二）</title>
-    <link href="//blog.stdioa.com/2018/06/gitlab-cicd-deploy/"/>
-    <id>//blog.stdioa.com/2018/06/gitlab-cicd-deploy/</id>
+    <link href="https://blog.stdioa.com/2018/06/gitlab-cicd-deploy/"/>
+    <id>https://blog.stdioa.com/2018/06/gitlab-cicd-deploy/</id>
     <published>2018-06-18T07:46:00.000Z</published>
     <updated>2018-06-18T08:16:53.589Z</updated>
     
@@ -53,21 +53,21 @@
     
     </summary>
     
-      <category term="DevOps" scheme="//blog.stdioa.com/categories/DevOps/"/>
+      <category term="DevOps" scheme="https://blog.stdioa.com/categories/DevOps/"/>
     
     
-      <category term="DevOps" scheme="//blog.stdioa.com/tags/DevOps/"/>
+      <category term="DevOps" scheme="https://blog.stdioa.com/tags/DevOps/"/>
     
-      <category term="GitLab" scheme="//blog.stdioa.com/tags/GitLab/"/>
+      <category term="GitLab" scheme="https://blog.stdioa.com/tags/GitLab/"/>
     
-      <category term="CI/CD" scheme="//blog.stdioa.com/tags/CI-CD/"/>
+      <category term="CI/CD" scheme="https://blog.stdioa.com/tags/CI-CD/"/>
     
   </entry>
   
   <entry>
     <title>GitLab CI/CD 基础教程（一）</title>
-    <link href="//blog.stdioa.com/2018/06/gitlab-cicd-fundmental/"/>
-    <id>//blog.stdioa.com/2018/06/gitlab-cicd-fundmental/</id>
+    <link href="https://blog.stdioa.com/2018/06/gitlab-cicd-fundmental/"/>
+    <id>https://blog.stdioa.com/2018/06/gitlab-cicd-fundmental/</id>
     <published>2018-06-06T07:46:00.000Z</published>
     <updated>2018-06-06T08:37:58.796Z</updated>
     
@@ -77,21 +77,21 @@
     
     </summary>
     
-      <category term="DevOps" scheme="//blog.stdioa.com/categories/DevOps/"/>
+      <category term="DevOps" scheme="https://blog.stdioa.com/categories/DevOps/"/>
     
     
-      <category term="DevOps" scheme="//blog.stdioa.com/tags/DevOps/"/>
+      <category term="DevOps" scheme="https://blog.stdioa.com/tags/DevOps/"/>
     
-      <category term="GitLab" scheme="//blog.stdioa.com/tags/GitLab/"/>
+      <category term="GitLab" scheme="https://blog.stdioa.com/tags/GitLab/"/>
     
-      <category term="CI/CD" scheme="//blog.stdioa.com/tags/CI-CD/"/>
+      <category term="CI/CD" scheme="https://blog.stdioa.com/tags/CI-CD/"/>
     
   </entry>
   
   <entry>
     <title>使用 supervisor 及 gunicorn 部署 Web 应用</title>
-    <link href="//blog.stdioa.com/2017/03/deploy-apps-with-supervisor-and-gunicorn/"/>
-    <id>//blog.stdioa.com/2017/03/deploy-apps-with-supervisor-and-gunicorn/</id>
+    <link href="https://blog.stdioa.com/2017/03/deploy-apps-with-supervisor-and-gunicorn/"/>
+    <id>https://blog.stdioa.com/2017/03/deploy-apps-with-supervisor-and-gunicorn/</id>
     <published>2017-03-19T09:00:00.000Z</published>
     <updated>2017-06-29T04:38:40.716Z</updated>
     
@@ -101,23 +101,23 @@
     
     </summary>
     
-      <category term="Web" scheme="//blog.stdioa.com/categories/Web/"/>
+      <category term="Web" scheme="https://blog.stdioa.com/categories/Web/"/>
     
     
-      <category term="Python" scheme="//blog.stdioa.com/tags/Python/"/>
+      <category term="Python" scheme="https://blog.stdioa.com/tags/Python/"/>
     
-      <category term="Django" scheme="//blog.stdioa.com/tags/Django/"/>
+      <category term="Django" scheme="https://blog.stdioa.com/tags/Django/"/>
     
-      <category term="supervisor" scheme="//blog.stdioa.com/tags/supervisor/"/>
+      <category term="supervisor" scheme="https://blog.stdioa.com/tags/supervisor/"/>
     
-      <category term="gunicorn" scheme="//blog.stdioa.com/tags/gunicorn/"/>
+      <category term="gunicorn" scheme="https://blog.stdioa.com/tags/gunicorn/"/>
     
   </entry>
   
   <entry>
     <title>Django REST Framework 入门</title>
-    <link href="//blog.stdioa.com/2017/03/DRF-demo/"/>
-    <id>//blog.stdioa.com/2017/03/DRF-demo/</id>
+    <link href="https://blog.stdioa.com/2017/03/DRF-demo/"/>
+    <id>https://blog.stdioa.com/2017/03/DRF-demo/</id>
     <published>2017-03-09T06:52:00.000Z</published>
     <updated>2018-04-23T13:37:52.809Z</updated>
     
@@ -127,21 +127,21 @@
     
     </summary>
     
-      <category term="Python" scheme="//blog.stdioa.com/categories/Python/"/>
+      <category term="Python" scheme="https://blog.stdioa.com/categories/Python/"/>
     
     
-      <category term="Python" scheme="//blog.stdioa.com/tags/Python/"/>
+      <category term="Python" scheme="https://blog.stdioa.com/tags/Python/"/>
     
-      <category term="Django" scheme="//blog.stdioa.com/tags/Django/"/>
+      <category term="Django" scheme="https://blog.stdioa.com/tags/Django/"/>
     
-      <category term="Django REST Framework" scheme="//blog.stdioa.com/tags/Django-REST-Framework/"/>
+      <category term="Django REST Framework" scheme="https://blog.stdioa.com/tags/Django-REST-Framework/"/>
     
   </entry>
   
   <entry>
     <title>Python 学习之 ctypes</title>
-    <link href="//blog.stdioa.com/2016/12/learning-python-ctypes/"/>
-    <id>//blog.stdioa.com/2016/12/learning-python-ctypes/</id>
+    <link href="https://blog.stdioa.com/2016/12/learning-python-ctypes/"/>
+    <id>https://blog.stdioa.com/2016/12/learning-python-ctypes/</id>
     <published>2016-12-30T03:27:00.000Z</published>
     <updated>2017-06-29T04:38:40.869Z</updated>
     
@@ -151,19 +151,19 @@
     
     </summary>
     
-      <category term="Python" scheme="//blog.stdioa.com/categories/Python/"/>
+      <category term="Python" scheme="https://blog.stdioa.com/categories/Python/"/>
     
     
-      <category term="python" scheme="//blog.stdioa.com/tags/python/"/>
+      <category term="python" scheme="https://blog.stdioa.com/tags/python/"/>
     
-      <category term="ctypes" scheme="//blog.stdioa.com/tags/ctypes/"/>
+      <category term="ctypes" scheme="https://blog.stdioa.com/tags/ctypes/"/>
     
   </entry>
   
   <entry>
     <title>SUCTF 非官方 Writeup</title>
-    <link href="//blog.stdioa.com/2016/11/SuCTF-Writeup/"/>
-    <id>//blog.stdioa.com/2016/11/SuCTF-Writeup/</id>
+    <link href="https://blog.stdioa.com/2016/11/SuCTF-Writeup/"/>
+    <id>https://blog.stdioa.com/2016/11/SuCTF-Writeup/</id>
     <published>2016-11-15T11:23:58.000Z</published>
     <updated>2018-06-06T07:55:13.895Z</updated>
     
@@ -173,19 +173,19 @@
     
     </summary>
     
-      <category term="乱七八糟" scheme="//blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
+      <category term="乱七八糟" scheme="https://blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
     
     
-      <category term="CTF" scheme="//blog.stdioa.com/tags/CTF/"/>
+      <category term="CTF" scheme="https://blog.stdioa.com/tags/CTF/"/>
     
-      <category term="脑洞" scheme="//blog.stdioa.com/tags/%E8%84%91%E6%B4%9E/"/>
+      <category term="脑洞" scheme="https://blog.stdioa.com/tags/%E8%84%91%E6%B4%9E/"/>
     
   </entry>
   
   <entry>
     <title>解决 MySQL 编码问题</title>
-    <link href="//blog.stdioa.com/2016/05/django-mysql-charset-problem/"/>
-    <id>//blog.stdioa.com/2016/05/django-mysql-charset-problem/</id>
+    <link href="https://blog.stdioa.com/2016/05/django-mysql-charset-problem/"/>
+    <id>https://blog.stdioa.com/2016/05/django-mysql-charset-problem/</id>
     <published>2016-05-09T01:40:46.000Z</published>
     <updated>2017-06-29T04:38:39.983Z</updated>
     
@@ -195,19 +195,19 @@
     
     </summary>
     
-      <category term="开发" scheme="//blog.stdioa.com/categories/%E5%BC%80%E5%8F%91/"/>
+      <category term="开发" scheme="https://blog.stdioa.com/categories/%E5%BC%80%E5%8F%91/"/>
     
     
-      <category term="Django" scheme="//blog.stdioa.com/tags/Django/"/>
+      <category term="Django" scheme="https://blog.stdioa.com/tags/Django/"/>
     
-      <category term="MySQL" scheme="//blog.stdioa.com/tags/MySQL/"/>
+      <category term="MySQL" scheme="https://blog.stdioa.com/tags/MySQL/"/>
     
   </entry>
   
   <entry>
     <title>第一届 NUAACTF 非官方 Writeup</title>
-    <link href="//blog.stdioa.com/2016/04/nuaactf-unofficial-writeup/"/>
-    <id>//blog.stdioa.com/2016/04/nuaactf-unofficial-writeup/</id>
+    <link href="https://blog.stdioa.com/2016/04/nuaactf-unofficial-writeup/"/>
+    <id>https://blog.stdioa.com/2016/04/nuaactf-unofficial-writeup/</id>
     <published>2016-04-25T04:01:04.000Z</published>
     <updated>2017-06-29T04:38:40.638Z</updated>
     
@@ -217,21 +217,21 @@
     
     </summary>
     
-      <category term="乱七八糟" scheme="//blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
+      <category term="乱七八糟" scheme="https://blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
     
     
-      <category term="Python" scheme="//blog.stdioa.com/tags/Python/"/>
+      <category term="Python" scheme="https://blog.stdioa.com/tags/Python/"/>
     
-      <category term="CTF" scheme="//blog.stdioa.com/tags/CTF/"/>
+      <category term="CTF" scheme="https://blog.stdioa.com/tags/CTF/"/>
     
-      <category term="脑洞" scheme="//blog.stdioa.com/tags/%E8%84%91%E6%B4%9E/"/>
+      <category term="脑洞" scheme="https://blog.stdioa.com/tags/%E8%84%91%E6%B4%9E/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode 数据库题目解答</title>
-    <link href="//blog.stdioa.com/2016/04/leetcode-database-solutions/"/>
-    <id>//blog.stdioa.com/2016/04/leetcode-database-solutions/</id>
+    <link href="https://blog.stdioa.com/2016/04/leetcode-database-solutions/"/>
+    <id>https://blog.stdioa.com/2016/04/leetcode-database-solutions/</id>
     <published>2016-04-06T08:02:00.000Z</published>
     <updated>2017-06-29T04:38:40.453Z</updated>
     
@@ -241,21 +241,21 @@
     
     </summary>
     
-      <category term="LeetCode" scheme="//blog.stdioa.com/categories/LeetCode/"/>
+      <category term="LeetCode" scheme="https://blog.stdioa.com/categories/LeetCode/"/>
     
     
-      <category term="LeetCode" scheme="//blog.stdioa.com/tags/LeetCode/"/>
+      <category term="LeetCode" scheme="https://blog.stdioa.com/tags/LeetCode/"/>
     
-      <category term="数据库" scheme="//blog.stdioa.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+      <category term="数据库" scheme="https://blog.stdioa.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
-      <category term="SQL" scheme="//blog.stdioa.com/tags/SQL/"/>
+      <category term="SQL" scheme="https://blog.stdioa.com/tags/SQL/"/>
     
   </entry>
   
   <entry>
     <title>随手记之Vue.js</title>
-    <link href="//blog.stdioa.com/2016/03/essay-vue/"/>
-    <id>//blog.stdioa.com/2016/03/essay-vue/</id>
+    <link href="https://blog.stdioa.com/2016/03/essay-vue/"/>
+    <id>https://blog.stdioa.com/2016/03/essay-vue/</id>
     <published>2016-03-28T13:40:03.000Z</published>
     <updated>2017-06-29T04:38:40.199Z</updated>
     
@@ -265,23 +265,23 @@
     
     </summary>
     
-      <category term="Javascript" scheme="//blog.stdioa.com/categories/Javascript/"/>
+      <category term="Javascript" scheme="https://blog.stdioa.com/categories/Javascript/"/>
     
     
-      <category term="前端开发" scheme="//blog.stdioa.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+      <category term="前端开发" scheme="https://blog.stdioa.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
-      <category term="Javascript" scheme="//blog.stdioa.com/tags/Javascript/"/>
+      <category term="Javascript" scheme="https://blog.stdioa.com/tags/Javascript/"/>
     
-      <category term="node.js" scheme="//blog.stdioa.com/tags/node-js/"/>
+      <category term="node.js" scheme="https://blog.stdioa.com/tags/node-js/"/>
     
-      <category term="vue.js" scheme="//blog.stdioa.com/tags/vue-js/"/>
+      <category term="vue.js" scheme="https://blog.stdioa.com/tags/vue-js/"/>
     
   </entry>
   
   <entry>
     <title>Atom 浅度体验感受</title>
-    <link href="//blog.stdioa.com/2016/03/essay-atom-using-experience/"/>
-    <id>//blog.stdioa.com/2016/03/essay-atom-using-experience/</id>
+    <link href="https://blog.stdioa.com/2016/03/essay-atom-using-experience/"/>
+    <id>https://blog.stdioa.com/2016/03/essay-atom-using-experience/</id>
     <published>2016-03-27T02:40:03.000Z</published>
     <updated>2017-06-29T04:38:40.052Z</updated>
     
@@ -291,23 +291,23 @@
     
     </summary>
     
-      <category term="随笔" scheme="//blog.stdioa.com/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="https://blog.stdioa.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="Atom" scheme="//blog.stdioa.com/tags/Atom/"/>
+      <category term="Atom" scheme="https://blog.stdioa.com/tags/Atom/"/>
     
-      <category term="Sublime Text" scheme="//blog.stdioa.com/tags/Sublime-Text/"/>
+      <category term="Sublime Text" scheme="https://blog.stdioa.com/tags/Sublime-Text/"/>
     
-      <category term="文本编辑器" scheme="//blog.stdioa.com/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+      <category term="文本编辑器" scheme="https://blog.stdioa.com/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/"/>
     
-      <category term="Git" scheme="//blog.stdioa.com/tags/Git/"/>
+      <category term="Git" scheme="https://blog.stdioa.com/tags/Git/"/>
     
   </entry>
   
   <entry>
     <title>Javascript学习总结</title>
-    <link href="//blog.stdioa.com/2016/02/learning-javascript/"/>
-    <id>//blog.stdioa.com/2016/02/learning-javascript/</id>
+    <link href="https://blog.stdioa.com/2016/02/learning-javascript/"/>
+    <id>https://blog.stdioa.com/2016/02/learning-javascript/</id>
     <published>2016-02-24T11:31:42.000Z</published>
     <updated>2017-06-29T04:38:40.299Z</updated>
     
@@ -317,21 +317,21 @@
     
     </summary>
     
-      <category term="Javascript" scheme="//blog.stdioa.com/categories/Javascript/"/>
+      <category term="Javascript" scheme="https://blog.stdioa.com/categories/Javascript/"/>
     
     
-      <category term="前端开发" scheme="//blog.stdioa.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+      <category term="前端开发" scheme="https://blog.stdioa.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
-      <category term="Javascript" scheme="//blog.stdioa.com/tags/Javascript/"/>
+      <category term="Javascript" scheme="https://blog.stdioa.com/tags/Javascript/"/>
     
-      <category term="node.js" scheme="//blog.stdioa.com/tags/node-js/"/>
+      <category term="node.js" scheme="https://blog.stdioa.com/tags/node-js/"/>
     
   </entry>
   
   <entry>
     <title>博客迁移记（三）</title>
-    <link href="//blog.stdioa.com/2016/01/blog-migration-iii/"/>
-    <id>//blog.stdioa.com/2016/01/blog-migration-iii/</id>
+    <link href="https://blog.stdioa.com/2016/01/blog-migration-iii/"/>
+    <id>https://blog.stdioa.com/2016/01/blog-migration-iii/</id>
     <published>2016-01-20T03:40:00.000Z</published>
     <updated>2017-06-29T04:38:40.515Z</updated>
     
@@ -341,21 +341,21 @@
     
     </summary>
     
-      <category term="乱七八糟" scheme="//blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
+      <category term="乱七八糟" scheme="https://blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
     
     
-      <category term="nginx" scheme="//blog.stdioa.com/tags/nginx/"/>
+      <category term="nginx" scheme="https://blog.stdioa.com/tags/nginx/"/>
     
-      <category term="七牛" scheme="//blog.stdioa.com/tags/%E4%B8%83%E7%89%9B/"/>
+      <category term="七牛" scheme="https://blog.stdioa.com/tags/%E4%B8%83%E7%89%9B/"/>
     
-      <category term="git" scheme="//blog.stdioa.com/tags/git/"/>
+      <category term="git" scheme="https://blog.stdioa.com/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>博客迁移记（二）</title>
-    <link href="//blog.stdioa.com/2015/12/blog-migration-ii/"/>
-    <id>//blog.stdioa.com/2015/12/blog-migration-ii/</id>
+    <link href="https://blog.stdioa.com/2015/12/blog-migration-ii/"/>
+    <id>https://blog.stdioa.com/2015/12/blog-migration-ii/</id>
     <published>2015-12-18T07:55:37.000Z</published>
     <updated>2017-06-29T04:38:39.867Z</updated>
     
@@ -365,21 +365,21 @@
     
     </summary>
     
-      <category term="乱七八糟" scheme="//blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
+      <category term="乱七八糟" scheme="https://blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
     
     
-      <category term="nginx" scheme="//blog.stdioa.com/tags/nginx/"/>
+      <category term="nginx" scheme="https://blog.stdioa.com/tags/nginx/"/>
     
-      <category term="Github" scheme="//blog.stdioa.com/tags/Github/"/>
+      <category term="Github" scheme="https://blog.stdioa.com/tags/Github/"/>
     
-      <category term="Let&#39;s Encrypt" scheme="//blog.stdioa.com/tags/Let-s-Encrypt/"/>
+      <category term="Let&#39;s Encrypt" scheme="https://blog.stdioa.com/tags/Let-s-Encrypt/"/>
     
   </entry>
   
   <entry>
     <title>博客迁移记（一）</title>
-    <link href="//blog.stdioa.com/2015/12/blog-migration/"/>
-    <id>//blog.stdioa.com/2015/12/blog-migration/</id>
+    <link href="https://blog.stdioa.com/2015/12/blog-migration/"/>
+    <id>https://blog.stdioa.com/2015/12/blog-migration/</id>
     <published>2015-12-17T11:55:37.000Z</published>
     <updated>2017-06-29T04:38:39.898Z</updated>
     
@@ -389,21 +389,21 @@
     
     </summary>
     
-      <category term="乱七八糟" scheme="//blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
+      <category term="乱七八糟" scheme="https://blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
     
     
-      <category term="nginx" scheme="//blog.stdioa.com/tags/nginx/"/>
+      <category term="nginx" scheme="https://blog.stdioa.com/tags/nginx/"/>
     
-      <category term="Github" scheme="//blog.stdioa.com/tags/Github/"/>
+      <category term="Github" scheme="https://blog.stdioa.com/tags/Github/"/>
     
-      <category term="python" scheme="//blog.stdioa.com/tags/python/"/>
+      <category term="python" scheme="https://blog.stdioa.com/tags/python/"/>
     
   </entry>
   
   <entry>
     <title>随手记 - 解决InsecurePlatformWarning</title>
-    <link href="//blog.stdioa.com/2015/12/essay-solve-InsecurePlatformWarning/"/>
-    <id>//blog.stdioa.com/2015/12/essay-solve-InsecurePlatformWarning/</id>
+    <link href="https://blog.stdioa.com/2015/12/essay-solve-InsecurePlatformWarning/"/>
+    <id>https://blog.stdioa.com/2015/12/essay-solve-InsecurePlatformWarning/</id>
     <published>2015-12-07T15:01:00.000Z</published>
     <updated>2017-06-29T04:38:40.152Z</updated>
     
@@ -413,21 +413,21 @@
     
     </summary>
     
-      <category term="随手记" scheme="//blog.stdioa.com/categories/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
+      <category term="随手记" scheme="https://blog.stdioa.com/categories/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
     
     
-      <category term="python" scheme="//blog.stdioa.com/tags/python/"/>
+      <category term="python" scheme="https://blog.stdioa.com/tags/python/"/>
     
-      <category term="openssl" scheme="//blog.stdioa.com/tags/openssl/"/>
+      <category term="openssl" scheme="https://blog.stdioa.com/tags/openssl/"/>
     
-      <category term="requests" scheme="//blog.stdioa.com/tags/requests/"/>
+      <category term="requests" scheme="https://blog.stdioa.com/tags/requests/"/>
     
   </entry>
   
   <entry>
     <title>Python学习之unittest</title>
-    <link href="//blog.stdioa.com/2015/11/learning-python-unittest/"/>
-    <id>//blog.stdioa.com/2015/11/learning-python-unittest/</id>
+    <link href="https://blog.stdioa.com/2015/11/learning-python-unittest/"/>
+    <id>https://blog.stdioa.com/2015/11/learning-python-unittest/</id>
     <published>2015-11-12T10:53:02.000Z</published>
     <updated>2017-06-29T04:38:40.399Z</updated>
     
@@ -437,19 +437,19 @@
     
     </summary>
     
-      <category term="Python" scheme="//blog.stdioa.com/categories/Python/"/>
+      <category term="Python" scheme="https://blog.stdioa.com/categories/Python/"/>
     
     
-      <category term="python" scheme="//blog.stdioa.com/tags/python/"/>
+      <category term="python" scheme="https://blog.stdioa.com/tags/python/"/>
     
-      <category term="unittest" scheme="//blog.stdioa.com/tags/unittest/"/>
+      <category term="unittest" scheme="https://blog.stdioa.com/tags/unittest/"/>
     
   </entry>
   
   <entry>
     <title>Python学习之collections</title>
-    <link href="//blog.stdioa.com/2015/10/learning-python-collections/"/>
-    <id>//blog.stdioa.com/2015/10/learning-python-collections/</id>
+    <link href="https://blog.stdioa.com/2015/10/learning-python-collections/"/>
+    <id>https://blog.stdioa.com/2015/10/learning-python-collections/</id>
     <published>2015-10-29T12:55:00.000Z</published>
     <updated>2017-06-29T04:38:40.569Z</updated>
     
@@ -459,19 +459,19 @@
     
     </summary>
     
-      <category term="Python" scheme="//blog.stdioa.com/categories/Python/"/>
+      <category term="Python" scheme="https://blog.stdioa.com/categories/Python/"/>
     
     
-      <category term="python" scheme="//blog.stdioa.com/tags/python/"/>
+      <category term="python" scheme="https://blog.stdioa.com/tags/python/"/>
     
-      <category term="collections" scheme="//blog.stdioa.com/tags/collections/"/>
+      <category term="collections" scheme="https://blog.stdioa.com/tags/collections/"/>
     
   </entry>
   
   <entry>
     <title>Python学习之迭代器</title>
-    <link href="//blog.stdioa.com/2015/10/learning-python-iterator/"/>
-    <id>//blog.stdioa.com/2015/10/learning-python-iterator/</id>
+    <link href="https://blog.stdioa.com/2015/10/learning-python-iterator/"/>
+    <id>https://blog.stdioa.com/2015/10/learning-python-iterator/</id>
     <published>2015-10-26T07:43:00.000Z</published>
     <updated>2017-06-29T04:38:40.337Z</updated>
     
@@ -481,12 +481,12 @@
     
     </summary>
     
-      <category term="Python" scheme="//blog.stdioa.com/categories/Python/"/>
+      <category term="Python" scheme="https://blog.stdioa.com/categories/Python/"/>
     
     
-      <category term="python" scheme="//blog.stdioa.com/tags/python/"/>
+      <category term="python" scheme="https://blog.stdioa.com/tags/python/"/>
     
-      <category term="迭代器" scheme="//blog.stdioa.com/tags/%E8%BF%AD%E4%BB%A3%E5%99%A8/"/>
+      <category term="迭代器" scheme="https://blog.stdioa.com/tags/%E8%BF%AD%E4%BB%A3%E5%99%A8/"/>
     
   </entry>
   
