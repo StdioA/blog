@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.stdioa.com/"/>
-  <updated>2018-06-24T02:34:16.511Z</updated>
+  <updated>2018-07-12T11:35:13.424Z</updated>
   <id>https://blog.stdioa.com/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="https://blog.stdioa.com/2018/06/gitlab-cicd-usage/"/>
     <id>https://blog.stdioa.com/2018/06/gitlab-cicd-usage/</id>
     <published>2018-06-23T12:53:00.000Z</published>
-    <updated>2018-06-24T02:34:16.511Z</updated>
+    <updated>2018-07-12T11:35:13.424Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jul 11 2018 22:30:32 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;前两篇我们讲了 GitLab CI/CD 的简单应用及部署方式，这一篇简单讲一下如何将 GitLab CI/CD 与日常开发部署流程结合。&lt;/p&gt;
+      &lt;!-- build time:Thu Jul 12 2018 19:36:53 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;前两篇我们讲了 GitLab CI/CD 的简单应用及部署方式，这一篇简单讲一下如何将 GitLab CI/CD 与日常开发部署流程结合。&lt;/p&gt;
     
     </summary>
     
@@ -45,11 +45,11 @@
     <link href="https://blog.stdioa.com/2018/06/gitlab-cicd-deploy/"/>
     <id>https://blog.stdioa.com/2018/06/gitlab-cicd-deploy/</id>
     <published>2018-06-18T07:46:00.000Z</published>
-    <updated>2018-06-18T08:16:53.589Z</updated>
+    <updated>2018-07-12T11:35:13.420Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jul 11 2018 22:30:32 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;本文是 GitLab CI/CD 系列的第二篇，主要介绍 GitLab CI Runner 在 Docker 和 Kubernetes 环境下的部署方式。&lt;/p&gt;
+      &lt;!-- build time:Thu Jul 12 2018 19:36:53 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;本文是 GitLab CI/CD 系列的第二篇，主要介绍 GitLab CI Runner 在 Docker 和 Kubernetes 环境下的部署方式。&lt;/p&gt;
     
     </summary>
     
@@ -69,11 +69,11 @@
     <link href="https://blog.stdioa.com/2018/06/gitlab-cicd-fundmental/"/>
     <id>https://blog.stdioa.com/2018/06/gitlab-cicd-fundmental/</id>
     <published>2018-06-06T07:46:00.000Z</published>
-    <updated>2018-06-06T08:37:58.796Z</updated>
+    <updated>2018-07-12T00:14:59.213Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jul 11 2018 22:30:32 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;最近玩了 GitLab CI/CD 平台，通过搭建这个平台也收获了一些关于 DevOps 的基本技能，打算通过几篇文章来讲述一下 GitLab CI/CD 平台的构建及应用。本文对 GitLab CI/CD 以及 CI/CD 流程定义文件的写法做了简要介绍。&lt;/p&gt;
+      &lt;!-- build time:Thu Jul 12 2018 08:22:05 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;最近玩了 GitLab CI/CD 平台，通过搭建这个平台也收获了一些关于 DevOps 的基本技能，打算通过几篇文章来讲述一下 GitLab CI/CD 平台的构建及应用。本文对 GitLab CI/CD 以及 CI/CD 流程定义文件的写法做了简要介绍。&lt;/p&gt;
     
     </summary>
     
@@ -93,11 +93,11 @@
     <link href="https://blog.stdioa.com/2017/03/deploy-apps-with-supervisor-and-gunicorn/"/>
     <id>https://blog.stdioa.com/2017/03/deploy-apps-with-supervisor-and-gunicorn/</id>
     <published>2017-03-19T09:00:00.000Z</published>
-    <updated>2017-06-29T04:38:40.716Z</updated>
+    <updated>2018-07-12T00:15:09.045Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jul 11 2018 22:30:32 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;很久之前就想尝试一下用 supervisor 部署 Web 应用，几个月前把 Python 应用的服务器都换成了 gunicorn，今天终于把进程管理服务换成了 supervisor. 看我的拖延症。&lt;/p&gt;
+      &lt;!-- build time:Thu Jul 12 2018 08:22:05 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;很久之前就想尝试一下用 supervisor 部署 Web 应用，几个月前把 Python 应用的服务器都换成了 gunicorn，今天终于把进程管理服务换成了 supervisor. 看我的拖延症。&lt;/p&gt;
     
     </summary>
     
@@ -119,11 +119,11 @@
     <link href="https://blog.stdioa.com/2017/03/DRF-demo/"/>
     <id>https://blog.stdioa.com/2017/03/DRF-demo/</id>
     <published>2017-03-09T06:52:00.000Z</published>
-    <updated>2018-04-23T13:37:52.809Z</updated>
+    <updated>2018-07-12T11:35:13.401Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jul 11 2018 22:30:32 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;拖了很久，终于用 Django REST Framework 写了个小 Demo.&lt;/p&gt;
+      &lt;!-- build time:Thu Jul 12 2018 19:36:53 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;拖了很久，终于用 Django REST Framework 写了个小 Demo.&lt;/p&gt;
     
     </summary>
     
@@ -143,11 +143,11 @@
     <link href="https://blog.stdioa.com/2016/12/learning-python-ctypes/"/>
     <id>https://blog.stdioa.com/2016/12/learning-python-ctypes/</id>
     <published>2016-12-30T03:27:00.000Z</published>
-    <updated>2017-06-29T04:38:40.869Z</updated>
+    <updated>2018-07-12T00:14:49.653Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jul 11 2018 22:30:32 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;课设写不完，要炸了… Windows UI 好难写，只好用 PyQt 解决… 怎么把 Python 和 C 模块连起来？就用 ctypes.&lt;/p&gt;
+      &lt;!-- build time:Thu Jul 12 2018 08:22:05 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;课设写不完，要炸了… Windows UI 好难写，只好用 PyQt 解决… 怎么把 Python 和 C 模块连起来？就用 ctypes.&lt;/p&gt;
     
     </summary>
     
@@ -165,11 +165,11 @@
     <link href="https://blog.stdioa.com/2016/11/SuCTF-Writeup/"/>
     <id>https://blog.stdioa.com/2016/11/SuCTF-Writeup/</id>
     <published>2016-11-15T11:23:58.000Z</published>
-    <updated>2018-06-06T07:55:13.895Z</updated>
+    <updated>2018-07-12T11:35:13.405Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jul 11 2018 22:30:32 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;又玩了一场 CTF，虽然是个人赛，但是有老司机带我飞。继续开脑洞，也学到了不少，做了很多之前没做过的题。&lt;/p&gt;
+      &lt;!-- build time:Thu Jul 12 2018 19:36:53 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;又玩了一场 CTF，虽然是个人赛，但是有老司机带我飞。继续开脑洞，也学到了不少，做了很多之前没做过的题。&lt;/p&gt;
     
     </summary>
     
@@ -187,11 +187,11 @@
     <link href="https://blog.stdioa.com/2016/05/django-mysql-charset-problem/"/>
     <id>https://blog.stdioa.com/2016/05/django-mysql-charset-problem/</id>
     <published>2016-05-09T01:40:46.000Z</published>
-    <updated>2017-06-29T04:38:39.983Z</updated>
+    <updated>2018-07-12T00:15:08.365Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jul 11 2018 22:30:32 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;很久以前写了一个 Django 项目，数据库用的 MySQL. 很久没用，后来发现 MySQL 编码设置有问题，导致中文全部变成了问号。&lt;/p&gt;
+      &lt;!-- build time:Thu Jul 12 2018 08:22:05 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;很久以前写了一个 Django 项目，数据库用的 MySQL. 很久没用，后来发现 MySQL 编码设置有问题，导致中文全部变成了问号。&lt;/p&gt;
     
     </summary>
     
@@ -209,11 +209,11 @@
     <link href="https://blog.stdioa.com/2016/04/nuaactf-unofficial-writeup/"/>
     <id>https://blog.stdioa.com/2016/04/nuaactf-unofficial-writeup/</id>
     <published>2016-04-25T04:01:04.000Z</published>
-    <updated>2017-06-29T04:38:40.638Z</updated>
+    <updated>2018-07-12T00:14:40.164Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jul 11 2018 22:30:32 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;学校组织了第一届 NUAACTF，参加去玩玩，开开脑洞😂，嗯，还蛮好玩的~&lt;/p&gt;
+      &lt;!-- build time:Thu Jul 12 2018 08:22:05 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;学校组织了第一届 NUAACTF，参加去玩玩，开开脑洞😂，嗯，还蛮好玩的~&lt;/p&gt;
     
     </summary>
     
@@ -233,11 +233,11 @@
     <link href="https://blog.stdioa.com/2016/04/leetcode-database-solutions/"/>
     <id>https://blog.stdioa.com/2016/04/leetcode-database-solutions/</id>
     <published>2016-04-06T08:02:00.000Z</published>
-    <updated>2017-06-29T04:38:40.453Z</updated>
+    <updated>2018-07-12T00:14:42.429Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jul 11 2018 22:30:32 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;前两天重刷了《SQL必知必会》，昨天想到了 LeetCode，于是去刷了几道数据库的题目，开了不少脑洞。&lt;/p&gt;
+      &lt;!-- build time:Thu Jul 12 2018 08:22:05 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;前两天重刷了《SQL必知必会》，昨天想到了 LeetCode，于是去刷了几道数据库的题目，开了不少脑洞。&lt;/p&gt;
     
     </summary>
     
@@ -257,11 +257,11 @@
     <link href="https://blog.stdioa.com/2016/03/essay-vue/"/>
     <id>https://blog.stdioa.com/2016/03/essay-vue/</id>
     <published>2016-03-28T13:40:03.000Z</published>
-    <updated>2017-06-29T04:38:40.199Z</updated>
+    <updated>2018-07-12T00:15:02.653Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jul 11 2018 22:30:32 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;之前的那门 JS 和前端课结课了，最后花了一周时间写了一个 project，使用 Vue.js 的一套工具写了一个单页面应用，先将使用到及学到的知识来整理一下。&lt;/p&gt;
+      &lt;!-- build time:Thu Jul 12 2018 08:22:05 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;之前的那门 JS 和前端课结课了，最后花了一周时间写了一个 project，使用 Vue.js 的一套工具写了一个单页面应用，先将使用到及学到的知识来整理一下。&lt;/p&gt;
     
     </summary>
     
@@ -283,11 +283,11 @@
     <link href="https://blog.stdioa.com/2016/03/essay-atom-using-experience/"/>
     <id>https://blog.stdioa.com/2016/03/essay-atom-using-experience/</id>
     <published>2016-03-27T02:40:03.000Z</published>
-    <updated>2017-06-29T04:38:40.052Z</updated>
+    <updated>2018-07-12T00:15:06.013Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jul 11 2018 22:30:32 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;昨天看到了 Atom 官方发布了一篇 &lt;a href=&quot;http://flight-manual.atom.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Atom Flight Manual&lt;/a&gt;, 看了两页觉得有些感兴趣所以下了一个体验一下。&lt;/p&gt;
+      &lt;!-- build time:Thu Jul 12 2018 08:22:05 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;昨天看到了 Atom 官方发布了一篇 &lt;a href=&quot;http://flight-manual.atom.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Atom Flight Manual&lt;/a&gt;, 看了两页觉得有些感兴趣所以下了一个体验一下。&lt;/p&gt;
     
     </summary>
     
@@ -309,11 +309,11 @@
     <link href="https://blog.stdioa.com/2016/02/learning-javascript/"/>
     <id>https://blog.stdioa.com/2016/02/learning-javascript/</id>
     <published>2016-02-24T11:31:42.000Z</published>
-    <updated>2017-06-29T04:38:40.299Z</updated>
+    <updated>2018-07-12T11:35:13.428Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jul 11 2018 22:30:32 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;从开始写Javascript到现在，已经有一个月了，这一个月学了不少新姿势，随便写写，简单整理一下。&lt;/p&gt;
+      &lt;!-- build time:Thu Jul 12 2018 19:36:53 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;从开始写Javascript到现在，已经有一个月了，这一个月学了不少新姿势，随便写写，简单整理一下。&lt;/p&gt;
     
     </summary>
     
@@ -333,11 +333,11 @@
     <link href="https://blog.stdioa.com/2016/01/blog-migration-iii/"/>
     <id>https://blog.stdioa.com/2016/01/blog-migration-iii/</id>
     <published>2016-01-20T03:40:00.000Z</published>
-    <updated>2017-06-29T04:38:40.515Z</updated>
+    <updated>2018-07-12T00:15:12.238Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jul 11 2018 22:30:32 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;一个月没更新，期末复习的时候光鼓捣网站却懒得写东西，期末考完了，把这一个月鼓捣的东西记录一下，比如利用七牛进行静态文件托管。&lt;/p&gt;
+      &lt;!-- build time:Thu Jul 12 2018 08:22:05 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;一个月没更新，期末复习的时候光鼓捣网站却懒得写东西，期末考完了，把这一个月鼓捣的东西记录一下，比如利用七牛进行静态文件托管。&lt;/p&gt;
     
     </summary>
     
@@ -357,11 +357,11 @@
     <link href="https://blog.stdioa.com/2015/12/blog-migration-ii/"/>
     <id>https://blog.stdioa.com/2015/12/blog-migration-ii/</id>
     <published>2015-12-18T07:55:37.000Z</published>
-    <updated>2017-06-29T04:38:39.867Z</updated>
+    <updated>2018-07-12T11:35:13.409Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jul 11 2018 22:30:32 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;域名依然在备案中，依然想将博客部署到新买的VPS的我和腾讯斗智斗勇（雾），为博客添加了HTTPS&amp;gt;_&amp;lt;&lt;br&gt;同时，把自己的密码学课设也转移到VPS上来了。&lt;/p&gt;
+      &lt;!-- build time:Thu Jul 12 2018 19:36:53 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;域名依然在备案中，依然想将博客部署到新买的VPS的我和腾讯斗智斗勇（雾），为博客添加了HTTPS&amp;gt;_&amp;lt;&lt;br&gt;同时，把自己的密码学课设也转移到VPS上来了。&lt;/p&gt;
     
     </summary>
     
@@ -381,11 +381,11 @@
     <link href="https://blog.stdioa.com/2015/12/blog-migration/"/>
     <id>https://blog.stdioa.com/2015/12/blog-migration/</id>
     <published>2015-12-17T11:55:37.000Z</published>
-    <updated>2017-06-29T04:38:39.898Z</updated>
+    <updated>2018-07-12T00:15:11.629Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jul 11 2018 22:30:32 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;昨天买了一个VPS、一个域名，决定把博客迁移到VPS上。&lt;/p&gt;
+      &lt;!-- build time:Thu Jul 12 2018 08:22:05 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;昨天买了一个VPS、一个域名，决定把博客迁移到VPS上。&lt;/p&gt;
     
     </summary>
     
@@ -405,11 +405,11 @@
     <link href="https://blog.stdioa.com/2015/12/essay-solve-InsecurePlatformWarning/"/>
     <id>https://blog.stdioa.com/2015/12/essay-solve-InsecurePlatformWarning/</id>
     <published>2015-12-07T15:01:00.000Z</published>
-    <updated>2017-06-29T04:38:40.152Z</updated>
+    <updated>2018-07-12T00:15:03.564Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jul 11 2018 22:30:32 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;第三次在VPS上面解决使用requests报InsecurePlatformWarning警告的问题。之前每次都要查资料折腾好久，这次决定把它记下来。&lt;/p&gt;
+      &lt;!-- build time:Thu Jul 12 2018 08:22:05 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;第三次在VPS上面解决使用requests报InsecurePlatformWarning警告的问题。之前每次都要查资料折腾好久，这次决定把它记下来。&lt;/p&gt;
     
     </summary>
     
@@ -429,11 +429,11 @@
     <link href="https://blog.stdioa.com/2015/11/learning-python-unittest/"/>
     <id>https://blog.stdioa.com/2015/11/learning-python-unittest/</id>
     <published>2015-11-12T10:53:02.000Z</published>
-    <updated>2017-06-29T04:38:40.399Z</updated>
+    <updated>2018-07-12T11:35:13.432Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jul 11 2018 22:30:32 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;单元测试，工程开发中重要的一环。&lt;/p&gt;
+      &lt;!-- build time:Thu Jul 12 2018 19:36:53 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;单元测试，工程开发中重要的一环。&lt;/p&gt;
     
     </summary>
     
@@ -451,11 +451,11 @@
     <link href="https://blog.stdioa.com/2015/10/learning-python-collections/"/>
     <id>https://blog.stdioa.com/2015/10/learning-python-collections/</id>
     <published>2015-10-29T12:55:00.000Z</published>
-    <updated>2017-06-29T04:38:40.569Z</updated>
+    <updated>2018-07-12T00:14:51.557Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jul 11 2018 22:30:32 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;collection是Python内建的一个实用工具包，提供一些使用的容器，用于对传统容器类型进行功能提升。&lt;/p&gt;
+      &lt;!-- build time:Thu Jul 12 2018 08:22:05 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;collection是Python内建的一个实用工具包，提供一些使用的容器，用于对传统容器类型进行功能提升。&lt;/p&gt;
     
     </summary>
     
@@ -473,11 +473,11 @@
     <link href="https://blog.stdioa.com/2015/10/learning-python-iterator/"/>
     <id>https://blog.stdioa.com/2015/10/learning-python-iterator/</id>
     <published>2015-10-26T07:43:00.000Z</published>
-    <updated>2017-06-29T04:38:40.337Z</updated>
+    <updated>2018-07-12T00:14:48.942Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jul 11 2018 22:30:32 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;昨晚用python写了个简单的链表，突然想起了迭代器，就随手整理一下，顺便过一下itertools模块。&lt;/p&gt;
+      &lt;!-- build time:Thu Jul 12 2018 08:22:05 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;昨晚用python写了个简单的链表，突然想起了迭代器，就随手整理一下，顺便过一下itertools模块。&lt;/p&gt;
     
     </summary>
     
