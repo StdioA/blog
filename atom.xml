@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.stdioa.com/"/>
-  <updated>2018-07-12T11:35:13.424Z</updated>
+  <updated>2018-07-21T08:28:40.169Z</updated>
   <id>https://blog.stdioa.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GitLab CI/CD: 辅助工具</title>
+    <link href="https://blog.stdioa.com/2018/07/gitlab-cicd-auxiliary/"/>
+    <id>https://blog.stdioa.com/2018/07/gitlab-cicd-auxiliary/</id>
+    <published>2018-07-15T12:21:00.000Z</published>
+    <updated>2018-07-21T08:28:40.169Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Sat Jul 21 2018 16:28:40 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;本文会讲一些在 GitLab CI/CD 中可能会用到的辅助工具，包括隐藏任务、依赖缓存、定时任务以及部署环境。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Devops" scheme="https://blog.stdioa.com/categories/Devops/"/>
+    
+    
+      <category term="DevOps" scheme="https://blog.stdioa.com/tags/DevOps/"/>
+    
+      <category term="GitLab" scheme="https://blog.stdioa.com/tags/GitLab/"/>
+    
+      <category term="CI/CD" scheme="https://blog.stdioa.com/tags/CI-CD/"/>
+    
+  </entry>
   
   <entry>
     <title>GitLab CI/CD 基础教程（三）</title>
@@ -465,28 +489,6 @@
       <category term="python" scheme="https://blog.stdioa.com/tags/python/"/>
     
       <category term="collections" scheme="https://blog.stdioa.com/tags/collections/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python学习之迭代器</title>
-    <link href="https://blog.stdioa.com/2015/10/learning-python-iterator/"/>
-    <id>https://blog.stdioa.com/2015/10/learning-python-iterator/</id>
-    <published>2015-10-26T07:43:00.000Z</published>
-    <updated>2018-07-12T00:14:48.942Z</updated>
-    
-    <summary type="html">
-    
-      &lt;!-- build time:Sat Jul 21 2018 15:35:11 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;昨晚用python写了个简单的链表，突然想起了迭代器，就随手整理一下，顺便过一下itertools模块。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Python" scheme="https://blog.stdioa.com/categories/Python/"/>
-    
-    
-      <category term="python" scheme="https://blog.stdioa.com/tags/python/"/>
-    
-      <category term="迭代器" scheme="https://blog.stdioa.com/tags/%E8%BF%AD%E4%BB%A3%E5%99%A8/"/>
     
   </entry>
   
