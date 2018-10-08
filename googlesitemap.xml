@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.stdioa.com/2018/06/gitlab-cicd-deploy/</loc>
+    
+    <lastmod>2018-10-08T13:06:22.539Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.stdioa.com/2018/07/gitlab-cicd-auxiliary/</loc>
     
     <lastmod>2018-07-21T08:28:40.169Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>https://blog.stdioa.com/2018/06/gitlab-cicd-usage/</loc>
     
     <lastmod>2018-07-12T11:35:13.424Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2018/06/gitlab-cicd-deploy/</loc>
-    
-    <lastmod>2018-07-12T11:35:13.420Z</lastmod>
     
   </url>
   

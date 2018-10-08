@@ -69,11 +69,11 @@
     <link href="https://blog.stdioa.com/2018/06/gitlab-cicd-deploy/"/>
     <id>https://blog.stdioa.com/2018/06/gitlab-cicd-deploy/</id>
     <published>2018-06-18T07:46:00.000Z</published>
-    <updated>2018-07-12T11:35:13.420Z</updated>
+    <updated>2018-10-08T13:06:22.539Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Sat Jul 21 2018 15:35:11 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;本文是 GitLab CI/CD 系列的第二篇，主要介绍 GitLab CI Runner 在 Docker 和 Kubernetes 环境下的部署方式。&lt;/p&gt;
+      &lt;!-- build time:Mon Oct 08 2018 21:06:36 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;本文是 GitLab CI/CD 系列的第二篇，主要介绍 GitLab CI Runner 在 Docker 和 Kubernetes 环境下的部署方式。&lt;/p&gt;
     
     </summary>
     
