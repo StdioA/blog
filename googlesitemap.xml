@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.stdioa.com/2018/10/docker-practice-notes/</loc>
+    
+    <lastmod>2018-10-30T13:20:49.608Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.stdioa.com/2018/06/gitlab-cicd-deploy/</loc>
     
     <lastmod>2018-10-08T13:06:22.539Z</lastmod>
