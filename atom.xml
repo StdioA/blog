@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.stdioa.com/"/>
-  <updated>2018-11-11T10:39:09.526Z</updated>
+  <updated>2018-11-11T15:15:07.943Z</updated>
   <id>https://blog.stdioa.com/</id>
   
   <author>
@@ -17,6 +17,28 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Python 函数式编程：不可变数据结构</title>
+    <link href="https://blog.stdioa.com/2018/11/translation-python-functional-programming/"/>
+    <id>https://blog.stdioa.com/2018/11/translation-python-functional-programming/</id>
+    <published>2018-11-11T15:07:00.000Z</published>
+    <updated>2018-11-11T15:15:07.943Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Sun Nov 11 2018 23:15:36 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;本文原载于 &lt;a href=&quot;https://opensource.com/article/18/10/functional-programming-python-immutable-data-structures&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;opensource.com&lt;/a&gt;，由本人翻译，翻译作品原载于 &lt;a href=&quot;https://linux.cn/article-10222-1.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;linux.cn&lt;/a&gt;。翻译及转载基于 &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CC-BY-NC-SA 协议&lt;/a&gt;。具体创作参与信息可见文章最后部分。&lt;/p&gt;&lt;h2 id=&quot;-more-&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#-more-&quot;&gt;&lt;/a&gt;
+    
+    </summary>
+    
+      <category term="翻译" scheme="https://blog.stdioa.com/categories/%E7%BF%BB%E8%AF%91/"/>
+    
+    
+      <category term="Python" scheme="https://blog.stdioa.com/tags/Python/"/>
+    
+      <category term="LCTT" scheme="https://blog.stdioa.com/tags/LCTT/"/>
+    
+  </entry>
+  
+  <entry>
     <title>《Docker 实践》阅读笔记</title>
     <link href="https://blog.stdioa.com/2018/10/docker-practice-notes/"/>
     <id>https://blog.stdioa.com/2018/10/docker-practice-notes/</id>
@@ -25,16 +47,16 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Sun Nov 11 2018 18:39:31 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;这几天看了《Docker 实践》，写了一点自己不知道或者想记录下来的内容。这是一份笔记，但不是一份基础教程。&lt;/p&gt;
+      &lt;p&gt;这几天看了《Docker 实践》，写了一点自己不知道或者想记录下来的内容。这是一份笔记，但不是一份基础教程。&lt;/p&gt;
     
     </summary>
     
       <category term="DevOps" scheme="https://blog.stdioa.com/categories/DevOps/"/>
     
     
-      <category term="Docker" scheme="https://blog.stdioa.com/tags/Docker/"/>
-    
       <category term="读书" scheme="https://blog.stdioa.com/tags/%E8%AF%BB%E4%B9%A6/"/>
+    
+      <category term="Docker" scheme="https://blog.stdioa.com/tags/Docker/"/>
     
   </entry>
   
@@ -47,7 +69,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Tue Oct 30 2018 21:57:18 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;本文会讲一些在 GitLab CI/CD 中可能会用到的辅助工具，包括隐藏任务、依赖缓存、定时任务以及部署环境。&lt;/p&gt;
+      &lt;p&gt;本文会讲一些在 GitLab CI/CD 中可能会用到的辅助工具，包括隐藏任务、依赖缓存、定时任务以及部署环境。&lt;/p&gt;
     
     </summary>
     
@@ -71,7 +93,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Tue Oct 30 2018 21:13:12 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;前两篇我们讲了 GitLab CI/CD 的简单应用及部署方式，这一篇简单讲一下如何将 GitLab CI/CD 与日常开发部署流程结合。&lt;/p&gt;
+      &lt;p&gt;前两篇我们讲了 GitLab CI/CD 的简单应用及部署方式，这一篇简单讲一下如何将 GitLab CI/CD 与日常开发部署流程结合。&lt;/p&gt;
     
     </summary>
     
@@ -95,7 +117,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Tue Oct 30 2018 21:13:12 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;本文是 GitLab CI/CD 系列的第二篇，主要介绍 GitLab CI Runner 在 Docker 和 Kubernetes 环境下的部署方式。&lt;/p&gt;
+      &lt;p&gt;本文是 GitLab CI/CD 系列的第二篇，主要介绍 GitLab CI Runner 在 Docker 和 Kubernetes 环境下的部署方式。&lt;/p&gt;
     
     </summary>
     
@@ -119,7 +141,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Tue Oct 30 2018 21:13:12 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;最近玩了 GitLab CI/CD 平台，通过搭建这个平台也收获了一些关于 DevOps 的基本技能，打算通过几篇文章来讲述一下 GitLab CI/CD 平台的构建及应用。本文对 GitLab CI/CD 以及 CI/CD 流程定义文件的写法做了简要介绍。&lt;/p&gt;
+      &lt;p&gt;最近玩了 GitLab CI/CD 平台，通过搭建这个平台也收获了一些关于 DevOps 的基本技能，打算通过几篇文章来讲述一下 GitLab CI/CD 平台的构建及应用。本文对 GitLab CI/CD 以及 CI/CD 流程定义文件的写法做了简要介绍。&lt;/p&gt;
     
     </summary>
     
@@ -143,7 +165,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Tue Oct 30 2018 21:13:12 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;很久之前就想尝试一下用 supervisor 部署 Web 应用，几个月前把 Python 应用的服务器都换成了 gunicorn，今天终于把进程管理服务换成了 supervisor. 看我的拖延症。&lt;/p&gt;
+      &lt;p&gt;很久之前就想尝试一下用 supervisor 部署 Web 应用，几个月前把 Python 应用的服务器都换成了 gunicorn，今天终于把进程管理服务换成了 supervisor. 看我的拖延症。&lt;/p&gt;
     
     </summary>
     
@@ -169,7 +191,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Tue Oct 30 2018 21:13:12 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;拖了很久，终于用 Django REST Framework 写了个小 Demo.&lt;/p&gt;
+      &lt;p&gt;拖了很久，终于用 Django REST Framework 写了个小 Demo.&lt;/p&gt;
     
     </summary>
     
@@ -193,7 +215,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Tue Oct 30 2018 21:13:12 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;课设写不完，要炸了… Windows UI 好难写，只好用 PyQt 解决… 怎么把 Python 和 C 模块连起来？就用 ctypes.&lt;/p&gt;
+      &lt;p&gt;课设写不完，要炸了… Windows UI 好难写，只好用 PyQt 解决… 怎么把 Python 和 C 模块连起来？就用 ctypes.&lt;/p&gt;
     
     </summary>
     
@@ -215,7 +237,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Tue Oct 30 2018 21:13:12 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;又玩了一场 CTF，虽然是个人赛，但是有老司机带我飞。继续开脑洞，也学到了不少，做了很多之前没做过的题。&lt;/p&gt;
+      &lt;p&gt;又玩了一场 CTF，虽然是个人赛，但是有老司机带我飞。继续开脑洞，也学到了不少，做了很多之前没做过的题。&lt;/p&gt;
     
     </summary>
     
@@ -237,7 +259,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Tue Oct 30 2018 21:13:12 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;很久以前写了一个 Django 项目，数据库用的 MySQL. 很久没用，后来发现 MySQL 编码设置有问题，导致中文全部变成了问号。&lt;/p&gt;
+      &lt;p&gt;很久以前写了一个 Django 项目，数据库用的 MySQL. 很久没用，后来发现 MySQL 编码设置有问题，导致中文全部变成了问号。&lt;/p&gt;
     
     </summary>
     
@@ -259,7 +281,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Tue Oct 30 2018 21:13:13 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;学校组织了第一届 NUAACTF，参加去玩玩，开开脑洞😂，嗯，还蛮好玩的~&lt;/p&gt;
+      &lt;p&gt;学校组织了第一届 NUAACTF，参加去玩玩，开开脑洞😂，嗯，还蛮好玩的~&lt;/p&gt;
     
     </summary>
     
@@ -283,7 +305,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Tue Oct 30 2018 21:13:13 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;前两天重刷了《SQL必知必会》，昨天想到了 LeetCode，于是去刷了几道数据库的题目，开了不少脑洞。&lt;/p&gt;
+      &lt;p&gt;前两天重刷了《SQL必知必会》，昨天想到了 LeetCode，于是去刷了几道数据库的题目，开了不少脑洞。&lt;/p&gt;
     
     </summary>
     
@@ -307,7 +329,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Tue Oct 30 2018 21:13:12 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;之前的那门 JS 和前端课结课了，最后花了一周时间写了一个 project，使用 Vue.js 的一套工具写了一个单页面应用，先将使用到及学到的知识来整理一下。&lt;/p&gt;
+      &lt;p&gt;之前的那门 JS 和前端课结课了，最后花了一周时间写了一个 project，使用 Vue.js 的一套工具写了一个单页面应用，先将使用到及学到的知识来整理一下。&lt;/p&gt;
     
     </summary>
     
@@ -333,20 +355,20 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Tue Oct 30 2018 21:13:12 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;昨天看到了 Atom 官方发布了一篇 &lt;a href=&quot;http://flight-manual.atom.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Atom Flight Manual&lt;/a&gt;, 看了两页觉得有些感兴趣所以下了一个体验一下。&lt;/p&gt;
+      &lt;p&gt;昨天看到了 Atom 官方发布了一篇 &lt;a href=&quot;http://flight-manual.atom.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Atom Flight Manual&lt;/a&gt;, 看了两页觉得有些感兴趣所以下了一个体验一下。&lt;/p&gt;
     
     </summary>
     
       <category term="随笔" scheme="https://blog.stdioa.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
+      <category term="Git" scheme="https://blog.stdioa.com/tags/Git/"/>
+    
       <category term="Atom" scheme="https://blog.stdioa.com/tags/Atom/"/>
     
       <category term="Sublime Text" scheme="https://blog.stdioa.com/tags/Sublime-Text/"/>
     
       <category term="文本编辑器" scheme="https://blog.stdioa.com/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    
-      <category term="Git" scheme="https://blog.stdioa.com/tags/Git/"/>
     
   </entry>
   
@@ -359,7 +381,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Tue Oct 30 2018 21:13:13 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;从开始写Javascript到现在，已经有一个月了，这一个月学了不少新姿势，随便写写，简单整理一下。&lt;/p&gt;
+      &lt;p&gt;从开始写Javascript到现在，已经有一个月了，这一个月学了不少新姿势，随便写写，简单整理一下。&lt;/p&gt;
     
     </summary>
     
@@ -383,7 +405,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Tue Oct 30 2018 21:13:12 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;一个月没更新，期末复习的时候光鼓捣网站却懒得写东西，期末考完了，把这一个月鼓捣的东西记录一下，比如利用七牛进行静态文件托管。&lt;/p&gt;
+      &lt;p&gt;一个月没更新，期末复习的时候光鼓捣网站却懒得写东西，期末考完了，把这一个月鼓捣的东西记录一下，比如利用七牛进行静态文件托管。&lt;/p&gt;
     
     </summary>
     
@@ -407,16 +429,17 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Tue Oct 30 2018 21:13:12 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;域名依然在备案中，依然想将博客部署到新买的VPS的我和腾讯斗智斗勇（雾），为博客添加了HTTPS&amp;gt;_&amp;lt;&lt;br&gt;同时，把自己的密码学课设也转移到VPS上来了。&lt;/p&gt;
+      &lt;p&gt;域名依然在备案中，依然想将博客部署到新买的VPS的我和腾讯斗智斗勇（雾），为博客添加了HTTPS&amp;gt;_&amp;lt;&lt;br&gt;
+同时，把自己的密码学课设也转移到VPS上来了。&lt;/p&gt;
     
     </summary>
     
       <category term="乱七八糟" scheme="https://blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
     
     
-      <category term="nginx" scheme="https://blog.stdioa.com/tags/nginx/"/>
-    
       <category term="Github" scheme="https://blog.stdioa.com/tags/Github/"/>
+    
+      <category term="nginx" scheme="https://blog.stdioa.com/tags/nginx/"/>
     
       <category term="Let&#39;s Encrypt" scheme="https://blog.stdioa.com/tags/Let-s-Encrypt/"/>
     
@@ -431,18 +454,18 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Tue Oct 30 2018 21:13:12 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;昨天买了一个VPS、一个域名，决定把博客迁移到VPS上。&lt;/p&gt;
+      &lt;p&gt;昨天买了一个VPS、一个域名，决定把博客迁移到VPS上。&lt;/p&gt;
     
     </summary>
     
       <category term="乱七八糟" scheme="https://blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
     
     
-      <category term="nginx" scheme="https://blog.stdioa.com/tags/nginx/"/>
-    
       <category term="python" scheme="https://blog.stdioa.com/tags/python/"/>
     
       <category term="Github" scheme="https://blog.stdioa.com/tags/Github/"/>
+    
+      <category term="nginx" scheme="https://blog.stdioa.com/tags/nginx/"/>
     
   </entry>
   
@@ -455,7 +478,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Tue Oct 30 2018 21:13:12 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;第三次在VPS上面解决使用requests报InsecurePlatformWarning警告的问题。之前每次都要查资料折腾好久，这次决定把它记下来。&lt;/p&gt;
+      &lt;p&gt;第三次在VPS上面解决使用requests报InsecurePlatformWarning警告的问题。之前每次都要查资料折腾好久，这次决定把它记下来。&lt;/p&gt;
     
     </summary>
     
@@ -467,28 +490,6 @@
       <category term="openssl" scheme="https://blog.stdioa.com/tags/openssl/"/>
     
       <category term="requests" scheme="https://blog.stdioa.com/tags/requests/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python学习之unittest</title>
-    <link href="https://blog.stdioa.com/2015/11/learning-python-unittest/"/>
-    <id>https://blog.stdioa.com/2015/11/learning-python-unittest/</id>
-    <published>2015-11-12T10:53:02.000Z</published>
-    <updated>2018-07-12T11:35:13.432Z</updated>
-    
-    <summary type="html">
-    
-      &lt;!-- build time:Tue Oct 30 2018 21:13:13 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;单元测试，工程开发中重要的一环。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Python" scheme="https://blog.stdioa.com/categories/Python/"/>
-    
-    
-      <category term="python" scheme="https://blog.stdioa.com/tags/python/"/>
-    
-      <category term="unittest" scheme="https://blog.stdioa.com/tags/unittest/"/>
     
   </entry>
   
