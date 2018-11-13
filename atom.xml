@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.stdioa.com/"/>
-  <updated>2018-11-11T15:15:07.943Z</updated>
+  <updated>2018-11-13T14:45:52.052Z</updated>
   <id>https://blog.stdioa.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《Prometheus Book》阅读笔记</title>
+    <link href="https://blog.stdioa.com/2018/11/prometheus-book-note/"/>
+    <id>https://blog.stdioa.com/2018/11/prometheus-book-note/</id>
+    <published>2018-11-13T14:45:00.000Z</published>
+    <updated>2018-11-13T14:45:52.052Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Tue Nov 13 2018 22:47:34 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;看了一本在线的小书，叫&lt;a href=&quot;https://yunlzheng.gitbook.io/prometheus-book/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;《Prometheus Book》&lt;/a&gt;，做了一点摘抄和笔记。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="DevOps" scheme="https://blog.stdioa.com/categories/DevOps/"/>
+    
+    
+      <category term="Prometheus" scheme="https://blog.stdioa.com/tags/Prometheus/"/>
+    
+      <category term="读书" scheme="https://blog.stdioa.com/tags/%E8%AF%BB%E4%B9%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>Python 函数式编程：不可变数据结构</title>
@@ -466,30 +488,6 @@
       <category term="Github" scheme="https://blog.stdioa.com/tags/Github/"/>
     
       <category term="nginx" scheme="https://blog.stdioa.com/tags/nginx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>随手记 - 解决InsecurePlatformWarning</title>
-    <link href="https://blog.stdioa.com/2015/12/essay-solve-InsecurePlatformWarning/"/>
-    <id>https://blog.stdioa.com/2015/12/essay-solve-InsecurePlatformWarning/</id>
-    <published>2015-12-07T15:01:00.000Z</published>
-    <updated>2018-07-12T00:15:03.564Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;第三次在VPS上面解决使用requests报InsecurePlatformWarning警告的问题。之前每次都要查资料折腾好久，这次决定把它记下来。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="随手记" scheme="https://blog.stdioa.com/categories/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
-    
-    
-      <category term="python" scheme="https://blog.stdioa.com/tags/python/"/>
-    
-      <category term="openssl" scheme="https://blog.stdioa.com/tags/openssl/"/>
-    
-      <category term="requests" scheme="https://blog.stdioa.com/tags/requests/"/>
     
   </entry>
   
