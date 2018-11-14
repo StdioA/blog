@@ -43,11 +43,11 @@
     <link href="https://blog.stdioa.com/2018/11/translation-python-functional-programming/"/>
     <id>https://blog.stdioa.com/2018/11/translation-python-functional-programming/</id>
     <published>2018-11-11T15:07:00.000Z</published>
-    <updated>2018-11-11T15:15:07.943Z</updated>
+    <updated>2018-11-14T00:18:59.045Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Sun Nov 11 2018 23:15:36 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;本文原载于 &lt;a href=&quot;https://opensource.com/article/18/10/functional-programming-python-immutable-data-structures&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;opensource.com&lt;/a&gt;，由本人翻译，翻译作品原载于 &lt;a href=&quot;https://linux.cn/article-10222-1.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;linux.cn&lt;/a&gt;。翻译及转载基于 &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CC-BY-NC-SA 协议&lt;/a&gt;。具体创作参与信息可见文章最后部分。&lt;/p&gt;&lt;h2 id=&quot;-more-&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#-more-&quot;&gt;&lt;/a&gt;
+      &lt;!-- build time:Wed Nov 14 2018 08:19:11 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;本文原载于 &lt;a href=&quot;https://opensource.com/article/18/10/functional-programming-python-immutable-data-structures&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;opensource.com&lt;/a&gt;，由本人翻译，翻译作品原载于 &lt;a href=&quot;https://linux.cn/article-10222-1.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;linux.cn&lt;/a&gt;。翻译及转载基于 &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CC-BY-NC-SA 协议&lt;/a&gt;。具体创作参与信息可见文章最后部分。&lt;/p&gt;&lt;h2 id=&quot;-more-&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#-more-&quot;&gt;&lt;/a&gt;
     
     </summary>
     
