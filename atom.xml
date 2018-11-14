@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.stdioa.com/"/>
-  <updated>2018-11-13T14:45:52.052Z</updated>
+  <updated>2018-11-14T14:33:20.514Z</updated>
   <id>https://blog.stdioa.com/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="https://blog.stdioa.com/2018/11/prometheus-book-note/"/>
     <id>https://blog.stdioa.com/2018/11/prometheus-book-note/</id>
     <published>2018-11-13T14:45:00.000Z</published>
-    <updated>2018-11-13T14:45:52.052Z</updated>
+    <updated>2018-11-14T14:33:20.514Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Tue Nov 13 2018 22:47:34 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;看了一本在线的小书，叫&lt;a href=&quot;https://yunlzheng.gitbook.io/prometheus-book/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;《Prometheus Book》&lt;/a&gt;，做了一点摘抄和笔记。&lt;/p&gt;
+      &lt;!-- build time:Wed Nov 14 2018 22:33:41 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;看了一本在线的小书，叫&lt;a href=&quot;https://yunlzheng.gitbook.io/prometheus-book/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;《Prometheus Book》&lt;/a&gt;，做了一点摘抄和笔记。&lt;/p&gt;
     
     </summary>
     
