@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.stdioa.com/"/>
-  <updated>2018-11-14T14:33:20.514Z</updated>
+  <updated>2018-12-02T09:00:01.580Z</updated>
   <id>https://blog.stdioa.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python hacking: “高级”偏函数</title>
+    <link href="https://blog.stdioa.com/2018/12/python-advanced-partial/"/>
+    <id>https://blog.stdioa.com/2018/12/python-advanced-partial/</id>
+    <published>2018-12-02T02:06:00.000Z</published>
+    <updated>2018-12-02T09:00:01.580Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Sun Dec 02 2018 17:00:23 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;本文讲解了一个需求的解决方案，而这个奇葩需求你在 99.93% 场景下都不会遇到，就算遇到了，也一定有其它更简单的解决方案。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="https://blog.stdioa.com/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="https://blog.stdioa.com/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>《Prometheus Book》阅读笔记</title>
@@ -464,30 +484,6 @@
       <category term="nginx" scheme="https://blog.stdioa.com/tags/nginx/"/>
     
       <category term="Let&#39;s Encrypt" scheme="https://blog.stdioa.com/tags/Let-s-Encrypt/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>博客迁移记（一）</title>
-    <link href="https://blog.stdioa.com/2015/12/blog-migration/"/>
-    <id>https://blog.stdioa.com/2015/12/blog-migration/</id>
-    <published>2015-12-17T11:55:37.000Z</published>
-    <updated>2018-07-12T00:15:11.629Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;昨天买了一个VPS、一个域名，决定把博客迁移到VPS上。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="乱七八糟" scheme="https://blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
-    
-    
-      <category term="python" scheme="https://blog.stdioa.com/tags/python/"/>
-    
-      <category term="Github" scheme="https://blog.stdioa.com/tags/Github/"/>
-    
-      <category term="nginx" scheme="https://blog.stdioa.com/tags/nginx/"/>
     
   </entry>
   

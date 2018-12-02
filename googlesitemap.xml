@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.stdioa.com/2018/12/python-advanced-partial/</loc>
+    
+    <lastmod>2018-12-02T09:00:01.580Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.stdioa.com/2018/07/gitlab-cicd-auxiliary/</loc>
     
     <lastmod>2018-11-30T15:35:21.204Z</lastmod>
