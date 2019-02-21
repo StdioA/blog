@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.stdioa.com/"/>
-  <updated>2019-02-13T00:11:49.387Z</updated>
+  <updated>2019-02-21T11:51:41.977Z</updated>
   <id>https://blog.stdioa.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>瞎玩IPv6——在公网搭建文件管理器</title>
+    <link href="https://blog.stdioa.com/2019/02/build-file-manager-on-ipv6/"/>
+    <id>https://blog.stdioa.com/2019/02/build-file-manager-on-ipv6/</id>
+    <published>2019-02-21T11:28:00.000Z</published>
+    <updated>2019-02-21T11:51:41.977Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Thu Feb 21 2019 19:53:28 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;IPv6 是个好东西，希望人人都有一个。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="网络" scheme="https://blog.stdioa.com/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="Linux" scheme="https://blog.stdioa.com/tags/Linux/"/>
+    
+      <category term="IPv6" scheme="https://blog.stdioa.com/tags/IPv6/"/>
+    
+      <category term="NAS" scheme="https://blog.stdioa.com/tags/NAS/"/>
+    
+  </entry>
   
   <entry>
     <title>NTP 简介</title>
@@ -85,11 +109,11 @@
     <link href="https://blog.stdioa.com/2018/11/prometheus-book-note/"/>
     <id>https://blog.stdioa.com/2018/11/prometheus-book-note/</id>
     <published>2018-11-13T14:45:00.000Z</published>
-    <updated>2019-02-12T11:54:06.385Z</updated>
+    <updated>2019-02-21T11:32:38.048Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Feb 13 2019 08:12:03 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;看了一本在线的小书，叫&lt;a href=&quot;https://yunlzheng.gitbook.io/prometheus-book/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;《Prometheus Book》&lt;/a&gt;，做了一点摘抄和笔记。&lt;/p&gt;
+      &lt;!-- build time:Thu Feb 21 2019 19:32:38 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;看了一本在线的小书，叫&lt;a href=&quot;https://yunlzheng.gitbook.io/prometheus-book/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;《Prometheus Book》&lt;/a&gt;，做了一点摘抄和笔记。&lt;/p&gt;
     
     </summary>
     
@@ -455,30 +479,6 @@
       <category term="文本编辑器" scheme="https://blog.stdioa.com/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/"/>
     
       <category term="Git" scheme="https://blog.stdioa.com/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Javascript学习总结</title>
-    <link href="https://blog.stdioa.com/2016/02/learning-javascript/"/>
-    <id>https://blog.stdioa.com/2016/02/learning-javascript/</id>
-    <published>2016-02-24T11:31:42.000Z</published>
-    <updated>2018-07-12T11:35:13.428Z</updated>
-    
-    <summary type="html">
-    
-      &lt;!-- build time:Wed Feb 13 2019 08:12:03 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;从开始写Javascript到现在，已经有一个月了，这一个月学了不少新姿势，随便写写，简单整理一下。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Javascript" scheme="https://blog.stdioa.com/categories/Javascript/"/>
-    
-    
-      <category term="前端开发" scheme="https://blog.stdioa.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-    
-      <category term="Javascript" scheme="https://blog.stdioa.com/tags/Javascript/"/>
-    
-      <category term="node.js" scheme="https://blog.stdioa.com/tags/node-js/"/>
     
   </entry>
   
