@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.stdioa.com/2019/04/data-migration-between-microservices/</loc>
+    
+    <lastmod>2019-04-08T04:55:19.344Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/about/index.html</loc>
+    
+    <lastmod>2019-04-06T12:17:16.967Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.stdioa.com/2019/03/geektime-microservice-notes/</loc>
     
     <lastmod>2019-03-30T11:58:25.697Z</lastmod>
@@ -61,13 +75,6 @@
     <loc>https://blog.stdioa.com/2018/11/translation-python-functional-programming/</loc>
     
     <lastmod>2018-11-14T00:18:59.045Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/about/index.html</loc>
-    
-    <lastmod>2018-11-11T14:58:41.063Z</lastmod>
     
   </url>
   
