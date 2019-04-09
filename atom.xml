@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.stdioa.com/"/>
-  <updated>2019-04-08T04:55:19.344Z</updated>
+  <updated>2019-04-09T07:50:37.525Z</updated>
   <id>https://blog.stdioa.com/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="https://blog.stdioa.com/2019/04/data-migration-between-microservices/"/>
     <id>https://blog.stdioa.com/2019/04/data-migration-between-microservices/</id>
     <published>2019-04-08T04:40:00.000Z</published>
-    <updated>2019-04-08T04:55:19.344Z</updated>
+    <updated>2019-04-09T07:50:37.525Z</updated>
     
     <summary type="html">
     
-      &lt;!-- build time:Mon Apr 08 2019 12:55:40 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;在扇贝，除了 CRUD 以外，做的最多的事情大概也就是数据迁移了，以至于后来简单的数据迁移工作都变成了一种搬砖。今天动笔写一写在扇贝做数据迁移的方法，以及一些需要关注的点。&lt;/p&gt;
+      &lt;!-- build time:Tue Apr 09 2019 15:51:30 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;在扇贝，除了 CRUD 以外，做的最多的事情大概也就是数据迁移了，以至于后来简单的数据迁移工作都变成了一种搬砖。今天动笔写一写在扇贝做数据迁移的方法，以及一些需要关注的点。&lt;/p&gt;
     
     </summary>
     
