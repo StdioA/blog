@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.stdioa.com/"/>
-  <updated>2019-05-21T08:46:12.680Z</updated>
+  <updated>2019-06-19T08:22:19.639Z</updated>
   <id>https://blog.stdioa.com/</id>
   
   <author>
@@ -17,6 +17,26 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Golang 学习记录</title>
+    <link href="https://blog.stdioa.com/2019/06/golang-learning-experience/"/>
+    <id>https://blog.stdioa.com/2019/06/golang-learning-experience/</id>
+    <published>2019-06-19T07:27:00.000Z</published>
+    <updated>2019-06-19T08:22:19.639Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Wed Jun 19 2019 16:22:39 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;这几个月在考虑从 Python 转向 Golang，所以专门学习了 Golang.&lt;br&gt;这里是 Golang 学习的一些记录。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Golang" scheme="https://blog.stdioa.com/categories/Golang/"/>
+    
+    
+      <category term="Golang" scheme="https://blog.stdioa.com/tags/Golang/"/>
+    
+  </entry>
+  
+  <entry>
     <title>用堆找出最小的 N 个数</title>
     <link href="https://blog.stdioa.com/2019/05/find-minn-with-heap/"/>
     <id>https://blog.stdioa.com/2019/05/find-minn-with-heap/</id>
@@ -25,7 +45,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Tue May 21 2019 16:47:07 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;不知道为啥，突然想水一篇很水的算法文章。&lt;/p&gt;
+      &lt;!-- build time:Wed Jun 19 2019 15:27:20 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;不知道为啥，突然想水一篇很水的算法文章。&lt;/p&gt;
     
     </summary>
     
@@ -451,30 +471,6 @@
       <category term="Django" scheme="https://blog.stdioa.com/tags/Django/"/>
     
       <category term="MySQL" scheme="https://blog.stdioa.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第一届 NUAACTF 非官方 Writeup</title>
-    <link href="https://blog.stdioa.com/2016/04/nuaactf-unofficial-writeup/"/>
-    <id>https://blog.stdioa.com/2016/04/nuaactf-unofficial-writeup/</id>
-    <published>2016-04-25T04:01:04.000Z</published>
-    <updated>2018-07-12T00:14:40.164Z</updated>
-    
-    <summary type="html">
-    
-      &lt;!-- build time:Tue May 21 2019 16:45:50 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;学校组织了第一届 NUAACTF，参加去玩玩，开开脑洞😂，嗯，还蛮好玩的~&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="乱七八糟" scheme="https://blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
-    
-    
-      <category term="CTF" scheme="https://blog.stdioa.com/tags/CTF/"/>
-    
-      <category term="脑洞" scheme="https://blog.stdioa.com/tags/%E8%84%91%E6%B4%9E/"/>
-    
-      <category term="Python" scheme="https://blog.stdioa.com/tags/Python/"/>
     
   </entry>
   
