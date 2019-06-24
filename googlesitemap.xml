@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.stdioa.com/2019/06/go-internal-note/</loc>
+    
+    <lastmod>2019-06-24T08:40:49.945Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.stdioa.com/2019/06/golang-learning-experience/</loc>
     
-    <lastmod>2019-06-20T04:58:36.204Z</lastmod>
+    <lastmod>2019-06-24T08:25:39.018Z</lastmod>
     
   </url>
   
