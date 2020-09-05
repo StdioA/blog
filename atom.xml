@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.stdioa.com/"/>
-  <updated>2019-06-24T08:40:49.945Z</updated>
+  <updated>2020-09-05T15:51:13.485Z</updated>
   <id>https://blog.stdioa.com/</id>
   
   <author>
@@ -17,6 +17,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>开始使用 Beancount</title>
+    <link href="https://blog.stdioa.com/2020/09/using-beancount/"/>
+    <id>https://blog.stdioa.com/2020/09/using-beancount/</id>
+    <published>2020-09-05T07:15:00.000Z</published>
+    <updated>2020-09-05T15:51:13.485Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Sat Sep 05 2020 23:51:27 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;使用 Beancount 记账已经有将近两个月了，简单写一写我都做了什么。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="乱七八糟" scheme="https://blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
+    
+    
+      <category term="Python" scheme="https://blog.stdioa.com/tags/Python/"/>
+    
+      <category term="记账" scheme="https://blog.stdioa.com/tags/%E8%AE%B0%E8%B4%A6/"/>
+    
+      <category term="Beancount" scheme="https://blog.stdioa.com/tags/Beancount/"/>
+    
+      <category term="fava" scheme="https://blog.stdioa.com/tags/fava/"/>
+    
+  </entry>
+  
+  <entry>
     <title>《深入解析Go》笔记</title>
     <link href="https://blog.stdioa.com/2019/06/go-internal-note/"/>
     <id>https://blog.stdioa.com/2019/06/go-internal-note/</id>
@@ -25,7 +51,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Mon Jun 24 2019 16:41:29 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;在 GitHub 上找到一本解读 Go 实现细节的好书，名叫&lt;a href=&quot;https://github.com/tiancaiamao/go-internals/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;《深入解析 Go》&lt;/a&gt;。&lt;br&gt;大致看了一遍，简单做了些笔记。&lt;/p&gt;
+      &lt;!-- build time:Sat Sep 05 2020 23:51:27 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;在 GitHub 上找到一本解读 Go 实现细节的好书，名叫&lt;a href=&quot;https://github.com/tiancaiamao/go-internals/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;《深入解析 Go》&lt;/a&gt;。&lt;br&gt;大致看了一遍，简单做了些笔记。&lt;/p&gt;
     
     </summary>
     
@@ -45,7 +71,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Mon Jun 24 2019 16:41:29 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;这几个月在考虑从 Python 转向 Golang，所以专门学习了 Golang.&lt;br&gt;这里是 Golang 学习的一些记录。&lt;/p&gt;
+      &lt;!-- build time:Sat Sep 05 2020 23:51:27 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;这几个月在考虑从 Python 转向 Golang，所以专门学习了 Golang.&lt;br&gt;这里是 Golang 学习的一些记录。&lt;/p&gt;
     
     </summary>
     
@@ -65,7 +91,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jun 19 2019 17:59:18 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;不知道为啥，突然想水一篇很水的算法文章。&lt;/p&gt;
+      &lt;!-- build time:Sat Sep 05 2020 23:51:27 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;不知道为啥，突然想水一篇很水的算法文章。&lt;/p&gt;
     
     </summary>
     
@@ -89,7 +115,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jun 19 2019 17:59:18 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;在扇贝，除了 CRUD 以外，做的最多的事情大概也就是数据迁移了，以至于后来简单的数据迁移工作都变成了一种搬砖。今天动笔写一写在扇贝做数据迁移的方法，以及一些需要关注的点。&lt;/p&gt;
+      &lt;!-- build time:Sat Sep 05 2020 23:51:27 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;在扇贝，除了 CRUD 以外，做的最多的事情大概也就是数据迁移了，以至于后来简单的数据迁移工作都变成了一种搬砖。今天动笔写一写在扇贝做数据迁移的方法，以及一些需要关注的点。&lt;/p&gt;
     
     </summary>
     
@@ -113,7 +139,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jun 19 2019 17:59:18 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;前一阵子购买了胡忠想老师的《从 0 开始学微服务》极客时间专栏，二月份看完以后做了一些笔记。&lt;/p&gt;
+      &lt;!-- build time:Sat Sep 05 2020 23:51:27 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;前一阵子购买了胡忠想老师的《从 0 开始学微服务》极客时间专栏，二月份看完以后做了一些笔记。&lt;/p&gt;
     
     </summary>
     
@@ -137,7 +163,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jun 19 2019 17:59:18 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;IPv6 是个好东西，希望人人都有一个。&lt;/p&gt;
+      &lt;!-- build time:Sat Sep 05 2020 23:51:27 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;IPv6 是个好东西，希望人人都有一个。&lt;/p&gt;
     
     </summary>
     
@@ -161,7 +187,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jun 19 2019 17:59:18 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;昨天遇到了一个神奇的问题，最后发现是服务器的 ntpd 没开导致本地时间没有同步😂 正好了解一下 NTP.&lt;/p&gt;
+      &lt;!-- build time:Sat Sep 05 2020 23:51:27 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;昨天遇到了一个神奇的问题，最后发现是服务器的 ntpd 没开导致本地时间没有同步😂 正好了解一下 NTP.&lt;/p&gt;
     
     </summary>
     
@@ -183,7 +209,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jun 19 2019 17:59:18 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;去年就想看《流畅的 Python》这本书，今年终于看完了。&lt;/p&gt;
+      &lt;!-- build time:Sat Sep 05 2020 23:51:27 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;去年就想看《流畅的 Python》这本书，今年终于看完了。&lt;/p&gt;
     
     </summary>
     
@@ -205,7 +231,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jun 19 2019 17:59:18 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;本文讲解了一个需求的解决方案，而这个奇葩需求你在 99.93% 场景下都不会遇到，就算遇到了，也一定有其它更简单的解决方案。&lt;/p&gt;
+      &lt;!-- build time:Sat Sep 05 2020 23:51:27 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;本文讲解了一个需求的解决方案，而这个奇葩需求你在 99.93% 场景下都不会遇到，就算遇到了，也一定有其它更简单的解决方案。&lt;/p&gt;
     
     </summary>
     
@@ -225,7 +251,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jun 19 2019 17:59:18 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;看了一本在线的小书，叫&lt;a href=&quot;https://yunlzheng.gitbook.io/prometheus-book/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;《Prometheus Book》&lt;/a&gt;，做了一点摘抄和笔记。&lt;/p&gt;
+      &lt;!-- build time:Sat Sep 05 2020 23:51:27 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;看了一本在线的小书，叫&lt;a href=&quot;https://yunlzheng.gitbook.io/prometheus-book/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;《Prometheus Book》&lt;/a&gt;，做了一点摘抄和笔记。&lt;/p&gt;
     
     </summary>
     
@@ -247,7 +273,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jun 19 2019 17:59:18 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;本文原载于 &lt;a href=&quot;https://opensource.com/article/18/10/functional-programming-python-immutable-data-structures&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;opensource.com&lt;/a&gt;，由本人翻译，翻译作品原载于 &lt;a href=&quot;https://linux.cn/article-10222-1.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;linux.cn&lt;/a&gt;。翻译及转载基于 &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CC-BY-NC-SA 协议&lt;/a&gt;。具体创作参与信息可见文章最后部分。&lt;/p&gt;&lt;h2 id=&quot;-more-&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#-more-&quot;&gt;&lt;/a&gt;
+      &lt;!-- build time:Sat Sep 05 2020 23:51:27 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;本文原载于 &lt;a href=&quot;https://opensource.com/article/18/10/functional-programming-python-immutable-data-structures&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;opensource.com&lt;/a&gt;，由本人翻译，翻译作品原载于 &lt;a href=&quot;https://linux.cn/article-10222-1.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;linux.cn&lt;/a&gt;。翻译及转载基于 &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CC-BY-NC-SA 协议&lt;/a&gt;。具体创作参与信息可见文章最后部分。&lt;/p&gt;&lt;h2 id=&quot;-more-&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#-more-&quot;&gt;&lt;/a&gt;
     
     </summary>
     
@@ -269,7 +295,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jun 19 2019 17:59:18 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;这几天看了《Docker 实践》，写了一点自己不知道或者想记录下来的内容。这是一份笔记，但不是一份基础教程。&lt;/p&gt;
+      &lt;!-- build time:Sat Sep 05 2020 23:51:27 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;这几天看了《Docker 实践》，写了一点自己不知道或者想记录下来的内容。这是一份笔记，但不是一份基础教程。&lt;/p&gt;
     
     </summary>
     
@@ -291,7 +317,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jun 19 2019 17:59:18 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;本文会讲一些在 GitLab CI/CD 中可能会用到的辅助工具，包括隐藏任务、依赖缓存、定时任务以及部署环境。&lt;/p&gt;
+      &lt;!-- build time:Sat Sep 05 2020 23:51:27 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;本文会讲一些在 GitLab CI/CD 中可能会用到的辅助工具，包括隐藏任务、依赖缓存、定时任务以及部署环境。&lt;/p&gt;
     
     </summary>
     
@@ -315,7 +341,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jun 19 2019 17:59:18 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;前两篇我们讲了 GitLab CI/CD 的简单应用及部署方式，这一篇简单讲一下如何将 GitLab CI/CD 与日常开发部署流程结合。&lt;/p&gt;
+      &lt;!-- build time:Sat Sep 05 2020 23:51:27 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;前两篇我们讲了 GitLab CI/CD 的简单应用及部署方式，这一篇简单讲一下如何将 GitLab CI/CD 与日常开发部署流程结合。&lt;/p&gt;
     
     </summary>
     
@@ -339,7 +365,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jun 19 2019 17:59:18 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;本文是 GitLab CI/CD 系列的第二篇，主要介绍 GitLab CI Runner 在 Docker 和 Kubernetes 环境下的部署方式。&lt;/p&gt;
+      &lt;!-- build time:Sat Sep 05 2020 23:51:27 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;本文是 GitLab CI/CD 系列的第二篇，主要介绍 GitLab CI Runner 在 Docker 和 Kubernetes 环境下的部署方式。&lt;/p&gt;
     
     </summary>
     
@@ -363,7 +389,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jun 19 2019 17:59:18 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;最近玩了 GitLab CI/CD 平台，通过搭建这个平台也收获了一些关于 DevOps 的基本技能，打算通过几篇文章来讲述一下 GitLab CI/CD 平台的构建及应用。本文对 GitLab CI/CD 以及 CI/CD 流程定义文件的写法做了简要介绍。&lt;/p&gt;
+      &lt;!-- build time:Sat Sep 05 2020 23:51:27 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;最近玩了 GitLab CI/CD 平台，通过搭建这个平台也收获了一些关于 DevOps 的基本技能，打算通过几篇文章来讲述一下 GitLab CI/CD 平台的构建及应用。本文对 GitLab CI/CD 以及 CI/CD 流程定义文件的写法做了简要介绍。&lt;/p&gt;
     
     </summary>
     
@@ -387,7 +413,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jun 19 2019 17:59:18 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;很久之前就想尝试一下用 supervisor 部署 Web 应用，几个月前把 Python 应用的服务器都换成了 gunicorn，今天终于把进程管理服务换成了 supervisor. 看我的拖延症。&lt;/p&gt;
+      &lt;!-- build time:Sat Sep 05 2020 23:51:27 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;很久之前就想尝试一下用 supervisor 部署 Web 应用，几个月前把 Python 应用的服务器都换成了 gunicorn，今天终于把进程管理服务换成了 supervisor. 看我的拖延症。&lt;/p&gt;
     
     </summary>
     
@@ -413,7 +439,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jun 19 2019 17:59:18 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;拖了很久，终于用 Django REST Framework 写了个小 Demo.&lt;/p&gt;
+      &lt;!-- build time:Sat Sep 05 2020 23:51:27 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;拖了很久，终于用 Django REST Framework 写了个小 Demo.&lt;/p&gt;
     
     </summary>
     
@@ -437,7 +463,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Wed Jun 19 2019 17:59:18 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;课设写不完，要炸了… Windows UI 好难写，只好用 PyQt 解决… 怎么把 Python 和 C 模块连起来？就用 ctypes.&lt;/p&gt;
+      &lt;!-- build time:Sat Sep 05 2020 23:51:27 GMT+0800 (GMT+08:00) --&gt;&lt;p&gt;课设写不完，要炸了… Windows UI 好难写，只好用 PyQt 解决… 怎么把 Python 和 C 模块连起来？就用 ctypes.&lt;/p&gt;
     
     </summary>
     
@@ -447,28 +473,6 @@
       <category term="python" scheme="https://blog.stdioa.com/tags/python/"/>
     
       <category term="ctypes" scheme="https://blog.stdioa.com/tags/ctypes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SUCTF 非官方 Writeup</title>
-    <link href="https://blog.stdioa.com/2016/11/SuCTF-Writeup/"/>
-    <id>https://blog.stdioa.com/2016/11/SuCTF-Writeup/</id>
-    <published>2016-11-15T11:23:58.000Z</published>
-    <updated>2018-07-12T11:35:13.405Z</updated>
-    
-    <summary type="html">
-    
-      &lt;!-- build time:Wed Jun 19 2019 17:59:18 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;又玩了一场 CTF，虽然是个人赛，但是有老司机带我飞。继续开脑洞，也学到了不少，做了很多之前没做过的题。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="乱七八糟" scheme="https://blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
-    
-    
-      <category term="CTF" scheme="https://blog.stdioa.com/tags/CTF/"/>
-    
-      <category term="脑洞" scheme="https://blog.stdioa.com/tags/%E8%84%91%E6%B4%9E/"/>
     
   </entry>
   
