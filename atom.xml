@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.stdioa.com/"/>
-  <updated>2020-12-27T06:53:32.741Z</updated>
+  <updated>2021-02-23T12:53:45.903Z</updated>
   <id>https://blog.stdioa.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>由 ttrss 解析数据库地址失败引出的一个问题</title>
+    <link href="https://blog.stdioa.com/2021/02/alpine-time-call/"/>
+    <id>https://blog.stdioa.com/2021/02/alpine-time-call/</id>
+    <published>2021-02-23T12:51:14.000Z</published>
+    <updated>2021-02-23T12:53:45.903Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;水一篇文章，主要用来告诫自己认真看文档。🌚&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Golang" scheme="https://blog.stdioa.com/categories/Golang/"/>
+    
+    
+      <category term="Docker" scheme="https://blog.stdioa.com/tags/Docker/"/>
+    
+      <category term="Alpine" scheme="https://blog.stdioa.com/tags/Alpine/"/>
+    
+  </entry>
   
   <entry>
     <title>protobuf 升级后带来的一些坑</title>
@@ -192,11 +214,11 @@
       <category term="网络" scheme="https://blog.stdioa.com/categories/%E7%BD%91%E7%BB%9C/"/>
     
     
+      <category term="Linux" scheme="https://blog.stdioa.com/tags/Linux/"/>
+    
       <category term="IPv6" scheme="https://blog.stdioa.com/tags/IPv6/"/>
     
       <category term="NAS" scheme="https://blog.stdioa.com/tags/NAS/"/>
-    
-      <category term="Linux" scheme="https://blog.stdioa.com/tags/Linux/"/>
     
   </entry>
   
@@ -449,30 +471,6 @@
       <category term="supervisor" scheme="https://blog.stdioa.com/tags/supervisor/"/>
     
       <category term="gunicorn" scheme="https://blog.stdioa.com/tags/gunicorn/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Django REST Framework 入门</title>
-    <link href="https://blog.stdioa.com/2017/03/DRF-demo/"/>
-    <id>https://blog.stdioa.com/2017/03/DRF-demo/</id>
-    <published>2017-03-09T06:52:00.000Z</published>
-    <updated>2018-07-12T11:35:13.401Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;拖了很久，终于用 Django REST Framework 写了个小 Demo.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Python" scheme="https://blog.stdioa.com/categories/Python/"/>
-    
-    
-      <category term="Python" scheme="https://blog.stdioa.com/tags/Python/"/>
-    
-      <category term="Django" scheme="https://blog.stdioa.com/tags/Django/"/>
-    
-      <category term="Django REST Framework" scheme="https://blog.stdioa.com/tags/Django-REST-Framework/"/>
     
   </entry>
   
