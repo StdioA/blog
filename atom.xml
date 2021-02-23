@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.stdioa.com/"/>
-  <updated>2021-02-23T12:56:21.012Z</updated>
+  <updated>2021-02-23T12:59:07.255Z</updated>
   <id>https://blog.stdioa.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>由 ttrss 解析数据库地址失败引出的一个问题</title>
+    <title>由 TT-RSS 解析数据库地址失败引出的一个问题</title>
     <link href="https://blog.stdioa.com/2021/02/alpine-time-call/"/>
     <id>https://blog.stdioa.com/2021/02/alpine-time-call/</id>
     <published>2021-02-23T12:51:14.000Z</published>
-    <updated>2021-02-23T12:56:21.012Z</updated>
+    <updated>2021-02-23T12:59:07.255Z</updated>
     
     <summary type="html">
     
@@ -35,6 +35,8 @@
       <category term="Docker" scheme="https://blog.stdioa.com/tags/Docker/"/>
     
       <category term="Alpine" scheme="https://blog.stdioa.com/tags/Alpine/"/>
+    
+      <category term="树莓派" scheme="https://blog.stdioa.com/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
     
   </entry>
   
