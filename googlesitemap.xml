@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.stdioa.com/2021/07/scrape-prometheus-metrics-outside-kubernetes/</loc>
+    
+    <lastmod>2021-07-11T11:58:14.131Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.stdioa.com/2021/02/alpine-time-call/</loc>
     
     <lastmod>2021-02-23T12:59:07.255Z</lastmod>

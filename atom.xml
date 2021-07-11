@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.stdioa.com/"/>
-  <updated>2021-02-23T12:59:07.255Z</updated>
+  <updated>2021-07-11T11:58:14.131Z</updated>
   <id>https://blog.stdioa.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在 K3S 集群外监控集群内的指标</title>
+    <link href="https://blog.stdioa.com/2021/07/scrape-prometheus-metrics-outside-kubernetes/"/>
+    <id>https://blog.stdioa.com/2021/07/scrape-prometheus-metrics-outside-kubernetes/</id>
+    <published>2021-07-11T09:00:00.000Z</published>
+    <updated>2021-07-11T11:58:14.131Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;s&gt;吃饱了撑的&lt;/s&gt;，尝试一下 Prometheus 在 K3S 集群外抓取集群内指标的若干姿势。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="DevOps" scheme="https://blog.stdioa.com/categories/DevOps/"/>
+    
+    
+      <category term="Prometheus" scheme="https://blog.stdioa.com/tags/Prometheus/"/>
+    
+      <category term="Kubernetes" scheme="https://blog.stdioa.com/tags/Kubernetes/"/>
+    
+      <category term="iptables" scheme="https://blog.stdioa.com/tags/iptables/"/>
+    
+  </entry>
   
   <entry>
     <title>由 TT-RSS 解析数据库地址失败引出的一个问题</title>
@@ -216,11 +240,11 @@
       <category term="网络" scheme="https://blog.stdioa.com/categories/%E7%BD%91%E7%BB%9C/"/>
     
     
-      <category term="Linux" scheme="https://blog.stdioa.com/tags/Linux/"/>
-    
       <category term="IPv6" scheme="https://blog.stdioa.com/tags/IPv6/"/>
     
       <category term="NAS" scheme="https://blog.stdioa.com/tags/NAS/"/>
+    
+      <category term="Linux" scheme="https://blog.stdioa.com/tags/Linux/"/>
     
   </entry>
   
@@ -447,32 +471,6 @@
       <category term="GitLab" scheme="https://blog.stdioa.com/tags/GitLab/"/>
     
       <category term="CI/CD" scheme="https://blog.stdioa.com/tags/CI-CD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用 supervisor 及 gunicorn 部署 Web 应用</title>
-    <link href="https://blog.stdioa.com/2017/03/deploy-apps-with-supervisor-and-gunicorn/"/>
-    <id>https://blog.stdioa.com/2017/03/deploy-apps-with-supervisor-and-gunicorn/</id>
-    <published>2017-03-19T09:00:00.000Z</published>
-    <updated>2018-07-12T00:15:09.045Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;很久之前就想尝试一下用 supervisor 部署 Web 应用，几个月前把 Python 应用的服务器都换成了 gunicorn，今天终于把进程管理服务换成了 supervisor. 看我的拖延症。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Web" scheme="https://blog.stdioa.com/categories/Web/"/>
-    
-    
-      <category term="Python" scheme="https://blog.stdioa.com/tags/Python/"/>
-    
-      <category term="Django" scheme="https://blog.stdioa.com/tags/Django/"/>
-    
-      <category term="supervisor" scheme="https://blog.stdioa.com/tags/supervisor/"/>
-    
-      <category term="gunicorn" scheme="https://blog.stdioa.com/tags/gunicorn/"/>
     
   </entry>
   
