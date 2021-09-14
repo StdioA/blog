@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.stdioa.com/2021/09/homelab-share/</loc>
+    
+    <lastmod>2021-09-14T12:22:43.335Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.stdioa.com/2020/09/using-beancount/</loc>
     
     <lastmod>2021-08-04T02:58:19.600Z</lastmod>

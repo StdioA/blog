@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.stdioa.com/"/>
-  <updated>2021-07-11T11:58:14.131Z</updated>
+  <updated>2021-09-14T12:22:43.335Z</updated>
   <id>https://blog.stdioa.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HomeLab 玩法简单分享</title>
+    <link href="https://blog.stdioa.com/2021/09/homelab-share/"/>
+    <id>https://blog.stdioa.com/2021/09/homelab-share/</id>
+    <published>2021-09-14T11:51:33.000Z</published>
+    <updated>2021-09-14T12:22:43.335Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;大学毕业之前一个冲动买了台式机，又一个冲动买了台 Linux 主机。到现在这它已经跑了四年多了，简单分享下自己的玩法。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="乱七八糟" scheme="https://blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
+    
+    
+      <category term="NAS" scheme="https://blog.stdioa.com/tags/NAS/"/>
+    
+      <category term="Docker" scheme="https://blog.stdioa.com/tags/Docker/"/>
+    
+      <category term="Homelab" scheme="https://blog.stdioa.com/tags/Homelab/"/>
+    
+  </entry>
   
   <entry>
     <title>在 K3S 集群外监控集群内的指标</title>
@@ -436,30 +460,6 @@
     <summary type="html">
     
       &lt;p&gt;本文是 GitLab CI/CD 系列的第二篇，主要介绍 GitLab CI Runner 在 Docker 和 Kubernetes 环境下的部署方式。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="DevOps" scheme="https://blog.stdioa.com/categories/DevOps/"/>
-    
-    
-      <category term="DevOps" scheme="https://blog.stdioa.com/tags/DevOps/"/>
-    
-      <category term="GitLab" scheme="https://blog.stdioa.com/tags/GitLab/"/>
-    
-      <category term="CI/CD" scheme="https://blog.stdioa.com/tags/CI-CD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GitLab CI/CD 基础教程（一）</title>
-    <link href="https://blog.stdioa.com/2018/06/gitlab-cicd-fundmental/"/>
-    <id>https://blog.stdioa.com/2018/06/gitlab-cicd-fundmental/</id>
-    <published>2018-06-06T07:46:00.000Z</published>
-    <updated>2018-07-12T00:14:59.213Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近玩了 GitLab CI/CD 平台，通过搭建这个平台也收获了一些关于 DevOps 的基本技能，打算通过几篇文章来讲述一下 GitLab CI/CD 平台的构建及应用。本文对 GitLab CI/CD 以及 CI/CD 流程定义文件的写法做了简要介绍。&lt;/p&gt;
     
     </summary>
     
