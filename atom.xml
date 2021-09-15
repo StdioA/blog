@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.stdioa.com/"/>
-  <updated>2021-09-14T12:22:43.335Z</updated>
+  <updated>2021-09-15T02:21:32.608Z</updated>
   <id>https://blog.stdioa.com/</id>
   
   <author>
@@ -21,20 +21,20 @@
     <link href="https://blog.stdioa.com/2021/09/homelab-share/"/>
     <id>https://blog.stdioa.com/2021/09/homelab-share/</id>
     <published>2021-09-14T11:51:33.000Z</published>
-    <updated>2021-09-14T12:22:43.335Z</updated>
+    <updated>2021-09-15T02:21:32.608Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;大学毕业之前一个冲动买了台式机，又一个冲动买了台 Linux 主机。到现在这它已经跑了四年多了，简单分享下自己的玩法。&lt;/p&gt;
+      &lt;p&gt;大学毕业之前一个冲动买了台式机，又一个冲动买了台 Linux 主机。到现在它已经运行了四年多了，简单分享下自己的玩法。&lt;/p&gt;
     
     </summary>
     
       <category term="乱七八糟" scheme="https://blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
     
     
-      <category term="NAS" scheme="https://blog.stdioa.com/tags/NAS/"/>
-    
       <category term="Docker" scheme="https://blog.stdioa.com/tags/Docker/"/>
+    
+      <category term="NAS" scheme="https://blog.stdioa.com/tags/NAS/"/>
     
       <category term="Homelab" scheme="https://blog.stdioa.com/tags/Homelab/"/>
     
@@ -264,11 +264,11 @@
       <category term="网络" scheme="https://blog.stdioa.com/categories/%E7%BD%91%E7%BB%9C/"/>
     
     
+      <category term="Linux" scheme="https://blog.stdioa.com/tags/Linux/"/>
+    
       <category term="IPv6" scheme="https://blog.stdioa.com/tags/IPv6/"/>
     
       <category term="NAS" scheme="https://blog.stdioa.com/tags/NAS/"/>
-    
-      <category term="Linux" scheme="https://blog.stdioa.com/tags/Linux/"/>
     
   </entry>
   
