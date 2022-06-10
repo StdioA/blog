@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.stdioa.com/"/>
-  <updated>2021-09-16T06:41:52.137Z</updated>
+  <updated>2022-06-10T12:57:53.256Z</updated>
   <id>https://blog.stdioa.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一种 IPv6 地址编码方案</title>
+    <link href="https://blog.stdioa.com/2022/06/encode-ipv6-into-utf8/"/>
+    <id>https://blog.stdioa.com/2022/06/encode-ipv6-into-utf8/</id>
+    <published>2022-06-10T12:51:14.000Z</published>
+    <updated>2022-06-10T12:57:53.256Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;又搞了一些骚操作：把一个 IPv6 地址压缩成一个短字符串。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="开发" scheme="https://blog.stdioa.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="IPv6" scheme="https://blog.stdioa.com/tags/IPv6/"/>
+    
+      <category term="Unicode" scheme="https://blog.stdioa.com/tags/Unicode/"/>
+    
+      <category term="UTF-8" scheme="https://blog.stdioa.com/tags/UTF-8/"/>
+    
+  </entry>
   
   <entry>
     <title>HomeLab 玩法简单分享</title>
@@ -145,7 +169,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;在 GitHub 上找到一本解读 Go 实现细节的好书，名叫&lt;a href=&quot;https://github.com/tiancaiamao/go-internals/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;《深入解析 Go》&lt;/a&gt;。&lt;br&gt;大致看了一遍，简单做了些笔记。&lt;/p&gt;
+      &lt;p&gt;在 GitHub 上找到一本解读 Go 实现细节的好书，名叫&lt;a href=&quot;https://github.com/tiancaiamao/go-internals/&quot;&gt;《深入解析 Go》&lt;/a&gt;。&lt;br /&gt;
+大致看了一遍，简单做了些笔记。&lt;/p&gt;
     
     </summary>
     
@@ -165,7 +190,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;这几个月在考虑从 Python 转向 Golang，所以专门学习了 Golang.&lt;br&gt;这里是 Golang 学习的一些记录。&lt;/p&gt;
+      &lt;p&gt;这几个月在考虑从 Python 转向 Golang，所以专门学习了 Golang.&lt;br /&gt;
+这里是 Golang 学习的一些记录。&lt;/p&gt;
     
     </summary>
     
@@ -345,7 +371,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;看了一本在线的小书，叫&lt;a href=&quot;https://yunlzheng.gitbook.io/prometheus-book/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;《Prometheus Book》&lt;/a&gt;，做了一点摘抄和笔记。&lt;/p&gt;
+      &lt;p&gt;看了一本在线的小书，叫&lt;a href=&quot;https://yunlzheng.gitbook.io/prometheus-book/&quot;&gt;《Prometheus Book》&lt;/a&gt;，做了一点摘抄和笔记。&lt;/p&gt;
     
     </summary>
     
@@ -367,7 +393,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;本文原载于 &lt;a href=&quot;https://opensource.com/article/18/10/functional-programming-python-immutable-data-structures&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;opensource.com&lt;/a&gt;，由本人翻译，翻译作品原载于 &lt;a href=&quot;https://linux.cn/article-10222-1.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;linux.cn&lt;/a&gt;。翻译及转载基于 &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CC-BY-NC-SA 协议&lt;/a&gt;。具体创作参与信息可见文章最后部分。&lt;/p&gt;&lt;h2 id=&quot;-more-&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#-more-&quot;&gt;&lt;/a&gt;
+      &lt;p&gt;本文原载于 &lt;a href=&quot;https://opensource.com/article/18/10/functional-programming-python-immutable-data-structures&quot;&gt;opensource.com&lt;/a&gt;，由本人翻译，翻译作品原载于 &lt;a href=&quot;https://linux.cn/article-10222-1.html&quot;&gt;linux.cn&lt;/a&gt;。翻译及转载基于 &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh&quot;&gt;CC-BY-NC-SA 协议&lt;/a&gt;。具体创作参与信息可见文章最后部分。&lt;/p&gt;
+&lt;h2 id=&quot;-more-&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#-more-&quot;&gt;&lt;/a&gt;
     
     </summary>
     
@@ -436,30 +463,6 @@
     <summary type="html">
     
       &lt;p&gt;前两篇我们讲了 GitLab CI/CD 的简单应用及部署方式，这一篇简单讲一下如何将 GitLab CI/CD 与日常开发部署流程结合。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="DevOps" scheme="https://blog.stdioa.com/categories/DevOps/"/>
-    
-    
-      <category term="DevOps" scheme="https://blog.stdioa.com/tags/DevOps/"/>
-    
-      <category term="GitLab" scheme="https://blog.stdioa.com/tags/GitLab/"/>
-    
-      <category term="CI/CD" scheme="https://blog.stdioa.com/tags/CI-CD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GitLab CI/CD 基础教程（二）</title>
-    <link href="https://blog.stdioa.com/2018/06/gitlab-cicd-deploy/"/>
-    <id>https://blog.stdioa.com/2018/06/gitlab-cicd-deploy/</id>
-    <published>2018-06-18T07:46:00.000Z</published>
-    <updated>2018-10-08T13:06:22.539Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本文是 GitLab CI/CD 系列的第二篇，主要介绍 GitLab CI Runner 在 Docker 和 Kubernetes 环境下的部署方式。&lt;/p&gt;
     
     </summary>
     
