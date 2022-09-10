@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://blog.stdioa.com/about/index.html</loc>
+    <loc>https://blog.stdioa.com/categories/index.html</loc>
     
     <lastmod>2022-09-10</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://blog.stdioa.com/categories/index.html</loc>
+    <loc>https://blog.stdioa.com/about/index.html</loc>
     
     <lastmod>2022-09-10</lastmod>
     
@@ -119,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://blog.stdioa.com/2020/12/protobuf-upgrade/</loc>
+    <loc>https://blog.stdioa.com/2018/11/prometheus-book-note/</loc>
     
     <lastmod>2022-09-10</lastmod>
     
@@ -128,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://blog.stdioa.com/2018/11/prometheus-book-note/</loc>
+    <loc>https://blog.stdioa.com/2020/12/protobuf-upgrade/</loc>
     
     <lastmod>2022-09-10</lastmod>
     
@@ -182,7 +182,7 @@
   </url>
   
   <url>
-    <loc>https://blog.stdioa.com/2015/11/learning-python-unittest/</loc>
+    <loc>https://blog.stdioa.com/2015/10/learning-python-logging/</loc>
     
     <lastmod>2022-09-10</lastmod>
     
@@ -191,7 +191,7 @@
   </url>
   
   <url>
-    <loc>https://blog.stdioa.com/2015/10/learning-python-logging/</loc>
+    <loc>https://blog.stdioa.com/2015/11/learning-python-unittest/</loc>
     
     <lastmod>2022-09-10</lastmod>
     
@@ -218,7 +218,7 @@
   </url>
   
   <url>
-    <loc>https://blog.stdioa.com/2019/06/go-internal-note/</loc>
+    <loc>https://blog.stdioa.com/2021/09/homelab-share/</loc>
     
     <lastmod>2022-09-10</lastmod>
     
@@ -227,7 +227,7 @@
   </url>
   
   <url>
-    <loc>https://blog.stdioa.com/2021/09/homelab-share/</loc>
+    <loc>https://blog.stdioa.com/2019/06/go-internal-note/</loc>
     
     <lastmod>2022-09-10</lastmod>
     
@@ -245,15 +245,6 @@
   </url>
   
   <url>
-    <loc>https://blog.stdioa.com/2018/07/gitlab-cicd-auxiliary/</loc>
-    
-    <lastmod>2022-09-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.stdioa.com/2019/03/geektime-microservice-notes/</loc>
     
     <lastmod>2022-09-10</lastmod>
@@ -263,7 +254,7 @@
   </url>
   
   <url>
-    <loc>https://blog.stdioa.com/2018/06/gitlab-cicd-fundmental/</loc>
+    <loc>https://blog.stdioa.com/2018/07/gitlab-cicd-auxiliary/</loc>
     
     <lastmod>2022-09-10</lastmod>
     
@@ -273,6 +264,15 @@
   
   <url>
     <loc>https://blog.stdioa.com/2018/06/gitlab-cicd-deploy/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2018/06/gitlab-cicd-fundmental/</loc>
     
     <lastmod>2022-09-10</lastmod>
     
@@ -875,6 +875,13 @@
   </url>
   
   <url>
+    <loc>https://blog.stdioa.com/tags/logging/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.stdioa.com/tags/unittest/</loc>
     <lastmod>2022-09-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -883,13 +890,6 @@
   
   <url>
     <loc>https://blog.stdioa.com/tags/virtualenv/</loc>
-    <lastmod>2022-09-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/tags/logging/</loc>
     <lastmod>2022-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -917,14 +917,14 @@
   </url>
   
   <url>
-    <loc>https://blog.stdioa.com/tags/Protobuf/</loc>
+    <loc>https://blog.stdioa.com/tags/Prometheus/</loc>
     <lastmod>2022-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.stdioa.com/tags/Prometheus/</loc>
+    <loc>https://blog.stdioa.com/tags/Protobuf/</loc>
     <lastmod>2022-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
