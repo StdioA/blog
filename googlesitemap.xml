@@ -2,381 +2,1074 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.stdioa.com/2022/06/encode-ipv6-into-utf8/</loc>
-    
-    <lastmod>2022-06-10T12:57:53.256Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2021/09/homelab-share/</loc>
-    
-    <lastmod>2021-09-16T06:41:52.137Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2020/09/using-beancount/</loc>
-    
-    <lastmod>2021-08-04T02:58:19.600Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2021/07/scrape-prometheus-metrics-outside-kubernetes/</loc>
-    
-    <lastmod>2021-07-11T11:58:14.131Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2021/02/alpine-time-call/</loc>
-    
-    <lastmod>2021-02-23T12:59:07.255Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2020/12/protobuf-upgrade/</loc>
-    
-    <lastmod>2020-12-27T06:53:32.741Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2019/06/go-internal-note/</loc>
-    
-    <lastmod>2019-06-24T08:40:49.945Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2019/06/golang-learning-experience/</loc>
-    
-    <lastmod>2019-06-24T08:25:39.018Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2019/05/find-minn-with-heap/</loc>
-    
-    <lastmod>2019-05-21T08:46:12.680Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2019/04/data-migration-between-microservices/</loc>
-    
-    <lastmod>2019-04-09T07:50:37.525Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/about/index.html</loc>
-    
-    <lastmod>2019-04-06T12:17:16.967Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2019/03/geektime-microservice-notes/</loc>
-    
-    <lastmod>2019-03-30T11:58:25.697Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2019/02/build-file-manager-on-ipv6/</loc>
-    
-    <lastmod>2019-03-02T15:03:51.803Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2018/11/prometheus-book-note/</loc>
-    
-    <lastmod>2019-02-21T11:32:38.048Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2019/02/NTP-summary/</loc>
-    
-    <lastmod>2019-02-13T00:11:49.387Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2018/12/fluent-python-notes/</loc>
-    
-    <lastmod>2018-12-24T14:19:42.403Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2018/12/python-hacking-advanced-partial/</loc>
-    
-    <lastmod>2018-12-12T14:07:15.798Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2018/07/gitlab-cicd-auxiliary/</loc>
-    
-    <lastmod>2018-11-30T15:35:21.204Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/links/index.html</loc>
-    
-    <lastmod>2018-11-27T00:19:59.433Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2018/11/translation-python-functional-programming/</loc>
-    
-    <lastmod>2018-11-14T00:18:59.045Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2018/10/docker-practice-notes/</loc>
-    
-    <lastmod>2018-11-11T10:39:09.526Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2018/06/gitlab-cicd-deploy/</loc>
-    
-    <lastmod>2018-10-08T13:06:22.539Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2016/04/leetcode-database-solutions/</loc>
-    
-    <lastmod>2018-07-15T04:32:30.066Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2015/11/learning-python-unittest/</loc>
-    
-    <lastmod>2018-07-12T11:35:13.432Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2016/02/learning-javascript/</loc>
-    
-    <lastmod>2018-07-12T11:35:13.428Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2018/06/gitlab-cicd-usage/</loc>
-    
-    <lastmod>2018-07-12T11:35:13.424Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2015/07/deploy-a-LAMP-environment/</loc>
-    
-    <lastmod>2018-07-12T11:35:13.415Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2015/12/blog-migration-ii/</loc>
-    
-    <lastmod>2018-07-12T11:35:13.409Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2016/11/SuCTF-Writeup/</loc>
-    
-    <lastmod>2018-07-12T11:35:13.405Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2017/03/DRF-demo/</loc>
-    
-    <lastmod>2018-07-12T11:35:13.401Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2016/01/blog-migration-iii/</loc>
-    
-    <lastmod>2018-07-12T00:15:12.238Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2015/12/blog-migration/</loc>
-    
-    <lastmod>2018-07-12T00:15:11.629Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2015/09/building-a-private-kms-server/</loc>
-    
-    <lastmod>2018-07-12T00:15:10.724Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2017/03/deploy-apps-with-supervisor-and-gunicorn/</loc>
-    
-    <lastmod>2018-07-12T00:15:09.045Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2016/05/django-mysql-charset-problem/</loc>
-    
-    <lastmod>2018-07-12T00:15:08.365Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2015/09/essay-ajax/</loc>
-    
-    <lastmod>2018-07-12T00:15:06.869Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2016/03/essay-atom-using-experience/</loc>
-    
-    <lastmod>2018-07-12T00:15:06.013Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2015/10/essay-git/</loc>
-    
-    <lastmod>2018-07-12T00:15:05.238Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2015/09/essay-pip-acceleration/</loc>
-    
-    <lastmod>2018-07-12T00:15:04.549Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2015/12/essay-solve-InsecurePlatformWarning/</loc>
-    
-    <lastmod>2018-07-12T00:15:03.564Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2016/03/essay-vue/</loc>
-    
-    <lastmod>2018-07-12T00:15:02.653Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2018/06/gitlab-cicd-fundmental/</loc>
-    
-    <lastmod>2018-07-12T00:14:59.213Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2015/10/learning-python-collections/</loc>
-    
-    <lastmod>2018-07-12T00:14:51.557Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2015/10/learning-python-context-management/</loc>
-    
-    <lastmod>2018-07-12T00:14:50.518Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2016/12/learning-python-ctypes/</loc>
-    
-    <lastmod>2018-07-12T00:14:49.653Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2015/10/learning-python-iterator/</loc>
-    
-    <lastmod>2018-07-12T00:14:48.942Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2015/10/learning-python-logging/</loc>
-    
-    <lastmod>2018-07-12T00:14:48.044Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2015/10/learning-python-virtualenv/</loc>
-    
-    <lastmod>2018-07-12T00:14:44.948Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2016/04/nuaactf-unofficial-writeup/</loc>
-    
-    <lastmod>2018-07-12T00:14:40.164Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.stdioa.com/2015/09/using-wget-in-Windows/</loc>
-    
-    <lastmod>2018-07-12T00:14:30.506Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://blog.stdioa.com/tags/index.html</loc>
     
-    <lastmod>2018-07-11T12:29:12.215Z</lastmod>
+    <lastmod>2022-09-10</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.stdioa.com/repository/index.html</loc>
     
-    <lastmod>2018-07-11T12:29:12.214Z</lastmod>
+    <lastmod>2022-09-10</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2015/09/using-wget-in-Windows/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/about/index.html</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.stdioa.com/categories/index.html</loc>
     
-    <lastmod>2018-07-11T12:29:12.213Z</lastmod>
+    <lastmod>2022-09-10</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/links/index.html</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2018/12/python-hacking-advanced-partial/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2021/07/scrape-prometheus-metrics-outside-kubernetes/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2018/11/translation-python-functional-programming/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2020/09/using-beancount/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2015/10/learning-python-virtualenv/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2016/04/leetcode-database-solutions/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2016/04/nuaactf-unofficial-writeup/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2020/12/protobuf-upgrade/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2018/11/prometheus-book-note/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2016/02/learning-javascript/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2015/10/learning-python-collections/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2015/10/learning-python-context-management/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2016/12/learning-python-ctypes/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2015/10/learning-python-iterator/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2015/11/learning-python-unittest/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2015/10/learning-python-logging/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2018/06/gitlab-cicd-usage/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2019/06/golang-learning-experience/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2019/06/go-internal-note/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2021/09/homelab-share/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2018/12/fluent-python-notes/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2018/07/gitlab-cicd-auxiliary/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2019/03/geektime-microservice-notes/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2018/06/gitlab-cicd-fundmental/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2018/06/gitlab-cicd-deploy/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2015/09/essay-ajax/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2016/03/essay-atom-using-experience/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2015/10/essay-git/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2015/09/essay-pip-acceleration/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2015/12/essay-solve-InsecurePlatformWarning/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2016/03/essay-vue/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2019/05/find-minn-with-heap/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2015/07/deploy-a-LAMP-environment/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2017/03/deploy-apps-with-supervisor-and-gunicorn/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2016/05/django-mysql-charset-problem/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2018/10/docker-practice-notes/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2022/06/encode-ipv6-into-utf8/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2015/12/blog-migration-ii/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2016/01/blog-migration-iii/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2015/12/blog-migration/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2019/02/build-file-manager-on-ipv6/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2015/09/building-a-private-kms-server/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2019/04/data-migration-between-microservices/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2017/03/DRF-demo/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2019/02/NTP-summary/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2016/11/SuCTF-Writeup/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/2021/02/alpine-time-call/</loc>
+    
+    <lastmod>2022-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://blog.stdioa.com/404.html</loc>
     
-    <lastmod>2017-06-29T04:38:39.767Z</lastmod>
+    <lastmod>2022-09-10</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  <url>
+    <loc>https://blog.stdioa.com/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/Python/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/Django/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/Django-REST-Framework/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/Linux/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/NTP/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/CTF/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/%E8%84%91%E6%B4%9E/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/Docker/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/Alpine/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/nginx/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/Github/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/Let-s-Encrypt/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/%E4%B8%83%E7%89%9B/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/git/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/python/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/IPv6/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/NAS/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/KMS/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/Apache/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/MySQL/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/PHP/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/supervisor/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/gunicorn/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/%E8%AF%BB%E4%B9%A6/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/Unicode/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/UTF-8/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/Ajax/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/Atom/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/Sublime-Text/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/Git/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/pip/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/openssl/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/requests/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/Javascript/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/node-js/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/vue-js/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/%E5%A0%86/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/DevOps/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/GitLab/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/CI-CD/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/Golang/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/Homelab/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/collections/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/ctypes/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/%E8%BF%AD%E4%BB%A3%E5%99%A8/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/unittest/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/virtualenv/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/logging/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/LeetCode/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/SQL/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/Protobuf/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/Prometheus/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/Kubernetes/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/iptables/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/LCTT/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/%E8%AE%B0%E8%B4%A6/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/Beancount/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/fava/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/Windows/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/tags/wget/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+
+  
+  <url>
+    <loc>https://blog.stdioa.com/categories/Python/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/categories/%E7%BD%91%E7%BB%9C/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/categories/%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/categories/Web/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/categories/DevOps/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/categories/%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/categories/%E9%9A%8F%E6%89%8B%E8%AE%B0/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/categories/Javascript/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/categories/Golang/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/categories/LeetCode/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.stdioa.com/categories/%E7%BF%BB%E8%AF%91/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
 </urlset>
