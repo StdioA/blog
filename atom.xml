@@ -6,7 +6,7 @@
   <link href="https://blog.stdioa.com/atom.xml" rel="self"/>
   
   <link href="https://blog.stdioa.com/"/>
-  <updated>2022-09-10T01:41:19.791Z</updated>
+  <updated>2022-10-29T14:50:02.690Z</updated>
   <id>https://blog.stdioa.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>USTC Hackergame 2022 玩耍记录</title>
+    <link href="https://blog.stdioa.com/2022/10/ustc-hackergame-2022-writeup/"/>
+    <id>https://blog.stdioa.com/2022/10/ustc-hackergame-2022-writeup/</id>
+    <published>2022-10-25T11:23:58.000Z</published>
+    <updated>2022-10-29T14:50:02.690Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;上周日晚上，偶然看到一个原神玩家群（？）里面有人发了一张图，说是 USTC 的 CTF. 上一次玩 CTF 还是六年前，不过这次一时兴起打算玩玩看。&lt;br /&gt;
+由于上班比较忙，所以只玩了一天多一点，做了一些简单题。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="乱七八糟" scheme="https://blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
+    
+    
+    <category term="CTF" scheme="https://blog.stdioa.com/tags/CTF/"/>
+    
+    <category term="脑洞" scheme="https://blog.stdioa.com/tags/%E8%84%91%E6%B4%9E/"/>
+    
+  </entry>
   
   <entry>
     <title>一种 IPv6 地址编码方案</title>
@@ -419,29 +441,6 @@
     
     
     <summary type="html">&lt;p&gt;本文会讲一些在 GitLab CI/CD 中可能会用到的辅助工具，包括隐藏任务、依赖缓存、定时任务以及部署环境。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="DevOps" scheme="https://blog.stdioa.com/categories/DevOps/"/>
-    
-    
-    <category term="DevOps" scheme="https://blog.stdioa.com/tags/DevOps/"/>
-    
-    <category term="GitLab" scheme="https://blog.stdioa.com/tags/GitLab/"/>
-    
-    <category term="CI/CD" scheme="https://blog.stdioa.com/tags/CI-CD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GitLab CI/CD 基础教程（三）</title>
-    <link href="https://blog.stdioa.com/2018/06/gitlab-cicd-usage/"/>
-    <id>https://blog.stdioa.com/2018/06/gitlab-cicd-usage/</id>
-    <published>2018-06-23T12:53:00.000Z</published>
-    <updated>2022-09-10T01:41:19.794Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;前两篇我们讲了 GitLab CI/CD 的简单应用及部署方式，这一篇简单讲一下如何将 GitLab CI/CD 与日常开发部署流程结合。&lt;/p&gt;</summary>
     
     
     

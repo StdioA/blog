@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <meta charset="utf-8">
+  
+    <meta name=referrer content=no-referrer-when-downgrade>
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#2a3f5b" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>USTC Hackergame 2022 玩耍记录 | Stdio&#39;s Blog</title>
+  <meta name="description" content="上周日晚上，偶然看到一个原神玩家群（？）里面有人发了一张图，说是 USTC 的 CTF. 上一次玩 CTF 还是六年前，不过这次一时兴起打算玩玩看。 由于上班比较忙，所以只玩了一天多一点，做了一些简单题。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="USTC Hackergame 2022 玩耍记录">
+<meta property="og:url" content="https://blog.stdioa.com/2022/10/ustc-hackergame-2022-writeup/index.html">
+<meta property="og:site_name" content="Stdio&#39;s Blog">
+<meta property="og:description" content="上周日晚上，偶然看到一个原神玩家群（？）里面有人发了一张图，说是 USTC 的 CTF. 上一次玩 CTF 还是六年前，不过这次一时兴起打算玩玩看。 由于上班比较忙，所以只玩了一天多一点，做了一些简单题。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://blog.stdioa.com/pics/hackergame2022/door_closed.png">
+<meta property="og:image" content="https://blog.stdioa.com/pics/hackergame2022/flag_machine.png">
+<meta property="og:image" content="https://github.com/USTC-Hackergame/hackergame2022-writeups/blob/master/official/%E7%BA%BF%E8%B7%AF%E6%9D%BF/src/circuit_boards.png?raw=true">
+<meta property="og:image" content="https://blog.stdioa.com/pics/hackergame2022/PCB.png">
+<meta property="og:image" content="https://blog.stdioa.com/pics/hackergame2022/light_and_shadow.png">
+<meta property="og:image" content="https://blog.stdioa.com/pics/hackergame2022/calculus.png">
+<meta property="og:image" content="https://blog.stdioa.com/pics/hackergame2022/lost_flag.jpg">
+<meta property="og:image" content="https://blog.stdioa.com/pics/hackergame2022/rank58.png">
+<meta property="og:image" content="https://blog.stdioa.com/pics/hackergame2022/final.png">
+<meta property="article:published_time" content="2022-10-25T11:23:58.000Z">
+<meta property="article:modified_time" content="2022-10-29T14:50:02.690Z">
+<meta property="article:author" content="David Dai">
+<meta property="article:tag" content="CTF">
+<meta property="article:tag" content="脑洞">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.stdioa.com/pics/hackergame2022/door_closed.png">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://blog.stdioa.com/2022/10/ustc-hackergame-2022-writeup/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="Stdio&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.min.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="/" target="_blank">
+          <img class="img-circle img-rotate" src="https://www.gravatar.com/avatar/e452ed622e6b1e9a2067a06fde30cf30?s=128" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">David Dai</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Backend Developer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Nanjing, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav menu-highlight">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">项目</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-sheets">
+          <a target="_blank" rel="noopener" href="http://sheet.stdioa.com/">
+            
+            <i class="icon icon-book"></i>
+            
+            <span class="menu-title">谱站</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/StdioA" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://twitter.com/stdio_a" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+        <li><a href="https://t.me/StdioA" target="_blank" title="Telegram" data-toggle=tooltip data-placement=top><i class="icon icon-telegram"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎，你是第 <span id="busuanzi_value_site_pv">并不知道多少</span> 个来到这里的人。
+<p>不过我更新的比较少…不好意思。</p>
+<p>另：本站使用 Disqus 评论系统，若文章页面下方无法显示评论框，那肯定是打开方式不对。</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Golang/">Golang</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/">Javascript</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/">乱七八糟</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BC%80%E5%8F%91/">开发</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BD%91%E7%BB%9C/">网络</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BF%BB%E8%AF%91/">翻译</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E6%89%8B%E8%AE%B0/">随手记</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/Ajax/" style="font-size: 13px;">Ajax</a> <a href="/tags/Alpine/" style="font-size: 13px;">Alpine</a> <a href="/tags/Apache/" style="font-size: 13px;">Apache</a> <a href="/tags/Atom/" style="font-size: 13px;">Atom</a> <a href="/tags/Beancount/" style="font-size: 13px;">Beancount</a> <a href="/tags/CI-CD/" style="font-size: 13.5px;">CI/CD</a> <a href="/tags/CTF/" style="font-size: 13.33px;">CTF</a> <a href="/tags/DevOps/" style="font-size: 13.67px;">DevOps</a> <a href="/tags/Django/" style="font-size: 13.33px;">Django</a> <a href="/tags/Django-REST-Framework/" style="font-size: 13px;">Django REST Framework</a> <a href="/tags/Docker/" style="font-size: 13.33px;">Docker</a> <a href="/tags/Git/" style="font-size: 13.17px;">Git</a> <a href="/tags/GitLab/" style="font-size: 13.5px;">GitLab</a> <a href="/tags/Github/" style="font-size: 13.17px;">Github</a> <a href="/tags/Golang/" style="font-size: 13.33px;">Golang</a> <a href="/tags/Homelab/" style="font-size: 13px;">Homelab</a> <a href="/tags/IPv6/" style="font-size: 13.17px;">IPv6</a> <a href="/tags/Javascript/" style="font-size: 13.17px;">Javascript</a> <a href="/tags/KMS/" style="font-size: 13px;">KMS</a> <a href="/tags/Kubernetes/" style="font-size: 13px;">Kubernetes</a> <a href="/tags/LCTT/" style="font-size: 13px;">LCTT</a> <a href="/tags/LeetCode/" style="font-size: 13px;">LeetCode</a> <a href="/tags/Let-s-Encrypt/" style="font-size: 13px;">Let's Encrypt</a> <a href="/tags/Linux/" style="font-size: 13.33px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 13.17px;">MySQL</a> <a href="/tags/NAS/" style="font-size: 13.17px;">NAS</a> <a href="/tags/NTP/" style="font-size: 13px;">NTP</a> <a href="/tags/PHP/" style="font-size: 13px;">PHP</a> <a href="/tags/Prometheus/" style="font-size: 13.17px;">Prometheus</a> <a href="/tags/Protobuf/" style="font-size: 13px;">Protobuf</a> <a href="/tags/Python/" style="font-size: 13.83px;">Python</a> <a href="/tags/SQL/" style="font-size: 13px;">SQL</a> <a href="/tags/Sublime-Text/" style="font-size: 13px;">Sublime Text</a> <a href="/tags/UTF-8/" style="font-size: 13px;">UTF-8</a> <a href="/tags/Unicode/" style="font-size: 13px;">Unicode</a> <a href="/tags/Windows/" style="font-size: 13px;">Windows</a> <a href="/tags/collections/" style="font-size: 13px;">collections</a> <a href="/tags/ctypes/" style="font-size: 13px;">ctypes</a> <a href="/tags/fava/" style="font-size: 13px;">fava</a> <a href="/tags/git/" style="font-size: 13px;">git</a> <a href="/tags/gunicorn/" style="font-size: 13px;">gunicorn</a> <a href="/tags/iptables/" style="font-size: 13px;">iptables</a> <a href="/tags/logging/" style="font-size: 13px;">logging</a> <a href="/tags/nginx/" style="font-size: 13.33px;">nginx</a> <a href="/tags/node-js/" style="font-size: 13.17px;">node.js</a> <a href="/tags/openssl/" style="font-size: 13px;">openssl</a> <a href="/tags/pip/" style="font-size: 13px;">pip</a> <a href="/tags/python/" style="font-size: 14px;">python</a> <a href="/tags/requests/" style="font-size: 13px;">requests</a> <a href="/tags/supervisor/" style="font-size: 13px;">supervisor</a> <a href="/tags/unittest/" style="font-size: 13px;">unittest</a> <a href="/tags/virtualenv/" style="font-size: 13px;">virtualenv</a> <a href="/tags/vue-js/" style="font-size: 13px;">vue.js</a> <a href="/tags/wget/" style="font-size: 13px;">wget</a> <a href="/tags/%E4%B8%83%E7%89%9B/" style="font-size: 13px;">七牛</a> <a href="/tags/%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86/" style="font-size: 13px;">上下文管理</a> <a href="/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" style="font-size: 13.33px;">前端开发</a> <a href="/tags/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" style="font-size: 13px;">后端开发</a> <a href="/tags/%E5%A0%86/" style="font-size: 13px;">堆</a> <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" style="font-size: 13.17px;">微服务</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 13px;">数据库</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB/" style="font-size: 13px;">数据迁移</a> <a href="/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/" style="font-size: 13px;">文本编辑器</a> <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" style="font-size: 13px;">树莓派</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 13px;">算法</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/" style="font-size: 13px;">编程工具</a> <a href="/tags/%E8%84%91%E6%B4%9E/" style="font-size: 13.33px;">脑洞</a> <a href="/tags/%E8%AE%B0%E8%B4%A6/" style="font-size: 13px;">记账</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 13.5px;">读书</a> <a href="/tags/%E8%BF%AD%E4%BB%A3%E5%99%A8/" style="font-size: 13px;">迭代器</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">六月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">九月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">二月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+  </div>
+</aside>
+
+  
+  
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%A8%E5%86%8C"><span class="toc-text"> 注册</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#binary"><span class="toc-text"> Binary</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#flag-%E8%87%AA%E5%8A%A8%E6%9C%BA"><span class="toc-text"> Flag 自动机</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#general"><span class="toc-text"> General</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8C%AB%E5%92%AA%E9%97%AE%E7%AD%94%E5%96%B5"><span class="toc-text"> 猫咪问答喵</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%B6%E7%9B%AE%E5%BD%95%E9%87%8C%E7%9A%84%E7%A7%98%E5%AF%86"><span class="toc-text"> 家目录里的秘密</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#vs-code-%E9%87%8C%E7%9A%84-flag"><span class="toc-text"> VS Code 里的 flag</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rclone-%E9%87%8C%E7%9A%84-flag"><span class="toc-text"> Rclone 里的 flag</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#heilang"><span class="toc-text"> HeiLang</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%85%E8%A1%8C%E7%85%A7%E7%89%87-20"><span class="toc-text"> 旅行照片 2.0</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E9%A2%98%E7%85%A7%E7%89%87%E5%88%86%E6%9E%90"><span class="toc-text"> 第一题：照片分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E9%A2%98%E7%A4%BE%E5%B7%A5%E5%AE%9E%E8%B7%B5"><span class="toc-text"> 第二题：社工实践</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%92%E5%BA%97"><span class="toc-text"> 酒店</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%88%AA%E7%8F%AD"><span class="toc-text"> 航班</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8C%9C%E6%95%B0%E5%AD%97"><span class="toc-text"> 猜数字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E8%B7%AF%E6%9D%BF"><span class="toc-text"> 线路板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%89%E4%B8%8E%E5%BD%B1"><span class="toc-text"> 光与影</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#web"><span class="toc-text"> Web</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AD%BE%E5%88%B0"><span class="toc-text"> 签到</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#xcaptcha"><span class="toc-text"> XCaptcha</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#latex-%E6%9C%BA%E5%99%A8%E4%BA%BA"><span class="toc-text"> LaTeX 机器人</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#flag-%E7%9A%84%E7%97%95%E8%BF%B9"><span class="toc-text"> Flag 的痕迹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E7%A7%AF%E5%88%86%E8%AE%A1%E7%AE%97%E5%B0%8F%E7%BB%83%E4%B9%A0"><span class="toc-text"> 微积分计算小练习</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#math"><span class="toc-text"> Math</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%92%99%E7%89%B9%E5%8D%A1%E7%BD%97%E8%BD%AE%E7%9B%98%E8%B5%8C"><span class="toc-text"> 蒙特卡罗轮盘赌</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%81%E9%B9%85%E6%8B%BC%E7%9B%98"><span class="toc-text"> 企鹅拼盘</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8E%E7%BB%AD"><span class="toc-text"> 后续</span></a></li></ol>
+    </nav>
+  </div>
+</aside>
+
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-ustc-hackergame-2022-writeup" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      USTC Hackergame 2022 玩耍记录
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2022/10/ustc-hackergame-2022-writeup/" class="article-date">
+	  <time datetime="2022-10-25T11:23:58.000Z" itemprop="datePublished">2022-10-25</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/">乱七八糟</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/CTF/" rel="tag">CTF</a>, <a class="article-tag-link-link" href="/tags/%E8%84%91%E6%B4%9E/" rel="tag">脑洞</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2022/10/ustc-hackergame-2022-writeup/#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 4.4k(字)</span>
+	
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <p>上周日晚上，偶然看到一个原神玩家群（？）里面有人发了一张图，说是 USTC 的 CTF. 上一次玩 CTF 还是六年前，不过这次一时兴起打算玩玩看。<br />
+由于上班比较忙，所以只玩了一天多一点，做了一些简单题。</p>
+<span id="more"></span>
+<h1 id="注册"><a class="markdownIt-Anchor" href="#注册"></a> 注册</h1>
+<p>周日的半夜，在群里看到了一张 CTF 的图，于是兴冲冲地跑去注册，没想到直接吃了闭门羹🌚。</p>
+<p><img src="/pics/hackergame2022/door_closed.png" alt="关门了" /></p>
+<p>周一早上八点，准时开干。</p>
+<h1 id="binary"><a class="markdownIt-Anchor" href="#binary"></a> Binary</h1>
+<h2 id="flag-自动机"><a class="markdownIt-Anchor" href="#flag-自动机"></a> Flag 自动机</h2>
+<p>题目在<a target="_blank" rel="noopener" href="https://github.com/USTC-Hackergame/hackergame2022-writeups/blob/master/official/Flag%20%E8%87%AA%E5%8A%A8%E6%9C%BA/src/flag_machine.exe">这里</a>。<br />
+打开之后可以看到一个对话框，鼠标一碰到“狠心夺取”的按钮，它就会跑掉。<br />
+拖到 IDA 里反编译，可以看到 <code>sub_401510</code> 函数中存在输出 flag 的代码，但生成 flag 的代码被混淆过，很难看懂。<br />
+在这个过程中，看到了出题人给的注释：“Hint: You don’t need to reverst the decryption logis itself.”，那看来是需要看看别的方法。</p>
+<p>仔细看下 <code>sub_401510</code>:<br />
+<img src="/pics/hackergame2022/flag_machine.png" alt="" /></p>
+<p>其中 <code>2u</code> 的 case 是“放手离开”的触发逻辑，而 <code>1u</code> 是“狠心夺取”。中间的 <code>0x111u</code> 分支需要想办法触发才能拿到 flag. 这个程序加了反动态调试，因此也无法通过打断点的方式来进入这个分支。（当然官方题解也讲了绕过动态调试的方法）。<br />
+一番搜索（感谢浩子哥哥），找到了 Windows 的 <a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/win32/api/winuser/nf-winuser-postmessagea">PostMessageA</a> 函数，通过它可以向指定窗口发送事件消息。<br />
+那么创建一个 Windows C++ 项目，运行 <code>PostMessageA(HWND_BROADCAST, 0x111, 3, 114514)</code>，即可让 flag 自动机弹窗并输出 flag.</p>
+<p>不过，老司机告诉我可以直接用 Python:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> win32gui</span><br><span class="line"><span class="keyword">import</span> win32con</span><br><span class="line"></span><br><span class="line">hwnd = win32gui.FindWindow(<span class="string">&quot;flag 自动机&quot;</span>, <span class="string">&quot;flag 自动机&quot;</span>)</span><br><span class="line">win32gui.SetForegroundWindow(hwnd)</span><br><span class="line">win32con.SendMessage(hwnd, <span class="number">0x111</span>, <span class="number">3</span>, <span class="number">114514</span>)</span><br></pre></td></tr></table></figure>
+<p>OK，这就是我唯一能做的逆向题了。</p>
+<h1 id="general"><a class="markdownIt-Anchor" href="#general"></a> General</h1>
+<p>General 就是 misc，是想当年最喜欢做的题目种类。</p>
+<h2 id="猫咪问答喵"><a class="markdownIt-Anchor" href="#猫咪问答喵"></a> 猫咪问答喵</h2>
+<blockquote>
+<p>参加猫咪问答喵，参加喵咪问答谢谢喵。</p>
+</blockquote>
+<p>点进去以后发现是 6 道问答题，答对一半给一个 flag，答对全部给两个。</p>
+<ol>
+<li>
+<blockquote>
+<p>中国科学技术大学 NEBULA 战队（USTC NEBULA）是于何时成立的喵？</p>
+</blockquote>
+<p>Google “USTC NEBULA 成立时间”搜到一条<a target="_blank" rel="noopener" href="https://cybersec.ustc.edu.cn/2022/0826/c23847a565848/page.htm">新闻</a>，可以得知成立于 2017 年 3 月。</p>
+</li>
+<li>
+<blockquote>
+<p>2022 年 9 月，中国科学技术大学学生 Linux 用户协会（LUG @ USTC）在科大校内承办了软件自由日活动。除了专注于自由撸猫的主会场之外，还有一些和技术相关的分会场（如闪电演讲 Lightning Talk）。其中在第一个闪电演讲主题里，主讲人于 slides 中展示了一张在 GNOME Wayland 下使用 Wayland 后端会出现显示问题的 KDE 程序截图，请问这个 KDE 程序的名字是什么？</p>
+</blockquote>
+<p>Google 一番找到了当时的<a target="_blank" rel="noopener" href="https://lug.ustc.edu.cn/wiki/lug/events/sfd/">活动记录</a>，看了一眼 slides 感觉是 <code>Dolphin</code>，然鹅并不是它。</p>
+<p>于是去看了 B 站上的<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV11e411M7t9/">视频回放</a>，把这段演讲听了两三遍 🌚。在视频的 2:42:06 处，主讲人念了一个单词，最后 Google 搜索联想告诉我它是 Kdenlive.</p>
+</li>
+<li>
+<blockquote>
+<p>22 年坚持，小 C 仍然使用着一台他从小用到大的 Windows 2000 计算机。那么，在不变更系统配置和程序代码的前提下，Firefox 浏览器能在 Windows 2000 下运行的最后一个大版本号是多少？</p>
+</blockquote>
+<p>放飞自我，随便 Google，最后发现 <a target="_blank" rel="noopener" href="https://support.mozilla.org/gl/questions/937250">12 能用</a>，但是 <a target="_blank" rel="noopener" href="https://groups.google.com/g/mozilla.support.firefox/c/PaBc5BH7ZB4?pli=1">13 就不能了</a>。所以答案是 12.</p>
+</li>
+<li>
+<blockquote>
+<p>你知道 PwnKit（CVE-2021-4034）喵？据可靠谣传，出题组的某位同学本来想出这样一道类似的题，但是发现 Linux 内核更新之后居然不再允许 argc 为 0 了喵！那么，请找出在 Linux 内核 master 分支（torvalds/linux.git）下，首个变动此行为的 commit 的 hash 吧喵！</p>
+</blockquote>
+<p>在 <code>torvalds/linux.git</code> 下搜索 CVE-2021-4034，得到 <a target="_blank" rel="noopener" href="https://github.com/torvalds/linux/commit/dcd46d897adb70d63e025f175a00a89797d31a43">Commit dcd46d897adb70d63e025f175a00a89797d31a43</a>.</p>
+</li>
+<li>
+<blockquote>
+<p>通过监视猫咪在键盘上看似乱踩的故意行为，不出所料发现其秘密连上了一个 ssh 服务器，终端显示 ED25519 key fingerprint is MD5:e4:ff:65:d7:be:5d:c8:44:1d:89:6b:50:f5:50:a0:ce.，你知道猫咪在连接什么域名吗？</p>
+</blockquote>
+<p>一开始看到这个题我有点蒙。全球那么多域名那么多服务器，怎么知道服务器的 key 是什么？做完上面的题回来看，发现可以直接 Google，看到 <a target="_blank" rel="noopener" href="https://docs.zeek.org/en/master/logs/ssh.html">Zeek 的文档</a> 用这个 key 做了例子，而目的 IP 是可以直接访问的。</p>
+<p>通过网页标题重新 Google，发现答案是 <code>sdf.org</code>.</p>
+</li>
+<li>
+<blockquote>
+<p>中国科学技术大学可以出校访问国内国际网络从而允许云撸猫的“网络通”定价为 20 元一个月是从哪一天正式实行的？</p>
+</blockquote>
+<p>一开始查到了一篇<a target="_blank" rel="noopener" href="https://netfee.ustc.edu.cn/faq/index.html#fee">介绍收费标准的文章</a>，然而 <code>2011-11-01</code> 不是正确答案。</p>
+<p>看了看以前的题解，这个题是可以爆破的，于是按天对题目进行了爆破，最后得到答案 <code>2003-03-01</code>.</p>
+</li>
+</ol>
+<h2 id="家目录里的秘密"><a class="markdownIt-Anchor" href="#家目录里的秘密"></a> 家目录里的秘密</h2>
+<h3 id="vs-code-里的-flag"><a class="markdownIt-Anchor" href="#vs-code-里的-flag"></a> VS Code 里的 flag</h3>
+<p>把 home 目录下下来，在 <code>.config/Code</code> 里全局搜索 “flag”，就能拿到第一个 flag.</p>
+<h3 id="rclone-里的-flag"><a class="markdownIt-Anchor" href="#rclone-里的-flag"></a> Rclone 里的 flag</h3>
+<p>rclone 没有用过，不是很熟。不过看了一眼 <code>.bash_history</code>，最后有一行 <code>cat .config/rclone/rclone.conf</code>.<br />
+hmm… 提示可以说是非常明显了。</p>
+<p>查看 <code>rclone.conf</code>，看到密码是 <code>tqqTq4tmQRDZ0sT_leJr7-WtCiHVXSMrVN49dWELPH1uce-5DPiuDtjBUN3EI38zvewgN5JaZqAirNnLlsQ</code>. 搜索“rclone decrypt password”，找到了一个<a target="_blank" rel="noopener" href="https://forum.rclone.org/t/how-to-retrieve-a-crypt-password-from-a-config-file/20051">解密脚本</a>，跑一下拿到 flag.</p>
+<h2 id="heilang"><a class="markdownIt-Anchor" href="#heilang"></a> HeiLang</h2>
+<blockquote>
+<p>来自 Heicore 社区的新一代编程语言 HeiLang，基于第三代大蟒蛇语言，但是抛弃了原有的难以理解的 <code>|</code> 运算，升级为了更加先进的语法，用 <code>A[x | y | z] = t</code> 来表示之前复杂的 <code>A[x] = t; A[y] = t; A[z] = t</code>。</p>
+</blockquote>
+<p>没啥好说的，把代码下下来做个字符串替换，然后塞回源代码里，跑一下就能拿到 flag.</p>
+<h2 id="旅行照片-20"><a class="markdownIt-Anchor" href="#旅行照片-20"></a> 旅行照片 2.0</h2>
+<p>社工题，有点意思，不过做完这道题的第二天，我就把我的个人签名改成了“记得取消 FR24 订阅”。</p>
+<p>题目给了这样一张<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/USTC-Hackergame/hackergame2022-writeups/master/official/%E6%97%85%E8%A1%8C%E7%85%A7%E7%89%87%202.0/src/travel-photo-2.jpg">图片</a>，需要从中来挖掘有关信息。</p>
+<h3 id="第一题照片分析"><a class="markdownIt-Anchor" href="#第一题照片分析"></a> 第一题：照片分析</h3>
+<ol>
+<li>图片所包含的 EXIF 信息版本是多少？</li>
+<li>拍照使用手机的品牌是什么？</li>
+<li>该图片被拍摄时相机的感光度（ISO）是多少？</li>
+<li>照片拍摄日期是哪一天？</li>
+<li>照片拍摄时是否使用了闪光灯？</li>
+</ol>
+<p>题目很明显都与照片的 EXIF 信息有关。而 Mac 自带的查看功能并不能看到全部信息（比如 ISO），所以找了一个 <a target="_blank" rel="noopener" href="https://pypi.org/project/exif/">Python EXIF</a> 库来协助完成。</p>
+<h3 id="第二题社工实践"><a class="markdownIt-Anchor" href="#第二题社工实践"></a> 第二题：社工实践</h3>
+<h4 id="酒店"><a class="markdownIt-Anchor" href="#酒店"></a> 酒店</h4>
+<ol>
+<li>请写出拍照人所在地点的邮政编码，格式为 3 至 10 位数字，不含空格或下划线等特殊符号（如 230026、94720）。</li>
+<li>照片窗户上反射出了拍照人的手机。那么这部手机的屏幕分辨率是多少呢？（格式为长 + 字母 x + 宽，如 1920x1080）</li>
+</ol>
+<p>仔细看图，体育馆的一楼有一行字，但看不太清，像是 “zozomandie stadium”。于是万能的 Google 搜索纠正告诉我它是 “zozo marine stadium”，也就是千叶海洋球场。那么，根据拍照人的位置，可以推测出拍照人住在附近的酒店，而且与球场只隔一条街。<br />
+根据 Google 地图提供的酒店地址（〒261-0021 千葉県千葉市美浜区ひび野２丁目３），我们就能够知道邮编就是“2610021”。</p>
+<p>而拍照人的手机，同样是通过 EXIF 信息获得。搜索“xiaomi sm6115”，前面几个搜索结果似乎没有提供很多有价值的信息，但后面的结果告诉我这个手机应该是「Redmi 9T」，或者「Redmi Note 9」. 搜索“红米9T”，可以直接查到它的屏幕分辨率是 <code>2340x1080</code>.</p>
+<h4 id="航班"><a class="markdownIt-Anchor" href="#航班"></a> 航班</h4>
+<p>仔细观察，可以发现照片空中（白色云上方中间位置）有一架飞机。你能调查出这架飞机的信息吗？</p>
+<ol>
+<li>起飞机场（IATA 机场编号，如 PEK）</li>
+<li>降落机场（IATA 机场编号，如 HFE）</li>
+<li>航班号（两个大写字母和若干个数字，如 CA1813）</li>
+</ol>
+<p>EXIF 信息告诉我这张照片拍摄于 2022 年 5 月 14 日 18:23:35，一开始不太确定手机的时区是否是日本时区（UTC+9），所以通过 2022-05-14 千叶县的日落时间比对了一下，确定拍摄时间所在的时区就是 UTC+9. 那么我们要查的就是那个时刻经过的航班了。<br />
+查这种东西我只能想到 FlightRadar24，但免费用户只能查询 7 天内的航班。于是被迫开了 7 天试用，查到了当时那家飞机的航班号（NH683），以及起降机场（HND → HIJ）。</p>
+<h2 id="猜数字"><a class="markdownIt-Anchor" href="#猜数字"></a> 猜数字</h2>
+<p>看看代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">var</span> <span class="variable">guess</span> <span class="operator">=</span> Double.parseDouble(event.asCharacters().getData());</span><br><span class="line"></span><br><span class="line"><span class="type">var</span> <span class="variable">isLess</span> <span class="operator">=</span> guess &lt; <span class="built_in">this</span>.number - <span class="number">1e-6</span> / <span class="number">2</span>;</span><br><span class="line"><span class="type">var</span> <span class="variable">isMore</span> <span class="operator">=</span> guess &gt; <span class="built_in">this</span>.number + <span class="number">1e-6</span> / <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">var</span> <span class="variable">isPassed</span> <span class="operator">=</span> !isLess &amp;&amp; !isMore;</span><br></pre></td></tr></table></figure>
+<p>浮点数，<strong>不大于</strong>也<strong>不小于</strong>，为什么不来个 <code>NaN</code> 呢？<br />
+输入 <code>NaN</code>，拿到 flag. 因为前端输入框限制了只能输入数字和小数点，所以还要构造下请求才能顺利提交。</p>
+<h2 id="线路板"><a class="markdownIt-Anchor" href="#线路板"></a> 线路板</h2>
+<p><img src="https://github.com/USTC-Hackergame/hackergame2022-writeups/blob/master/official/%E7%BA%BF%E8%B7%AF%E6%9D%BF/src/circuit_boards.png?raw=true" alt="" /><br />
+题目给了一套<a target="_blank" rel="noopener" href="https://github.com/USTC-Hackergame/hackergame2022-writeups/blob/master/official/%E7%BA%BF%E8%B7%AF%E6%9D%BF/src/fabrication_files.zip">PCB 的生产文件</a>，需要找到 PCB 版中的 flag.</p>
+<p>下载下来之后，看到里面有 <code>.gbr</code> 文件，虽然是纯文本格式，但它似乎并不能直接读出来。<br />
+于是下载了一套 KiCad 工具，用 <a target="_blank" rel="noopener" href="https://docs.kicad.org/master/zh/pcbnew/pcbnew.html">PCBNew</a> 打开电路板，在啥都不懂的情况下一番鼓捣，最后看到了 Flag 的轮廓，是 <code>flag&#123;8_1ayER_rogeRS_81ind_V1a&#125;</code>.</p>
+<p><img src="/pics/hackergame2022/PCB.png" alt="藏在 PCB 中的 flag" /></p>
+<p>为了它我下了一套 15GB 的 App，用了 10 分钟就删掉了，略微有点离谱 😂</p>
+<h2 id="光与影"><a class="markdownIt-Anchor" href="#光与影"></a> 光与影</h2>
+<p>题目文件在<a target="_blank" rel="noopener" href="https://github.com/USTC-Hackergame/hackergame2022-writeups/tree/master/official/%E5%85%89%E4%B8%8E%E5%BD%B1/src">这里</a>，是一个使用 OpenGL 编写的动画。而我们就是需要找到被挡住的 flag.</p>
+<p><img src="/pics/hackergame2022/light_and_shadow.png" alt="光与影" /></p>
+<p>下下来以后看到了一堆完全不认识的代码，而经验告诉我核心的渲染逻辑都在 <code>fragment-shader.js</code> 中，而这个 js 里面使用了一种没见过但很像 C 的语言。<br />
+翻到文件的最后，在主函数看到了一个 <code>isTerrain</code> 变量，顺着 <code>isTerrain</code> 为 <code>false</code> 的逻辑一路往上看，遇到不懂的地方就改改代码再运行一下看看效果，最后找到了关键代码。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">float</span> <span class="title function_">sceneSDF</span><span class="params">(vec3 p, out vec3 pColor)</span> &#123;</span><br><span class="line">    pColor = vec3(<span class="number">1.0</span>, <span class="number">1.0</span>, <span class="number">1.0</span>);</span><br><span class="line">    </span><br><span class="line">    vec4 pH = mk_homo(p);</span><br><span class="line">    vec4 pTO = mk_trans(<span class="number">35.0</span>, <span class="number">-5.0</span>, <span class="number">-20.0</span>) * mk_scale(<span class="number">1.5</span>, <span class="number">1.5</span>, <span class="number">1.0</span>) * pH;</span><br><span class="line">    </span><br><span class="line">    <span class="type">float</span> t1 = t1SDF(pTO.xyz);</span><br><span class="line">    <span class="type">float</span> t2 = t2SDF((mk_trans(<span class="number">-45.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>) * pTO).xyz);</span><br><span class="line">    <span class="type">float</span> t3 = t3SDF((mk_trans(<span class="number">-80.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>) * pTO).xyz);</span><br><span class="line">    <span class="type">float</span> t4 = t4SDF((mk_trans(<span class="number">-106.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>) * pTO).xyz);</span><br><span class="line">    <span class="type">float</span> t5 = t5SDF(p - vec3(<span class="number">36.0</span>, <span class="number">10.0</span>, <span class="number">15.0</span>), vec3(<span class="number">30.0</span>, <span class="number">5.0</span>, <span class="number">5.0</span>), <span class="number">2.0</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="type">float</span> tmin = min(min(min(min(t1, t2), t3), t4), t5);</span><br><span class="line">    <span class="keyword">return</span> tmin;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>只要把 <code>t5</code> 从 <code>tmin</code> 的判断中去掉，就能看到 flag: <code>flag&#123;SDF-i3-FuN!&#125;</code>.</p>
+<p>虽然改出来了，然而我依然没有看懂这堆代码。<a target="_blank" rel="noopener" href="https://github.com/USTC-Hackergame/hackergame2022-writeups/blob/master/official/%E5%85%89%E4%B8%8E%E5%BD%B1/README.md">官方题解</a>中详细地讲了一下渲染方法的实现，有兴趣的朋友可以去看看。</p>
+<h1 id="web"><a class="markdownIt-Anchor" href="#web"></a> Web</h1>
+<h2 id="签到"><a class="markdownIt-Anchor" href="#签到"></a> 签到</h2>
+<p>需要手写识别 2022，但它把识别结果写在 URL 里了。<br />
+把 URL <code>http://202.38.93.111:12022/?result=????</code> 里的 result 改成 2022，拿到 flag.</p>
+<h2 id="xcaptcha"><a class="markdownIt-Anchor" href="#xcaptcha"></a> XCaptcha</h2>
+<p>题目源代码在<a target="_blank" rel="noopener" href="https://github.com/USTC-Hackergame/hackergame2022-writeups/tree/master/official/Xcaptcha/src">这里</a>。<br />
+出题人给了一个网页，需要你通过在一秒内算出三个大数加法并提交，来证明你是机器人。</p>
+<p>写个自动提交的爬虫吧，网页结构不是很复杂，所以直接用正则即可，不需要判断 DOM.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">sess = requests.Session()</span><br><span class="line">sess.cookies.<span class="built_in">set</span>(<span class="string">&quot;session&quot;</span>, <span class="string">&quot;&lt;some_jwt&gt;&quot;</span>)</span><br><span class="line">response = sess.request(<span class="string">&quot;GET&quot;</span>, url)</span><br><span class="line"></span><br><span class="line">res = re.findall(<span class="string">r&quot;(\d+)\+(\d+)&quot;</span>, response.text)</span><br><span class="line">result = []</span><br><span class="line"><span class="keyword">for</span> x, y <span class="keyword">in</span> res:</span><br><span class="line">    result.append(<span class="built_in">int</span>(x)+<span class="built_in">int</span>(y))</span><br><span class="line"><span class="keyword">for</span> k, v <span class="keyword">in</span> response.cookies.items():</span><br><span class="line">    sess.cookies.<span class="built_in">set</span>(k, v)</span><br><span class="line"></span><br><span class="line">response = sess.request(<span class="string">&quot;POST&quot;</span>, url, data=&#123;</span><br><span class="line">    <span class="string">&quot;captcha1&quot;</span>: result[<span class="number">0</span>],</span><br><span class="line">    <span class="string">&quot;captcha2&quot;</span>: result[<span class="number">1</span>],</span><br><span class="line">    <span class="string">&quot;captcha3&quot;</span>: result[<span class="number">2</span>],</span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">print</span>(response.text)</span><br></pre></td></tr></table></figure>
+<h2 id="latex-机器人"><a class="markdownIt-Anchor" href="#latex-机器人"></a> LaTeX 机器人</h2>
+<p>渲染 LaTeX 图片的脚本在<a target="_blank" rel="noopener" href="https://github.com/USTC-Hackergame/hackergame2022-writeups/blob/master/official/LaTeX%20%E6%9C%BA%E5%99%A8%E4%BA%BA/src/latexbot-backend.zip">这里</a>。</p>
+<p>靠 Google 只会做一半：<code>\input&#123;/flag1&#125;</code> 拿到第一个 flag.<br />
+由于构建脚本里关掉了 <code>shell escape</code>，所以其它基于命令执行的方案都会失败，后面卡了很久。</p>
+<p>某天晚上，浩哥哥发来了<a target="_blank" rel="noopener" href="https://tex.stackexchange.com/questions/630044/how-can-i-input-multiple-txt-files-with-special-characters-into-my-main-tex-file">一个页面</a>，讲了如何去在文章里引用包含特殊符号的内容，而里面提到了 <code>\catcode</code> 命令。<br />
+<code>\catcode</code> 的常见用法是将某个字符定义成某种宏。而我们通过它就可以将特殊字符视为一个 <a target="_blank" rel="noopener" href="https://www-sop.inria.fr/marelle/tralics/doc-symbols.html#catcode12">Catcode 12</a> 的字符，而这类字符是无法参与指令控制的。</p>
+<p>最后输入 <code>&#123; \catcode``#=12  \catcode\``_=12  \input&#123;/flag2&#125; &#125;</code> 得到 flag：<code>flag&#123;latex_bec_0_m##es_co__#ol_2a1fd66cfe&#125;</code>.</p>
+<h2 id="flag-的痕迹"><a class="markdownIt-Anchor" href="#flag-的痕迹"></a> Flag 的痕迹</h2>
+<p>题目写明了服务的版本：</p>
+<blockquote>
+<p>（题目 Dokuwiki 版本基于 2022-07-31a “Igor”）</p>
+</blockquote>
+<p>这大概已经算是明示了？去搜一发 CVE，看到了 <a target="_blank" rel="noopener" href="https://nvd.nist.gov/vuln/detail/CVE-2022-3123#vulnCurrentDescriptionTitle">CVE-2022-3123</a>，通过构造 XSS 即可打开历史记录页面。</p>
+<p>构造请求：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">POST /doku.php?id=start HTTP/1.1</span><br><span class="line">Content-Type: application/x-www-form-urlencoded</span><br><span class="line">Referer: http://202.38.93.111:15004/doku.php?id=start</span><br><span class="line">Cookie: DokuWiki=57vk0n23v486p8vdjqc15oigpu; DOKU_PREFS=show_changes%23both%23difftype%23sidebyside</span><br><span class="line">Content-Length: 139</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</span><br><span class="line">Accept-Encoding: gzip,deflate,br</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36</span><br><span class="line">Host: 202.38.93.111:15004</span><br><span class="line">Connection: Keep-alive</span><br><span class="line"></span><br><span class="line">difftype=sidebyside&#x27;&quot;()%26%25&lt;zzz&gt;&lt;ScRiPt%20&gt;alert(&quot;1&quot;)&lt;/ScRiPt&gt;&amp;do=diff&amp;do[diff]=1&amp;id=start&amp;rev2[0]=1&amp;rev2[1]=0&amp;sectok=1</span><br></pre></td></tr></table></figure>
+<p>看到历史记录，就可以拿到 flag.</p>
+<hr />
+<p>当然以上都是误打误撞。</p>
+<p>比赛结束后看到了<a target="_blank" rel="noopener" href="https://github.com/USTC-Hackergame/hackergame2022-writeups/blob/master/official/Flag%20%E7%9A%84%E7%97%95%E8%BF%B9/README.md">官方题解</a>，才发现真正的关键是请求参数中的 <code>do=diff</code>，其它的包括 CVE, XSS payload 等等都不重要。</p>
+<p>因此只要访问 <code>http://202.38.93.111:15004/doku.php?id=start&amp;do=diff</code>，然后在页面中查看版本变更即可。</p>
+<h2 id="微积分计算小练习"><a class="markdownIt-Anchor" href="#微积分计算小练习"></a> 微积分计算小练习</h2>
+<p>XSS 基础练习。</p>
+<p>题目给了一个<a target="_blank" rel="noopener" href="https://github.com/USTC-Hackergame/hackergame2022-writeups/tree/master/official/%E5%BE%AE%E7%A7%AF%E5%88%86%E8%AE%A1%E7%AE%97%E5%B0%8F%E7%BB%83%E4%B9%A0/src/web">练习页面</a>，以及一个提交练习成绩的<a target="_blank" rel="noopener" href="https://github.com/USTC-Hackergame/hackergame2022-writeups/tree/master/official/%E5%BE%AE%E7%A7%AF%E5%88%86%E8%AE%A1%E7%AE%97%E5%B0%8F%E7%BB%83%E4%B9%A0/src/bot">后端代码</a>。</p>
+<img src="/pics/hackergame2022/calculus.png" style="height:30em">
+<p>练习页面长这样，先 X 一发，发现姓名字段是可以注入的，没有任何限制。<br />
+然后再去看<a target="_blank" rel="noopener" href="https://github.com/USTC-Hackergame/hackergame2022-writeups/blob/master/official/%E5%BE%AE%E7%A7%AF%E5%88%86%E8%AE%A1%E7%AE%97%E5%B0%8F%E7%BB%83%E4%B9%A0/src/bot/bot.py">后端代码</a>，可以看到它使用 selenium 打开了练习结果页面，但打开结果之前，它把 flag 注入到了当前浏览器的 cookie 中。<br />
+那么，直接在练习页面来一发 <code>&lt;img src=# onerror=&quot;alert(document.cookie)&quot;&gt;</code> 并将结果提交，就可以看到后端抛出了异常：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">- Logining...</span><br><span class="line"> Putting secret flag...</span><br><span class="line">- Now browsing your quiz result...</span><br><span class="line">ERROR &lt;class &#x27;selenium.common.exceptions.UnexpectedAlertPresentException&#x27;&gt;</span><br><span class="line">selenium.common.exceptions.UnexpectedAlertPresentException: Alert Text: flag=flag&#123;xS5_1OI_is_N0t_SOHARD_abb4def144&#125;</span><br><span class="line">Message: unexpected alert open: &#123;Alert text : flag=flag&#123;xS5_1OI_is_N0t_SOHARD_abb4def144&#125;&#125;</span><br><span class="line">  (Session info: headless chrome=106.0.5249.119)</span><br><span class="line">Stacktrace:</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>后来看了<a target="_blank" rel="noopener" href="https://github.com/USTC-Hackergame/hackergame2022-writeups/blob/master/official/%E5%BE%AE%E7%A7%AF%E5%88%86%E8%AE%A1%E7%AE%97%E5%B0%8F%E7%BB%83%E4%B9%A0/README.md">官方题解</a>，他们给的 payload 是把 cookie 放到了名字的 DOM 中，这样看起来似乎更优雅一些。</p>
+<h1 id="math"><a class="markdownIt-Anchor" href="#math"></a> Math</h1>
+<p>我的数学是真的很垃圾，所以只能做出一道半…</p>
+<h2 id="蒙特卡罗轮盘赌"><a class="markdownIt-Anchor" href="#蒙特卡罗轮盘赌"></a> 蒙特卡罗轮盘赌</h2>
+<p>好家伙，头一次见到随机数种子碰撞的题。</p>
+<p>题目描述见<a target="_blank" rel="noopener" href="https://github.com/USTC-Hackergame/hackergame2022-writeups/blob/master/official/%E8%92%99%E7%89%B9%E5%8D%A1%E7%BD%97%E8%BD%AE%E7%9B%98%E8%B5%8C/README.md">这里</a>。</p>
+<p>看了下代码，主要逻辑是使用 <code>(unsigned)time(0) + clock()</code> 初始化随机数种子，并根据实验计算出 π 的值。而我们如果要答对题，就需要找到或猜到服务运行时所用的种子。<br />
+那么我的思路主要靠猜：通过大量收集服务端给出的结果，并对其进行爆破算出每组数据实际使用的 <code>clock()</code>，统计出 <code>clock()</code> 的大致范围，然后用一个固定 clock 去随机碰撞答案。</p>
+<p>题目的服务限制了连接频率，每个用户 10 秒钟只能建立一个连接。收集程序跑了一中午拿了两百多组数据，而我的 NAS 平均一分半才能算碰撞出一组结果。算了大概半个小时，发现 <code>clock()</code> 的值大多落在 700-900 之间。<br />
+于是简单写了个脚本，用 800 作为 clock 的值开始蒙，没想到只用了一分半就蒙出来了！然而更让我没想到的，是我在撞完之后没有把服务端的所有输出都打出来就退出了，这导致我只拿到了结果，但没拿到 flag，直接哭死。</p>
+<p><img src="/pics/hackergame2022/lost_flag.jpg" alt="" /></p>
+<p>改了一下代码，使用了 <code>interactive()</code> 保证所有输出都被打印，重新开蒙。这次蒙了将近 70 分钟才蒙到。</p>
+<hr />
+<p>最后看了<a target="_blank" rel="noopener" href="https://github.com/USTC-Hackergame/hackergame2022-writeups/tree/master/official/%E8%92%99%E7%89%B9%E5%8D%A1%E7%BD%97%E8%BD%AE%E7%9B%98%E8%B5%8C">题解</a>，发现完全不需要碰撞，只需要先拿两组算出种子，然后提交三个正确答案即可。<br />
+果然还是绕了远路 🌚</p>
+<h2 id="企鹅拼盘"><a class="markdownIt-Anchor" href="#企鹅拼盘"></a> 企鹅拼盘</h2>
+<p>嗯，这个题真的很可爱。</p>
+<p>我的数学实在是太差，所以解法正如题目描述那样“大力出奇迹”。<br />
+为了优化遍历速度，还用 Go 重写了代码，并对模拟算法做了常数级别的优化，就差加个 channel 搞并行了。想看爆破代码的可以戳<a href="/pics/hackergame2022/traverse.go">这里</a>。</p>
+<p>各位还是移步<a target="_blank" rel="noopener" href="https://github.com/USTC-Hackergame/hackergame2022-writeups/blob/master/official/%E4%BC%81%E9%B9%85%E6%8B%BC%E7%9B%98/README.md">官方题解</a>好啦。</p>
+<h1 id="后续"><a class="markdownIt-Anchor" href="#后续"></a> 后续</h1>
+<p>周六比赛结束后，官方发了题解，于是去看了下想做但没思路的<a target="_blank" rel="noopener" href="https://github.com/USTC-Hackergame/hackergame2022-writeups/blob/master/official/%E5%AE%89%E5%85%A8%E7%9A%84%E5%9C%A8%E7%BA%BF%E6%B5%8B%E8%AF%84/README.md">《安全的在线测评》</a>》和<a target="_blank" rel="noopener" href="https://github.com/USTC-Hackergame/hackergame2022-writeups/blob/master/official/%E6%9D%AF%E7%AA%97%E9%B9%85%E5%BD%B1/README.md">《杯窗鹅影》</a>，又涨了不少姿势。</p>
+<p>太久没玩 CTF 了，周一玩了大半天，晚上靠着手速冲到了 58 名，虽然最后掉到了 134 名，不过还是蛮有成就感的。<br />
+听浩子哥哥说，这几年的 CTF 的题基本都是赛棍特供，没想到 USTC 的大佬们能够设计出这么精彩的题目，在此感谢各位出题的同学。</p>
+<p>最后放两张图留个纪念吧，希望明年这个时候我还能记得 hackergame 2023。</p>
+<p><img src="/pics/hackergame2022/rank58.png" alt="" /><br />
+<img src="/pics/hackergame2022/final.png" alt="" /></p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://blog.stdioa.com/2022/10/ustc-hackergame-2022-writeup/" title="USTC Hackergame 2022 玩耍记录" target="_blank" rel="external">https://blog.stdioa.com/2022/10/ustc-hackergame-2022-writeup/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="/" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://www.gravatar.com/avatar/e452ed622e6b1e9a2067a06fde30cf30?s=128" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="/" target="_blank"><span class="text-dark">David Dai</span><small class="ml-1x">Backend Developer</small></a></h3>
+        <div>小孩子。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/2022/06/encode-ipv6-into-utf8/" title="一种 IPv6 地址编码方案"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+        <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/StdioA" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://twitter.com/stdio_a" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+        <li><a href="https://t.me/StdioA" target="_blank" title="Telegram" data-toggle=tooltip data-placement=top><i class="icon icon-telegram"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+   
+    
+    <script defer>
+    var disqus_config = function () {
+        
+            this.page.url = 'https://blog.stdioa.com/2022/10/ustc-hackergame-2022-writeup/';
+        
+        this.page.identifier = 'ustc-hackergame-2022-writeup';
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'stdioa' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+
+
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JLS011CGS8"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { window.dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-JLS011CGS8');
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+</body>
+</html>
