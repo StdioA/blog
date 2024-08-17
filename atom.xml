@@ -6,7 +6,7 @@
   <link href="https://blog.stdioa.com/atom.xml" rel="self"/>
   
   <link href="https://blog.stdioa.com/"/>
-  <updated>2022-10-29T14:55:19.250Z</updated>
+  <updated>2024-08-17T13:24:52.412Z</updated>
   <id>https://blog.stdioa.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RAG 基本应用 —— 记账效率优化</title>
+    <link href="https://blog.stdioa.com/2024/08/beancount-rag/"/>
+    <id>https://blog.stdioa.com/2024/08/beancount-rag/</id>
+    <published>2024-08-17T13:20:00.000Z</published>
+    <updated>2024-08-17T13:24:52.412Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;一个手工记账博主的脑洞大开，通过向量数据库和 RAG 来想办法让自己能再少打几个字。顺便宣传一下最近开源的&lt;a href=&quot;https://github.com/StdioA/beancount-bot&quot;&gt;记账 bot&lt;/a&gt;.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="乱七八糟" scheme="https://blog.stdioa.com/categories/%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F/"/>
+    
+    
+    <category term="Python" scheme="https://blog.stdioa.com/tags/Python/"/>
+    
+    <category term="记账" scheme="https://blog.stdioa.com/tags/%E8%AE%B0%E8%B4%A6/"/>
+    
+    <category term="Beancount" scheme="https://blog.stdioa.com/tags/Beancount/"/>
+    
+    <category term="fava" scheme="https://blog.stdioa.com/tags/fava/"/>
+    
+  </entry>
   
   <entry>
     <title>USTC Hackergame 2022 玩耍记录</title>
@@ -429,29 +454,6 @@
     <category term="Docker" scheme="https://blog.stdioa.com/tags/Docker/"/>
     
     <category term="读书" scheme="https://blog.stdioa.com/tags/%E8%AF%BB%E4%B9%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GitLab CI/CD: 辅助工具</title>
-    <link href="https://blog.stdioa.com/2018/07/gitlab-cicd-auxiliary/"/>
-    <id>https://blog.stdioa.com/2018/07/gitlab-cicd-auxiliary/</id>
-    <published>2018-07-15T12:21:00.000Z</published>
-    <updated>2022-09-10T01:41:19.793Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;本文会讲一些在 GitLab CI/CD 中可能会用到的辅助工具，包括隐藏任务、依赖缓存、定时任务以及部署环境。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="DevOps" scheme="https://blog.stdioa.com/categories/DevOps/"/>
-    
-    
-    <category term="DevOps" scheme="https://blog.stdioa.com/tags/DevOps/"/>
-    
-    <category term="GitLab" scheme="https://blog.stdioa.com/tags/GitLab/"/>
-    
-    <category term="CI/CD" scheme="https://blog.stdioa.com/tags/CI-CD/"/>
     
   </entry>
   
