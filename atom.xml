@@ -6,7 +6,7 @@
   <link href="https://blog.stdioa.com/atom.xml" rel="self"/>
   
   <link href="https://blog.stdioa.com/"/>
-  <updated>2024-08-17T15:45:31.183Z</updated>
+  <updated>2024-08-18T01:41:09.005Z</updated>
   <id>https://blog.stdioa.com/</id>
   
   <author>
@@ -17,14 +17,14 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>RAG 基本应用 —— 记账效率优化</title>
+    <title>RAG 基本应用——Beacount 记账效率优化</title>
     <link href="https://blog.stdioa.com/2024/08/beancount-rag/"/>
     <id>https://blog.stdioa.com/2024/08/beancount-rag/</id>
     <published>2024-08-17T13:20:00.000Z</published>
-    <updated>2024-08-17T15:45:31.183Z</updated>
+    <updated>2024-08-18T01:41:09.005Z</updated>
     
     
-    <summary type="html">&lt;p&gt;一个手工记账博主的脑洞大开，通过向量数据库和 RAG 来想办法让自己能再少打几个字。顺便宣传一下最近开源的&lt;a href=&quot;https://github.com/StdioA/beancount-bot&quot;&gt;记账 bot&lt;/a&gt;.&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;本文来自于一个手工记账博主的脑洞大开，尝试通过向量数据库和 RAG 来想办法让自己少打几个字。顺便宣传一下最近开源的&lt;a href=&quot;https://github.com/StdioA/beancount-bot&quot;&gt;记账 bot&lt;/a&gt;.&lt;/p&gt;</summary>
     
     
     
