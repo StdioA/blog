@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://blog.stdioa.com/pics/homelab/raspberrypi.png">
 <meta property="og:image" content="https://blog.stdioa.com/pics/homelab/topo.png">
 <meta property="article:published_time" content="2021-09-14T11:51:33.000Z">
-<meta property="article:modified_time" content="2024-08-21T08:34:59.340Z">
+<meta property="article:modified_time" content="2024-08-21T08:48:56.826Z">
 <meta property="article:author" content="David Dai">
 <meta property="article:tag" content="Docker">
 <meta property="article:tag" content="NAS">
@@ -53,7 +53,7 @@
   
   
   
-<meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage">
@@ -314,7 +314,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/09/homelab-share/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 4.5k(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 4.6k(字)</span>
 	
 	
 
@@ -325,7 +325,7 @@
         <p>大学毕业之前一个冲动买了台式机，又一个冲动买了台 Linux 主机。到现在它已经运行了四年多了，简单分享下自己的玩法。</p>
 <span id="more"></span>
 <blockquote>
-<p>注：本文与 2024 年 8 月进行过一次修订，对内容进行了一些更新和补充。补充的部分会以引用的形式添加在文章中。</p>
+<p>注：本文于 2024 年 8 月进行过一次修订，根据自己的使用经验，对已有内容做了一些更新和补充。成段补充的部分会以引用的形式添加在文章中。</p>
 </blockquote>
 <h1 id="背景"><a class="markdownIt-Anchor" href="#背景"></a> 背景</h1>
 <p>毕业之前在公司附近租了房，再加上受到了网络的蛊惑，于是陷入了“买一台 NAS 来大幅提高生活质量”的念头之中。看了很多成熟的 NAS 方案（比如群辉或威联通），最后还是在高昂的价格面前望而却步。<br />
@@ -431,18 +431,36 @@
 <td>880</td>
 <td>购买于 2018 年 10 月，替换了通电很久的蓝盘</td>
 </tr>
+<tr>
+<td>机箱</td>
+<td>乔思伯 N1</td>
+<td>589</td>
+<td>购买于 2021 年 11 月，改善外观并提升盘位数量</td>
+</tr>
+<tr>
+<td>SATA 拓展卡</td>
+<td>杂牌</td>
+<td>100 以内</td>
+<td>主板的 SATA 接口不够用了，因此利用上了 PCIe x1 接口</td>
+</tr>
+<tr>
+<td>硬盘</td>
+<td>10T + 16T 西数企业盘</td>
+<td>1730 元</td>
+<td>10T 硬盘做主要存储，二手 16T 硬盘做定时热备</td>
+</tr>
 </tbody>
 </table>
 <p>去除已淘汰的硬件，整机成本如下：</p>
 <ul>
-<li>硬盘（2T + 4T）：1479 元</li>
-<li>主机（除硬盘以外的部分，但包括 SSD 系统盘）：1469.9 元</li>
+<li>硬盘（2T + 4T + 10T + 16T）：3209 元</li>
+<li>主机（除硬盘以外的部分，但包括 SSD 系统盘）：2138.9 元</li>
 </ul>
 <p>写这篇文章的时候翻了下淘宝，发现这几年 Intel 推出了更多低功耗但性能更强的 CPU，然而这些 CPU 大多数都拿去做成了成套的 NAS、NUC 和工控机方案，貌似很难再买到 J3455-ITX 这种主板 + CPU 的组合了。</p>
 <blockquote>
 <p>在 2024 年，由于市场对软路由的稳定需求，因此很多小厂商开发了搭载 N100 或 J4125 的 ITX 方案，目前选择比 2021 年要多了不少。</p>
 </blockquote>
-<p>此外，由于主机的硬盘太过吵闹，有时为了享受更好的睡眠，我不得不关掉它的电源，所以我又买了一块可安安静静挂机的树莓派 4，并将一部分我认为比较重要的软件挪到了它的上面。<br />
+<p>此外，由于主机的硬盘太过吵闹，有时为了享受更好的睡眠，我不得不关掉它的电源，所以我又买了一块可以安安静静挂机的树莓派 4（后来用上文淘汰下来的 22G SSD 重做了系统盘来代替性能捉急的 TF 卡），并将一部分我认为比较重要的软件挪到了它的上面。<br />
 最近在机缘巧合之下又收了一块树莓派，不过目前处于在线但闲置的状态，跑了个 k3s 偶尔玩一玩。</p>
 <p>附两张机器的配置图：<br />
 <img style="max-width: 45vw;" alt="NAS 配置" src="/pics/homelab/nas.png"></img><br />
