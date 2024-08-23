@@ -6,7 +6,7 @@
   <link href="https://blog.stdioa.com/atom.xml" rel="self"/>
   
   <link href="https://blog.stdioa.com/"/>
-  <updated>2024-08-23T08:33:24.377Z</updated>
+  <updated>2024-08-23T15:00:08.275Z</updated>
   <id>https://blog.stdioa.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog.stdioa.com/2024/08/python-i18n-with-gettext/"/>
     <id>https://blog.stdioa.com/2024/08/python-i18n-with-gettext/</id>
     <published>2024-08-23T08:21:08.000Z</published>
-    <updated>2024-08-23T08:33:24.377Z</updated>
+    <updated>2024-08-23T15:00:08.275Z</updated>
     
     
     <summary type="html">&lt;p&gt;突发奇想，给自己的 &lt;code&gt;beancount-bot&lt;/code&gt; 接入了多语言支持。本文简单记录了接入和使用的流程。&lt;/p&gt;</summary>
