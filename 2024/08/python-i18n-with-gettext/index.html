@@ -29,7 +29,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://blog.stdioa.com/pics/python-i18n/i18n.png">
 <meta property="article:published_time" content="2024-08-23T08:21:08.000Z">
-<meta property="article:modified_time" content="2024-08-23T08:28:37.859Z">
+<meta property="article:modified_time" content="2024-08-23T08:33:24.377Z">
 <meta property="article:author" content="David Dai">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="多语言">
@@ -339,8 +339,8 @@
 <p>具体操作步骤如下：</p>
 <ol>
 <li>在 Python 代码中先通过 <code>gettext.gettext</code> 函数（通常会使用 <code>_</code> 的别名）来标记所有需要翻译的字符串。注意，需要翻译的字符串必须是”静态“字符串，不能是 <code>f-string</code> 这种内容不确定的字符串；</li>
-<li>标记好后，通过 <code>xgettext -d mydomain -o locale/mydomain.pot **/*.py</code> 扫描源代码中的字符串，并生成 <code>.pot</code> 文档；</li>
-<li>选择你希望翻译的语言（严格来讲是 locale），假设为 <code>zh_CN</code>，生成 <code>.po</code> 文件：
+<li>标记好后，通过 <code>xgettext -d mydomain -o locale/mydomain.pot **/*.py</code> 扫描源代码中的字符串，并生成 <code>.pot</code> 本地化模板；</li>
+<li>选择你希望翻译的语言（严格来讲是 locale），假设为 <code>zh_CN</code>，并根据翻译模板生成 <code>.po</code> 本地化文件：
 <ol>
 <li>如果是初次生成，则运行 <code>msginit -i locale/mydomain.pot -o locale/zh_CN/LC_MESSAGES/mydomain.po -l zh_CN</code>；</li>
 <li>如果要更新现有 <code>.po</code> 的内容，并保留原有翻译，则运行 <code>msgmerge --update locale/zh_CN/LC_MESSAGES/mydomain.po locale/mydomain.pot</code></li>
