@@ -29,7 +29,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://blog.stdioa.com/pics/python-i18n/i18n.png">
 <meta property="article:published_time" content="2024-08-23T08:21:08.000Z">
-<meta property="article:modified_time" content="2024-08-23T08:27:27.174Z">
+<meta property="article:modified_time" content="2024-08-23T08:28:37.859Z">
 <meta property="article:author" content="David Dai">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="多语言">
@@ -335,7 +335,7 @@
 <h1 id="接入流程"><a class="markdownIt-Anchor" href="#接入流程"></a> 接入流程</h1>
 <p>通常情况下，一个 Python 程序接入多语言的工作流程如下图：<br />
 <img src="/pics/python-i18n/i18n.png" alt="多语言接入流程" /></p>
-<p>为了隔离不同场景，<code>gettext</code> 创建了与 <code>namespace</code> 类似的”域“的概念。此处假设我们的域为 <code>mydomain</code>。</p>
+<p>为了隔离不同场景，<code>gettext</code> 创建了与 <code>namespace</code> 类似的“域”的概念。此处假设我们的域为 <code>mydomain</code>。</p>
 <p>具体操作步骤如下：</p>
 <ol>
 <li>在 Python 代码中先通过 <code>gettext.gettext</code> 函数（通常会使用 <code>_</code> 的别名）来标记所有需要翻译的字符串。注意，需要翻译的字符串必须是”静态“字符串，不能是 <code>f-string</code> 这种内容不确定的字符串；</li>
